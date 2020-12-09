@@ -1,0 +1,7 @@
+@@ -39,4 +39,4 @@ function onEventFinish(player,csid,option)
+             player:confirmTrade()
+         end
+     end
+-end
+\ No newline at end of file
++end

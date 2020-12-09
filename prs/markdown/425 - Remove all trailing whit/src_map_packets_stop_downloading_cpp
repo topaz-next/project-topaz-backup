@@ -1,0 +1,7 @@
+@@ -40,4 +40,4 @@ CStopDownloadingPacket::CStopDownloadingPacket(CCharEntity* PChar, std::vector<
+ 
+ 	ref<uint8>(0xF4) = 3; // Unknown but important!
+ 	ref<uint8>(0xF5) = (int8)blacklist.size();
+-}
+\ No newline at end of file
++}

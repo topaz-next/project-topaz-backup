@@ -1,0 +1,7 @@
+@@ -29,4 +29,4 @@ function onUseAbility(player,target,ability)
+     player:addStatusEffect(tpz.effect.FOCALIZATION,player:getMerit(tpz.merit.FOCALIZATION),0,60)
+ 
+     return tpz.effect.FOCALIZATION
+-end
+\ No newline at end of file
++end

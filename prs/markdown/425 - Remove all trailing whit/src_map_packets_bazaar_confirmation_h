@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ class CBazaarConfirmationPacket: public CBasicPacket
+     CBazaarConfirmationPacket(CCharEntity* PChar, CItem* PItem);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,7 @@
+@@ -29,4 +29,4 @@ function onEventFinish(player,csid,option)
+         torch2:openDoor(10)
+         brassDoor:openDoor(6)
+     end
+-end
+\ No newline at end of file
++end

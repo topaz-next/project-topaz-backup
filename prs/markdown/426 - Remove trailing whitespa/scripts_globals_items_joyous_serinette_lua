@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ function onItemUse(target)
+             member:ChangeMusic(1, 214) -- Eternal Oath
+         end
+     end
+-end
+\ No newline at end of file
++end

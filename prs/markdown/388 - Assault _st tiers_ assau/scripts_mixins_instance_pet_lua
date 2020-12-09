@@ -1,0 +1,27 @@
+@@ -0,0 +1,26 @@
++require("scripts/globals/mixins")
++require("scripts/globals/status")
++
++
++g_mixins = g_mixins or {}
++
++g_mixins.instance_pet = function(mob)
++
++    mob:addListener("ROAM_TICK", "MASTER_RTICK", function(mob)
++        local instance = mob:getInstance()
++        local master = instance:getEntity(bit.band(mob:getID() - 1, 0xFFF), tpz.objType.MOB)
++        
++--        mob:follow(master, tpz.follow.ROAM)
++--        master = mob
++    end)
++    
++    mob:addListener("DEATH", "PET_DEATH", function(mob)
++        local instance = mob:getInstance()
++        local master = instance:getEntity(bit.band(mob:getID() - 1, 0xFFF), tpz.objType.MOB)
++    
++        master:setLocalVar("spawnPet", os.time() + 30)
++        master:setLocalVar("petSpawned", 0)
++    end)
++end
++
++return g_mixins.instance_pet

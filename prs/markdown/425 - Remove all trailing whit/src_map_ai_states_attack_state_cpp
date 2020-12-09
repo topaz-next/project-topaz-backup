@@ -1,0 +1,7 @@
+@@ -137,4 +137,4 @@ bool CAttackState::CanAttack(CBattleEntity* PTarget)
+ bool CAttackState::AttackReady()
+ {
+     return m_attackTime < 0ms;
+-}
+\ No newline at end of file
++}

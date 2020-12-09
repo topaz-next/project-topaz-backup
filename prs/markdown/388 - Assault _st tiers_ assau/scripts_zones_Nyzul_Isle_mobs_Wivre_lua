@@ -1,0 +1,16 @@
+@@ -0,0 +1,15 @@
++-----------------------------------
++--  Mob: Wivre
++-- Area: Nyzul Isle
++-----------------------------------
++require("scripts/globals/nyzul")
++-----------------------------------
++
++function onMobSpawn(mob)
++    nyzul.specifiedEnemySet(mob)
++end
++
++function onMobDeath(mob, player, isKiller, firstCall)
++    nyzul.spawnChest(mob)
++    nyzul.specifiedEnemyKill(mob, firstCall)
++end

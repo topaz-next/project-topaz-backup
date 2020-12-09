@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ end
+ 
+ function onTrigger(player,npc)
+     player:messageSpecial(ID.text.MYCOPHILE_MUSHROOM)
+-end
+\ No newline at end of file
++end

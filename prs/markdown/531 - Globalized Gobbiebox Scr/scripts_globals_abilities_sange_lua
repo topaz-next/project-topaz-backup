@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ function onUseAbility(player,target,ability)
+     local potency = player:getMerit(tpz.merit.SANGE)-1
+ 
+     player:addStatusEffect(tpz.effect.SANGE,potency * 25,0,60)
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,10 @@
+014a31000fe7d63dbbc34dd3f7dcc9b02b90d574 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/014a31000fe7d63dbbc34dd3f7dcc9b02b90d574
+3e76f11e478a4f4ea308ac4f63e5b5af8449d1f7 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/3e76f11e478a4f4ea308ac4f63e5b5af8449d1f7
+079ed0c77cadecac1a019dffdfce34003089df1f - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/079ed0c77cadecac1a019dffdfce34003089df1f
+4b147c62b167c3f06aee13a992b6b4fbd952435f - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/4b147c62b167c3f06aee13a992b6b4fbd952435f
+c4f334c39711df83f2620984c0b96fdab3c1e27f - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/c4f334c39711df83f2620984c0b96fdab3c1e27f
+aaf9f0ae6d3216bb0acd1157b98d60ddbddb94c0 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/aaf9f0ae6d3216bb0acd1157b98d60ddbddb94c0
+0b3f1bc81b71b3bd5b23321186c5271ade50efa9 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/0b3f1bc81b71b3bd5b23321186c5271ade50efa9
+1f777967248edcf2b986f57526c06bc78a2ad7c7 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/1f777967248edcf2b986f57526c06bc78a2ad7c7
+975da975774d67f12f59390c59f994842d5e7a65 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/975da975774d67f12f59390c59f994842d5e7a65
+a6cac35e4b2576504070640907a0725e682d406b - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/a6cac35e4b2576504070640907a0725e682d406b

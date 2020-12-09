@@ -1,0 +1,23 @@
+@@ -28,13 +28,13 @@ function onTrigger(player, target, variable, value)
+             return
+         end
+     end
+-    
++
+     -- validate var
+     if (variable == nil) then
+         error(player, "You must provide a variable name.")
+         return
+     end
+-    
++
+     -- validate value
+     if (value == nil) then
+         error(player, "You must provide a value.")
+@@ -43,4 +43,4 @@ function onTrigger(player, target, variable, value)
+ 
+     targ:setCharVar(variable, value)
+     player:PrintToPlayer( string.format( "Set %s's variable '%s' to %i.", targ:getName(), variable, value ) )
+-end
+\ No newline at end of file
++end

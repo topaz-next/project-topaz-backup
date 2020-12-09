@@ -1,0 +1,11 @@
+@@ -57557,8 +57557,8 @@ INSERT INTO `mob_spawn_points` VALUES (17580334,'Wight','Wight',22,-100,-28.067,
+ INSERT INTO `mob_spawn_points` VALUES (17580335,'Ghast','Ghast',37,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17580336,'Banshee','Banshee',36,60,-11,407,127);
+ INSERT INTO `mob_spawn_points` VALUES (17580337,'Wandering_Ghost','Wandering Ghost',39,-177,-1,371,13);
+-INSERT INTO `mob_spawn_points` VALUES (17580338,'Pudding','Pudding',40,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17580339,'Pudding','Pudding',40,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17580338,'Pudding','Pudding',40,23,-60,21,63);
++INSERT INTO `mob_spawn_points` VALUES (17580339,'Pudding','Pudding',40,23,-60,20.5,63);
+ INSERT INTO `mob_spawn_points` VALUES (17580340,'Earth_Elemental','Earth Elemental',41,220.001,-41.172,257.302,0);
+ INSERT INTO `mob_spawn_points` VALUES (17580341,'Aroma_Fly','Aroma Fly',42,1.000,1.000,1.000,20);
+ INSERT INTO `mob_spawn_points` VALUES (17580343,'Lorbulcrud','Lorbulcrud',43,-115,-60.452,-100,178);

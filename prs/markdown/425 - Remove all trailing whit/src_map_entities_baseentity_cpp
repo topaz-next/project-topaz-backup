@@ -1,0 +1,7 @@
+@@ -152,4 +152,4 @@ void CBaseEntity::SetModelId(uint16 modelid)
+ uint16 CBaseEntity::GetModelId()
+ {
+     return look.modelid;
+-}
+\ No newline at end of file
++}

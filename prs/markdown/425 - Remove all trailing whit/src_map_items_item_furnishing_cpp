@@ -1,0 +1,16 @@
+@@ -93,7 +93,7 @@ void CItemFurnishing::setCol(uint8 col)
+ {
+ 	ref<uint8>(m_extra, 0x06) = col;
+ }
+-	
++
+ uint8 CItemFurnishing::getCol()
+ {
+     return ref<uint8>(m_extra, 0x06);
+@@ -137,4 +137,4 @@ void CItemFurnishing::setOrder(uint8 order)
+ uint8 CItemFurnishing::getOrder()
+ {
+     return ref<uint8>(m_extra, 0x0A);
+-}
+\ No newline at end of file
++}

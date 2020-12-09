@@ -1,0 +1,7 @@
+@@ -118,4 +118,4 @@ class CAttack
+     int32                       m_baseDamage {0};           // The base damage.
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

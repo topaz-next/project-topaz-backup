@@ -1,0 +1,7 @@
+@@ -28,4 +28,4 @@ function onTrigger(player, offset)
+         error(player, "Time offset was not successful.")
+         return
+     end
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -24,4 +24,4 @@ end
+ function onEffectLose(target,effect)
+     target:delLatent(tpz.latent.SIGNET_BONUS, 0, tpz.mod.DEF, 15)
+     target:delLatent(tpz.latent.SIGNET_BONUS, 0, tpz.mod.EVA, 15)
+-end
+\ No newline at end of file
++end

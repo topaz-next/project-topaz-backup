@@ -1,0 +1,7 @@
+@@ -13,4 +13,4 @@ function onTrigger(player,npc)
+     if player:getZPos() > 35 then
+         GetNPCByID(ID.npc.DROP_GATE):openDoor() -- drop gate to Sacrificial Chamber
+     end
+-end
+\ No newline at end of file
++end

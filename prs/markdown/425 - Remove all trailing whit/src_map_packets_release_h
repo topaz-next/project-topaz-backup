@@ -1,0 +1,7 @@
+@@ -50,4 +50,4 @@ class CReleasePacket : public CBasicPacket
+ 	CReleasePacket(CCharEntity* PChar, RELEASE_TYPE releaseType = RELEASE_STANDARD);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

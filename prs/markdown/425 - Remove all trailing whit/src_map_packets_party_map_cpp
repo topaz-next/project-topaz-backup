@@ -1,0 +1,7 @@
+@@ -40,4 +40,4 @@ CPartyMapPacket::CPartyMapPacket(CCharEntity* PChar)
+ 	ref<float>(0x0C) = PChar->loc.p.x;
+ 	ref<float>(0x10) = PChar->loc.p.y;
+ 	ref<float>(0x14) = PChar->loc.p.z;
+-}
+\ No newline at end of file
++}

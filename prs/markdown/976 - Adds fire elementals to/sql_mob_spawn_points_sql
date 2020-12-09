@@ -1,0 +1,87 @@
+@@ -28715,7 +28715,7 @@ INSERT INTO `mob_spawn_points` VALUES (17203271,'Orcish_Cursemaker','Orcish Curs
+ INSERT INTO `mob_spawn_points` VALUES (17203272,'Orcish_Serjeant','Orcish Serjeant',22,-164.097,0.045,-145.450,127);
+ INSERT INTO `mob_spawn_points` VALUES (17203273,'Ghoul','Ghoul',23,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17203274,'Zombie','Zombie',24,-467.444,-0.739,-368.853,127);
+-INSERT INTO `mob_spawn_points` VALUES (17203275,'Thunder_Elemental','Thunder Elemental',25,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17203275,'Thunder_Elemental','Thunder Elemental',25,-414.483,-1.422,-355.749,191);
+ INSERT INTO `mob_spawn_points` VALUES (17203276,'Stag_Beetle','Stag Beetle',8,-328.942,-0.470,56.844,127);
+ INSERT INTO `mob_spawn_points` VALUES (17203277,'Stag_Beetle','Stag Beetle',8,-318.553,-0.467,81.186,127);
+ INSERT INTO `mob_spawn_points` VALUES (17203278,'Wandering_Sapling','Wandering Sapling',9,-266.466,3.871,104.161,127);
+@@ -28768,7 +28768,7 @@ INSERT INTO `mob_spawn_points` VALUES (17203324,'Goblin_Gambler','Goblin Gambler
+ INSERT INTO `mob_spawn_points` VALUES (17203325,'Goblin_Butcher','Goblin Butcher',31,-184.545,-0.307,107.038,127);
+ INSERT INTO `mob_spawn_points` VALUES (17203326,'Ghoul','Ghoul',23,-27.630,0.155,69.012,79);
+ INSERT INTO `mob_spawn_points` VALUES (17203327,'Zombie','Zombie',24,-61.207,1.788,89.480,127);
+-INSERT INTO `mob_spawn_points` VALUES (17203328,'Thunder_Elemental','Thunder Elemental',25,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17203328,'Thunder_Elemental','Thunder Elemental',25,-281.810,0.203,8.466,189);
+ INSERT INTO `mob_spawn_points` VALUES (17203329,'Snipper','Snipper',32,-492.154,8.047,279.137,16);
+ INSERT INTO `mob_spawn_points` VALUES (17203330,'Snipper','Snipper',32,-490.595,7.110,326.604,127);
+ INSERT INTO `mob_spawn_points` VALUES (17203331,'Land_Pugil','Land Pugil',33,-515.088,7.524,321.950,110);
+@@ -29010,7 +29010,7 @@ INSERT INTO `mob_spawn_points` VALUES (17203566,'Goblin_Gambler','Goblin Gambler
+ INSERT INTO `mob_spawn_points` VALUES (17203567,'Goblin_Butcher','Goblin Butcher',31,252.609,1.023,258.211,127);
+ INSERT INTO `mob_spawn_points` VALUES (17203568,'Ghoul','Ghoul',23,265.531,-2.347,301.585,127);
+ INSERT INTO `mob_spawn_points` VALUES (17203569,'Zombie','Zombie',24,467.420,-0.556,170.924,127);
+-INSERT INTO `mob_spawn_points` VALUES (17203570,'Thunder_Elemental','Thunder Elemental',25,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17203570,'Thunder_Elemental','Thunder Elemental',25,252.893,5.284,197.902,55);
+ INSERT INTO `mob_spawn_points` VALUES (17203571,'Jugner_Funguar','Jugner Funguar',12,410.886,-0.177,234.980,127);
+ INSERT INTO `mob_spawn_points` VALUES (17203572,'Jugner_Funguar','Jugner Funguar',12,459.336,-0.350,230.766,127);
+ INSERT INTO `mob_spawn_points` VALUES (17203573,'Jugner_Funguar','Jugner Funguar',12,394.633,-0.622,235.558,127);
+@@ -29076,7 +29076,7 @@ INSERT INTO `mob_spawn_points` VALUES (17203632,'Goblin_Gambler','Goblin Gambler
+ INSERT INTO `mob_spawn_points` VALUES (17203633,'Goblin_Butcher','Goblin Butcher',31,459.253,-0.788,587.803,101);
+ INSERT INTO `mob_spawn_points` VALUES (17203634,'Ghoul','Ghoul',23,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17203635,'Zombie','Zombie',24,262.618,-4.596,321.318,127);
+-INSERT INTO `mob_spawn_points` VALUES (17203636,'Thunder_Elemental','Thunder Elemental',25,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17203636,'Thunder_Elemental','Thunder Elemental',25,117.386,-0.275,363.255,9);
+ INSERT INTO `mob_spawn_points` VALUES (17203637,'Stag_Beetle','Stag Beetle',8,239.541,-0.365,559.722,127);
+ INSERT INTO `mob_spawn_points` VALUES (17203638,'Stag_Beetle','Stag Beetle',8,296.088,-0.622,510.656,91);
+ INSERT INTO `mob_spawn_points` VALUES (17203639,'Stag_Beetle','Stag Beetle',8,274.083,0.250,537.848,0);
+@@ -37091,7 +37091,7 @@ INSERT INTO `mob_spawn_points` VALUES (17281122,'Goblin_Smithy','Goblin Smithy',
+ INSERT INTO `mob_spawn_points` VALUES (17281123,'Goblin_Smithy','Goblin Smithy',7,-138.171,-0.888,208.303,111);
+ INSERT INTO `mob_spawn_points` VALUES (17281124,'Goblin_Furrier','Goblin Furrier',17,-133.082,-1.139,222.708,92);
+ INSERT INTO `mob_spawn_points` VALUES (17281125,'Goblin_Furrier','Goblin Furrier',17,-113.823,-0.354,194.826,6);
+-INSERT INTO `mob_spawn_points` VALUES (17281126,'Fire_Elemental','Fire Elemental',18,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17281126,'Fire_Elemental','Fire Elemental',18,-143.389,0.024,205.562,147);
+ INSERT INTO `mob_spawn_points` VALUES (17281127,'Ivory_Lizard','Ivory Lizard',8,-75.419,7.898,300.851,12);
+ INSERT INTO `mob_spawn_points` VALUES (17281128,'Ivory_Lizard','Ivory Lizard',8,-92.748,6.556,298.562,96);
+ INSERT INTO `mob_spawn_points` VALUES (17281129,'Death_Jacket','Death Jacket',10,-241.788,-0.166,59.987,112);
+@@ -37170,7 +37170,7 @@ INSERT INTO `mob_spawn_points` VALUES (17281201,'Death_Jacket','Death Jacket',10
+ INSERT INTO `mob_spawn_points` VALUES (17281202,'Death_Jacket','Death Jacket',10,-78.253,-3.832,-101.627,86);
+ INSERT INTO `mob_spawn_points` VALUES (17281203,'Goblin_Furrier','Goblin Furrier',17,-88.199,-3.113,-109.860,88);
+ INSERT INTO `mob_spawn_points` VALUES (17281204,'Goblin_Furrier','Goblin Furrier',17,-79.580,-3.371,-108.126,114);
+-INSERT INTO `mob_spawn_points` VALUES (17281205,'Fire_Elemental','Fire Elemental',18,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17281205,'Fire_Elemental','Fire Elemental',18,-79.731,-3.507,-87.759,18);
+ INSERT INTO `mob_spawn_points` VALUES (17281206,'Death_Jacket','Death Jacket',10,-75.126,-0.688,-67.527,50);
+ INSERT INTO `mob_spawn_points` VALUES (17281207,'Young_Opo-opo','Young Opo-opo',11,-73.904,-0.672,-60.527,117);
+ INSERT INTO `mob_spawn_points` VALUES (17281208,'Death_Jacket','Death Jacket',10,-68.611,-1.053,-122.947,72);
+@@ -37179,7 +37179,7 @@ INSERT INTO `mob_spawn_points` VALUES (17281210,'Death_Jacket','Death Jacket',10
+ INSERT INTO `mob_spawn_points` VALUES (17281211,'Death_Jacket','Death Jacket',10,-113.011,-3.551,-76.280,127);
+ INSERT INTO `mob_spawn_points` VALUES (17281212,'Goblin_Furrier','Goblin Furrier',17,-118.228,-3.704,-116.298,127);
+ INSERT INTO `mob_spawn_points` VALUES (17281213,'Goblin_Furrier','Goblin Furrier',17,-111.581,-3.413,-121.166,127);
+-INSERT INTO `mob_spawn_points` VALUES (17281214,'Fire_Elemental','Fire Elemental',18,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17281214,'Fire_Elemental','Fire Elemental',18,-119.418,-3.868,-82.583,207);
+ INSERT INTO `mob_spawn_points` VALUES (17281215,'Death_Jacket','Death Jacket',10,-130.197,-1.012,-121.272,127);
+ INSERT INTO `mob_spawn_points` VALUES (17281216,'Young_Opo-opo','Young Opo-opo',11,-120.455,-1.118,-137.045,39);
+ INSERT INTO `mob_spawn_points` VALUES (17281217,'Young_Opo-opo','Young Opo-opo',11,-99.1,4.496,-80.669,44);
+@@ -37373,12 +37373,12 @@ INSERT INTO `mob_spawn_points` VALUES (17281404,'Goblin_Poacher','Goblin Poacher
+ INSERT INTO `mob_spawn_points` VALUES (17281405,'Goblin_Poacher','Goblin Poacher',14,341.07,20.576,275.163,26);
+ INSERT INTO `mob_spawn_points` VALUES (17281406,'Goblin_Reaper','Goblin Reaper',29,349.024,20.504,280.837,72);
+ INSERT INTO `mob_spawn_points` VALUES (17281407,'Goblin_Reaper','Goblin Reaper',29,313.134,20.329,276.370,127);
+-INSERT INTO `mob_spawn_points` VALUES (17281408,'Fire_Elemental','Fire Elemental',18,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17281408,'Fire_Elemental','Fire Elemental',18,330.347,20.346,285.439,189);
+ INSERT INTO `mob_spawn_points` VALUES (17281409,'Soldier_Crawler','Soldier Crawler',12,321.379,20.314,230.371,127);
+ INSERT INTO `mob_spawn_points` VALUES (17281410,'Goblin_Poacher','Goblin Poacher',14,341.461,21.056,227.353,127);
+ INSERT INTO `mob_spawn_points` VALUES (17281411,'Goblin_Reaper','Goblin Reaper',29,315.473,20.742,231.476,127);
+ INSERT INTO `mob_spawn_points` VALUES (17281412,'Overgrown_Rose','Overgrown Rose',16,325.769,20.228,228.559,0);
+-INSERT INTO `mob_spawn_points` VALUES (17281413,'Fire_Elemental','Fire Elemental',18,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17281413,'Fire_Elemental','Fire Elemental',18,327.000,20.494,239.898,142);
+ INSERT INTO `mob_spawn_points` VALUES (17281414,'Soldier_Crawler','Soldier Crawler',12,392.747,20.909,208.005,127);
+ INSERT INTO `mob_spawn_points` VALUES (17281415,'Goblin_Poacher','Goblin Poacher',14,411.199,20.373,231.407,12);
+ INSERT INTO `mob_spawn_points` VALUES (17281416,'Goblin_Poacher','Goblin Poacher',14,399.041,20.760,248.609,113);
+@@ -37410,7 +37410,7 @@ INSERT INTO `mob_spawn_points` VALUES (17281441,'Goblin_Reaper','Goblin Reaper',
+ INSERT INTO `mob_spawn_points` VALUES (17281442,'Goblin_Reaper','Goblin Reaper',29,458.591,21.246,298.470,127);
+ INSERT INTO `mob_spawn_points` VALUES (17281443,'Goblin_Reaper','Goblin Reaper',29,463.973,20.790,303.676,127);
+ INSERT INTO `mob_spawn_points` VALUES (17281444,'Lava_Bomb','Lava Bomb',15,461.118,15.796,78.404,72);
+-INSERT INTO `mob_spawn_points` VALUES (17281445,'Fire_Elemental','Fire Elemental',18,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17281445,'Fire_Elemental','Fire Elemental',18,462.612,14.735,90.607,164);
+ INSERT INTO `mob_spawn_points` VALUES (17281446,'Soldier_Crawler','Soldier Crawler',12,474.114,19.361,220.447,127);
+ INSERT INTO `mob_spawn_points` VALUES (17281447,'Soldier_Crawler','Soldier Crawler',12,471.580,19.026,221.588,127);
+ INSERT INTO `mob_spawn_points` VALUES (17281448,'Goblin_Poacher','Goblin Poacher',14,460.685,19.753,239.610,127);

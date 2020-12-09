@@ -1,0 +1,7 @@
+@@ -23,4 +23,4 @@ function onManeuverGain(pet, maneuvers)
+ end
+ 
+ function onManeuverLose(pet, maneuvers)
+-end
+\ No newline at end of file
++end

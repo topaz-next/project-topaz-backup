@@ -1,0 +1,7 @@
+@@ -55,4 +55,4 @@ class CLuaTradeContainer
+     int32 confirmSlot(lua_State*);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,7 @@
+@@ -50,4 +50,4 @@ class CAttackState : public CState
+     duration m_attackTime {2s};
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

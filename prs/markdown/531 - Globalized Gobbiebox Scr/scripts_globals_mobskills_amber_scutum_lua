@@ -1,0 +1,7 @@
+@@ -25,4 +25,4 @@ function onMobWeaponSkill(target, mob, skill)
+     skill:setMsg(MobBuffMove(mob, tpz.effect.DEFENSE_BOOST, power, 0, 60))
+ 
+     return tpz.effect.DEFENSE_BOOST
+-end
+\ No newline at end of file
++end

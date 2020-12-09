@@ -1,0 +1,18 @@
+@@ -37737,7 +37737,7 @@ INSERT INTO `mob_spawn_points` VALUES (17285386,'Young_Opo-opo','Young Opo-opo',
+ INSERT INTO `mob_spawn_points` VALUES (17285387,'Young_Opo-opo','Young Opo-opo',23,-4.795,-0.354,-400.263,127);
+ INSERT INTO `mob_spawn_points` VALUES (17285388,'Tonberry_Hexer','Tonberry Hexer',28,14.274,-1.670,-414.336,18);
+ INSERT INTO `mob_spawn_points` VALUES (17285389,'Tonberry_Creeper','Tonberry Creeper',27,-5.443,-0.332,-399.649,41);
+-INSERT INTO `mob_spawn_points` VALUES (17285390,'Fire_Elemental','Fire Elemental',29,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17285390,'Fire_Elemental','Fire Elemental',29,17.238,0.069,-402.464,211);
+ INSERT INTO `mob_spawn_points` VALUES (17285391,'Young_Opo-opo','Young Opo-opo',23,117.237,-0.499,-395.620,54);
+ INSERT INTO `mob_spawn_points` VALUES (17285392,'Tonberry_Creeper','Tonberry Creeper',27,31.93,0.201,-407.7,60);
+ INSERT INTO `mob_spawn_points` VALUES (17285393,'Tonberry_Shadower','Tonberry Shadower',30,24.922,-5.023,-423.784,19);
+@@ -37872,7 +37872,7 @@ INSERT INTO `mob_spawn_points` VALUES (17285521,'Young_Opo-opo','Young Opo-opo',
+ INSERT INTO `mob_spawn_points` VALUES (17285522,'Young_Opo-opo','Young Opo-opo',23,217.325,-0.269,-190.096,3);
+ INSERT INTO `mob_spawn_points` VALUES (17285523,'Tonberry_Creeper','Tonberry Creeper',27,189.682,-0.364,-181.061,117);
+ INSERT INTO `mob_spawn_points` VALUES (17285524,'Tonberry_Hexer','Tonberry Hexer',28,220.690,-0.084,-226.994,127);
+-INSERT INTO `mob_spawn_points` VALUES (17285525,'Fire_Elemental','Fire Elemental',29,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17285525,'Fire_Elemental','Fire Elemental',29,209.072,-0.150,-168.756,196);
+ INSERT INTO `mob_spawn_points` VALUES (17285526,'Bright-handed_Kunberry','Bright-handed Kunberry',39,227,-0.5,-169,127);
+ INSERT INTO `mob_spawn_points` VALUES (17285527,'Tonberry_Hexer','Tonberry Hexer',28,192,-0.349,-162,127);
+ INSERT INTO `mob_spawn_points` VALUES (17285528,'Tonberry_Harasser','Tonberry Harasser',34,189,-0.390,-136,127);

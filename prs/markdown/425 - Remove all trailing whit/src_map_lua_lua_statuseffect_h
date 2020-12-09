@@ -1,0 +1,7 @@
+@@ -71,4 +71,4 @@ class CLuaStatusEffect
+     int32 unsetFlag(lua_State*);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,7 @@
+@@ -71,4 +71,4 @@ function onTrigger(player)
+         player:delMod(tpz.mod.DEF,2500)
+         player:delMod(tpz.mod.MDEF,2500)
+     end
+-end
+\ No newline at end of file
++end

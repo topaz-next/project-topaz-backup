@@ -1,0 +1,16 @@
+@@ -27,7 +27,7 @@
+ CWorldPassPacket::CWorldPassPacket(uint32 WorldPass)
+ {
+ 	this->type = 0x59;
+-	this->size = 0x12; 
++	this->size = 0x12;
+ 
+     ref<uint32>(0x0C) = 10000;       // price
+ 
+@@ -44,4 +44,4 @@ CWorldPassPacket::CWorldPassPacket(uint32 WorldPass)
+         ref<uint8>(0x20) = 0x06;
+         snprintf((char*)data+(0x10), 10, "%u", WorldPass);
+     }
+-}
+\ No newline at end of file
++}

@@ -1,0 +1,7 @@
+@@ -14,4 +14,4 @@ end
+ 
+ function onFurnitureRemoved(player)
+     player:setCharVar("[MS1]BedPlaced", 0)
+-end
+\ No newline at end of file
++end

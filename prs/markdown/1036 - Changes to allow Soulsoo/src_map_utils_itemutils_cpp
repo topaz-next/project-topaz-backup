@@ -1,0 +1,18 @@
+@@ -215,6 +215,17 @@ namespace itemutils
+         return nullptr;
+     }
+ 
++    /************************************************************************
++    *                                                                       *
++    *  True if pointer points to a read-only g_pItemList array item         *
++    *                                                                       *
++    ************************************************************************/
++
++    bool IsItemPointer(CItem* item)
++    {
++        return g_pItemList[item->getID()] == item;
++    }
++
+     /************************************************************************
+     *                                                                       *
+     *                                                                       *

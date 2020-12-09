@@ -1,0 +1,7 @@
+@@ -60,4 +60,4 @@ function onEffectLose(target,effect)
+     target:delMod(tpz.mod.SLOWRES, effect:getPower())
+     target:delMod(tpz.mod.STUNRES, effect:getPower())
+     target:delMod(tpz.mod.CHARMRES, effect:getPower())
+-end
+\ No newline at end of file
++end

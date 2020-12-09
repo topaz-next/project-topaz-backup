@@ -1,0 +1,7 @@
+@@ -70,4 +70,4 @@ function onZoneWeatherChange(weather)
+     else
+         mirrorPond:setStatus(tpz.status.DISAPPEAR)
+     end
+-end
+\ No newline at end of file
++end

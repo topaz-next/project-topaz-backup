@@ -1,0 +1,460 @@
+@@ -0,0 +1,459 @@
++-----------------------------------
++-- Nyzul Isle Global
++-----------------------------------
++local ID = require("scripts/zones/Nyzul_Isle/IDs")
++require("scripts/globals/status")
++require("scripts/globals/appraisal")
++-----------------------------------
++
++nyzul = nyzul or {}
++
++nyzul.baseWeapons =
++{
++    [tpz.job.WAR] = 18492,
++    [tpz.job.MNK] = 18753,
++    [tpz.job.WHM] = 18851,
++    [tpz.job.BLM] = 18589,
++    [tpz.job.RDM] = 17742,
++    [tpz.job.THF] = 18003,
++    [tpz.job.PLD] = 17744,
++    [tpz.job.DRK] = 18944,
++    [tpz.job.BST] = 17956,
++    [tpz.job.BRD] = 18034,
++    [tpz.job.RNG] = 18719,
++    [tpz.job.SAM] = 18443,
++    [tpz.job.NIN] = 18426,
++    [tpz.job.DRG] = 18120,
++    [tpz.job.SMN] = 18590,
++    [tpz.job.BLU] = 17743,
++    [tpz.job.COR] = 18720,
++    [tpz.job.PUP] = 18754,
++    [tpz.job.DNC] = 19102,
++    [tpz.job.SCH] = 18592
++}
++
++function nyzul.isBaseWeapon(itemId)
++    for i, wepId in pairs(nyzul.baseWeapons) do
++        if (itemId == wepId) then
++            return true
++        end
++    end
++    
++    return false 
++end
++
++nyzul.objective =
++{
++    ELIMINATE_ENEMY_LEADER        = 0,
++    ELIMINATE_SPECIFIED_ENEMIES   = 1,
++    ACTIVATE_ALL_LAMPS            = 2,
++    ELIMINATE_SPECIFIED_ENEMY     = 3,
++    ELIMINATE_ALL_ENEMIES         = 4,
++    FREE_FLOOR                    = 5,
++}
++
++nyzul.lampsObjective =
++{
++    REGISTER     = 1,
++    ACTIVATE_ALL = 2,
++    ORDER        = 3,
++}
++
++nyzul.FloorLayout =
++{
++    [0]  = { -20, -0.5, -380}, -- boss floors 20, 40, 60, 80
++    [1]  = { 380, -0.5, -500},
++    [2]  = { 500, -0.5,  -20},
++    [3]  = { 500, -0.5,   60},
++    [4]  = { 500, -0.5, -100},
++    [5]  = { 540, -0.5, -140},
++    [6]  = { 460, -0.5, -219},
++    [7]  = { 420, -0.5,  500},
++    [8]  = {  60, -0.5, -335},
++    [9]  = {  20, -0.5, -500},
++    [10] = { -95, -0.5,   60},
++    [11] = { 100, -0.5,  100},
++    [12] = {-460, -4.0, -180},
++    [13] = {-304, -0.5, -380},
++    [14] = {-380, -0.5, -500},
++    [15] = {-459, -4.0, -540},
++    [16] = {-465, -4.0, -340},
++}
++
++nyzul.floorCost =
++{
++    [1]  = {level =  1, cost =    0},
++    [2]  = {level =  6, cost =  500},
++    [3]  = {level = 11, cost =  550},
++    [4]  = {level = 16, cost =  600},
++    [5]  = {level = 21, cost =  650},
++    [6]  = {level = 26, cost =  700},
++    [7]  = {level = 31, cost =  750},
++    [8]  = {level = 36, cost =  800},
++    [9]  = {level = 41, cost =  850},
++    [10] = {level = 46, cost =  900},
++    [11] = {level = 51, cost = 1000},
++    [12] = {level = 56, cost = 1100},
++    [13] = {level = 61, cost = 1200},
++    [14] = {level = 66, cost = 1300},
++    [15] = {level = 71, cost = 1400},
++    [16] = {level = 76, cost = 1500},
++    [17] = {level = 81, cost = 1600},
++    [18] = {level = 86, cost = 1700},
++    [19] = {level = 91, cost = 1800},
++    [20] = {level = 96, cost = 1900},
++}
++
++nyzul.pickMobs =
++{
++    [0] = -- 20th Floor bosses
++    {
++        [40] = -- 20 and 40 floor Bosses
++        {
++            ADAMANTOISE = 17092999,
++            FAFNIR      = 17093001,
++        },
++        [100] = -- floors 60, 80 and 100 floor bosses
++        {
++            KHIMAIRA = 17093002,
++            CERBERUS = 17093004,
++        },
++    },
++    [1] = -- Enemy Leaders, can appear on all floors but %20 that are on objective
++    {
++        MOKKE               = 17092944,
++        LONG_HORNED_CHARIOT = 17092968,
++    },
++    [2] = -- Regular NM's
++    {
++        [0] = -- floor 1 to 19 NM's
++        {
++            start = 17092824,
++            stop  = 17092841,
++        },
++        [1] = -- floor 21 to 39 NM's
++        {
++            start = 17092842,
++            stop  = 17092859,
++        },
++        [2] = -- floor 41 to 59 NM's
++        {
++            start = 17092860,
++            stop  = 17092877,
++        },
++        [3] = -- floor 61 to 79 NM's
++        {
++            start = 17092878,
++            stop  = 17092895,
++        },
++        [4] = -- floor 81 to 99 NM's
++        {
++            start = 17092896,
++            stop  = 17092913,
++        },
++    },
++    [3] = -- Specified Enemies
++    {
++        [0] =
++        {
++            start = 17092969, -- Heraldic Imp x5
++            stop  = 17092973,
++        },
++        [1] =
++        {
++            start = 17092974, -- Psycheflayer x5
++            stop  = 17092978,
++        },
++        [2] =
++        {
++            start = 17092979, -- Poroggo Gent x5
++            stop  = 17092983,
++        },
++        [3] =
++        {
++            start = 17092984, -- Ebony Pudding x5
++            stop  = 17092988,
++        },
++        [4] =
++        {
++            start = 17092989, -- Qiqirn_Treasure_Hunter x2
++            stop  = 17092990,
++        },
++        [5] =
++        {
++            start = 17092991, -- Qiqirn_Archaeologist x3
++            stop  = 17092993,
++        },
++        [6] =
++        {
++            start = 17092994, -- Racing_Chariot x5
++            stop  = 17092998,
++        },
++    },
++}
++
++nyzul.FloorEntities = -- regular mobs by layout
++{
++    [1] = -- Aquans
++    {
++        start = 17092631,
++        stop  = 17092642,
++    },
++    [2] = -- Amorphs
++    {
++        start = 17092643,
++        stop  = 17092654,
++    },
++    [3] = -- Arcana
++    {
++        start = 17092655,
++        stop  = 17092666,
++    },
++    [4] = -- Undead
++    {
++        start = 17092667,
++        stop  = 17092678,
++    },
++    [5] = -- Vermin
++    {
++        start = 17092679,
++        stop  = 17092690,
++    },
++    [6] = -- Demons
++    {
++        start = 17092691,
++        stop  = 17092702,
++    },
++    [7] = -- Dragons
++    {
++        start = 17092703,
++        stop  = 17092714,
++    },
++    [8] = -- Birds
++    {
++        start = 17092715,
++        stop  = 17092726,
++    },
++    [9] = -- Beasts
++    {
++        start = 17092727,
++        stop  = 17092738,
++    },
++    [10] = -- Plantoids
++    {
++        start = 17092739,
++        stop  = 17092750,
++    },
++    [11] =  -- Lizards
++    {
++        start = 17092751,
++        stop  = 17092762,
++    },
++    [12] = -- Amorphs
++    {
++        start = 17092763,
++        stop  = 17092774,
++    },
++    [13] = -- Mixed
++    {
++        start = 17092775,
++        stop  = 17092786,
++    },
++    [14] = -- Mixed
++    {
++        start = 17092787,
++        stop  = 17092798,
++    },
++    [15] = -- Amorphs
++    {
++        start = 17092799,
++        stop  = 17092810,
++    },
++    [16] = -- Arcana
++    {
++        start = 17092811,
++        stop  = 17092822,
++    },
++}
++
++nyzul.pathosBeneficial =
++{
++    [1] = {effect = tpz.effect.REGEN, power = 3},
++    [2] = {effect = tpz.effect.REFRESH, power = 3},
++    [3] = {effect = tpz.effect.REGAIN, power = 50},
++    [4] = {effect = tpz.effect.FLURRY, power = 15},
++    [5] = {effect = tpz.effect.CONCENTRATION, power = 10},
++--    [6] = {effect = {},
++}
++
++nyzul.pathosDetrimental =
++{
++    [1] = {effect = tpz.effect.DEBILITATION, power = bit.lshift(1, math.random(0, 8))},
++    [2] = {effect = tpz.effect.OMERTA, power = bit.lshift(1, math.random(0, 5))},
++    [3] = {effect = tpz.effect.IMPAIRMENT, power = 0},
++}
++
++nyzul.appraisalItems =
++{
++        [appraisalUtil.Origin.NYZUL_BAT_EYE] =               appraisalUtil.questionMarkItems.AXE,
++        [appraisalUtil.Origin.NYZUL_SHADOW_EYE] =            appraisalUtil.questionMarkItems.NECKLACE,
++        [appraisalUtil.Origin.NYZUL_BOMB_KING] =             appraisalUtil.questionMarkItems.RING,
++        [appraisalUtil.Origin.NYZUL_JUGGLER_HECATOMB] =      appraisalUtil.questionMarkItems.POLEARM,
++        [appraisalUtil.Origin.NYZUL_SMOTHERING_SCHMIDT] =    appraisalUtil.questionMarkItems.RING,
++        [appraisalUtil.Origin.NYZUL_HELLION] =               appraisalUtil.questionMarkItems.POLEARM,
++        [appraisalUtil.Origin.NYZUL_LEAPING_LIZZY] =         appraisalUtil.questionMarkItems.FOOTWEAR,
++        [appraisalUtil.Origin.NYZUL_TOM_TIT_TAT] =           appraisalUtil.questionMarkItems.DAGGER,
++        [appraisalUtil.Origin.NYZUL_JAGGEDY_EARED_JACK] =    appraisalUtil.questionMarkItems.NECKLACE,
++        [appraisalUtil.Origin.NYZUL_CACTUAR_CANTAUTOR] =     appraisalUtil.questionMarkItems.FOOTWEAR,
++        [appraisalUtil.Origin.NYZUL_GARGANTUA] =             appraisalUtil.questionMarkItems.NECKLACE,
++        [appraisalUtil.Origin.NYZUL_GYRE_CARLIN] =           appraisalUtil.questionMarkItems.BOW,
++        [appraisalUtil.Origin.NYZUL_ASPHYXIATED_AMSEL] =     appraisalUtil.questionMarkItems.RING,
++        [appraisalUtil.Origin.NYZUL_FROSTMANE] =             appraisalUtil.questionMarkItems.SWORD,
++        [appraisalUtil.Origin.NYZUL_PEALLAIDH] =             appraisalUtil.questionMarkItems.GLOVES,
++        [appraisalUtil.Origin.NYZUL_CARNERO] =               appraisalUtil.questionMarkItems.SWORD,
++        [appraisalUtil.Origin.NYZUL_FALCATUS_ARANEI] =       appraisalUtil.questionMarkItems.POLEARM,
++        [appraisalUtil.Origin.NYZUL_EMERGENT_ELM] =          appraisalUtil.questionMarkItems.SWORD,
++        [appraisalUtil.Origin.NYZUL_OLD_TWO_WINGS] =         appraisalUtil.questionMarkItems.CAPE,
++        [appraisalUtil.Origin.NYZUL_AIATAR] =                appraisalUtil.questionMarkItems.BOX,
++        [appraisalUtil.Origin.NYZUL_INTULO] =                appraisalUtil.questionMarkItems.BOX,
++        [appraisalUtil.Origin.NYZUL_ORCTRAP] =               appraisalUtil.questionMarkItems.DAGGER,
++        [appraisalUtil.Origin.NYZUL_VALKURM_EMPEROR] =       appraisalUtil.questionMarkItems.HEADPIECE,
++        [appraisalUtil.Origin.NYZUL_CRUSHED_KRAUSE] =        appraisalUtil.questionMarkItems.RING,
++        [appraisalUtil.Origin.NYZUL_STINGING_SOPHIE] =       appraisalUtil.questionMarkItems.DAGGER,
++        [appraisalUtil.Origin.NYZUL_SERPOPARD_ISHTAR] =      appraisalUtil.questionMarkItems.NECKLACE,
++        [appraisalUtil.Origin.NYZUL_WESTERN_SHADOW] =        appraisalUtil.questionMarkItems.DAGGER,
++        [appraisalUtil.Origin.NYZUL_BLOODTEAR_BALDURF] =     appraisalUtil.questionMarkItems.SHIELD,
++        [appraisalUtil.Origin.NYZUL_ZIZZY_ZILLAH] =          appraisalUtil.questionMarkItems.SWORD,
++        [appraisalUtil.Origin.NYZUL_ELLYLLON] =              appraisalUtil.questionMarkItems.HEADPIECE,
++        [appraisalUtil.Origin.NYZUL_MISCHIEVOUS_MICHOLAS] =  appraisalUtil.questionMarkItems.DAGGER,
++        [appraisalUtil.Origin.NYZUL_LEECH_KING] =            appraisalUtil.questionMarkItems.EARRING,
++        [appraisalUtil.Origin.NYZUL_EASTERN_SHADOW] =        appraisalUtil.questionMarkItems.BOW,
++        [appraisalUtil.Origin.NYZUL_NUNYENUNC] =             appraisalUtil.questionMarkItems.POLEARM,
++        [appraisalUtil.Origin.NYZUL_HELLDIVER] =             appraisalUtil.questionMarkItems.BOW,
++        [appraisalUtil.Origin.NYZUL_TAISAIJIN] =             appraisalUtil.questionMarkItems.HEADPIECE,
++        [appraisalUtil.Origin.NYZUL_FUNGUS_BEETLE] =         appraisalUtil.questionMarkItems.SHIELD,
++        [appraisalUtil.Origin.NYZUL_FRIAR_RUSH] =            appraisalUtil.questionMarkItems.BOX,
++        [appraisalUtil.Origin.NYZUL_PULVERIZED_PFEFFER] =    appraisalUtil.questionMarkItems.RING,
++        [appraisalUtil.Origin.NYZUL_ARGUS] =                 appraisalUtil.questionMarkItems.NECKLACE,
++        [appraisalUtil.Origin.NYZUL_BLOODPOOL_VORAX] =       appraisalUtil.questionMarkItems.NECKLACE,
++        [appraisalUtil.Origin.NYZUL_NIGHTMARE_VASE] =        appraisalUtil.questionMarkItems.DAGGER,
++        [appraisalUtil.Origin.NYZUL_DAGGERCLAW_DRACOS] =     appraisalUtil.questionMarkItems.DAGGER,
++        [appraisalUtil.Origin.NYZUL_NORTHERN_SHADOW] =       appraisalUtil.questionMarkItems.AXE,
++        [appraisalUtil.Origin.NYZUL_FRAELISSA] =             appraisalUtil.questionMarkItems.CAPE,
++        [appraisalUtil.Origin.NYZUL_ROC] =                   appraisalUtil.questionMarkItems.POLEARM,
++        [appraisalUtil.Origin.NYZUL_SABOTENDER_BAILARIN] =   appraisalUtil.questionMarkItems.BOX,
++        [appraisalUtil.Origin.NYZUL_AQUARIUS] =              appraisalUtil.questionMarkItems.AXE,
++        [appraisalUtil.Origin.NYZUL_ENERGETIC_ERUCA] =       appraisalUtil.questionMarkItems.GLOVES,
++        [appraisalUtil.Origin.NYZUL_SPINY_SPIPI] =           appraisalUtil.questionMarkItems.CAPE,
++        [appraisalUtil.Origin.NYZUL_TRICKSTER_KINETIX] =     appraisalUtil.questionMarkItems.AXE,
++        [appraisalUtil.Origin.NYZUL_DROOLING_DAISY] =        appraisalUtil.questionMarkItems.HEADPIECE,
++        [appraisalUtil.Origin.NYZUL_BONNACON] =              appraisalUtil.questionMarkItems.FOOTWEAR,
++        [appraisalUtil.Origin.NYZUL_GOLDEN_BAT] =            appraisalUtil.questionMarkItems.CAPE,
++        [appraisalUtil.Origin.NYZUL_STEELFLEECE_BALDARICH] = appraisalUtil.questionMarkItems.SHIELD,
++        [appraisalUtil.Origin.NYZUL_SABOTENDER_MARIACHI] =   appraisalUtil.questionMarkItems.DAGGER,
++        [appraisalUtil.Origin.NYZUL_UNGUR] =                 appraisalUtil.questionMarkItems.BOW,
++        [appraisalUtil.Origin.NYZUL_SWAMFISK] =              appraisalUtil.questionMarkItems.POLEARM,
++        [appraisalUtil.Origin.NYZUL_BUBURIMBOO] =            appraisalUtil.questionMarkItems.NECKLACE,
++        [appraisalUtil.Origin.NYZUL_KEEPER_OF_HALIDOM] =     appraisalUtil.questionMarkItems.SWORD,
++        [appraisalUtil.Origin.NYZUL_SERKET] =                appraisalUtil.questionMarkItems.RING,
++        [appraisalUtil.Origin.NYZUL_DUNE_WIDOW] =            appraisalUtil.questionMarkItems.NECKLACE,
++        [appraisalUtil.Origin.NYZUL_ODQAN] =                 appraisalUtil.questionMarkItems.BOX,
++        [appraisalUtil.Origin.NYZUL_BURNED_BERGMANN] =       appraisalUtil.questionMarkItems.RING,
++        [appraisalUtil.Origin.NYZUL_TYRANNIC_TUNNOK] =       appraisalUtil.questionMarkItems.AXE,
++        [appraisalUtil.Origin.NYZUL_BLOODSUCKER] =           appraisalUtil.questionMarkItems.RING,
++        [appraisalUtil.Origin.NYZUL_TOTTERING_TOBY] =        appraisalUtil.questionMarkItems.FOOTWEAR,
++        [appraisalUtil.Origin.NYZUL_SOUTHERN_SHADOW] =       appraisalUtil.questionMarkItems.SHIELD,
++        [appraisalUtil.Origin.NYZUL_SHARP_EARED_ROPIPI] =    appraisalUtil.questionMarkItems.HEADPIECE,
++        [appraisalUtil.Origin.NYZUL_PANZER_PERCIVAL] =       appraisalUtil.questionMarkItems.AXE,
++        [appraisalUtil.Origin.NYZUL_VOUIVRE] =               appraisalUtil.questionMarkItems.POLEARM,
++        [appraisalUtil.Origin.NYZUL_JOLLY_GREEN] =           appraisalUtil.questionMarkItems.SASH,
++        [appraisalUtil.Origin.NYZUL_TUMBLING_TRUFFLE] =      appraisalUtil.questionMarkItems.HEADPIECE,
++        [appraisalUtil.Origin.NYZUL_CAPRICIOUS_CASSIE] =     appraisalUtil.questionMarkItems.EARRING,
++        [appraisalUtil.Origin.NYZUL_AMIKIRI] =               appraisalUtil.questionMarkItems.SWORD,
++        [appraisalUtil.Origin.NYZUL_STRAY_MARY] =            appraisalUtil.questionMarkItems.BOX,
++        [appraisalUtil.Origin.NYZUL_SEWER_SYRUP] =           appraisalUtil.questionMarkItems.RING,
++        [appraisalUtil.Origin.NYZUL_UNUT] =                  appraisalUtil.questionMarkItems.BOX,
++        [appraisalUtil.Origin.NYZUL_SIMURGH] =               appraisalUtil.questionMarkItems.FOOTWEAR,
++        [appraisalUtil.Origin.NYZUL_PELICAN] =               appraisalUtil.questionMarkItems.SHIELD,
++        [appraisalUtil.Origin.NYZUL_CARGO_CRAB_COLIN] =      appraisalUtil.questionMarkItems.SWORD,
++        [appraisalUtil.Origin.NYZUL_WOUNDED_WURFEL] =        appraisalUtil.questionMarkItems.RING,
++        [appraisalUtil.Origin.NYZUL_PEG_POWLER] =            appraisalUtil.questionMarkItems.AXE,
++        [appraisalUtil.Origin.NYZUL_JADED_JODY] =            appraisalUtil.questionMarkItems.BOX,
++        [appraisalUtil.Origin.NYZUL_MAIGHDEAN_UAINE] =       appraisalUtil.questionMarkItems.EARRING,
++}
++
++function nyzul.enemyLeaderKill(mob, isKiller)
++    local instance = mob:getInstance()
++    if isKiller then
++        instance:setProgress(15)
++    end
++end
++
++function nyzul.specifiedGroupKill(mob, isKiller)
++    local instance = mob:getInstance()
++    if (instance:getStage() == nyzul.objective.ELIMINATE_SPECIFIED_ENEMIES or instance:getStage() == nyzul.objective.ELIMINATE_ALL_ENEMIES) and isKiller then
++        instance:setProgress(instance:getProgress() + 1)
++    end
++end
++
++function nyzul.specifiedEnemySet(mob)
++    local instance = mob:getInstance()
++    if instance:getStage() == nyzul.objective.ELIMINATE_SPECIFIED_ENEMY then
++        if instance:getEntity(bit.band(ID.npc.RUNE_TRANSFER_START, 0xFFF), tpz.objType.NPC):getLocalVar("Nyzul_Specified_Enemy") == mob:getID() then
++            mob:setMobMod(tpz.mobMod.CHECK_AS_NM, 1)
++        end
++    end
++end
++
++function nyzul.specifiedEnemyKill(mob, isKiller)
++    local instance = mob:getInstance()
++    if instance:getStage() == nyzul.objective.ELIMINATE_SPECIFIED_ENEMY and isKiller then
++        if instance:getEntity(bit.band(ID.npc.RUNE_TRANSFER_START, 0xFFF), tpz.objType.NPC):getLocalVar("Nyzul_Specified_Enemy") == mob:getID() then
++            instance:setProgress(15)
++        end
++    elseif instance:getStage() == nyzul.objective.ELIMINATE_ALL_ENEMIES then
++        instance:setProgress(instance:getProgress() + 1)
++    end
++end
++
++function nyzul.eliminateAllKill(mob, isKiller)
++    local instance = mob:getInstance()
++    if instance:getStage() == nyzul.objective.ELIMINATE_ALL_ENEMIES then
++        instance:setProgress(instance:getProgress() + 1)
++    end
++end
++
++function nyzul.spawnChest(mob)
++    local instance = mob:getInstance()
++    local mobID = mob:getID()
++    
++    if mobID >= ID.mob[NYZUL_ISLE_INVESTIGATION].BAT_EYE and mobID <= ID.mob[NYZUL_ISLE_INVESTIGATION].TAISAIJIN then
++        if mobID == 17092877 or mobID == 17092895 or mobID == 17092913 then
++            mobID = 17092859
++        elseif mobID == 17092889 or mobID == 17092910 then
++            mobID = 17092831
++        end
++        for _, cofferID in ipairs(ID.npc.TREASURE_COFFER) do
++            local coffer = instance:getEntity(bit.band(cofferID, 0xFFF), tpz.objType.NPC)
++            if coffer:getStatus() == tpz.status.DISAPPEAR then
++                local pos = mob:getPos()
++                coffer:setPos(pos.x, pos.y, pos.z, pos.rot)
++                coffer:setLocalVar("appraisalItem", mobID)
++                coffer:setStatus(tpz.status.NORMAL)
++                break
++            end
++        end
++    elseif mobID < ID.mob[NYZUL_ISLE_INVESTIGATION].ADAMANTOISE then
++        if math.random(100) < 6 then
++            for _, casketID in ipairs(ID.npc.TREASURE_CASKET) do
++                local casket = instance:getEntity(bit.band(casketID, 0xFFF), tpz.objType.NPC)
++                if casket:getStatus() == tpz.status.DISAPPEAR then
++                    local pos = mob:getPos()
++                    casket:setPos(pos.x, pos.y, pos.z, pos.rot)
++                    casket:setStatus(tpz.status.NORMAL)
++                    break
++                end
++            end
++        end
++    end
++end

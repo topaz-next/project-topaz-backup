@@ -1,0 +1,7 @@
+@@ -159,4 +159,4 @@ function onEventFinish(player,csid,option)
+     elseif csid == 707 then
+         npcUtil.completeQuest(player, AHT_URHGAN, tpz.quest.id.ahtUrhgan.BEGINNINGS, {item=17717})
+     end
+-end
+\ No newline at end of file
++end

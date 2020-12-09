@@ -1,0 +1,7 @@
+@@ -122,4 +122,4 @@ namespace traits
+ 
+ 	    return &PTraitsList[JobID];
+     }
+-};
+\ No newline at end of file
++};

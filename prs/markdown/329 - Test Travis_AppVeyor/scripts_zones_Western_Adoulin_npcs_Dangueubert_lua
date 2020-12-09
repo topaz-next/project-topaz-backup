@@ -1,0 +1,69 @@
+@@ -1,45 +1,42 @@
+ -----------------------------------
+ -- Area: Western Adoulin
+---  NPC: Dangueubert
++-- NPC: Dangueubert
+ -- Type: Standard NPC and Quest NPC
+--- Involved with Quest: 'A Certain Substitute Patrolman'
+ -- !pos 5 0 -136 256
+ -----------------------------------
+-require("scripts/globals/missions");
+-require("scripts/globals/quests");
++require("scripts/globals/missions")
++require("scripts/globals/quests")
++
++local quests = tpz.quest.involvedQuests({
++    require("scripts/quests/adoulin/a_certain_substitute_patrolman")
++})
+ -----------------------------------
+ 
+ function onTrade(player,npc,trade)
+-end;
++end
+ 
+ function onTrigger(player,npc)
+-    local SOA_Mission = player:getCurrentMission(SOA);
+-
+-    if (SOA_Mission >= tpz.mission.id.soa.LIFE_ON_THE_FRONTIER) then
+-        if ((ACSP == QUEST_ACCEPTED) and (player:getCharVar("ACSP_NPCs_Visited") == 6)) then
+-            -- Progresses Quest: 'A Certain Substitute Patrolman'
+-            player:startEvent(2558);
+-        else
++    if not quests.onTrigger(player, npc) then
++        if player:getCurrentMission(SOA) >= tpz.mission.id.soa.LIFE_ON_THE_FRONTIER then
+             -- Standard dialogue
+-            player:startEvent(546, 0, 1);
++            player:startEvent(546, 0, 1)
++        else
++            -- Dialogue prior to joining colonization effort
++            player:startEvent(546)
+         end
+-    else
+-        -- Dialogue prior to joining colonization effort
+-        player:startEvent(546);
+     end
+-end;
++end
+ 
+ function onEventUpdate(player,csid,option)
+-end;
++end
+ 
+ function onEventFinish(player,csid,option)
+-    if (csid == 2558) then
+-        -- Progresses Quest: 'A Certain Substitute Patrolman'
+-        player:setCharVar("ACSP_NPCs_Visited", 7);
+-    elseif (csid == 546) then
+-        if (option == 1) then
+-            -- Warps player to Mog Garden
+-            player:setPos(0, 0, 0, 0, 280);
++    if not quests.onEventFinish(player, csid, option) then
++        if (csid == 546) then
++            if (option == 1) then
++                -- Warps player to Mog Garden
++                player:setPos(0, 0, 0, 0, 280)
++            end
+         end
+     end
+-end;
++end

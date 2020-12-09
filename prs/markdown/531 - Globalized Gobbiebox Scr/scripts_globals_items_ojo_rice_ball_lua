@@ -1,0 +1,7 @@
+@@ -40,4 +40,4 @@ function onEffectLose(target, effect)
+     target:delMod(tpz.mod.DEX, 5)
+     target:delMod(tpz.mod.VIT, 5)
+     target:delMod(tpz.mod.CHR, 5)
+-end
+\ No newline at end of file
++end

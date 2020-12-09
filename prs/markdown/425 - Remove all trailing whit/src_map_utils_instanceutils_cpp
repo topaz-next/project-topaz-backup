@@ -1,0 +1,7 @@
+@@ -54,4 +54,4 @@ namespace instanceutils
+ 			luautils::OnInstanceCreated(PRequester, nullptr);
+ 		}
+ 	}
+-};
+\ No newline at end of file
++};

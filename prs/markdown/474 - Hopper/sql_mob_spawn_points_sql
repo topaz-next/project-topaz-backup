@@ -1,0 +1,19 @@
+@@ -13882,12 +13882,12 @@ INSERT INTO `mob_spawn_points` VALUES (17043877,'Mamool_Ja_Chamberlain','Mamool
+ INSERT INTO `mob_spawn_points` VALUES (17043878,'Mamool_Ja_Palatine','Mamool Ja Palatine',56,-295,18,-384,253);
+ INSERT INTO `mob_spawn_points` VALUES (17043879,'Mamool_Ja_Palatine','Mamool Ja Palatine',56,-295,18,-376,253);
+ INSERT INTO `mob_spawn_points` VALUES (17043880,'Carpophagous_Puk','Carpophagous Puk',57,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17043881,'Poroggo_Casanova','Poroggo Casanova',58,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17043882,'Mikilulu','Mikilulu',59,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17043883,'Mikiruru','Mikiruru',60,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17043884,'Nikilulu','Nikilulu',61,-37.477,5.704,-98.310,90);
+-INSERT INTO `mob_spawn_points` VALUES (17043885,'Mikiluru','Mikiluru',62,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17043886,'Mikirulu','Mikirulu',63,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17043881,'Poroggo_Casanova','Poroggo Casanova',58,-42.477,5.904,-98.310,90);
++INSERT INTO `mob_spawn_points` VALUES (17043882,'Mikilulu','Mikilulu',59,-42.477,5.904,-101.310,90);
++INSERT INTO `mob_spawn_points` VALUES (17043883,'Mikiruru','Mikiruru',60,-40.477,5.804,-101.310,90);
++INSERT INTO `mob_spawn_points` VALUES (17043884,'Nikilulu','Nikilulu',61,-46.477,5.804,-101.310,90);
++INSERT INTO `mob_spawn_points` VALUES (17043885,'Mikiluru','Mikiluru',62,-47.477,5.804,-98.310,90);
++INSERT INTO `mob_spawn_points` VALUES (17043886,'Mikirulu','Mikirulu',63,-49.477,5.990,-100.310,90);
+ INSERT INTO `mob_spawn_points` VALUES (17043887,'Chamrosh','Chamrosh',64,206,14,-285,249);
+ INSERT INTO `mob_spawn_points` VALUES (17043888,'Iriri_Samariri','Iriri Samariri',65,-118,7,-80,193);
+ INSERT INTO `mob_spawn_points` VALUES (17043889,'Wartkin','Wartkin',66,0,0,0,0);

@@ -1,0 +1,7 @@
+@@ -1102,4 +1102,4 @@ tpz.title.changerOnEventFinish = function(player, csid, option, eventId, titleIn
+             end
+         end
+     end
+-end
+\ No newline at end of file
++end

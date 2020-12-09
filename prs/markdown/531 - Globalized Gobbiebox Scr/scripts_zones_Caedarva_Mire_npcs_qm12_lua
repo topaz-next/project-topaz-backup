@@ -1,0 +1,16 @@
+@@ -13,7 +13,7 @@ end
+ 
+ function onTrigger(player,npc)
+     local notMeantToBeProg = player:getCharVar("notmeanttobeCS")
+-    
++
+     if notMeantToBeProg == 1 then
+         player:startEvent(16)
+     elseif
+@@ -44,4 +44,4 @@ function onEventFinish(player,csid,option)
+         player:setCharVar("notmeanttobeLamia27Killed", 0)
+         player:setCharVar("notmeanttobeCS", 5)
+     end
+-end
+\ No newline at end of file
++end

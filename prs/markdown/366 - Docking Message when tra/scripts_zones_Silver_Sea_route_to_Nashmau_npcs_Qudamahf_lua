@@ -1,0 +1,40 @@
+@@ -4,18 +4,32 @@
+ -- Notes: Tells ship ETA time
+ -- !pos 0.340 -12.232 -4.120 58
+ -----------------------------------
+-local ID = require("scripts/zones/Silver_Sea_route_to_Nashmau/IDs");
++local ID = require("scripts/zones/Silver_Sea_route_to_Nashmau/IDs")
+ -----------------------------------
+ 
++function onSpawn(npc)
++    local messageInterval = 480
++    local vanadielEpochOffset = 280
++    npc:addPeriodicTrigger(0, messageInterval, vanadielEpochOffset)
++end
++
++function onTimeTrigger(npc, triggerID)
++    if triggerID == 0 then
++        for _, player in pairs(npc:getZone():getPlayers()) do
++            npc:showText(player, ID.text.DOCKING_IN_NASHMAU)
++        end
++    end
++end
++
+ function onTrade(player,npc,trade)
+-end;
++end
+ 
+ function onTrigger(player,npc)
+-    player:messageSpecial(ID.text.ON_WAY_TO_NASHMAU,0,0); -- Earth Time, Vana Hours. Needs a get-time function for boat?
+-end;
++    player:messageSpecial(ID.text.ON_WAY_TO_NASHMAU,0,0) -- Earth Time, Vana Hours. Needs a get-time function for boat?
++end
+ 
+ function onEventUpdate(player,csid,option)
+-end;
++end
+ 
+ function onEventFinish(player,csid,option)
+-end;
++end
+\ No newline at end of file

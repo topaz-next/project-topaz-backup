@@ -1,0 +1,7 @@
+@@ -259,4 +259,4 @@ tpz.homepoint.onEventFinish = function(player, csid, option, event)
+         end
+     end
+ 
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -61,4 +61,4 @@ namespace zoneutils
+     bool         IsResidentialArea(CCharEntity*);                                  // returns whether or not the area is a residential zone
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

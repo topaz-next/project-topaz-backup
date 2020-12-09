@@ -1,0 +1,7 @@
+@@ -15,4 +15,4 @@ end
+ 
+ function onItemUse(target)
+     target:messageBasic(tpz.msg.basic.RECOVERS_MP,0,target:addMP(20*ITEM_POWER))
+-end
+\ No newline at end of file
++end

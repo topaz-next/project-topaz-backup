@@ -1,0 +1,7 @@
+@@ -40,4 +40,4 @@ namespace attackutils
+     bool				IsBlocked(CBattleEntity* PAttacker, CBattleEntity* PDefender);		// Is the attack blocked.
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

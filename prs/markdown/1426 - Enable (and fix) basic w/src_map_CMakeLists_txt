@@ -1,0 +1,9 @@
+@@ -142,7 +142,7 @@ target_link_libraries(topaz_game
+     common
+     ai
+     project_options
+-    #project_warnings
++    project_warnings
+ )
+ 
+ if(APPLE)

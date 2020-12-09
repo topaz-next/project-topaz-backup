@@ -1,0 +1,7 @@
+@@ -15,4 +15,4 @@ end
+ function onUseAbility(player,target,ability)
+     local power = 20 + player:getMod(tpz.mod.DODGE_EFFECT)
+     player:addStatusEffect(tpz.effect.DODGE,power,0,120)
+-end
+\ No newline at end of file
++end

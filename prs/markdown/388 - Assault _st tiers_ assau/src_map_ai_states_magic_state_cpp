@@ -1,0 +1,24 @@
+@@ -167,11 +167,22 @@ bool CMagicState::CanCastSpell(CBattleEntity* PTarget)
+         m_errorMsg = std::make_unique<CMessageBasicPacket>(m_PEntity, m_PEntity, static_cast<uint16>(m_PSpell->getID()), 0, MSGBASIC_CANNOT_USE_IN_AREA);
+         return false;
+     }
+-    if (m_PEntity->StatusEffectContainer->HasStatusEffect({EFFECT_SILENCE, EFFECT_MUTE, EFFECT_OMERTA}))
++    if (m_PEntity->StatusEffectContainer->HasStatusEffect({EFFECT_SILENCE, EFFECT_MUTE, EFFECT_HEALING, EFFECT_MOUNTED}))
+     {
+         m_errorMsg = std::make_unique<CMessageBasicPacket>(m_PEntity, m_PEntity, static_cast<uint16>(m_PSpell->getID()), 0, MSGBASIC_UNABLE_TO_CAST_SPELLS);
+         return false;
+     }
++    if (m_PEntity->StatusEffectContainer->HasStatusEffect(EFFECT_OMERTA))
++    {
++        int16 power = m_PEntity->StatusEffectContainer->GetStatusEffect(EFFECT_OMERTA)->GetPower();
++        if ((m_PSpell->getSpellGroup() == SPELLGROUP_SONG) && power == 0x01 || (m_PSpell->getSpellGroup() == SPELLGROUP_BLACK) && power == 0x02 || (m_PSpell->getSpellGroup() == SPELLGROUP_BLUE) && power == 0x04
++            || (m_PSpell->getSpellGroup() == SPELLGROUP_NINJUTSU) && power == 0x08 || (m_PSpell->getSpellGroup() == SPELLGROUP_SUMMONING) && power == 0x10 ||
++            (m_PSpell->getSpellGroup() == SPELLGROUP_WHITE) && power == 0x10 || power == 0x3F)
++        {
++            m_errorMsg = std::make_unique<CMessageBasicPacket>(m_PEntity, m_PEntity, static_cast<uint16>(m_PSpell->getID()), 0, MSGBASIC_UNABLE_TO_CAST_SPELLS);
++            return false; 
++        }
++    }
+     if (!HasCost())
+     {
+         return false;

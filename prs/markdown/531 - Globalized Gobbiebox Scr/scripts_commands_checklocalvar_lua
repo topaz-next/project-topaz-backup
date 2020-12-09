@@ -1,0 +1,7 @@
+@@ -55,4 +55,4 @@ function onTrigger(player, arg1, arg2, arg3)
+     end
+ 
+     player:PrintToPlayer(string.format("%s's variable '%s' : %i", targ:getName(), varName, targ:getLocalVar(varName)))
+-end
+\ No newline at end of file
++end

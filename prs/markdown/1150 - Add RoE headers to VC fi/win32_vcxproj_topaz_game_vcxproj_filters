@@ -1,0 +1,59 @@
+@@ -416,6 +416,15 @@
+     <ClInclude Include="..\..\src\map\packets\release.h">
+       <Filter>Header Files\packets</Filter>
+     </ClInclude>
++    <ClInclude Include="..\..\src\map\packets\roe_questlog.h">
++      <Filter>Header Files\packets</Filter>
++    </ClInclude>
++    <ClInclude Include="..\..\src\map\packets\roe_sparkupdate.h">
++      <Filter>Header Files\packets</Filter>
++    </ClInclude>
++    <ClInclude Include="..\..\src\map\packets\roe_update.h">
++      <Filter>Header Files\packets</Filter>
++    </ClInclude>
+     <ClInclude Include="..\..\src\map\packets\server_ip.h">
+       <Filter>Header Files\packets</Filter>
+     </ClInclude>
+@@ -698,6 +707,9 @@
+     <ClInclude Include="..\..\src\map\blue_trait.h">
+       <Filter>Header Files</Filter>
+     </ClInclude>
++    <ClInclude Include="..\..\src\map\roe.h">
++      <Filter>Header Files</Filter>
++    </ClInclude>
+     <ClInclude Include="..\..\src\map\ai\states\ability_state.h">
+       <Filter>Header Files\ai\states</Filter>
+     </ClInclude>
+@@ -1195,6 +1207,15 @@
+     <ClCompile Include="..\..\src\map\packets\release.cpp">
+       <Filter>Source Files\packets</Filter>
+     </ClCompile>
++    <ClCompile Include="..\..\src\map\packets\roe_questlog.cpp">
++      <Filter>Source Files\packets</Filter>
++    </ClCompile>
++    <ClCompile Include="..\..\src\map\packets\roe_sparkupdate.cpp">
++      <Filter>Source Files\packets</Filter>
++    </CCompile>
++    <ClCompile Include="..\..\src\map\packets\roe_update.cpp">
++      <Filter>Source Files\packets</Filter>
++    </ClCompile>
+     <ClCompile Include="..\..\src\map\packets\server_ip.cpp">
+       <Filter>Source Files\packets</Filter>
+     </ClCompile>
+@@ -1540,6 +1561,9 @@
+     <ClCompile Include="..\..\src\map\instance_loader.cpp">
+       <Filter>Source Files</Filter>
+     </ClCompile>
++    <ClCompile Include="..\..\src\map\roe.cpp">
++      <Filter>Source Files</Filter>
++    </ClCompile>
+     <ClCompile Include="..\..\src\map\utils\instanceutils.cpp">
+       <Filter>Source Files\utils</Filter>
+     </ClCompile>
+@@ -1669,4 +1693,4 @@
+   <ItemGroup>
+     <ResourceCompile Include="gameserver.rc" />
+   </ItemGroup>
+-</Project>
+\ No newline at end of file
++</Project>

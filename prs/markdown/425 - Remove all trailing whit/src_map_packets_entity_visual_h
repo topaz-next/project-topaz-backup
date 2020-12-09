@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CEntityVisualPacket : public CBasicPacket
+ 	CEntityVisualPacket(CBaseEntity * PEntity, const char type[4]);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,7 @@
+@@ -11,4 +11,4 @@ cmdprops =
+ 
+ function onTrigger(player)
+     UpdateServerMessage()
+-end
+\ No newline at end of file
++end

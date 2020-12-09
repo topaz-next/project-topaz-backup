@@ -1,0 +1,16 @@
+@@ -0,0 +1,14 @@
++-----------------------------------
++--  Mob: Qirirn Treasure Hunter
++-- Area: Nyzul Isle
++-- Info: Specified Mob Group
++-----------------------------------
++require("scripts/globals/nyzul")
++-----------------------------------
++
++function onMobDeath(mob, player, isKiller)
++    local instance = mob:getInstance()
++    if isKiller then
++        instance:setProgress(instance:getProgress() + 1)
++    end
++end
+\ No newline at end of file

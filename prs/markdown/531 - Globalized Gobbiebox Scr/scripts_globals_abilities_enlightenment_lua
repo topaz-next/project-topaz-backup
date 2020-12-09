@@ -1,0 +1,7 @@
+@@ -21,4 +21,4 @@ function onUseAbility(player,target,ability)
+     local merit = (player:getMerit(tpz.merit.ENLIGHTENMENT) - 5)
+     player:addStatusEffect(tpz.effect.ENLIGHTENMENT,merit,0,60)
+     return tpz.effect.ENLIGHTENMENT
+-end
+\ No newline at end of file
++end

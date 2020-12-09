@@ -1,0 +1,16 @@
+@@ -44,6 +44,7 @@ class CMobController : public CController
+ 
+     bool CanAggroTarget(CBattleEntity*);
+     void TapDeaggroTime();
++    void TapDeclaimTime();
+     virtual bool Cast(uint16 targid, SpellID spellid) override;
+ 
+ protected:
+@@ -81,6 +82,7 @@ class CMobController : public CController
+     time_point m_LastMobSkillTime;
+     time_point m_LastSpecialTime;
+     time_point m_DeaggroTime;
++    time_point m_DeclaimTime;
+     time_point m_NeutralTime;
+     time_point m_WaitTime;
+ 

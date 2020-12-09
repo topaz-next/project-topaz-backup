@@ -1,0 +1,8 @@
+dec2993b1cf78a64df1e1ad7586a21a9d813ac36 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/dec2993b1cf78a64df1e1ad7586a21a9d813ac36
+13fcfac3a8e8459caf75f29d00f463be5e5a1dc1 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/13fcfac3a8e8459caf75f29d00f463be5e5a1dc1
+ab5e057d2a066e3e0d5a201b9b1586ed0db7faea - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/ab5e057d2a066e3e0d5a201b9b1586ed0db7faea
+da4e092c300114729fe7a11358eb2bcc4198e035 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/da4e092c300114729fe7a11358eb2bcc4198e035
+3c52ac86abed98981bddcbb2f25d8da93079b108 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/3c52ac86abed98981bddcbb2f25d8da93079b108
+e4f6cad9f0e737b3239abea2ec6ef96132a843b6 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/e4f6cad9f0e737b3239abea2ec6ef96132a843b6
+f1531fc9d87970bc73739606ba91022889b51cb1 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/f1531fc9d87970bc73739606ba91022889b51cb1
+9036732da054dc4c904fd8e1e00e489cda66b6a6 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/9036732da054dc4c904fd8e1e00e489cda66b6a6

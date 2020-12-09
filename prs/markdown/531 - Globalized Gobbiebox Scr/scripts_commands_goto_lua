@@ -1,0 +1,7 @@
+@@ -40,4 +40,4 @@ function onTrigger(player, target, forceZone)
+     elseif not player:gotoPlayer(target) then
+         error(player, string.format("Player named: %s not found!"), target)
+     end
+-end
+\ No newline at end of file
++end

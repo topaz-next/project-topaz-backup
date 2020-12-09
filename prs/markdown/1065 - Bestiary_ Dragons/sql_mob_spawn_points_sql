@@ -1,0 +1,9 @@
+@@ -19857,7 +19857,7 @@ INSERT INTO `mob_spawn_points` VALUES (17125728,'Scarlet_Boar_Esquire','Scarlet
+ INSERT INTO `mob_spawn_points` VALUES (17125729,'Scarlet_Boar_Esquire','Scarlet Boar Esquire',0,0,0,0,239);
+ INSERT INTO `mob_spawn_points` VALUES (17125730,'Scarlet_Boar_Esquire','Scarlet Boar Esquire',0,0,0,0,69);
+ INSERT INTO `mob_spawn_points` VALUES (17125731,'Scarlet_Boar_Esquire','Scarlet Boar Esquire',0,0,0,0,77);
+-INSERT INTO `mob_spawn_points` VALUES (17125732,'Feldrautte_I_Rouhent','Feldrautte I Rouhent',42,275.943,3.5,-196.921,51);
++INSERT INTO `mob_spawn_points` VALUES (17125732,'Feldrautte_I_Rouhent','Feldrautte I Rouhent',44,275.943,3.5,-196.921,51);
+ INSERT INTO `mob_spawn_points` VALUES (17125733,'Norvallen_Knight','Norvallen Knight',0,0,0,0,88);
+ INSERT INTO `mob_spawn_points` VALUES (17125734,'Norvallen_Knight','Norvallen Knight',0,0,0,0,229);
+ INSERT INTO `mob_spawn_points` VALUES (17125735,'Norvallen_Knight','Norvallen Knight',0,0,0,0,255);

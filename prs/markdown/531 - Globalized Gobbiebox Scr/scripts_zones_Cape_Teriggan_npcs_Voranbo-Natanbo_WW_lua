@@ -1,0 +1,7 @@
+@@ -26,4 +26,4 @@ end
+ 
+ function onEventFinish(player,csid,option)
+     tpz.conq.overseerOnEventFinish(player, csid, option, guardNation, guardType, guardRegion)
+-end
+\ No newline at end of file
++end

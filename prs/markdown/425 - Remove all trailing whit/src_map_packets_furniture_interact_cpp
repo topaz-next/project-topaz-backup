@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ CFurnitureInteractPacket::CFurnitureInteractPacket(CItem* PItem, uint8 LocationI
+     // These entries are unknown and current speculation is that they are junk
+     //ref<uint8>(0x0E) = ???;
+     //ref<uint8>(0x0F) = ???;
+-}
+\ No newline at end of file
++}

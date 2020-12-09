@@ -1,0 +1,7 @@
+@@ -26,4 +26,4 @@ function onItemUse(target)
+         target:addStatusEffectEx(tpz.effect.ENCUMBRANCE_I, tpz.effect.ENCUMBRANCE_I, newpower, 0, 0)
+     end
+     target:messageText(target, zones[target:getZoneID()].text.CELL_OFFSET + 5)
+-end
+\ No newline at end of file
++end

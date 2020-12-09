@@ -1,0 +1,917 @@
+@@ -1,24 +1,26 @@
++require("scripts/globals/keyitems")
+ require("scripts/globals/log_ids")
++require("scripts/globals/npc_util")
++require("scripts/globals/titles")
+ require("scripts/globals/zone")
+ 
+ tpz = tpz or {}
+-tpz.quest = tpz.quest or {}
+-
+------------------------------------
+---
+---  QUESTS ID
+---
+------------------------------------
++tpz.quest = tpz.quest or {} -- "Solid" enum definitions which are currently in use by master
+ 
++-- These should be tabled enums for rewritten quests, but
++-- these globals are kept so old-style quests will work
++-- until they're all converted (and then these can be removed)
+ QUEST_AVAILABLE = 0;
+ QUEST_ACCEPTED  = 1;
+ QUEST_COMPLETED = 2;
+ 
+--- Log IDs defined as "enums" here to tie into quest_rewrite
+--- branch that will be merged in at a later date. Used
+--- as keys for the quest ID tables below.
++-----------------------------------
++--  LOG IDS AND QUEST AREAS
++-----------------------------------
+ 
+-tpz.quest.log_id =
++-- These integers are the ones used by the client
++-- to diffierentiate different quest log update packets
++tpz.quest.log =
+ {
+     SANDORIA    =  0,
+     BASTOK      =  1,
+@@ -33,27 +35,38 @@ tpz.quest.log_id =
+     COALITION   = 10
+ }
+ 
++-- These area strings are used in the prefixes for our quest ID
++-- tables, which are used in all calls to player:fooQuest() functions.
++-- These areas are keyed by the area's quest log ID to facilitate
++-- fetching the area's quests.
++-- Ex: If all you have is a quest log ID, you can pull all
++-- quest IDs for that area by: tpz.quest.id[tpz.quest.area[log]]
++-- These can also be tied into quest file directories later.
+ tpz.quest.area =
+ {
+-    [tpz.quest.log_id.SANDORIA]    = 'sandoria',
+-    [tpz.quest.log_id.BASTOK]      = 'bastok',
+-    [tpz.quest.log_id.WINDURST]    = 'windurst',
+-    [tpz.quest.log_id.JEUNO]       = 'jeuno',
+-    [tpz.quest.log_id.OTHER_AREAS] = 'otherAreas',
+-    [tpz.quest.log_id.OUTLANDS]    = 'outlands',
+-    [tpz.quest.log_id.AHT_URHGAN]  = 'ahtUrhgan',
+-    [tpz.quest.log_id.CRYSTAL_WAR] = 'crystalWar',
+-    [tpz.quest.log_id.ABYSSEA]     = 'abyssea',
+-    [tpz.quest.log_id.ADOULIN]     = 'adoulin',
+-    [tpz.quest.log_id.COALITION]   = 'coalition'
++    [tpz.quest.log.SANDORIA]    = 'sandoria',
++    [tpz.quest.log.BASTOK]      = 'bastok',
++    [tpz.quest.log.WINDURST]    = 'windurst',
++    [tpz.quest.log.JEUNO]       = 'jeuno',
++    [tpz.quest.log.OTHER_AREAS] = 'otherAreas',
++    [tpz.quest.log.OUTLANDS]    = 'outlands',
++    [tpz.quest.log.AHT_URHGAN]  = 'ahtUrhgan',
++    [tpz.quest.log.CRYSTAL_WAR] = 'crystalWar',
++    [tpz.quest.log.ABYSSEA]     = 'abyssea',
++    [tpz.quest.log.ADOULIN]     = 'adoulin',
++    [tpz.quest.log.COALITION]   = 'coalition'
+ }
+ 
++-----------------------------------
++--  QUEST IDS
++-----------------------------------
++
+ tpz.quest.id =
+ {
+     -----------------------------------
+     --  San d'Oria
+     -----------------------------------
+-    [tpz.quest.area[tpz.quest.log_id.SANDORIA]] =
++    [tpz.quest.area[tpz.quest.log.SANDORIA]] =
+     {
+         A_SENTRY_S_PERIL                = 0,  -- ± --
+         WATER_OF_THE_CHEVAL             = 1,  -- ± --
+@@ -141,7 +154,7 @@ tpz.quest.id =
+     -----------------------------------
+     --  Bastok
+     -----------------------------------
+-    [tpz.quest.area[tpz.quest.log_id.BASTOK]] =
++    [tpz.quest.area[tpz.quest.log.BASTOK]] =
+     {
+         THE_SIREN_S_TEAR                = 0,  -- ± --
+         BEAUTY_AND_THE_GALKA            = 1,  -- ± --
+@@ -239,7 +252,7 @@ tpz.quest.id =
+     -----------------------------------
+     --  Windurst
+     -----------------------------------
+-    [tpz.quest.area[tpz.quest.log_id.WINDURST]] =
++    [tpz.quest.area[tpz.quest.log.WINDURST]] =
+     {
+         HAT_IN_HAND                     = 0,  -- + --
+         A_FEATHER_IN_ONE_S_CAP          = 1,  -- + --
+@@ -335,7 +348,7 @@ tpz.quest.id =
+     -----------------------------------
+     --  Jeuno
+     -----------------------------------
+-    [tpz.quest.area[tpz.quest.log_id.JEUNO]] =
++    [tpz.quest.area[tpz.quest.log.JEUNO]] =
+     {
+         CREST_OF_DAVOI                  = 0,  -- + --
+         SAVE_MY_SISTER                  = 1,  -- + --
+@@ -486,7 +499,7 @@ tpz.quest.id =
+     -----------------------------------
+     --  Other Areas
+     -----------------------------------
+-    [tpz.quest.area[tpz.quest.log_id.OTHER_AREAS]] =
++    [tpz.quest.area[tpz.quest.log.OTHER_AREAS]] =
+     {
+         RYCHARDE_THE_CHEF               = 0,  -- + --
+         WAY_OF_THE_COOK                 = 1,  -- + --
+@@ -559,7 +572,7 @@ tpz.quest.id =
+     -----------------------------------
+     --  Outlands
+     -----------------------------------
+-    [tpz.quest.area[tpz.quest.log_id.OUTLANDS]] =
++    [tpz.quest.area[tpz.quest.log.OUTLANDS]] =
+     {
+         -- Kazham (1-15)
+         THE_FIREBLOOM_TREE              = 1,
+@@ -631,7 +644,7 @@ tpz.quest.id =
+     -----------------------------------
+     --  Aht Urhgan
+     -----------------------------------
+-    [tpz.quest.area[tpz.quest.log_id.AHT_URHGAN]] =
++    [tpz.quest.area[tpz.quest.log.AHT_URHGAN]] =
+     {
+         KEEPING_NOTES                   = 0,
+         ARTS_AND_CRAFTS                 = 1,
+@@ -689,7 +702,7 @@ tpz.quest.id =
+     -----------------------------------
+     --  Crystal War
+     -----------------------------------
+-    [tpz.quest.area[tpz.quest.log_id.CRYSTAL_WAR]] =
++    [tpz.quest.area[tpz.quest.log.CRYSTAL_WAR]] =
+     {
+         LOST_IN_TRANSLOCATION            = 0, -- + --
+         MESSAGE_ON_THE_WINDS             = 1,
+@@ -788,7 +801,7 @@ tpz.quest.id =
+     -----------------------------------
+     --  Abyssea
+     -----------------------------------
+-    [tpz.quest.area[tpz.quest.log_id.ABYSSEA]] =
++    [tpz.quest.area[tpz.quest.log.ABYSSEA]] =
+     {
+         -- For some reason these did not match dat file order,
+         -- had to adjust IDs >120 after using @addquest
+@@ -989,7 +1002,7 @@ tpz.quest.id =
+     -----------------------------------
+     --  Adoulin
+     -----------------------------------
+-    [tpz.quest.area[tpz.quest.log_id.ADOULIN]] =
++    [tpz.quest.area[tpz.quest.log.ADOULIN]] =
+     {
+         -- These also do not match the DAT file order, had
+         -- discrepencies and swapped orders from the start.
+@@ -1095,7 +1108,7 @@ tpz.quest.id =
+     -----------------------------------
+     --  Coalition
+     -----------------------------------
+-    [tpz.quest.area[tpz.quest.log_id.COALITION]] =
++    [tpz.quest.area[tpz.quest.log.COALITION]] =
+     {
+         -- Also slightly incongruent with DAT file order
+         PROCURE_CEIZAK_BATTLEGROUNDS    = 0,
+@@ -1195,4 +1208,735 @@ tpz.quest.id =
+         BOOST_MARJAMI_RAVINE            = 94,
+         BOOST_KAMIHR_DRIFTS             = 95,
+     }
+-}
+\ No newline at end of file
++}
++
++-----------------------------------
++--  QUEST STRING KEYS
++-----------------------------------
++
++-- These are the string key counterparts for a quest, and can be used to find the string
++-- key/path that Topaz uses for a given quest when all you have is the quest's ID and its area.
++-- Filepaths can be built using "(AREA_FOLDER)/".. tpz.quest.string.(AREA)[(QUEST_ID)],
++-- Where (AREA) is tpz.quest.area[AREAS_LOG_ID] (a string), _not_ the default integer log ID
++local function buildQuestStringTable(tpzQuestIDtable)
++    local questStringTable = {}
++    for areaKey, areaQuestTable in pairs(tpzQuestIDtable) do
++        local areaQuestStringTable = {}
++        for questStringKey, questID in pairs(areaQuestTable) do
++            areaQuestStringTable[questID] = questStringKey
++        end
++        questStringTable[areaKey] = areaQuestStringTable
++    end
++    return questStringTable
++end
++
++tpz.quest.string = buildQuestStringTable(tpz.quest.id)
++
++-----------------------------------
++--  QUEST OBJECTS TABLE
++-----------------------------------
++
++-- Quest objects inside these tables will be loaded/reloaded as required by NPC scripts and GM commands
++tpz.quest.object =
++{
++    [tpz.quest.area[tpz.quest.log.SANDORIA]] = {},
++    [tpz.quest.area[tpz.quest.log.BASTOK]] = {},
++    [tpz.quest.area[tpz.quest.log.WINDURST]] = {},
++    [tpz.quest.area[tpz.quest.log.JEUNO]] = {},
++    [tpz.quest.area[tpz.quest.log.OTHER_AREAS]] = {},
++    [tpz.quest.area[tpz.quest.log.OUTLANDS]] = {},
++    [tpz.quest.area[tpz.quest.log.AHT_URHGAN]] = {},
++    [tpz.quest.area[tpz.quest.log.CRYSTAL_WAR]] = {},
++    [tpz.quest.area[tpz.quest.log.ABYSSEA]] = {},
++    [tpz.quest.area[tpz.quest.log.ADOULIN]] = {},
++    [tpz.quest.area[tpz.quest.log.COALITION]] = {}
++}
++
++-----------------------------------
++--  TOPAZ QUEST SYSTEM CONSTANTS
++-----------------------------------
++
++tpz.quest.stage =
++{
++    STAGE0   =  0, STAGE1  =  1, STAGE2  =  2, STAGE3   =  3, STAGE4   =  4,
++    STAGE5   =  5, STAGE6  =  6, STAGE7  =  7, STAGE8   =  8, STAGE9   =  9,
++    STAGE10  = 10, STAGE11 = 11, STAGE12 = 12, STAGE13  = 13, STAGE14  = 14,
++    COMPLETE = 255
++}
++
++tpz.quest.fame =
++{
++    SANDORIA          =  0, BASTOK           =  1, WINDURST           =  2,
++    JEUNO             =  3, SELBINA          =  4, MHAURA             =  2,
++    RABAO             =  4, KAZHAM           =  2, NORG               =  5,
++    ABYSSEA_KONSCHTAT =  6, ABYSSEA_TAHRONGI =  7, ABYSSEA_LATHEINE   =  8,
++    ABYSSEA_MISAREAUX =  9, ABYSSEA_VUNKERL  = 10, ABYSSEA_ATTOHWA    = 11,
++    ABYSSEA_ALTEPA    = 12, ABYSSEA_GRAUBERG = 13, ABYSSEA_ULEGUERAND = 14,
++    ADOULIN = 15
++}
++
++tpz.quest.status =
++{
++    AVAILABLE = 0,
++    ACCEPTED  = 1,
++    COMPLETED = 2,
++}
++
++tpz.quest.var =
++{
++    CHAR   = 1,
++    ENTITY = 2,
++    SERVER = 3,
++}
++
++tpz.quest.event =
++{
++    TRIGGER   = 1,
++    TRADE     = 2,
++    UPDATE    = 3,
++    FINISH    = 4,
++    MOB_DEATH = 5,
++    ZONE_IN   = 6
++}
++
++tpz.quest.eventType =
++{
++    NEVER     = 0, -- Never displayed; can be used to disable quests (set this on starting event)
++    DEFAULT   = 1, -- Becomes NPC's "default dialogue" if nothing else takes precendence
++    CYCLE     = 2, -- Will be displayed repeatedly every N other qualifying same-level events the NPC has
++    TOGGLE    = 3, -- Will display every-other time the NPC is triggered if nothing else takes precendence
++    ZONE      = 4, -- Triggers only once until the player zones and speaks to NPC again
++    ONCE      = 5, -- Only displays once - ever - regardless of zoning, uses charvar
++    ALWAYS    = 6  -- Will always be the chosen event (barring a _higher_ priority event of equal type)
++}
++
++-----------------------------------
++--  QUEST OBJECT
++-----------------------------------
++
++tpz.quest.newQuest = function()
++    local this = {}
++
++    ---------------------------------------------------------------
++    -- Internal helper functions
++    ---------------------------------------------------------------
++    local function validateQuest(entity, quest, varname, val, get)
++        local msg = ""
++        local prefix = "[Quest Parameter Error] "
++
++        if entity == nil then
++            msg = prefix .. "entity cannot be nil"
++        elseif quest == nil then
++            msg = prefix .. "quest cannot be nil"
++        elseif varname == nil or varname == '' then
++            msg = prefix .. "varname cannot be nil or empty"
++        end
++
++        return msg
++    end
++
++    local function handleQuestVar(entity, quest, varname, val, get)
++        local ret = {}
++        local validateMsg = validateQuest(entity, quest, varname, val, get)
++        if validateMsg ~= '' then
++            ret.message = validateMsg
++            return ret
++        end
++
++        local var, vartype, db_name
++        if quest.vars.stage == varname then
++            var = quest.vars.stage
++            vartype = tpz.quest.var.CHAR
++            db_name = quest.vars.stage
++        else
++            var = quest.vars.additional[varname]
++            if var then
++                vartype = var.type
++                db_name = var.db_name
++            end
++        end
++
++        if not var then
++            ret.message = " unable to find "..varname.." for quest: "..quest.name.." (log: "..quest.log..")"
++        else
++            if vartype == tpz.quest.var.CHAR then
++                if get then
++                    ret.val = entity:getCharVar(db_name)
++                else
++                    entity:setCharVar(db_name, val)
++                end
++            elseif vartype == tpz.quest.var.LOCAL then
++                if get then
++                    ret.val = entity:getLocalVar(db_name)
++                else
++                    entity:setLocalVar(db_name, val)
++                end
++            elseif vartype == tpz.quest.var.SERVER then
++                if get then
++                    ret.val = GetServerVariable(db_name)
++                else
++                    SetServerVariable(db_name, val)
++                end
++            end
++        end
++
++        return ret
++    end
++
++    local function error(entity, message)
++        if entity:isPC() then
++            entity:PrintToPlayer(message)
++        end
++        print("[Quest Error]".. this.string_key .." "..entity:getName()..": "..message)
++    end
++
++    ---------------------------------------------------------------
++    -- Public Methods
++    ---------------------------------------------------------------
++
++    -- Sets the player's specified var for the quest to the specified value
++    ---------------------------------------------------------------
++    this.setVar = function(entity, varname, val, msg)
++        local message = msg or this.string_key.. ".setVar: "
++        local ret = handleQuestVar(entity, this, varname, val, false)
++        if ret.message then
++            error(entity, message..ret.message)
++        end
++    end
++
++    -- Returns the player's specified var for the quest
++    ---------------------------------------------------------------
++    this.getVar = function(entity, varname, msg)
++        local message = msg or this.string_key.. ".getVar: "
++        local ret = handleQuestVar(entity, this, varname, nil, true)
++        if ret.message then
++            error(entity, message..ret.message)
++        else
++            return ret.val
++        end
++    end
++
++    -- Sets the player's quest progress to the specified stage
++    ---------------------------------------------------------------
++    this.setStage = function(entity, val)
++        local message = this.string_key.. ".setStage -> "
++        return this.setVar(entity, this.vars.stage, val, message)
++    end
++
++    -- Returns the player's current quest progress
++    ---------------------------------------------------------------
++    this.getStage = function(entity)
++        local message = this.string_key.. ".getStage -> "
++        local stage = this.getVar(entity, this.vars.stage, message)
++        if stage > 0 then
++            return stage
++        elseif entity:getQuestStatus(this.log, this.quest_id) == tpz.quest.status.COMPLETED then
++            return tpz.quest.stage.COMPLETE
++        else
++            return 0
++        end
++    end
++
++    -- Advances the player's current quest stage by 1
++    ---------------------------------------------------------------
++    this.advanceStage = function(entity)
++        local message = this.string_key.. ".advanceStage -> "
++        local currentStage = this.getStage(entity)
++        this.setVar(entity, this.vars.stage, currentStage + 1, message)
++        return true
++    end
++
++    -- Returns true if the player meets all the listed quest requirements
++    ---------------------------------------------------------------
++    this.checkRequirements = function(player)
++        local questStatusCheck = player:getQuestStatus(this.log, this.quest_id)
++
++        if questStatusCheck == tpz.quest.status.AVAILABLE
++        or (questStatusCheck == tpz.quest.status.COMPLETED and this.repeatable) then
++            -- Check all required quests
++            if this.requirements.quests then
++                for i, requiredQuest in ipairs(this.requirements.quests) do
++                    local requiredQuestStatus = player:getQuestStatus(requiredQuest.log, requiredQuest.quest_id)
++                    if requiredQuest.stage then
++                        local quest = tpz.quest.getQuest(requiredQuest.log, requiredQuest.quest_id)
++                        if quest then
++                            if quest.getStage(player) < requiredQuest.stage then
++                                return false
++                            end
++                        else
++                            return false
++                        end
++                    elseif requiredQuestStatus ~= tpz.quest.status.COMPLETED then
++                        return false
++                    end
++                end
++            end
++            -- Check all required missions
++            if this.requirements.missions then
++                for i, requiredMission in ipairs(this.requirements.missions) do
++                    if player:getCurrentMission(requiredMission.mission_log) < requiredMission.mission_id then
++                    -- or (required_mission.stage and (tpz.quests.getStage(player, required_mission) < required_mission.stage)) then -- getStage requires a full quest table
++                        return false
++                    end
++                end
++            end
++            -- Check if player possesses all required key items to start quest
++            if this.requirements.key_items then
++                for i, requiredKeyItem in ipairs(this.requirements.key_items) do
++                    if not player:hasKeyItem(requiredKeyItem) then
++                        return false
++                    end
++                end
++            end
++            -- Check fame requirement
++            if this.requirements.fame then
++                if player:getFameLevel(this.requirements.fame.area) < this.requirements.fame.level then
++                    return false
++                end
++            end
++            -- Make sure player is on the right job, if applicable
++            if this.requirements.main_job and (player:getMainJob() ~= this.requirements.main_job) then
++                return false
++            end
++            -- Finally, make sure the player is high enough level
++            if this.requirements.level and (player:getMainLvl() < this.requirements.level) then
++                return false 
++            end
++
++            -- We haven't failed any of the requirement checks, so we must meet the quest's requirements
++            return true
++        else
++            return false
++        end
++    end
++
++    -- Adds a quest to the player's log and sets their stage to 1
++    ---------------------------------------------------------------
++    this.begin = function(player)
++        player:addQuest(this.log, this.quest_id)
++        return this.advanceStage(player)
++    end
++
++    -- Handles checking a quest to see if control should be diverted
++    -- from the calling NPC
++    ---------------------------------------------------------------
++    this.check = function(player, type, target, args)
++        local playerCurrentStage = this.getStage(player)
++        if this.stages[playerCurrentStage] then
++            local stageZoneTable = this.stages[playerCurrentStage][player:getZoneID()]
++            if stageZoneTable and stageZoneTable[type] and stageZoneTable[type][target] then
++                return stageZoneTable[type][target](player, unpack(args))
++            end
++        end
++
++        return false
++    end
++
++    -- Begins an event for the player, with built-in return
++    ---------------------------------------------------------------
++    this.startEvent = function(player, event, params, type)
++        if not params then params = {} end
++        if not type then type = tpz.quest.eventType.DEFAULT end
++        return {['id'] = event, ['params'] = params, ['type'] = type}
++    end
++
++    -- Attempt to give item to the player.
++    -- Takes an optional parameter to determine if the default
++    -- item can't be obtained message from npcUtil.giveItem()
++    -- should be silenced (in case quest has custom event)
++    ---------------------------------------------------------------
++    this.giveItem = function(player, item, silent_fail)
++        if npcUtil.giveItem(player, item, silent_fail) then
++            return true
++        else
++            return false
++        end
++    end
++
++    -- Returns the item ID of the first item currently being held
++    -- for the player by this quest
++    -- Takes an optional stack parameter to assist in storing
++    -- and returning multiple rewards for the few quests which
++    -- need the capability.
++    ---------------------------------------------------------------
++    this.holdingItem = function(player, stack)
++        if not stack then
++            stack = 1
++        end
++        local item = player:getCharVar(this.var_prefix .. "[I][".. stack .."]")
++
++        if item > 0 then
++            return item
++        else
++            return false
++        end
++    end
++
++    -- Holds an item for a player
++    -- Optional stack parameter is for the very few quests that
++    -- bestow multiple item rewards.
++    ---------------------------------------------------------------
++    this.holdItem = function(player, item, stack)
++        if not stack then
++            stack = 1
++        end
++        if this.holdingItem(player, stack) then
++            return this.holdItem(player, item, stack + 1)
++        else
++            player:setCharVar(this.var_prefix .. "[I][".. stack .."]", item)
++            return true
++        end
++    end
++
++    -- Attempts to return an item, or items, to the player
++    -- Optional silent_fail parameter determines if failure message
++    -- should be displayed by npcUtil.giveItem()
++    ---------------------------------------------------------------
++    this.returnItem = function(player, silent_fail)
++        -- There are a small handful of quests that reward multiple
++        -- items as quest rewards, so we need to account for those.
++        local stack = 1
++        local items_held = 0
++        local items = {}
++        local item = this.holdingItem(player, stack)
++
++        while item and item > 0 do
++            items[stack] = item
++            stack = stack + 1
++            items_held = items_held + 1
++            item = this.holdingItem(player, stack)
++        end
++
++        if items_held > 0 then
++            if npcUtil.giveItem(player, items, silent_fail) then
++                stack = 1
++                while stack <= items_held do
++                    player:setCharVar(this.var_prefix .. "[I][".. stack .."]", 0)
++                    stack = stack + 1
++                end
++                return true
++            else
++                return false
++            end
++        else
++            error(player, "quest.returnItem: " .. player:getName() .." does not have any items held for quest ".. this.name)
++            return false
++        end
++    end
++
++    -- Give KI to player, while going through this quest's wrapper
++    ---------------------------------------------------------------
++    this.giveKeyItem = function(player, key_item)
++        return npcUtil.giveKeyItem(player, key_item)
++    end
++
++    -- Remove KI from player, while going through this quest's wrapper
++    ---------------------------------------------------------------
++    this.delKeyItem = function(player, key_item)
++        for _, ki in pairs(this.temporary.key_items) do
++            if ki == key_item then
++                player:delKeyItem(key_item)
++                return true
++            end
++        end
++        error(player, "Key Item " .. key_item .." not listed as temporary in quest file! No action taken.")
++        return false
++    end
++
++    -- Check to see if a trade contains the items and marks
++    -- them as accepted in the container
++    ---------------------------------------------------------------
++    this.tradeHas = function(player, trade, items)
++        -- We technically don't need a player for this function,
++        -- but include it in the arguments for the sake of
++        -- consistency with other quest functions.
++        return npcUtil.tradeHas(trade, items)
++    end
++
++    -- Check to see if a trade contains ONLY items and marks
++    -- them as accepted in the container
++    ---------------------------------------------------------------
++    this.tradeHasExactly = function(player, trade, items)
++        return npcUtil.tradeHasExactly(trade, items)
++    end
++
++    -- Completes a given trade, taking the items marked as
++    -- accepted by tradeHas and tradeHasExactly
++    ---------------------------------------------------------------
++    this.completeTrade = function(player, trade)
++        player:tradeComplete()
++        return true
++    end
++
++    -- Completes the quest in the player's log, gives out rewards, and cleans up leftover vars and key items
++    ---------------------------------------------------------------
++    this.complete = function(player, reward_set)
++        local message = this.string_key.. ".complete: "
++
++        local rewards_given = false
++        if this.rewards then
++            if reward_set == nil then
++                if this.rewards.sets and this.rewards.sets[1] then
++                    reward_set = this.rewards.sets[1]
++                else
++                    reward_set = this.rewards
++                end
++            end
++            if reward_set then
++                -- Attempt to reward items first
++                if reward_set["items"] then
++                    -- quest.giveItem will naturally hold items for the player if they're full
++                    if type(reward_set["items"]) == "table" then
++                        for _, item in ipairs(reward_set["items"]) do
++                            this.giveItem(player, item)
++                        end
++                    else
++                        this.giveItem(player, reward_set["items"])
++                    end
++                end
++
++                rewards_given = npcUtil.completeQuest(player, this.log, this.quest_id, reward_set)
++                if not rewards_given then
++                    error(player, message.. "Unable to give quest rewards.")
++                end
++            else
++                error(player, message.. "Rewards table defined, but unable to get rewards set")
++            end
++        else
++            error(player, message.. "No quest rewards defined!")
++        end
++
++        if rewards_given then
++            this.setVar(player, this.vars.stage, 0) -- Stage should ALWAYS be erased
++            if this.vars.additional then
++                for name, var in pairs(this.vars.additional) do
++                    if not var.preserve then
++                        this.setVar(player, name, 0, message)
++                    end
++                end
++            end
++
++            -- Make certain any forgotten temporary key items have been removed
++            if this.temporary and this.temporary.key_items then
++                for _, ki in pairs(this.temporary.key_items) do
++                    player:delKeyItem(ki)
++                end
++            end
++
++            -- Clear all char_vars from having seen tpz.quest.eventType.ONCE type events
++            if this.temporary and this.temporary.seen_events then
++                for _, seen_event in pairs(this.temporary.seen_events) do
++                    player:setCharVar('[QE][Z'.. seen_event[1] ..']'.. seen_event[2], 0)
++                end
++            end
++            return true
++        end
++    end
++
++    return this
++end
++
++-----------------------------------
++--  INVOLVED QUESTS OBJECT
++-----------------------------------
++tpz.quest.involvedQuests = function(involvedQuests)
++    local this = {}
++    this.involvedQuests = involvedQuests
++
++    ---------------------------------------------------------------
++    -- Internal helper functions
++    ---------------------------------------------------------------
++
++    -- Helper function returning if a player has seen an event of a given type
++    local hasSeen = function(player, trackingTag, eventType)
++        if (eventType >= tpz.quest.eventType.CYCLE) and (eventType <= tpz.quest.eventType.ZONE) then
++            return player:getLocalVar(trackingTag) == 1
++        elseif eventType == tpz.quest.eventType.ONCE then
++            return player:getCharVar(trackingTag) == 1
++        else
++            return false
++        end
++    end
++
++    -- Helper function to check all of our involvedQuests for a given quest event
++    local check = function(player, checkType, target, args)
++        local trackingName = function(player, event)
++            return '[QE][Z'.. player:getZoneID() ..']'.. event
++        end
++
++        local result = false
++        local highestEvent = {}
++        highestEvent.type = tpz.quest.eventType.NEVER
++
++        local hasCycleEvents = false
++        local isLastCycleEvent = false
++        local unseenCycleEvent = false
++        local wasLastCycleEvent = player:getLocalVar('[QE][WLC]'.. target) == 1
++
++        for _, quest in ipairs(this.involvedQuests) do
++            result = quest.check(player, checkType, target, args)
++            if result then
++                if checkType == 'onTrigger' then -- We found an onTrigger the player currently qualifies for
++                    if type(result) == 'bool' then
++                        -- But this quest already initiated an event/message directly and returned true.
++                        -- We don't want to mess up whatever special scenario it's doing
++                        return true
++                    else -- The result should be a table describing the qualifying event
++                        local trackingTag = trackingName(player, result.id)
++                        local sawEvent = hasSeen(player, trackingTag, result.type)
++
++
++                        if result.type == tpz.quest.eventType.CYCLE then
++                            -- If player just viewed the final cycle event, we need to mark all as unseen
++                            if wasLastCycleEvent then
++                                player:setLocalVar(trackingTag, 0)
++                                sawEvent = false
++                            end
++
++                            -- We need to assume that the first cycle we find is the last, or else we'd never
++                            -- pick it multiple times when there's only one cycle event the player qualifies for
++                            if not hasCycleEvents then
++                                hasCycleEvents = true   -- So on the first cycle event only...
++                                isLastCycleEvent = true -- Presume it's the last in the list to view
++                                player:setLocalVar('[QE][WLC]'.. target, 0) -- (Let's reset our local var here, though.)
++                                unseenCycleEvent = not sawEvent -- But if this is an unseen cycle event...
++                            elseif isLastCycleEvent and not sawEvent then -- ..or if a later cycle event is unseen
++                                if not unseenCycleEvent then
++                                    unseenCycleEvent = true -- Note there are unseen cycle events...
++                                else
++                                    isLastCycleEvent = false -- ..and then on the SECOND unseen event, mark our assumption false
++                                end
++                            end
++                        elseif result.type == tpz.quest.eventType.TOGGLE then
++                            if sawEvent then
++                                -- Go ahead an mark the toggle event as unseen (but we won't
++                                -- select it until next time because sawEvent is still false)
++                                player:setLocalVar(trackingTag, 0)
++                            end
++                        end
++
++                        if result.type > highestEvent.type then
++                            if result.type == tpz.quest.eventType.ONCE and not sawEvent then
++                                highestEvent = result
++                            elseif ((result.type >= tpz.quest.eventType.CYCLE) and (result.type <= tpz.quest.eventType.ZONE)) and not sawEvent then
++                                highestEvent = result
++                            elseif (result.type == tpz.quest.eventType.ALWAYS) or (result.type == tpz.quest.eventType.DEFAULT) then
++                                highestEvent = result
++                            end
++                        end
++                    end
++                else
++                    break -- trades, finishes, and updates should only have one valid match
++                end
++            end
++        end
++
++        if unseenCycleEvent and isLastCycleEvent then
++            player:setLocalVar('[QE][WLC]'.. target, 1)
++        end
++
++        if highestEvent.type > tpz.quest.eventType.NEVER then  -- We figured out an onTrigger to play
++            player:startEvent(highestEvent.id, unpack(highestEvent.params)) -- Invoke our thunked highest event
++            -- We're only going to mark what kind of event we have, so we can check later during an onEventFinish
++            -- We don't want to mark the event as "seen" _now_ because the event might get interupted before finishing
++            player:setLocalVar('[QE][ST]', highestEvent.type) -- Seen Type, so we know what _kind_ of var to set during onFinish
++            player:setLocalVar('[QE][SI]', highestEvent.id) -- And the Seen ID our "seen" check should be firing on
++            return true -- Return that we have chosen (and played) an event
++        elseif checkType ~= 'onTrigger' then -- ('Result' can be dirty, and we should have already played any applicable onTrigger)
++            if checkType == 'onEventFinish' then
++                if player:getLocalVar('[QE][SI]') == target then -- "target" is our CS ID during onEventFinish checks
++                    local trackingType = player:getLocalVar('[QE][ST]')
++                    if trackingType == tpz.quest.eventType.ONCE then
++                        player:setCharVar(trackingName(player, target), 1)
++                    elseif (trackingType >= tpz.quest.eventType.CYCLE) and (trackingType <= tpz.quest.eventType.ZONE) then
++                        player:setLocalVar(trackingName(player, target), 1)
++                    end
++                    player:setLocalVar('[QE][SI]', 0)
++                    player:setLocalVar('[QE][ST]', 0)
++                end
++            end
++            return result -- Return result of our (already-executed) highest priority onTrade/onUpdate/onFinish
++        end
++    end
++
++
++
++    ---------------------------------------------------------------
++    -- Public Methods
++    ---------------------------------------------------------------
++
++    -- Checks the onTrade events for this list of involved quests
++    ---------------------------------------------------------------
++    this.onTrade = function(player, npc, trade)
++        return check(player, 'onTrade', npc:getName(), {npc, trade})
++    end
++
++    -- Checks the onTrigger events for this list of involved quests
++    ---------------------------------------------------------------
++    this.onTrigger = function(player, npc)
++        return check(player, 'onTrigger', npc:getName(), {npc})
++    end
++
++    -- Checks the onEventFinish events for this list of involved quests
++    ---------------------------------------------------------------
++    this.onEventFinish = function(player, csid, option)
++        return check(player, 'onEventFinish', csid, {option})
++    end
++
++    -- Checks the onMobDeath events for this list of involved quests
++    ---------------------------------------------------------------
++    this.onMobDeath = function(mob, entity, isKiller, isWeaponSkillKill)
++        if entity:isPC() then
++            return check(entity, 'onMobDeath', mob:getName(), {mob, isKiller, isWeaponSkillKill})
++        else
++            return false
++        end
++    end
++
++    return this
++end
++
++-----------------------------------
++--  OTHER QUEST FUNCTIONS
++-----------------------------------
++
++tpz.quest.getQuest = function(area_log_id, quest_id)
++    local area = tpz.quest.area[area_log_id]
++    if area then
++        local quest_string = tpz.quest.string[area][quest_id]
++        if quest_string then -- Verify the quest ID is one we expect
++            if tpz.quest.object[area][quest_id] then
++                -- If we already have the quest loaded, just return it!
++                return tpz.quest.object[area][quest_id]
++            else
++                local quest_filename = 'scripts/quests/'
++                local area_dirs =
++                {
++                    [tpz.quest.log.SANDORIA]    = 'sandoria',
++                    [tpz.quest.log.BASTOK]      = 'bastok',
++                    [tpz.quest.log.WINDURST]    = 'windurst',
++                    [tpz.quest.log.JEUNO]       = 'jeuno',
++                    [tpz.quest.log.OTHER_AREAS] = 'other_areas',
++                    [tpz.quest.log.OUTLANDS]    = 'outlands',
++                    [tpz.quest.log.AHT_URHGAN]  = 'aht_urhgan',
++                    [tpz.quest.log.CRYSTAL_WAR] = 'crystal_war',
++                    [tpz.quest.log.ABYSSEA]     = 'abyssea',
++                    [tpz.quest.log.ADOULIN]     = 'adoulin',
++                    [tpz.quest.log.COALITION]   = 'coalition'
++                }
++                quest_filename = quest_filename .. area_dirs[area_log_id] .. '/' .. string.lower(quest_string)
++                local quest = require(quest_filename)
++                if (quest) then
++                    tpz.quest.object[area][quest_id] = quest -- Stash our quest away for others to use!
++                    return quest
++                else
++                    print("tpz.quest.getQuest: Unable to include designated file '".. quest_filename .."'")
++                end
++            end
++        else
++            print("tpz.quest.getQuest: Unknown quest ID: ".. quest_id.. " for area: ".. area)
++        end
++    else
++        print("tpz.quest.getQuest: Unknown area log ID: ".. area_log_id)
++    end
++end

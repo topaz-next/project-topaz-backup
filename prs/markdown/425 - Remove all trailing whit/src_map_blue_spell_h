@@ -1,0 +1,7 @@
+@@ -62,4 +62,4 @@ class CBlueSpell : public CSpell
+ 
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

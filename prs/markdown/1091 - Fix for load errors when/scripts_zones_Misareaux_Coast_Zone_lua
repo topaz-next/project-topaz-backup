@@ -1,0 +1,34 @@
+@@ -5,13 +5,16 @@
+ -----------------------------------
+ require("scripts/globals/conquest")
+ require("scripts/globals/helm")
++require("scripts/globals/settings")
+ local ID = require("scripts/zones/Misareaux_Coast/IDs")
+ local MISAREAUX_COAST = require("scripts/zones/Misareaux_Coast/globals")
+ -----------------------------------
+ 
+ function onInitialize(zone)
+-    tpz.helm.initZone(zone, tpz.helm.type.LOGGING)
+-    MISAREAUX_COAST.ziphiusHandleQM()
++	if ENABLE_COP == 1 then
++		tpz.helm.initZone(zone, tpz.helm.type.LOGGING)
++		MISAREAUX_COAST.ziphiusHandleQM()
++	end
+ end
+ 
+ function onConquestUpdate(zone, updatetype)
+@@ -30,9 +33,11 @@ function onRegionEnter(player, region)
+ end
+ 
+ function onGameHour(zone)
+-    local vHour = VanadielHour()
+-    if vHour >= 22 or vHour <= 7 then
+-        MISAREAUX_COAST.ziphiusHandleQM()
++	if ENABLE_COP == 1 then
++		local vHour = VanadielHour()
++		if vHour >= 22 or vHour <= 7 then
++			MISAREAUX_COAST.ziphiusHandleQM()
++		end
+     end
+ end
+ 

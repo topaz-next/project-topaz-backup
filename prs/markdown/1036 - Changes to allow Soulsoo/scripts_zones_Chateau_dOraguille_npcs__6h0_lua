@@ -1,0 +1,22 @@
+@@ -48,7 +48,6 @@ function onTrigger(player, npc)
+     local currentMission = player:getCurrentMission(SANDORIA)
+     local missionStatus = player:getCharVar("MissionStatus")
+     local infiltrateDavoi = player:hasCompletedMission(SANDORIA, tpz.mission.id.sandoria.INFILTRATE_DAVOI)
+-
+     local Rank6 = player:getRank() >= 6
+ 
+     if (player:getCharVar("aBoysDreamCS") == 8) then
+@@ -58,11 +57,10 @@ function onTrigger(player, npc)
+         tpz.job.PLD) then
+         player:startEvent(90)
+     elseif (player:getCharVar("UnderOathCS") == 8) then
+-        player:startEvent(89);
++        player:startEvent(89)
+     elseif Rank6 and player:hasKeyItem(tpz.ki.SAN_DORIA_TRUST_PERMIT) and not player:hasSpell(905) then
+         player:startEvent(574, 0, 0, 0, TrustMemory(player))
+-    elseif (currentMission == tpz.mission.id.sandoria.INFILTRATE_DAVOI and infiltrateDavoi == false and missionStatus ==
+-        0) then
++    elseif (currentMission == tpz.mission.id.sandoria.INFILTRATE_DAVOI and infiltrateDavoi == false and missionStatus == 0) then
+         player:startEvent(553, 0, tpz.ki.ROYAL_KNIGHTS_DAVOI_REPORT)
+     elseif (currentMission == tpz.mission.id.sandoria.INFILTRATE_DAVOI and missionStatus == 4) then
+         player:startEvent(554, 0, tpz.ki.ROYAL_KNIGHTS_DAVOI_REPORT)

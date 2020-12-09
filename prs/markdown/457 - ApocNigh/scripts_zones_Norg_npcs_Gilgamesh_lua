@@ -1,0 +1,9 @@
+@@ -38,6 +38,8 @@ function onTrigger(player,npc)
+         player:startEvent(173);
+     elseif (ZilartMission == tpz.mission.id.zilart.AWAKENING) then
+         player:startEvent(177);
++	elseif (player:getQuestStatus(JEUNO,tpz.quest.id.jeuno.APOCALYPSE_NIGH) == QUEST_ACCEPTED and player:getCharVar('ApocalypseNigh') == 6) then
++			player:startEvent(10057);		
+     end
+ 
+ end;

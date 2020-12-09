@@ -1,0 +1,35 @@
+@@ -0,0 +1,34 @@
++-----------------------------------
++-- Area: Ilrusi Atoll
++--  NPC: Treasure Coffer
++-----------------------------------
++local ID = require("scripts/zones/Ilrusi_Atoll/IDs")
++require("scripts/globals/status")
++-----------------------------------
++
++function onTrade(player,npc,trade)
++end
++
++function onTrigger(player,npc)
++    if npc:getLocalVar("Complete") == 0 then
++        player:messageSpecial(ID.text.CHEST)
++        local mobID = npc:getID()
++        local instance = npc:getInstance()
++        local figureheadChest = instance:getProgress()
++
++        if mobID == figureheadChest then
++            npc:setLocalVar("Complete", 1)
++            npc:entityAnimationPacket("open")
++            player:messageSpecial(ID.text.GOLDEN)
++            instance:setProgress(1)
++            npc:timer(1000, function(npc) npc:entityAnimationPacket("open") end)
++            npc:timer(15000, function(npc) npc:entityAnimationPacket("kesu") end)
++            npc:timer(16000, function(npc) npc:setStatus(dsp.status.DISAPPEAR) end)
++        else
++            local pos = npc:getPos()
++            npc:setStatus(dsp.status.DISAPPEAR)
++            instance:getEntity(bit.band(mobID, 0xFFF), dsp.objType.MOB):setSpawn(pos.x, pos.y, pos.z)
++            SpawnMob(mobID, instance):updateClaim(player)
++        end
++    end
++end

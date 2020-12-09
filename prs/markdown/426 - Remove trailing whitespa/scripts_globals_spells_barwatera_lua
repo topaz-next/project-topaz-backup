@@ -1,0 +1,7 @@
+@@ -11,4 +11,4 @@ end
+ 
+ function onSpellCast(caster,target,spell)
+     return applyBarspell(tpz.effect.BARWATER,caster,target,spell)
+-end
+\ No newline at end of file
++end

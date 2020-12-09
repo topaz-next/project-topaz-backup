@@ -1,0 +1,19 @@
+@@ -1587,15 +1587,15 @@ INSERT INTO `mob_spawn_points` VALUES (16809996,'Shikaree_Y','Shikaree Y',2,479.
+ INSERT INTO `mob_spawn_points` VALUES (16809997,'Shikaree_X','Shikaree X',3,472.013,2.97,613.136,64);
+ INSERT INTO `mob_spawn_points` VALUES (16809998,'Shikaree_Zs_Wyvern','Shikaree Z\'s Wyvern',4,475.306,3.639,610.579,64);
+ INSERT INTO `mob_spawn_points` VALUES (16809999,'Shikaree_Xs_Rabbit','Shikaree X\'s Rabbit',5,472.013,2.97,614.136,64);
+-INSERT INTO `mob_spawn_points` VALUES (16810001,'Tuchulcha','Tuchulcha',6,-553.888,1.546,-444.477,171);
++INSERT INTO `mob_spawn_points` VALUES (16810001,'Tuchulcha','Tuchulcha',6,-610.888,0.546,-490,171);
+ INSERT INTO `mob_spawn_points` VALUES (16810002,'Swift_Hunter','Swift Hunter',7,-545,0.749,-416,64);
+ INSERT INTO `mob_spawn_points` VALUES (16810003,'Shrewd_Hunter','Shrewd Hunter',8,-517,-0.5,-518,46);
+ INSERT INTO `mob_spawn_points` VALUES (16810004,'Armored_Hunter','Armored Hunter',9,-536.364,-0.5,-458,175);
+-INSERT INTO `mob_spawn_points` VALUES (16810007,'Tuchulcha','Tuchulcha',6,1,-0.425,83,7);
++INSERT INTO `mob_spawn_points` VALUES (16810007,'Tuchulcha','Tuchulcha',6,-54.896,-1.580,67.273,175);
+ INSERT INTO `mob_spawn_points` VALUES (16810008,'Swift_Hunter','Swift Hunter',7,43,-0.5,42,64);
+ INSERT INTO `mob_spawn_points` VALUES (16810009,'Shrewd_Hunter','Shrewd Hunter',8,9,0.899,114,64);
+ INSERT INTO `mob_spawn_points` VALUES (16810010,'Armored_Hunter','Armored Hunter',9,-15,-3.820,97,64);
+-INSERT INTO `mob_spawn_points` VALUES (16810013,'Tuchulcha','Tuchulcha',6,481,-0.424,563,240);
++INSERT INTO `mob_spawn_points` VALUES (16810013,'Tuchulcha','Tuchulcha',6,430,0.5,550,240);
+ INSERT INTO `mob_spawn_points` VALUES (16810014,'Swift_Hunter','Swift Hunter',7,509,-0.149,560,64);
+ INSERT INTO `mob_spawn_points` VALUES (16810015,'Shrewd_Hunter','Shrewd Hunter',8,484,2.725,605,179);
+ INSERT INTO `mob_spawn_points` VALUES (16810016,'Armored_Hunter','Armored Hunter',9,475.834,-1.015,571.575,78);

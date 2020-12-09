@@ -1,0 +1,7 @@
+@@ -36,4 +36,4 @@ function onEventFinish(player,csid,option,npc)
+         npc:openDoor(16);
+     end
+ 
+-end;
+\ No newline at end of file
++end;

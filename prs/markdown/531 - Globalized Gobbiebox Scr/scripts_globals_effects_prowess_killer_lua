@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ function onEffectLose(target,effect)
+     -- target:delMod(tpz.mod.HUMANOID_KILLER, effect:getPower())
+     target:delMod(tpz.mod.LUMORIAN_KILLER, effect:getPower())
+     target:delMod(tpz.mod.LUMINION_KILLER, effect:getPower())
+-end
+\ No newline at end of file
++end

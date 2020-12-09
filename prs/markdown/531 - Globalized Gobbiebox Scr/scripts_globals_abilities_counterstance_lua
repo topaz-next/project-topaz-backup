@@ -1,0 +1,7 @@
+@@ -18,4 +18,4 @@ function onUseAbility(player,target,ability)
+ 
+     target:delStatusEffect(tpz.effect.COUNTERSTANCE) --if not found this will do nothing
+     target:addStatusEffect(tpz.effect.COUNTERSTANCE,power,0,300)
+-end
+\ No newline at end of file
++end

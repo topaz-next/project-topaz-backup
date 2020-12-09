@@ -1,0 +1,10 @@
+@@ -152,4 +152,8 @@ void CBaseEntity::SetModelId(uint16 modelid)
+ uint16 CBaseEntity::GetModelId()
+ {
+     return look.modelid;
++}
++
++bool CBaseEntity::IsTargetable() {
++    return (namevis & FLAG_UNTARGETABLE) == 0;
+ }
+\ No newline at end of file

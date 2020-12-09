@@ -1,0 +1,16 @@
+@@ -27,7 +27,7 @@ function onSpellCast(caster, target, spell)
+     if (merits > 1) then
+         basePotency = basePotency + merits - 1
+     end
+-    
++
+     local potency = calculatePotency(basePotency, spell:getSkillType(), caster, target)
+ 
+     -- Duration, including resistance.  Unconfirmed.
+@@ -51,4 +51,4 @@ function onSpellCast(caster, target, spell)
+     end
+ 
+     return params.effect
+-end
+\ No newline at end of file
++end

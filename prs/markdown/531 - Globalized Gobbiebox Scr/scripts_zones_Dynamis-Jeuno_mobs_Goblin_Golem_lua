@@ -1,0 +1,7 @@
+@@ -8,4 +8,4 @@ require("scripts/globals/dynamis")
+ 
+ function onMobDeath(mob, player, isKiller)
+     dynamis.megaBossOnDeath(mob, player, isKiller)
+-end
+\ No newline at end of file
++end

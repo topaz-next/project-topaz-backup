@@ -1,0 +1,7 @@
+@@ -35,4 +35,4 @@ namespace battlefieldutils
+     void getStartPosition(uint16 zoneid, int(&pPosition)[4]);			// returns lobby position
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

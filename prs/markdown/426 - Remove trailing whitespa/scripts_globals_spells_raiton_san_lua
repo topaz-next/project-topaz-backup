@@ -1,0 +1,7 @@
+@@ -37,4 +37,4 @@ function onSpellCast(caster,target,spell)
+     handleNinjutsuDebuff(caster,target,spell,30,duration,tpz.mod.EARTHRES)
+ 
+     return dmg
+-end
+\ No newline at end of file
++end

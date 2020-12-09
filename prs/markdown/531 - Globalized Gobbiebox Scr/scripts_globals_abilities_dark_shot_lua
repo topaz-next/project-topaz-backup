@@ -1,0 +1,7 @@
+@@ -74,4 +74,4 @@ function onUseAbility(player, target, ability)
+     local del = player:delItem(2183, 1) or player:delItem(2974, 1)
+     target:updateClaim(player)
+     return dispelledEffect
+-end
+\ No newline at end of file
++end

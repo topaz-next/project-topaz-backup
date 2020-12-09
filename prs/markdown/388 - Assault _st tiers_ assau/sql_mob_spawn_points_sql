@@ -1,0 +1,22 @@
+@@ -13901,15 +13901,15 @@ INSERT INTO `mob_spawn_points` VALUES (17043892,'Wartkin','Wartkin',66,0,0,0,0);
+ 
+ -- Imperial Agent Rescue entering@ -20 2.276 -405
+ INSERT INTO `mob_spawn_points` VALUES (17047553,'Mamool_Ja_Warder','Mamool Ja Warder',1,-52.529,11.454,-481.784,173);
+-INSERT INTO `mob_spawn_points` VALUES (17047554,'Mamool_Ja_Warder','Mamool Ja Warder',2,-56.889,11.425,-478.689,120);
+-INSERT INTO `mob_spawn_points` VALUES (17047555,'Mamool_Jas_Lizard','Mamool Ja\'s Lizard',3,-56.888,11.328,-478.687,120);
++INSERT INTO `mob_spawn_points` VALUES (17047554,'Mamool_Ja_Warder_bst','Mamool Ja Warder',2,-56.889,11.425,-478.689,120);
++INSERT INTO `mob_spawn_points` VALUES (17047555,'Mamool_Jas_Lizard','Mamool Ja\'s Lizard',3,1,1,1,120);
+ INSERT INTO `mob_spawn_points` VALUES (17047556,'Mamool_Ja_Warder','Mamool Ja Warder',1,-73.562,11.445,-476.531,197);
+-INSERT INTO `mob_spawn_points` VALUES (17047557,'Mamool_Ja_Warder','Mamool Ja Warder',2,-83.271,11.411,-451.202,110);
+-INSERT INTO `mob_spawn_points` VALUES (17047558,'Mamool_Jas_Lizard','Mamool Ja\'s Lizard',3,0,0,0,120);
++INSERT INTO `mob_spawn_points` VALUES (17047557,'Mamool_Ja_Warder_bst','Mamool Ja Warder',2,-83.271,11.411,-451.202,110);
++INSERT INTO `mob_spawn_points` VALUES (17047558,'Mamool_Jas_Lizard','Mamool Ja\'s Lizard',3,1,1,1,120);
+ INSERT INTO `mob_spawn_points` VALUES (17047559,'Mamool_Ja_Warder','Mamool Ja Warder',1,166.512,1.886,-418.296,127);
+ INSERT INTO `mob_spawn_points` VALUES (17047560,'Mamool_Ja_Warder','Mamool Ja Warder',1,261.726,1.318,-421.633,90);
+-INSERT INTO `mob_spawn_points` VALUES (17047561,'Mamool_Ja_Warder','Mamool Ja Warder',2,214.891,1.294,-578.562,204);
+-INSERT INTO `mob_spawn_points` VALUES (17047562,'Mamool_Jas_Lizard','Mamool Ja\'s Lizard',3,215.239,1.254,-580.13,191);
++INSERT INTO `mob_spawn_points` VALUES (17047561,'Mamool_Ja_Warder_bst','Mamool Ja Warder',2,214.891,1.294,-578.562,204);
++INSERT INTO `mob_spawn_points` VALUES (17047562,'Mamool_Jas_Lizard','Mamool Ja\'s Lizard',3,1,1,1,191);
+ INSERT INTO `mob_spawn_points` VALUES (17047563,'Mamool_Ja_Warder','Mamool Ja Warder',4,197.111,2.415,-458.513,140);
+ INSERT INTO `mob_spawn_points` VALUES (17047564,'Mamool_Ja_Warder','Mamool Ja Warder',4,215.755,2.173,-461.893,103);
+ INSERT INTO `mob_spawn_points` VALUES (17047565,'Mamool_Ja_Warder','Mamool Ja Warder',4,258.477,5.566,-471.841,188);

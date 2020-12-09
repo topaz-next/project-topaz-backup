@@ -1,0 +1,7 @@
+@@ -28,4 +28,4 @@ CSpecialReleasePacket::CSpecialReleasePacket(CCharEntity* PChar)
+     this->length(0x08);
+ 
+     ref<uint8>(0x04) = 0;    // unknown1
+-}
+\ No newline at end of file
++}

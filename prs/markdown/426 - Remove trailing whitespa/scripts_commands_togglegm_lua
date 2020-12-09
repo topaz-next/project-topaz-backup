@@ -1,0 +1,7 @@
+@@ -46,4 +46,4 @@ function onTrigger(player)
+             player:setFlag(FLAG_GM)
+         end
+     end
+-end
+\ No newline at end of file
++end

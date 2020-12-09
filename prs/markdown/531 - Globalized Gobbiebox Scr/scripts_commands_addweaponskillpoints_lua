@@ -1,0 +1,7 @@
+@@ -53,4 +53,4 @@ function onTrigger(player, slot, points, target)
+     else
+         player:PrintToPlayer(string.format("Could not add weapon skill points to %s.", item:getName()))
+     end
+-end
+\ No newline at end of file
++end

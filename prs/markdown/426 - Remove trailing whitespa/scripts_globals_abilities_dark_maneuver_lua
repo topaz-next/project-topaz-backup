@@ -1,0 +1,7 @@
+@@ -49,4 +49,4 @@ function onUseAbility(player,target,ability)
+     end
+ 
+     return tpz.effect.DARK_MANEUVER
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -93,4 +93,4 @@ namespace linkshell
+ 	CLinkshell* GetLinkshell(uint32 id);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

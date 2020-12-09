@@ -1,0 +1,7 @@
+@@ -15,4 +15,4 @@ end
+ function onUseAbility(player,target,ability)
+     local duration = 30 + player:getMod(tpz.mod.FLEE_DURATION)
+     player:addStatusEffect(tpz.effect.FLEE,100,0,duration)
+-end
+\ No newline at end of file
++end

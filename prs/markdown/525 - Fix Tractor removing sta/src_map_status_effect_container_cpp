@@ -1,0 +1,14 @@
+@@ -1357,11 +1357,12 @@ void CStatusEffectContainer::SaveStatusEffects(bool logout)
+ 
+     Sql_Query(SqlHandle, "DELETE FROM char_effects WHERE charid = %u", m_POwner->id);
+ 
++    bool hasTractor = static_cast<CCharEntity*>(m_POwner)->m_hasTractor;
+     for (uint16 i = 0; i < m_StatusEffectList.size(); ++i)
+     {
+         CStatusEffect* PStatusEffect = m_StatusEffectList.at(i);
+ 
+-        if ((logout && PStatusEffect->GetFlag() & EFFECTFLAG_LOGOUT) || (!logout && PStatusEffect->GetFlag() & EFFECTFLAG_ON_ZONE))
++        if ((logout && PStatusEffect->GetFlag() & EFFECTFLAG_LOGOUT) || (!logout && !hasTractor && PStatusEffect->GetFlag() & EFFECTFLAG_ON_ZONE))
+         {
+             RemoveStatusEffect(PStatusEffect, true);
+             continue;

@@ -1,0 +1,7 @@
+@@ -37,4 +37,4 @@ function onTrigger(player, flags, target)
+     -- set flags
+     targ:setFlag( flags )
+ 
+-end
+\ No newline at end of file
++end

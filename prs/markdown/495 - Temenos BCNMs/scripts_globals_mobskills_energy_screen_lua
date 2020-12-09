@@ -1,0 +1,18 @@
+@@ -12,7 +12,9 @@ require("scripts/globals/status")
+ function onMobSkillCheck(target,mob,skill)
+     local phase = mob:getLocalVar("battlePhase")
+     if (phase >= 3) then
+-        return 0
++        if mob:getLocalVar("nuclearWaste") == 0 and mob:getLocalVar("citadelBuster") == 0 then
++            return 0
++        end
+     end
+     return 1
+ end
+@@ -22,4 +24,4 @@ function onMobWeaponSkill(target, mob, skill)
+ 
+     skill:setMsg(MobBuffMove(mob, typeEffect, 1, 0, 60))
+     return typeEffect
+-end
++end
+\ No newline at end of file

@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ function onItemUse(target)
+     end
+     target:addHP(hpHeal)
+     target:messageBasic(tpz.msg.basic.RECOVERS_HP, 0, hpHeal)
+-end
+\ No newline at end of file
++end

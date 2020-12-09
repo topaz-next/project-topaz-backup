@@ -1,0 +1,7 @@
+@@ -179,4 +179,4 @@ Lunar<CLuaAbility>::Register_t CLuaAbility::methods[] =
+     LUNAR_DECLARE_METHOD(CLuaAbility,setVE),
+     LUNAR_DECLARE_METHOD(CLuaAbility,setRange),
+     {nullptr,nullptr}
+-};
+\ No newline at end of file
++};

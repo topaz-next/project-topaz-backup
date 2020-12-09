@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ function onMobWeaponSkill(target, mob, skill)
+     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,tpz.attackType.MAGICAL,tpz.damageType.LIGHTNING,MOBPARAM_WIPE_SHADOWS)
+     target:takeDamage(dmg, mob, tpz.attackType.MAGICAL, tpz.damageType.LIGHTNING)
+     return dmg
+-end
+\ No newline at end of file
++end

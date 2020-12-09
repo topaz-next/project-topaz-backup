@@ -1,0 +1,7 @@
+@@ -15,4 +15,4 @@ end
+ 
+ function onItemUse(target)
+     target:addItem(17335, 99) -- 99x rusty_bolt
+-end
+\ No newline at end of file
++end

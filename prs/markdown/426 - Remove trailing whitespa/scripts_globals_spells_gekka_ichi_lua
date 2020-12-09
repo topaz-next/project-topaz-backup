@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ function onSpellCast(caster,target,spell)
+     local effect = tpz.effect.ENMITY_BOOST
+     caster:addStatusEffect(effect,30,0,300)
+     return effect
+-end
+\ No newline at end of file
++end

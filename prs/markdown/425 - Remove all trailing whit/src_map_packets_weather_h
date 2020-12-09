@@ -1,0 +1,7 @@
+@@ -61,4 +61,4 @@ class CWeatherPacket : public CBasicPacket
+     CWeatherPacket(uint32 ChangeTime, WEATHER WeatherEffect, uint8 TransitionTime);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

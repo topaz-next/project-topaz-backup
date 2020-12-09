@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ function onItemUse(target)
+     elseif (target:hasStatusEffect(tpz.effect.FIELD_SUPPORT_FOOD) == true) then
+         target:delStatusEffect(tpz.effect.FIELD_SUPPORT_FOOD)
+     end
+-end
+\ No newline at end of file
++end

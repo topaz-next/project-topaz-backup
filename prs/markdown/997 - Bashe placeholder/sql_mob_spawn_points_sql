@@ -1,0 +1,9 @@
+@@ -35937,7 +35937,7 @@ INSERT INTO `mob_spawn_points` VALUES (17268784,'Hill_Lizard','Hill Lizard',6,51
+ INSERT INTO `mob_spawn_points` VALUES (17268785,'Midnight_Wings','Midnight Wings',7,598.211,7.714,-6.763,127);
+ INSERT INTO `mob_spawn_points` VALUES (17268786,'Midnight_Wings','Midnight Wings',7,544.471,-0.542,-161.729,127);
+ INSERT INTO `mob_spawn_points` VALUES (17268787,'Moon_Bat','Moon Bat',8,594.075,8.128,-24.515,127);
+-INSERT INTO `mob_spawn_points` VALUES (17268788,'Bashe','Bashe',0,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17268788,'Bashe','Bashe',49,537.188,6.167,-11.067,127);
+ INSERT INTO `mob_spawn_points` VALUES (17268789,'Goblin_Mugger','Goblin Mugger',21,473.743,23.845,176.953,127);
+ INSERT INTO `mob_spawn_points` VALUES (17268790,'Goblin_Pathfinder','Goblin Pathfinder',22,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17268791,'Goblins_Beetle','Goblin\'s Beetle',23,0,0,0,0);

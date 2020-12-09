@@ -1,0 +1,16 @@
+@@ -29,7 +29,7 @@ CTriggerHandler* CTriggerHandler::getInstance()
+ {
+     if (!_instance)
+         _instance.reset(new CTriggerHandler);
+-    
++
+     return _instance.get();
+ }
+ 
+@@ -56,4 +56,4 @@ void CTriggerHandler::triggerTimer()
+             trigger->lastTrigger = timeCount;
+         }
+     }
+-}
+\ No newline at end of file
++}

@@ -1,0 +1,7 @@
+@@ -47,4 +47,4 @@ class CPlayerCharmController : public CPlayerController
+     void DoRoamTick(time_point tick);
+ };
+ 
+-#endif // _PLAYERCONTROLLER
+\ No newline at end of file
++#endif // _PLAYERCONTROLLER

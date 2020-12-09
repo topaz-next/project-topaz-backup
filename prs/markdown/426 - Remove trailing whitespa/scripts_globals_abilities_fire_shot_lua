@@ -1,0 +1,7 @@
+@@ -67,4 +67,4 @@ function onUseAbility(player, target, ability, action)
+ 
+     target:updateClaim(player)
+     return dmg
+-end
+\ No newline at end of file
++end

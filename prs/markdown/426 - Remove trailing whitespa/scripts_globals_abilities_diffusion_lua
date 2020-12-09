@@ -1,0 +1,7 @@
+@@ -21,4 +21,4 @@ function onUseAbility(player, target, ability)
+     player:addStatusEffect(tpz.effect.DIFFUSION,1,0,60)
+ 
+     return tpz.effect.DIFFUSION
+-end
+\ No newline at end of file
++end

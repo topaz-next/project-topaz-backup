@@ -1,0 +1,796 @@
+@@ -0,0 +1,794 @@
++---
++--- File will eventually be renamed to / replace magic.lua
++---
++
++require("scripts/globals/status")
++require("scripts/globals/utils")
++require("scripts/globals/magic_data")
++require("scripts/globals/magic_helpers")
++require("scripts/globals/magicburst")
++
++tpz = tpz or {}
++
++---------------------------
++--- Basic Elemental Nuke --
++---------------------------
++tpz.elementalNuke = tpz.elementalNuke or {}
++
++-- Support Inheritance, looks to itself first before going to base class / meta table
++tpz.elementalNuke.__index = tpz.elementalNuke
++
++function tpz.elementalNuke:create(args)
++    args = args or {}
++    setmetatable(args, self)
++
++    -- Default / Configurable params
++    args.day_bonus_proc_rate     = 0.33
++    args.weather_bonus_proc_rate = 0.33
++
++    return args
++end
++
++-- TODO: Absorb mechanic... because like... absorb damage shouldn't be reduced by stoneskin?
++--       Need to find some solid research on absorb stuff
++function tpz.elementalNuke:__call(spell, caster, target)
++    local damage  = self:calculateSpellDamage(spell, caster, target)
++    local element = spell:getElement()
++
++    -- Handle any extras (does nothing for basic elemental spells)
++    damage = self:handleExtras(spell, caster, target, damage, element)
++
++    -- Adjust the Damage for Phalanx
++    damage = self:handlePhalanx(target, damage)
++
++    -- Adjust the Damage for Stoneskin
++    damage = self:handleStoneskin(target, damage)
++
++    -- Deal the Damage
++    self:dealDamage(spell, caster, target, damage, element)
++
++    -- Add the Nuke Wall
++    self:addNukeWall(target, element)
++
++    return damage
++end
++
++function tpz.elementalNuke:calculateSpellDamage(spell, caster, target)
++    --- https://www.bg-wiki.com/bg/Magic_Damage
++    -- Damage is floored every step.
++    -- "Damage Dealt is calculated by multiplying the following
++    --  terms in order (see above). After each multiplication step,
++    --  the product is floored to the next lowest integer before
++    --  continuing to the next multiplier. Each term after D starts
++    --  with a base of 1.0 and is increased or decreased by caster
++    --  and target stats and attributes as well as other effects."
++
++    local element = spell:getElement() -- Let's grab this as little as possible and then just pass it around
++
++    -- Base Damage
++    local damage = math.floor(self:getBaseDmg(caster, target))
++
++    -- MTDR: Multi Target Damage Reduction
++    damage = math.floor(damage * self:getMultiTargetMultiplier(spell, caster, target))
++
++    -- Staff/Potency: Elemental Staves have potency modifiers
++    damage = math.floor(damage * self:getStaffMultiplier(caster, element))
++
++    -- Elemental Affinity DMG
++    damage = math.floor(damage * self:getAffinityMultiplier(caster, element))
++
++    -- Specific Damage Taken
++    damage = math.floor(damage * self:getSpecificDamageTakenMultiplier(target, element))
++
++    -- Resist
++    damage = math.floor(damage * self:getResistMultiplier(caster, target, element))
++    --print("damage after resist " .. damage)
++    -- Nuke Wall
++    damage = math.floor(damage * self:getNukeWallMultiplier(target, element))
++
++    -- Day/Weather Bonus
++    damage = math.floor(damage * self:getDayWeatherMultiplier(caster, element))
++
++    -- Magic Burst
++    damage = math.floor(damage * self:getMagicBurstMultiplier(target, element))
++
++    -- Magic Burst Bonuses
++    damage = math.floor(damage * self:getMagicBurstBonusMultiplier(caster, target, element))
++
++    -- MAB/MDB
++    damage = math.floor(damage * self:getMABMDBMultiplier(caster, target, element))
++
++    --- https://www.bg-wiki.com/bg/Magic_Damage#TMDA:_Target_Magic_Damage_Adjustment
++    damage = target:magicDmgTaken(damage, element) -- automatically floored because its a C++ int
++
++    ---------------------
++    --- Etc Potencies ---
++    ---------------------
++
++    -- Ebullence
++    damage = math.floor(damage * self:getEbullienceMultiplier(caster))
++
++    -- Cumulative Magic effect
++    damage = math.floor(damage * self:getCumulativeMagicMultiplier(target, element))
++
++    -- TODO: The following are outside of the scope of this refactor as they require systems that don't exist yet
++    --       and, to be honest, I don't feel like implementing them - m241dan
++
++    -- Quick Draw Bonus from AF3 Feet
++    -- Klimaform Bonus from AF3 Feet
++    -- Goetia +2 Set bonus
++
++    return damage
++end
++
++-------------------------------------
++--- Spell Base Damage Calculation ---
++----------------------------------------------------------------------------
++--- This design defaults to retail. However, if you want to customize it ---
++--- by passing your own V/M/dINT_adjustment tables, I recommend that you ---
++--- pass a custom calculateVMIndex() function as well.                   ---
++----------------------------------------------------------------------------
++function tpz.elementalNuke:getBaseDmg(caster, target)
++    --- https://www.bg-wiki.com/bg/Magic_Damage#D:_INT-adjusted_Base_Damage
++    local dINT    = caster:getStat(tpz.mod.INT) - target:getStat(tpz.mod.INT)
++    local VMIndex = self:calculateVMIndex(dINT)
++    local V       = self.V[VMIndex]
++    local M       = self.M[VMIndex]
++
++    -- Need to adjust dINT for the M multiplication step
++    -- Function needs to support passing in a custom adjustment table for certain nukes (tier 1s, -ra spells, etc)
++    -- but most follow the the default params
++    local dINT_adjustment = self.dINT_adjustment or {0, 50, 100, 200}
++
++    dINT = dINT - dINT_adjustment[VMIndex]
++
++    return (caster:getMod(tpz.mod.MAGIC_DAMAGE) + V + (dINT * M))
++end
++
++function tpz.elementalNuke:calculateVMIndex(dStat)
++    local VMIndex = 1
++
++    if dStat <= 49 then
++        VMIndex = 1
++    elseif 50 <= dStat and dStat <= 99 then
++        VMIndex = 2
++    elseif 100 <= dStat and dStat <= 199 then
++        VMIndex = 3
++    elseif 200 <= dStat then
++        VMIndex = 4
++    end
++
++    return VMIndex
++end
++
++function tpz.elementalNuke:getMultiTargetMultiplier(spell, caster, target)
++    --- https://www.bg-wiki.com/bg/Magic_Damage#MTDR:_Multiple-Target_Damage_Reduction
++    local multiplier = 1.0
++
++    if self.hasMultipleTargetReduction then
++        local numTargets = spell:getTotalTargets()
++
++        -- 2 <= numTargets <= 10
++        if (2 <= numTargets) and (numTargets <= 10) then
++            multiplier = 0.9 - 0.05 * numTargets
++        elseif (10 < numTargets) then
++            multiplier = 0.4
++        end
++    end
++
++    return multiplier
++end
++
++function tpz.elementalNuke:getStaffMultiplier(caster, element)
++    --- https://www.bg-wiki.com/bg/Magic_Damage#Staff
++    local multiplier = 1.0
++
++    multiplier = multiplier + (caster:getMod(tpz.magic.element_to_potency_map[element]) / 100)
++
++    return multiplier
++end
++
++function tpz.elementalNuke:getAffinityMultiplier(caster, element)
++    --- https://www.bg-wiki.com/bg/Magic_Damage#Affinity
++    local multiplier      = 1.0
++
++    if element ~= tpz.magic.element.NONE then
++        local affinity_mod_id = tpz.magic.affinity_dmg_map[element]
++        local affinity_mod    = caster:getMod(affinity_mod_id)
++
++        if affinity_mod > 0 then
++            -- 0.10 for the first level
++            -- 0.05 for the subsequent levels
++            multiplier = multiplier + 0.10 + ((affinity_mod - 1) * 0.05)
++        end
++    end
++
++    return multiplier
++end
++
++function tpz.elementalNuke:getSpecificDamageTakenMultiplier(target, element)
++    --- https://www.bg-wiki.com/bg/Magic_Damage#Specific_Damage_Taken
++    local multiplier = 0.0
++
++    if element ~= tpz.magic.element.NONE then
++        local sdt_mod_id = tpz.magic.elemental_sdt_map[element]
++        multiplier       = multiplier + (target:getMod(sdt_mod_id) / 1000)
++    end
++
++    return multiplier
++end
++
++-------------------------------------
++--- Resist Multiplier Calculation ---
++----------------------------------------------------------------------------
++--- This design defaults to retail. However, if you want to customize it ---
++--- by passing your own resist_rates tables, I recommend that you pass a ---
++--- custom calculateResistRateIndex() function as well.                  ---
++----------------------------------------------------------------------------
++function tpz.elementalNuke:getResistMultiplier(caster, target, element)
++    --- https://www.bg-wiki.com/bg/Magic_Damage#Resist
++    local multiplier     = 1.0
++    local magic_hit_rate = self:getMagicHitRate(caster, target, element)
++
++    -- Make sure target doesn't have magic shield, if they do, short circuit all this calculation
++    if target:hasStatusEffect(tpz.effect.MAGIC_SHIELD, 0) == false then
++        local resist_index = self:calculateResistRateIndex(magic_hit_rate)
++        local resist_rates = self.resist_rates or {1/8, 1/4, 1/2, 1/1}
++
++        -- This may seem convoluted but it supports custom resist rates
++        multiplier = resist_rates[resist_index]
++
++        -- Handle SDT (if the reduction is 50% or less, halve it)
++        if self:getSpecificDamageTakenMultiplier(target, element) <= 0.5 then
++            multiplier = multiplier / 2
++        end
++    else
++        multiplier = 0.0
++    end
++
++    return multiplier
++end
++
++function tpz.elementalNuke:calculateResistRateIndex(magic_hit_rate)
++    local one_eighth   = (1-magic_hit_rate)^3
++    local one_fourth   = (1-magic_hit_rate)^2
++    local one_half     = (1-magic_hit_rate)
++    local resist_roll  = math.random() + (self.base_resist or 0)
++    local resist_index = 1
++
++    if resist_roll <= one_eighth then
++        resist_index = 1
++    elseif resist_roll <= one_fourth then
++        resist_index = 2
++    elseif resist_roll <= one_half then
++        resist_index = 3
++    else
++        resist_index = 4
++    end
++
++    return resist_index
++end
++
++function tpz.elementalNuke:getMagicHitRate(caster, target, element)
++    --- https://www.bg-wiki.com/bg/Magic_Hit_Rate
++    -- Old version had a level correction involved, seems to be nothing "concrete" about that on BG-Wiki,
++    -- so, I'm leaving it out... for now
++    local dMAcc          = self:getSpellMagicAcc(caster, target, element) - self:getTargetMagicEva(target, element)
++    local magic_hit_rate = 0.50
++
++    if dMAcc < 0 then
++        magic_hit_rate = magic_hit_rate + (math.floor(dMAcc / 2) / 100)
++    else
++        magic_hit_rate = magic_hit_rate + (dMAcc / 100 )
++    end
++
++    -- BG-Wiki Comment is that it is like hitrate, which is between 20% and 95%... so we'll adopt that here
++    return utils.clamp(magic_hit_rate, 0.20, 0.95)
++end
++
++function tpz.elementalNuke:getSpellMagicAcc(caster, target, element)
++    local spell_mAcc = tpz.magic.helpers.getCasterMagicAcc(caster, target, tpz.skill.ELEMENTAL_MAGIC, tpz.mod.INT, element) -- base mAcc
++
++    -- mAcc from Merits
++    spell_mAcc = spell_mAcc + self:getAccFromMerits(caster, element)
++
++    -- mAcc from Abilities
++    spell_mAcc = spell_mAcc + self:getAccFromStatus(caster)
++
++    -- mAcc from Magic Burst
++    spell_mAcc = spell_mAcc + self:getAccFromMagicBurst(target, element)
++
++    -- mAcc from Weather
++    spell_mAcc = spell_mAcc + self:getAccFromWeather(caster, element)
++
++    -- mAcc from MACC Affinity
++    spell_mAcc = spell_mAcc + self:getAccFromAffinity(caster, element)
++
++    return spell_mAcc
++end
++
++function tpz.elementalNuke:getAccFromMerits(caster, element)
++    local merit_mAcc = 0
++
++    -- Deal with Black Mage Elemental Magic Accuracy Merits
++    --- https://www.bg-wiki.com/bg/Category:Elemental_Magic#Merit_Point_Augment
++    merit_mAcc = merit_mAcc + caster:getMerit(tpz.merit.ELEMENTAL_MAGIC_ACCURACY)
++
++    -- Deal with Red Mage Group 2 Magic Accuracy Merits
++    --- https://www.bg-wiki.com/bg/Red_Mage#Merits
++    merit_mAcc = merit_mAcc + caster:getMerit(tpz.merit.MAGIC_ACCURACY)
++
++    -- Deal with REd Mage Group 1 Element Specific Accuracy Merits
++    --- https://www.bg-wiki.com/bg/Red_Mage#Merits
++    merit_mAcc = merit_mAcc + caster:getMerit(tpz.magic.rdm_merits_acc_map[element])
++
++    return merit_mAcc
++end
++
++function tpz.elementalNuke:getAccFromAffinity(caster, element)
++    -- No solid reference for this except for the dated post below ...
++    --- https://ffxiclopedia.fandom.com/wiki/Magic_Accuracy
++    -- It was 2011 when the parts we care about were last edited.
++    local affinity_lvl  = caster:getMod(tpz.magic.affinity_acc_map[element])
++    local affinity_mAcc = 0
++
++    if affinity_lvl ~= 0 then
++        affinity_mAcc = 10 + (affinity_lvl * 10)
++    end
++
++    return affinity_mAcc
++end
++
++function tpz.elementalNuke:getAccFromStatus(caster)
++    local status_mAcc = 0
++
++    --- https://www.bg-wiki.com/bg/Focalization
++    if caster:hasStatusEffect(tpz.effect.FOCALIZATION) then
++        status_mAcc = status_mAcc + caster:getMod(tpz.mod.FOCALIZATION_AMOUNT)
++    end
++
++    return status_mAcc
++end
++
++function tpz.elementalNuke:getAccFromWeather(caster, element)
++    local weather_mAcc = 0
++
++    --- https://www.bg-wiki.com/bg/Klimaform
++    if element ~= tpz.magic.element.NONE and caster:hasStatusEffect(tpz.effect.KLIMAFORM) then
++        if element == tpz.magic.weather_to_element_map[caster:getWeather()] then
++            weather_mAcc = 15
++        end
++    end
++
++    return weather_mAcc
++end
++
++function tpz.elementalNuke:getAccFromMagicBurst(target, element)
++    local burst_mAcc = 0
++
++    local skillchainTier, _ = FormMagicBurst(element, target)
++    if skillchainTier > 0 then
++        -- Not sure where the +25 comes from? Currently taking from magic.lua
++        burst_mAcc = 25
++    end
++
++    return burst_mAcc
++end
++
++function tpz.elementalNuke:getTargetMagicEva(target, element)
++    --- https://www.bg-wiki.com/bg/Magic_Evasion
++    return target:getMod(tpz.mod.MEVA) + target:getMod(tpz.magic.elemental_res_map[element])
++end
++
++function tpz.elementalNuke:getNukeWallMultiplier(target, element)
++    --- https://www.bg-wiki.com/bg/Magic_Damage#Consecutive_Elemental_Damage_Penalty
++    local multiplier = 1.0
++
++    if target:isNM() and target:hasStatusEffect(tpz.magic.element_to_nukewall_effect_map[element]) then
++        -- 60% penalty...
++        multiplier = 0.40
++        -- TODO: once rune fencer is in, the penalty is only 30%
++        --  if rayke_element == element then multiplier = 0.7; end
++    end
++
++    return multiplier
++end
++
++function tpz.elementalNuke:getDayWeatherMultiplier(caster, element)
++    --- https://www.bg-wiki.com/bg/Magic_Damage#Day_.26_Weather
++    local day_element     = VanadielDayElement()
++    local weather         = caster:getWeather()
++    local weather_element = tpz.magic.weather_to_element_map[weather]
++    local multiplier      = 1.0
++
++    -- determine if we should force day/weather bonuses (ie, Obis)
++    local force_bonuses = self:shouldForceDayWeatherProc(caster, element)
++
++    -- handle day bonuses
++    if day_element == element then
++        -- matching elements
++        multiplier = multiplier + (caster:getMod(tpz.mod.DAY_NUKE_BONUS) / 100) -- things like Sorcerer's Tonban and/or Zodiac Ring
++
++        if force_bonuses or math.random() < self.day_bonus_proc_rate then
++            multiplier = multiplier + 0.10
++        end
++
++    elseif day_element == tpz.magic.element_to_ascendant_element_map[element] then
++        -- opposing / ascendant elements
++        if force_bonuses or math.random() < self.day_bonus_proc_rate then
++            multiplier = multiplier - 0.10
++        end
++    end
++
++    -- handle weather bonuses
++    if element == weather_element then
++        -- matching elements
++        if force_bonuses or math.random() < self.weather_bonus_proc_rate then
++            -- if the weather is single if its mod is even, double if its odd
++            if weather % 2 == 0 then
++                multiplier = multiplier + 0.10
++            else
++                multiplier = multiplier + 0.25
++            end
++        end
++
++        -- do iridescence in its own roll until told otherwise
++        if caster:getMod(tpz.mod.IRIDESCENCE) >= 1 and (force_bonuses or math.random() < self.weather_bonus_proc_rate) then
++            multiplier = multiplier + 0.10
++        end
++    elseif element == tpz.magic.element_to_ascendant_element_map[weather_element] then
++        -- opposing / ascendant elements
++        if force_bonuses or math.random() < self.weather_bonus_proc_rate then
++            -- if the weather is single if its mod is even, double if its odd
++            if weather % 2 == 0 then
++                multiplier = multiplier - 0.10
++            else
++                multiplier = multiplier - 0.25
++            end
++        end
++    end
++
++    -- day/weather caps at 1.4
++    multiplier = math.min(multiplier, 1.4)
++
++    -- TODO: unknown if Twilight Cape should be outside of the cap?
++    -- TODO: Also, Twilight Cape should trigger on either but present mod triggers only for day
++
++    return multiplier
++end
++
++function tpz.elementalNuke:shouldForceDayWeatherProc(caster, element)
++    local force_bonuses = false
++
++    if  caster:getMod(tpz.magic.element_to_dayweather_bonus_map[element]) > 0 then
++        force_bonuses = true
++    end
++
++    return force_bonuses
++end
++
++function tpz.elementalNuke:getMagicBurstMultiplier(target, element)
++    --- https://www.bg-wiki.com/bg/Magic_Damage#MB:_Magic_Burst
++    local skillchainTier, weaponSkillCount = FormMagicBurst(element, target)
++    local multiplier = 1.0
++
++    -- TODO: https://www.bg-wiki.com/bg/Resist#SDT_and_Magic_Bursting
++    --       The research here seems contradictory in a way.
++    --       At 100% SDT (ie, neutral) the multiplier would look like 0.95.
++    --       However, it seems correct at 150% SDT as it claims the multiplier would be 1.85.
++    if skillchainTier > 0 then
++        -- MB = 1.25 + (0.1 * X) where X is number of ws
++        -- However, starting at 1.35 accounts for chainbind magic bursts being 1.25 becuase their weaponSkillCount is 0.
++        multiplier = 1.35 + ((weaponSkillCount - 1) * 0.1)
++    end
++
++    return multiplier
++end
++
++function tpz.elementalNuke:getMagicBurstBonusMultiplier(caster, target, element)
++    --- https://www.bg-wiki.com/bg/Magic_Damage#MBB:_Magic_Burst_Bonus
++    local multiplier = 1.0
++
++    -- Gear and Atma will likely use the same mod
++    multiplier = multiplier + (self:getMagicBurstBonusMod(caster) / 100)
++
++    -- Cap at 1.4 for non-trait
++    multiplier = math.min(multiplier, 1.4)
++
++    -- Add the trait
++    multiplier = multiplier + (caster:getMod(tpz.mod.MAG_BURST_BONUS_TRAIT) / 100)
++
++    return multiplier
++end
++
++function tpz.elementalNuke:getMagicBurstBonusMod(caster)
++    return caster:getMod(tpz.mod.MAG_BURST_BONUS)
++end
++
++function tpz.elementalNuke:getMABMDBMultiplier(caster, target, element)
++    --- https://www.bg-wiki.com/bg/Magic_Damage#MAB.2FMDB:_Magic_Attack_Bonus_.2F_Magic_Defense_Bonus
++    -- MAB comes in general and elemental specific forms (atmas)
++    local MAB = 1 + (self:getMAB(caster, element) / 100)
++    local MDB = 1 + (target:getMod(tpz.mod.MDEF) / 100)
++
++    return MAB/MDB
++end
++
++function tpz.elementalNuke:getMAB(caster, element)
++    return (caster:getMod(tpz.mod.MATT)                         +
++            caster:getMod(tpz.magic.elemental_atk_map[element]) +
++            caster:getMerit(tpz.magic.blm_merits_mab_map[element]))
++end
++
++function tpz.elementalNuke:getEbullienceMultiplier(caster)
++    --- https://www.bg-wiki.com/bg/Ebullience
++    local multiplier = 1.0
++
++    if caster:hasStatusEffect(tpz.effect.EBULLIENCE) then
++        multiplier = multiplier + (caster:getMod(tpz.mod.EBULLIENCE_AMOUNT) / 100)
++        -- has to be deleted here because core does not check for if its a damage spell
++        caster:delStatusEffect(tpz.effect.EBULLIENCE)
++    end
++
++    return multiplier
++end
++
++function tpz.elementalNuke:getCumulativeMagicMultiplier(target, element)
++    --- https://www.bg-wiki.com/bg/Category:Cumulative_Magic
++    local multiplier = 1.0
++    local effect     = target:getStatusEffect(tpz.effect.CUMULATIVE_MAGIC_BONUS, element)
++
++    if effect ~= nil then
++        multiplier = multiplier + (effect:getPower() * 0.05)
++    end
++
++    -- caps at 25%
++    multiplier = math.min(multiplier, 1.25)
++
++    return multiplier
++end
++
++function tpz.elementalNuke:addNukeWall(target, element)
++    local effect_id = tpz.magic.element_to_nukewall_effect_map[element]
++
++    if target:isNM() and target:hasStatusEffect(effect_id) == false then
++        target:addStatusEffectEx(effect_id, 0, 1, 0, 5)
++    end
++end
++
++function tpz.elementalNuke:handleExtras(spell, caster, target, damage, element)
++    return damage
++end
++
++function tpz.elementalNuke:handlePhalanx(target, damage)
++    local phalanx_reduced_damage = damage - target:getMod(tpz.mod.PHALANX)
++
++    return utils.clamp(phalanx_reduced_damage, 0, 99999)
++end
++
++function tpz.elementalNuke:handleStoneskin(target, damage)
++    local stoneskin_reduced_damage = utils.stoneskin(target, damage)
++
++    return utils.clamp(stoneskin_reduced_damage, 0, 99999)
++end
++
++function tpz.elementalNuke:dealDamage(spell, caster, target, damage, element)
++    target:takeSpellDamage(caster, spell, damage, tpz.attackType.MAGICAL, tpz.damageType.ELEMENTAL + element)
++    target:updateEnmityFromDamage(caster, damage)
++
++    if target:getObjType() ~= tpz.objType.PC then
++        target:addTP(100)
++    end
++end
++
++
++-------------------------------
++--- Ancient Magic II Spells ---
++-------------------------------
++
++tpz.ancientMagicNuke = tpz.ancientMagicNuke or tpz.elementalNuke:create() -- use the elementalNuke as our base metatable
++
++-- Support Inheritance, looks to itself first before going to base class / meta table
++tpz.ancientMagicNuke.__index = tpz.ancientMagicNuke
++tpz.ancientMagicNuke.__call  = tpz.elementalNuke.__call
++
++function tpz.ancientMagicNuke:create(args)
++    args = tpz.elementalNuke:create(args or {})
++    setmetatable(args, self)
++
++    return args
++end
++
++----------------------------------------------
++--- Accomodating Ancient Magic Differences ---
++----------------------------------------------
++
++-------------------------------------------------------------------
++--- Handle ancient magic lowering descendant element resistance ---
++-------------------------------------------------------------------
++function tpz.ancientMagicNuke:handleExtras(spell, caster, target, damage, element)
++    -- don't like that this uses the same debuff as nin...? is it supposed to?
++    -- would like some research on this
++    target:addStatusEffectEx(tpz.effect.NINJUTSU_ELE_DEBUFF, 0, 30, 0, 10, 0, tpz.magic.element_to_descendant_element_map[element], 0)
++
++    return damage
++end
++
++-----------------------------------
++--- Handle ancient magic merits ---
++-----------------------------------
++function tpz.ancientMagicNuke:getMagicBurstBonusMod(caster)
++    return tpz.elementalNuke.getMagicBurstBonusMod(self, caster) + caster:getMerit(tpz.merit.ANCIENT_MAGIC_BURST_DMG)
++end
++
++function tpz.ancientMagicNuke:getMAB(caster, element)
++    return tpz.elementalNuke.getMAB(self, caster, element) + caster:getMerit(tpz.merit.ANCIENT_MAGIC_ATK_BONUS)
++end
++
++
++
++
++
++------------------
++--- -Ja Spells ---
++------------------
++tpz.jaNuke = tpz.jaNuke or tpz.elementalNuke:create()
++
++-- Support Inheritance, looks to itself first before going to base class / meta table
++tpz.jaNuke.__index = tpz.jaNuke
++tpz.jaNuke.__call  = tpz.elementalNuke.__call
++
++function tpz.jaNuke:create(args)
++    args = tpz.elementalNuke:create(args or {})
++    setmetatable(args, self)
++
++    return args
++end
++
++--------------------------------
++--- Accomodating inheritance ---
++--------------------------------
++
++--------------------------------------------------------------
++--- Handle -ja spells stack cumulative magic damage debuff ---
++--------------------------------------------------------------
++function tpz.jaNuke:handleExtras(spell, caster, target, damage, element)
++    local effect  = target:getStatusEffect(tpz.effect.CUMULATIVE_MAGIC_BONUS)
++
++    -- If we already have the effect and its a matching element, beef it up
++    if effect ~= nil and effect:getSubType() == element then
++        effect:setPower(effect:getPower() + 1)
++    else
++        -- if we got here, we, at minimum, don't have matching element, so delete whats there
++        if effect ~= nil then
++            target:delStatusEffect(tpz.effect.CUMULATIVE_MAGIC_BONUS)
++        end
++        -- now, add a fresh cumulative effect (starting over)
++        -- TODO: certain blm items extend this duration, but them and their mods are not in
++        --       and that is currently outside of the purview of this refactor
++        target:addStatusEffectEx(tpz.effect.CUMULATIVE_MAGIC_BONUS, 0, 1, 0, 60, element)
++    end
++
++    return damage
++end
++
++
++
++
++
++--------------------
++--- Helix Spells ---
++--------------------
++tpz.helixNuke = tpz.HelixNuke or tpz.elementalNuke:create() -- use the elementalNuke as our base metatable
++
++-- Support Inheritance, looks to itself first before going to base class / meta table
++tpz.helixNuke.__index = tpz.helixNuke
++tpz.helixNuke.__call  = tpz.elementalNuke.__call
++
++function tpz.helixNuke:create(args)
++    args = tpz.elementalNuke:create(args or {})
++    setmetatable(args, self)
++
++    return args
++end
++
++--------------------------------------
++--- Accomodating Helix differences ---
++--------------------------------------
++-- Helix have custom dINT Adjustment, but don't pass in constructor or you eliminate the chance to pass in a custom table
++tpz.helixNuke.dINT_adjustment = {0, 77, 234}
++function tpz.helixNuke:calculateVMIndex(dStat)
++    local VMIndex = 1
++
++    if dStat <= 77 then
++        VMIndex = 1
++    elseif 78 <= dStat and dStat <= 234 then
++        VMIndex = 2
++    elseif 235 <= dStat then
++        VMIndex = 3
++    end
++
++    return VMIndex
++end
++
++---------------------------
++--- Handle Helix Merits ---
++---------------------------
++function tpz.helixNuke:getAccFromMerits(caster, element)
++    local spell_mAcc = tpz.elementalNuke.getAccFromMerits(self, caster, element)
++
++    -- https://www.bg-wiki.com/bg/Scholar#Merits
++    spell_mAcc = caster:getMerit(tpz.merit.HELIX_MAGIC_ACC_ATT) * 3
++
++    return spell_mAcc
++end
++
++-----------------------------
++--- Handle merits and DOT ---
++-----------------------------
++function tpz.helixNuke:calculateSpellDamage(spell, caster, target)
++    local damage = tpz.elementalNuke.calculateSpellDamage(self, spell, caster, target)
++
++    -- https://www.bg-wiki.com/bg/Category:Helix
++    -- Merit Points section
++    damage = math.floor(damage * (1.00 + (caster:getMerit(tpz.merit.HELIX_MAGIC_ACC_ATT) * 2) / 100))
++    return damage
++end
++
++function tpz.helixNuke:handleExtras(spell, caster, target, damage, element)
++    local duration = self:getHelixDuration(caster)
++    local dot      = math.min(damage, 9999)
++
++    if (dot > 0) then
++        target:addStatusEffect(tpz.effect.HELIX,dot,3,duration)
++    end
++
++    return damage
++end
++
++-----------------------------------
++--- Helix Duration Calculations ---
++-----------------------------------------------------------------------------
++--- This design defaults to retail settings, however if you want to roll  ---
++--- some custom durations (ie, passing your own duration table), I would  ---
++--- recommend passing a calculateHelixDurationIndex as well. And possibly ---
++--- even recommend passing in a determineLvl function                     ---
++-----------------------------------------------------------------------------
++function tpz.helixNuke:getHelixDuration(caster)
++    -- https://www.bg-wiki.com/bg/Category:Helix
++    local lvl           = self:determineHelixLvl(caster)
++    local durationIndex = self:calculateHelixDurationIndex(lvl)
++    local durations     = self.durations or {30, 60, 90}
++
++    return durations[durationIndex]
++end
++
++function tpz.helixNuke:determineHelixLvl(caster)
++    local lvl = 1 -- incase somehow we casting helix without being a scholar???
++
++    if caster:getMainJob() == tpz.job.SCH then
++        lvl = caster:getMainLvl()
++    elseif caster:getSubJob() == tpz.job.SCH then
++        lvl = caster:getSubLvl()
++    end
++
++    return lvl
++end
++
++function tpz.helixNuke:calculateHelixDurationIndex(lvl)
++    -- This is simply a helper function that allows for customizability
++    return utils.clamp(lvl % 20, 1, 3)
++end
++
++function tpz.helixNuke:shouldForceDayWeatherProc(caster, element)
++    return true
++end
++
++-- TODO: https://www.bg-wiki.com/bg/Category:Helix
++--       What does this mean? ...
++--       "enemies are more susceptible to the full power of a Helix if the Helix is of the element they are weak against"
++--       Need research, maybe they do bonus damage to SDT?
++
++
++-- TODO: testing (test all the AM2 and Helix paths, ie their merits)
++-- TODO: multipliers into a "customizable" table
+\ No newline at end of file

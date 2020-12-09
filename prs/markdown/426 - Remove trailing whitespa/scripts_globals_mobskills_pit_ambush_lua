@@ -1,0 +1,7 @@
+@@ -36,4 +36,4 @@ function onMobWeaponSkill(target, mob, skill)
+ 
+     target:takeDamage(dmg, mob, tpz.attackType.PHYSICAL, tpz.damageType.PIERCING)
+     return dmg
+-end
+\ No newline at end of file
++end

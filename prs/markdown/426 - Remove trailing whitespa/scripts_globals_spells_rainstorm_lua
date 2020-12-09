@@ -1,0 +1,7 @@
+@@ -34,4 +34,4 @@ function onSpellCast(caster, target, spell)
+     target:addStatusEffect(tpz.effect.RAINSTORM, power, 0, duration)
+ 
+     return tpz.effect.RAINSTORM
+-end
+\ No newline at end of file
++end

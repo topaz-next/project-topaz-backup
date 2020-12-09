@@ -1,0 +1,7 @@
+@@ -30,4 +30,4 @@ function onEventFinish(player,csid,option)
+         player:setPetName(tpz.pet.type.AUTOMATON, 86 + val + page * 32)
+         player:messageSpecial(ID.text.AUTOMATON_RENAME)
+     end
+-end
+\ No newline at end of file
++end

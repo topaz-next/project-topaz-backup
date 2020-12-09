@@ -1,0 +1,7 @@
+@@ -69,4 +69,4 @@ function onUseAbility(player, target, ability)
+     local del = player:delItem(2182, 1) or player:delItem(2974, 1)
+     target:updateClaim(player)
+     return tpz.effect.SLEEP_I
+-end
+\ No newline at end of file
++end

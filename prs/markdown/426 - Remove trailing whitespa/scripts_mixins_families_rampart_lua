@@ -1,0 +1,22 @@
+@@ -8,11 +8,11 @@ g_mixins.families = g_mixins.families or {}
+ -- 1 = door open
+ 
+ g_mixins.families.rampart = function(mob)
+-    
++
+     mob:addListener("SPAWN", "RAMPART_SPAWN", function(mob)
+-        mob:setLocalVar("swapTime", os.time())    
++        mob:setLocalVar("swapTime", os.time())
+     end)
+-    
++
+     mob:addListener("TICK", "RAMPART_TICK", function(mob)
+         local swapTime = mob:getLocalVar("swapTime")
+ 
+@@ -31,4 +31,4 @@ g_mixins.families.rampart = function(mob)
+     end)
+ end
+ 
+-return g_mixins.families.rampart
+\ No newline at end of file
++return g_mixins.families.rampart

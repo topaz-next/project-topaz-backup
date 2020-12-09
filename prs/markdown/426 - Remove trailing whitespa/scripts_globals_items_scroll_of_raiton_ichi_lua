@@ -1,0 +1,7 @@
+@@ -10,4 +10,4 @@ end
+ 
+ function onItemUse(target)
+     target:addSpell(332)
+-end
+\ No newline at end of file
++end

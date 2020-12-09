@@ -1,0 +1,7 @@
+@@ -46,4 +46,4 @@ function onTrigger(player, tp, target)
+     if(targ:getID() ~= player:getID()) then
+         player:PrintToPlayer(string.format("Set %s's TP to %i.", targ:getName(), targ:getTP()))
+     end
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -1233,4 +1233,4 @@ function tpz.pet.spawnPet(player, petID)
+         local duration = math.floor(statusEffect:getTimeRemaining()/1000)
+         pet:addStatusEffectEx(effect, effect, power, 0, duration)
+     end
+-end
+\ No newline at end of file
++end

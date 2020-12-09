@@ -1,0 +1,13 @@
+@@ -44545,9 +44545,9 @@ INSERT INTO `mob_spawn_points` VALUES (17375275,'Phoedme','Phoedme',15,16.231,-4
+ INSERT INTO `mob_spawn_points` VALUES (17375277,'Prune','Prune',13,188.059,-64,175.999,65);
+ INSERT INTO `mob_spawn_points` VALUES (17375278,'Pepper','Pepper',14,182.059,-64,175.999,65);
+ INSERT INTO `mob_spawn_points` VALUES (17375279,'Phoedme','Phoedme',15,176.059,-64,175.999,65);
+-INSERT INTO `mob_spawn_points` VALUES (17375281,'Bitoso','Bitoso',16,-138,56,-225,190);
+-INSERT INTO `mob_spawn_points` VALUES (17375283,'Bitoso','Bitoso',16,22.231,-4,-25.076,190);
+-INSERT INTO `mob_spawn_points` VALUES (17375285,'Bitoso','Bitoso',16,182.059,-64,174.999,190);
++INSERT INTO `mob_spawn_points` VALUES (17375281,'Bitoso','Bitoso',16,-139.00,56.043,-224.199,192);
++INSERT INTO `mob_spawn_points` VALUES (17375283,'Bitoso','Bitoso',16,21.089,-3.463,-24.282,192);
++INSERT INTO `mob_spawn_points` VALUES (17375285,'Bitoso','Bitoso',16,181.039,-63.471,175.76,192);
+ INSERT INTO `mob_spawn_points` VALUES (17375287,'Nenaunir','Nenaunir',17,-138,56,-224,190);
+ INSERT INTO `mob_spawn_points` VALUES (17375288,'Nenaunirs_Wife','Nenaunir\'s Wife',18,-134,56,-224,190);
+ INSERT INTO `mob_spawn_points` VALUES (17375289,'Nenaunirs_Wife','Nenaunir\'s Wife',18,-135,56,-228,190);

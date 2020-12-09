@@ -1,0 +1,244 @@
+@@ -0,0 +1,242 @@
++require("scripts/globals/status")
++require("scripts/globals/magic")
++require("scripts/globals/weather")
++
++tpz = tpz or {}
++
++tpz.items = tpz.items or {}
++
++tpz.items.staves = {
++    FIRE_STAFF      = 17545,
++    VULCANS_STAFF   = 17546,
++    ICE_STAFF       = 17547,
++    AQUILOS_STAFF   = 17548,
++    WIND_STAFF      = 17549,
++    AUSTERS_STAFF   = 17550,
++    EARTH_STAFF     = 17551,
++    TERRAS_STAFF    = 17552,
++    THUNDER_STAFF   = 17553,
++    JUPITERS_STAFF  = 17554,
++    WATER_STAFF     = 17555,
++    NEPTUNES_STAFF  = 17556,
++    LIGHT_STAFF     = 17557,
++    APOLLOS_STAFF   = 17558,
++    DARK_STAFF      = 17559,
++    PLUTOS_STAFF    = 17560,
++    IRIDAL_STAFF    = 18632,
++    CHATOYANT_STAFF = 18633
++}
++
++tpz.magic = tpz.magic or {}
++tpz.magic.staff_map = {
++    -- sub table maps to ...
++    -- [1] = Fire, [2] = Earth, [3] = Water, [4] = Wind, [5] = Ice, [6] = Thunder, [7] = Light, [8] = Dark
++    [tpz.items.staves.FIRE_STAFF]      = { [1] = 1.10, [2] = 1.00, [3] = 1.00, [4] = 1.00, [5] = 0.90, [6] = 1.00, [7] = 1.00, [8] = 1.00 },
++    [tpz.items.staves.VULCANS_STAFF]   = { [1] = 1.15, [2] = 1.00, [3] = 1.00, [4] = 1.00, [5] = 0.85, [6] = 1.00, [7] = 1.00, [8] = 1.00 },
++    [tpz.items.staves.EARTH_STAFF]     = { [1] = 1.00, [2] = 1.10, [3] = 1.00, [4] = 1.00, [5] = 1.00, [6] = 0.90, [7] = 1.00, [8] = 1.00 },
++    [tpz.items.staves.TERRAS_STAFF]    = { [1] = 1.00, [2] = 1.15, [3] = 1.00, [4] = 1.00, [5] = 1.00, [6] = 0.85, [7] = 1.00, [8] = 1.00 },
++    [tpz.items.staves.WATER_STAFF]     = { [1] = 0.90, [2] = 1.00, [3] = 1.10, [4] = 1.00, [5] = 1.00, [6] = 1.00, [7] = 1.00, [8] = 1.00 },
++    [tpz.items.staves.NEPTUNES_STAFF]  = { [1] = 0.85, [2] = 1.00, [3] = 1.15, [4] = 1.00, [5] = 1.00, [6] = 1.00, [7] = 1.00, [8] = 1.00 },
++    [tpz.items.staves.WIND_STAFF]      = { [1] = 1.00, [2] = 0.90, [3] = 1.00, [4] = 1.10, [5] = 1.00, [6] = 1.00, [7] = 1.00, [8] = 1.00 },
++    [tpz.items.staves.AUSTERS_STAFF]   = { [1] = 1.00, [2] = 0.85, [3] = 1.00, [4] = 1.15, [5] = 1.00, [6] = 1.00, [7] = 1.00, [8] = 1.00 },
++    [tpz.items.staves.ICE_STAFF]       = { [1] = 1.00, [2] = 1.00, [3] = 1.00, [4] = 0.90, [5] = 1.10, [6] = 1.00, [7] = 1.00, [8] = 1.00 },
++    [tpz.items.staves.AQUILOS_STAFF]   = { [1] = 1.00, [2] = 1.00, [3] = 1.00, [4] = 0.85, [5] = 1.15, [6] = 1.00, [7] = 1.00, [8] = 1.00 },
++    [tpz.items.staves.THUNDER_STAFF]   = { [1] = 1.00, [2] = 1.00, [3] = 0.90, [4] = 1.00, [5] = 1.00, [6] = 1.10, [7] = 1.00, [8] = 1.00 },
++    [tpz.items.staves.JUPITERS_STAFF]  = { [1] = 1.00, [2] = 1.00, [3] = 0.85, [4] = 1.00, [5] = 1.00, [6] = 1.15, [7] = 1.00, [8] = 1.00 },
++    [tpz.items.staves.LIGHT_STAFF]     = { [1] = 1.00, [2] = 1.00, [3] = 1.00, [4] = 1.00, [5] = 1.00, [6] = 1.00, [7] = 1.10, [8] = 0.90 },
++    [tpz.items.staves.APOLLOS_STAFF]   = { [1] = 1.00, [2] = 1.00, [3] = 1.00, [4] = 1.00, [5] = 1.00, [6] = 1.00, [7] = 1.15, [8] = 0.85 },
++    [tpz.items.staves.DARK_STAFF]      = { [1] = 1.00, [2] = 1.00, [3] = 1.00, [4] = 1.00, [5] = 1.00, [6] = 1.00, [7] = 0.90, [8] = 1.10 },
++    [tpz.items.staves.PLUTOS_STAFF]    = { [1] = 1.00, [2] = 1.00, [3] = 1.00, [4] = 1.00, [5] = 1.00, [6] = 1.00, [7] = 0.85, [8] = 1.15 },
++    [tpz.items.staves.IRIDAL_STAFF]    = { [1] = 1.10, [2] = 1.10, [3] = 1.10, [4] = 1.10, [5] = 1.10, [6] = 1.10, [7] = 1.10, [8] = 1.10 },
++    [tpz.items.staves.CHATOYANT_STAFF] = { [1] = 1.15, [2] = 1.15, [3] = 1.15, [4] = 1.15, [5] = 1.15, [6] = 1.15, [7] = 1.15, [8] = 1.15 },
++}
++
++tpz.magic.element_to_potency_map = {
++    [tpz.magic.element.FIRE]    = tpz.mod.FIRE_MAGIC_POTENCY,
++    [tpz.magic.element.EARTH]   = tpz.mod.EARTH_MAGIC_POTENCY,
++    [tpz.magic.element.WATER]   = tpz.mod.WATER_MAGIC_POTENCY,
++    [tpz.magic.element.WIND]    = tpz.mod.WIND_MAGIC_POTENCY,
++    [tpz.magic.element.ICE]     = tpz.mod.ICE_MAGIC_POTENCY,
++    [tpz.magic.element.THUNDER] = tpz.mod.THUNDER_MAGIC_POTENCY,
++    [tpz.magic.element.LIGHT]   = tpz.mod.LIGHT_MAGIC_POTENCY,
++    [tpz.magic.element.DARK]    = tpz.mod.DARK_MAGIC_POTENCY,
++}
++
++tpz.magic.element_to_ascendant_element_map = {
++    [tpz.magic.element.FIRE]      = tpz.magic.element.ICE,
++    [tpz.magic.element.EARTH]     = tpz.magic.element.LIGHTNING,
++    [tpz.magic.element.WATER]     = tpz.magic.element.FIRE,
++    [tpz.magic.element.WIND]      = tpz.magic.element.EARTH,
++    [tpz.magic.element.ICE]       = tpz.magic.element.WIND,
++    [tpz.magic.element.LIGHTNING] = tpz.magic.element.WATER,
++    [tpz.magic.element.LIGHT]     = tpz.magic.element.DARK,
++    [tpz.magic.element.DARK]      = tpz.magic.element.LIGHT,
++}
++
++tpz.magic.element_to_descendant_element_map = {
++    [tpz.magic.element.ICE]       = tpz.magic.element.FIRE,
++    [tpz.magic.element.LIGHTNING] = tpz.magic.element.EARTH,
++    [tpz.magic.element.FIRE]      = tpz.magic.element.WATER,
++    [tpz.magic.element.EARTH]     = tpz.magic.element.WIND,
++    [tpz.magic.element.WIND]      = tpz.magic.element.ICE,
++    [tpz.magic.element.WATER]     = tpz.magic.element.LIGHTNING,
++    [tpz.magic.element.LIGHT]     = tpz.magic.element.DARK,
++    [tpz.magic.element.DARK]      = tpz.magic.element.LIGHT,
++}
++
++tpz.magic.affinity_dmg_map = {
++    [tpz.magic.element.FIRE]    = tpz.mod.FIRE_AFFINITY_DMG,
++    [tpz.magic.element.EARTH]   = tpz.mod.EARTH_AFFINITY_DMG,
++    [tpz.magic.element.WATER]   = tpz.mod.WATER_AFFINITY_DMG,
++    [tpz.magic.element.WIND]    = tpz.mod.WIND_AFFINITY_DMG,
++    [tpz.magic.element.ICE]     = tpz.mod.ICE_AFFINITY_DMG,
++    [tpz.magic.element.THUNDER] = tpz.mod.THUNDER_AFFINITY_DMG,
++    [tpz.magic.element.LIGHT]   = tpz.mod.LIGHT_AFFINITY_DMG,
++    [tpz.magic.element.DARK]    = tpz.mod.DARK_AFFINITY_DMG,
++}
++
++tpz.magic.affinity_acc_map = {
++    tpz.mod.FIRE_AFFINITY_ACC,
++    tpz.mod.EARTH_AFFINITY_ACC,
++    tpz.mod.WATER_AFFINITY_ACC,
++    tpz.mod.ICE_AFFINITY_ACC,
++    tpz.mod.THUNDER_AFFINITY_ACC,
++    tpz.mod.WIND_AFFINITY_ACC,
++    tpz.mod.LIGHT_AFFINITY_ACC,
++    tpz.mod.DARK_AFFINITY_ACC,
++}
++
++tpz.magic.elemental_sdt_map = {
++    [tpz.magic.element.FIRE]    = tpz.mod.FIRESDT,
++    [tpz.magic.element.EARTH]   = tpz.mod.EARTHSDT,
++    [tpz.magic.element.WATER]   = tpz.mod.WATERSDT,
++    [tpz.magic.element.WIND]    = tpz.mod.WINDSDT,
++    [tpz.magic.element.ICE]     = tpz.mod.ICESDT,
++    [tpz.magic.element.THUNDER] = tpz.mod.THUNDERSDT,
++    [tpz.magic.element.LIGHT]   = tpz.mod.LIGHTSDT,
++    [tpz.magic.element.DARK]    = tpz.mod.DARKSDT,
++}
++
++tpz.magic.elemental_res_map = {
++    [tpz.magic.element.FIRE]    = tpz.mod.FIRERES,
++    [tpz.magic.element.EARTH]   = tpz.mod.EARTHRES,
++    [tpz.magic.element.WATER]   = tpz.mod.WATERRES,
++    [tpz.magic.element.WIND]    = tpz.mod.WINDRES,
++    [tpz.magic.element.ICE]     = tpz.mod.ICERES,
++    [tpz.magic.element.THUNDER] = tpz.mod.THUNDERRES,
++    [tpz.magic.element.LIGHT]   = tpz.mod.LIGHTRES,
++    [tpz.magic.element.DARK]    = tpz.mod.DARKRES,
++}
++
++tpz.magic.elemental_acc_map = {
++    [tpz.magic.element.FIRE]    = tpz.mod.FIREACC,
++    [tpz.magic.element.EARTH]   = tpz.mod.EARTHACC,
++    [tpz.magic.element.WATER]   = tpz.mod.WATERACC,
++    [tpz.magic.element.WIND]    = tpz.mod.WINDACC,
++    [tpz.magic.element.ICE]     = tpz.mod.ICEACC,
++    [tpz.magic.element.THUNDER] = tpz.mod.THUNDERACC,
++    [tpz.magic.element.LIGHT]   = tpz.mod.LIGHTACC,
++    [tpz.magic.element.DARK]    = tpz.mod.DARKACC,
++}
++
++tpz.magic.elemental_atk_map = {
++    [tpz.magic.element.FIRE]    = tpz.mod.FIREATT,
++    [tpz.magic.element.EARTH]   = tpz.mod.EARTHATT,
++    [tpz.magic.element.WATER]   = tpz.mod.WATERATT,
++    [tpz.magic.element.WIND]    = tpz.mod.WINDATT,
++    [tpz.magic.element.ICE]     = tpz.mod.ICEATT,
++    [tpz.magic.element.THUNDER] = tpz.mod.THUNDERATT,
++    [tpz.magic.element.LIGHT]   = tpz.mod.LIGHTATT,
++    [tpz.magic.element.DARK]    = tpz.mod.DARKATT,
++}
++tpz.magic.rdm_merits_acc_map = {
++    [tpz.magic.element.FIRE]    = tpz.merit.FIRE_MAGIC_ACCURACY,
++    [tpz.magic.element.EARTH]   = tpz.merit.EARTH_MAGIC_ACCURACY,
++    [tpz.magic.element.WATER]   = tpz.merit.WATER_MAGIC_ACCURACY,
++    [tpz.magic.element.WIND]    = tpz.merit.WIND_MAGIC_ACCURACY,
++    [tpz.magic.element.ICE]     = tpz.merit.ICE_MAGIC_ACCURACY,
++    [tpz.magic.element.THUNDER] = tpz.merit.LIGHTNING_MAGIC_ACCURACY
++}
++
++tpz.magic.blm_merits_mab_map = {
++    [tpz.magic.element.FIRE]    = tpz.merit.FIRE_MAGIC_POTENCY,
++    [tpz.magic.element.EARTH]   = tpz.merit.EARTH_MAGIC_POTENCY,
++    [tpz.magic.element.WATER]   = tpz.merit.WATER_MAGIC_POTENCY,
++    [tpz.magic.element.WIND]    = tpz.merit.WIND_MAGIC_POTENCY,
++    [tpz.magic.element.ICE]     = tpz.merit.ICE_MAGIC_POTENCY,
++    [tpz.magic.element.THUNDER] = tpz.merit.LIGHTNING_MAGIC_POTENCY
++}
++
++tpz.magic.weather_to_element_map = {
++    [tpz.weather.HOT_SPELL]     = tpz.magic.element.FIRE,
++    [tpz.weather.HEAT_WAVE]     = tpz.magic.element.FIRE,
++    [tpz.weather.DUST_STORM]    = tpz.magic.element.EARTH,
++    [tpz.weather.SAND_STORM]    = tpz.magic.element.EARTH,
++    [tpz.weather.RAIN]          = tpz.magic.element.WATER,
++    [tpz.weather.SQUALL]        = tpz.magic.element.WATER,
++    [tpz.weather.WIND]          = tpz.magic.element.WIND,
++    [tpz.weather.GALES]         = tpz.magic.element.WIND,
++    [tpz.weather.SNOW]          = tpz.magic.element.ICE,
++    [tpz.weather.BLIZZARDS]     = tpz.magic.element.ICE,
++    [tpz.weather.THUNDER]       = tpz.magic.element.LIGHTNING,
++    [tpz.weather.THUNDERSTORMS] = tpz.magic.element.LIGHTNING,
++    [tpz.weather.AURORAS]       = tpz.magic.element.LIGHT,
++    [tpz.weather.STELLAR_GLARE] = tpz.magic.element.LIGHT,
++    [tpz.weather.GLOOM]         = tpz.magic.element.DARK,
++    [tpz.weather.DARKNESS]      = tpz.magic.element.DARK,
++}
++
++tpz.magic.element_to_nukewall_effect_map = {
++    [tpz.magic.element.FIRE]    = tpz.effect.NUKEWALL_FIRE,
++    [tpz.magic.element.EARTH]   = tpz.effect.NUKEWALL_EARTH,
++    [tpz.magic.element.WATER]   = tpz.effect.NUKEWALL_WATER,
++    [tpz.magic.element.WIND]    = tpz.effect.NUKEWALL_WIND,
++    [tpz.magic.element.ICE]     = tpz.effect.NUKEWALL_ICE,
++    [tpz.magic.element.THUNDER] = tpz.effect.NUKEWALL_LIGHTNING,
++    [tpz.magic.element.LIGHT]   = tpz.effect.NUKEWALL_LIGHT,
++    [tpz.magic.element.DARK]    = tpz.effect.NUKEWALL_DARK,
++}
++
++tpz.magic.element_to_dayweather_bonus_map = {
++    [tpz.magic.element.FIRE]    = tpz.mod.FORCE_FIRE_DWBONUS,
++    [tpz.magic.element.EARTH]   = tpz.mod.FORCE_EARTH_DWBONUS,
++    [tpz.magic.element.WATER]   = tpz.mod.FORCE_WATER_DWBONUS,
++    [tpz.magic.element.WIND]    = tpz.mod.FORCE_WIND_DWBONUS,
++    [tpz.magic.element.ICE]     = tpz.mod.FORCE_ICE_DWBONUS,
++    [tpz.magic.element.THUNDER] = tpz.mod.FORCE_LIGHTNING_DWBONUS,
++    [tpz.magic.element.LIGHT]   = tpz.mod.FORCE_LIGHT_DWBONUS,
++    [tpz.magic.element.DARK]    = tpz.mod.FORCE_DARK_DWBONUS,
++}
++
++tpz.magic.day_to_element_map = {
++    [tpz.day.FIRESDAY]     = tpz.magic.element.FIRE,
++    [tpz.day.EARTHSDAY]    = tpz.magic.element.EARTH,
++    [tpz.day.WATERSDAY]    = tpz.magic.element.WATER,
++    [tpz.day.WINDSDAY]     = tpz.magic.element.WIND,
++    [tpz.day.ICEDAY]       = tpz.magic.element.ICE,
++    [tpz.day.LIGHTNINGDAY] = tpz.magic.element.LIGHTNING,
++    [tpz.day.LIGHTSDAY]    = tpz.magic.element.LIGHT,
++    [tpz.day.DARKSDAY]     = tpz.magic.element.DARK,
++}
++
++tpz.magic.element_to_absorb_map = {
++    [tpz.magic.element.FIRE]    = tpz.mod.FIRE_ABSORB,
++    [tpz.magic.element.EARTH]   = tpz.mod.EARTH_ABSORB,
++    [tpz.magic.element.WATER]   = tpz.mod.WATER_ABSORB,
++    [tpz.magic.element.WIND]    = tpz.mod.WIND_ABSORB,
++    [tpz.magic.element.ICE]     = tpz.mod.ICE_ABSORB,
++    [tpz.magic.element.THUNDER] = tpz.mod.LIGHTNING_ABSORB,
++    [tpz.magic.element.LIGHT]   = tpz.mod.LIGHT_ABSORB,
++    [tpz.magic.element.DARK]    = tpz.mod.DARK_ABSORB,
++}
++
++tpz.magic.element_to_null_map = {
++    [tpz.magic.element.FIRE]    = tpz.mod.FIRE_NULL,
++    [tpz.magic.element.EARTH]   = tpz.mod.EARTH_NULL,
++    [tpz.magic.element.WATER]   = tpz.mod.WATER_NULL,
++    [tpz.magic.element.WIND]    = tpz.mod.WIND_NULL,
++    [tpz.magic.element.ICE]     = tpz.mod.ICE_NULL,
++    [tpz.magic.element.THUNDER] = tpz.mod.LIGHTNING_NULL,
++    [tpz.magic.element.LIGHT]   = tpz.mod.LIGHT_NULL,
++    [tpz.magic.element.DARK]    = tpz.mod.DARK_NULL,
++}
+\ No newline at end of file

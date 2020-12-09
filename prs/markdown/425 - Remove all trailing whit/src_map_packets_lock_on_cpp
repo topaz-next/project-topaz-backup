@@ -1,0 +1,7 @@
+@@ -40,4 +40,4 @@ CLockOnPacket::CLockOnPacket(CCharEntity* PChar, CBattleEntity* PTarget)
+ 		ref<uint32>(0x08) = PTarget->id;
+ 		ref<uint16>(0x0E) = PTarget->targid;
+ 	}
+-}
+\ No newline at end of file
++}

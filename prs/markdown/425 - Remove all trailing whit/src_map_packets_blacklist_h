@@ -1,0 +1,7 @@
+@@ -34,4 +34,4 @@ class CBlacklistPacket : public CBasicPacket
+ 	CBlacklistPacket(uint32 accid, const int8* targetName, int8 action);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

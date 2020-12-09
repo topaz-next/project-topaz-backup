@@ -1,0 +1,16 @@
+@@ -280,7 +280,7 @@ tpz.ws = tpz.weaponskill
+ -- Weaponskill Unlock IDs
+ ------------------------------------
+ 
+-tpz.ws_unlock = 
++tpz.ws_unlock =
+ {
+     ASURAN_FISTS        = 1,
+     EVISCERATION        = 2,
+@@ -330,4 +330,4 @@ tpz.ws_unlock =
+     MYRKR               = 46,
+     JISHNUS_RADIANCE    = 47,
+     WILDFIRE            = 48,
+-}
+\ No newline at end of file
++}

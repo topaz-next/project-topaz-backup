@@ -1,0 +1,7 @@
+@@ -18,4 +18,4 @@ function onUseAbility(player, target, ability)
+     player:addStatusEffect(tpz.effect.CHAIN_AFFINITY,1,0,30)
+ 
+     return tpz.effect.CHAIN_AFFINITY
+-end
+\ No newline at end of file
++end

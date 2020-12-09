@@ -1,0 +1,7 @@
+@@ -12,4 +12,4 @@ end
+ 
+ function onMobDespawn(mob)
+     tpz.mob.phOnDespawn(mob, ID.mob.GRANDGOULE_PH, 10, 3600) -- 1 hour
+-end
+\ No newline at end of file
++end

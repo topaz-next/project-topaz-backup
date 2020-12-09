@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ end
+ function onUseAbility(player,target,ability)
+     local effect = tpz.effect.BLOOD_WEAPON
+     doEnspell(player,target,nil,effect)
+-end
+\ No newline at end of file
++end

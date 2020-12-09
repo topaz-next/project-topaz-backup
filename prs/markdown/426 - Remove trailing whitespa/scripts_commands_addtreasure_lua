@@ -1,0 +1,16 @@
+@@ -23,7 +23,7 @@ function onTrigger(player, itemId, target, dropper)
+         error(player, "Invalid itemID.")
+         return
+     end
+-    
++
+     -- validate target
+     local targ
+     if (target == nil) then
+@@ -48,4 +48,4 @@ function onTrigger(player, itemId, target, dropper)
+     -- add treasure to pool
+     targ:addTreasure(itemId, dropper)
+     player:PrintToPlayer(string.format("Item of ID %d was added to the treasure pool of %s or their party/alliance.", itemId, targ:getName()))
+-end
+\ No newline at end of file
++end

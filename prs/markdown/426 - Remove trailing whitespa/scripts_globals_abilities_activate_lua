@@ -1,0 +1,7 @@
+@@ -23,4 +23,4 @@ end
+ 
+ function onUseAbility(player, target, ability)
+     tpz.pet.spawnPet(player, tpz.pet.id.AUTOMATON)
+-end
+\ No newline at end of file
++end

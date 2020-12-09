@@ -1,0 +1,16 @@
+@@ -121,7 +121,7 @@ class CTransportHandler
+ public:
+     virtual ~CTransportHandler() = default;
+     static CTransportHandler* getInstance();
+-    
++
+     void startElevator(int32 elevatorID);
+     void TransportTimer();
+     void insertElevator(Elevator_t elevator);
+@@ -142,4 +142,4 @@ class CTransportHandler
+     std::vector<TransportZone_Voyage> voyageZoneList;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

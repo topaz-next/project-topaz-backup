@@ -1,0 +1,16 @@
+@@ -27,7 +27,7 @@
+ #include "../entities/baseentity.h"
+ 
+ 
+-CWideScanTrackPacket::CWideScanTrackPacket(CBaseEntity * PEntity) 
++CWideScanTrackPacket::CWideScanTrackPacket(CBaseEntity * PEntity)
+ {
+ 	this->type = 0xF5;
+ 	this->size = 0x0C;
+@@ -39,4 +39,4 @@ CWideScanTrackPacket::CWideScanTrackPacket(CBaseEntity * PEntity)
+ 	ref<uint8>(0x10) = 1;
+ 	ref<uint16>(0x12) = PEntity->targid;
+ 	ref<uint8>(0x14) = PEntity->status == STATUS_DISAPPEAR ? 2 : 1;
+-}
+\ No newline at end of file
++}

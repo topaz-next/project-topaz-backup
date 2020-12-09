@@ -1,0 +1,7 @@
+@@ -7,4 +7,4 @@ mixins = {require("scripts/mixins/families/imp")}
+ -----------------------------------
+ 
+ function onMobDeath(mob, player, isKiller)
+-end
+\ No newline at end of file
++end

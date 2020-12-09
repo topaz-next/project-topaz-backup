@@ -1,0 +1,23 @@
+@@ -2257,11 +2257,11 @@ namespace luautils
+     *                                                                       *
+     ************************************************************************/
+ 
+-    int32 OnWeaponskillHit(CBattleEntity* PMob, CBaseEntity* PAttacker, uint16 PWeaponskill)
++    int32 OnWeaponskillHit(CBattleEntity* PMob, CBaseEntity* PAttacker, uint16 WeaponskillID)
+     {
+         TPZ_DEBUG_BREAK_IF(PMob == nullptr);
+         TPZ_DEBUG_BREAK_IF(PAttacker == nullptr);
+-        TPZ_DEBUG_BREAK_IF(PWeaponskill == NULL);
++        TPZ_DEBUG_BREAK_IF(WeaponskillID == 0 || WeaponskillID >= MAX_WEAPONSKILL_ID);
+ 
+         lua_prepscript("scripts/zones/%s/mobs/%s.lua", PMob->loc.zone->GetName(), PMob->GetName());
+ 
+@@ -2276,7 +2276,7 @@ namespace luautils
+         CLuaBaseEntity LuaBaseEntity(PAttacker);
+         Lunar<CLuaBaseEntity>::push(LuaHandle, &LuaBaseEntity);
+ 
+-        lua_pushinteger(LuaHandle, PWeaponskill);
++        lua_pushinteger(LuaHandle, WeaponskillID);
+ 
+         if (lua_pcall(LuaHandle, 3, 1, 0))
+         {

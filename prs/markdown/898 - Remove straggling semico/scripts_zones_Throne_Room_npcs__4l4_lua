@@ -1,0 +1,6 @@
+@@ -33,4 +33,4 @@ function onEventFinish(player, csid, option)
+         return
+     end
+ 
+-end;
++end

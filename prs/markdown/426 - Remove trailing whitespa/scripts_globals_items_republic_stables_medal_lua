@@ -1,0 +1,7 @@
+@@ -19,4 +19,4 @@ end
+ 
+ function onItemUse(target)
+     target:addStatusEffectEx(tpz.effect.TELEPORT,0,tpz.teleport.id.CHOCO_BASTOK,0,4)
+-end
+\ No newline at end of file
++end

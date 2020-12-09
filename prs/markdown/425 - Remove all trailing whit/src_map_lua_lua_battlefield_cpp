@@ -1,0 +1,7 @@
+@@ -482,4 +482,4 @@ Lunar<CLuaBattlefield>::Register_t CLuaBattlefield::methods[] =
+     LUNAR_DECLARE_METHOD(CLuaBattlefield,win),
+     LUNAR_DECLARE_METHOD(CLuaBattlefield,lose),
+     { nullptr,nullptr }
+-};
+\ No newline at end of file
++};

@@ -1,0 +1,7 @@
+@@ -95,4 +95,4 @@ class CAutomatonEntity : public CPetEntity
+     std::array<uint8, 8> m_Burden {};
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

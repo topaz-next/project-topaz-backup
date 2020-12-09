@@ -1,0 +1,7 @@
+@@ -53,4 +53,4 @@ function onTrigger(player, logId, questId, target)
+     targ:delQuest(logId, questId)
+     player:PrintToPlayer(string.format("Deleted %s quest %i from %s.", logName, questId, targ:getName()))
+ 
+-end
+\ No newline at end of file
++end

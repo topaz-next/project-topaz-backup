@@ -1,0 +1,7 @@
+@@ -13,4 +13,4 @@ function onMobDespawn(mob)
+     if instance:getStage() == 1 then
+         instance:setProgress(instance:getProgress() + 1)
+     end
+-end
+\ No newline at end of file
++end

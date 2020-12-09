@@ -1,0 +1,26 @@
+@@ -24,8 +24,6 @@ function onTrigger(player,npc)
+     local MissionStatus = player:getCharVar("MissionStatus");
+     local infiltrateDavoi = player:hasCompletedMission(SANDORIA,tpz.mission.id.sandoria.INFILTRATE_DAVOI);
+ 
+-    local Wait1DayRanperre = player:getCharVar("Wait1DayForRanperre_date");
+-    local osdate = tonumber(os.date("%j"));
+ 
+     if (player:getCharVar("aBoysDreamCS") == 8) then
+         player:startEvent(88);
+@@ -41,7 +39,7 @@ function onTrigger(player,npc)
+         player:startEvent(547);
+     elseif (currentMission == tpz.mission.id.sandoria.RANPERRE_S_FINAL_REST and MissionStatus == 0) then
+         player:startEvent(81);
+-    elseif (currentMission == tpz.mission.id.sandoria.RANPERRE_S_FINAL_REST and MissionStatus == 4 and Wait1DayRanperre ~= osdate) then -- Ready now.
++    elseif (currentMission == tpz.mission.id.sandoria.RANPERRE_S_FINAL_REST and MissionStatus == 4 and player:needToZone() == false) then -- Ready now.
+         player:startEvent(21);
+     elseif (currentMission == tpz.mission.id.sandoria.RANPERRE_S_FINAL_REST and MissionStatus == 7) then
+         player:startEvent(21);
+@@ -97,7 +95,6 @@ function onEventFinish(player,csid,option)
+     elseif (csid == 81) then
+         player:setCharVar("MissionStatus",1);
+     elseif (csid == 21) then
+-        player:setCharVar("Wait1DayForRanperre_date",0);
+         player:setCharVar("MissionStatus",8);
+     elseif (csid == 63) then
+         player:setCharVar("Cutscenes_8-2",1)

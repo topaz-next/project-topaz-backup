@@ -1,0 +1,7 @@
+@@ -33,4 +33,4 @@ function onSpellCast(caster, target, spell)
+     end
+ 
+     return params.effect
+-end
+\ No newline at end of file
++end

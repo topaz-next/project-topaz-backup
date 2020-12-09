@@ -1,0 +1,9 @@
+@@ -21,7 +21,7 @@
+ #define TPZ_DEBUG_BREAK_IF(_CONDITION_) assert(!(_CONDITION_));
+ #endif
+ #else
+-#define TPZ_DEBUG_BREAK_IF(_CONDITION_)
++#define TPZ_DEBUG_BREAK_IF(_CONDITION_) std::ignore = (_CONDITION_);
+ #endif
+ 
+ // typedef/using

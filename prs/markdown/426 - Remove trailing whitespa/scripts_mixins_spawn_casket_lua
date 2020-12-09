@@ -1,0 +1,7 @@
+@@ -24,4 +24,4 @@ g_mixins.spawn_casket = function(mob)
+     end)
+ end
+ 
+-return g_mixins.spawn_casket
+\ No newline at end of file
++return g_mixins.spawn_casket

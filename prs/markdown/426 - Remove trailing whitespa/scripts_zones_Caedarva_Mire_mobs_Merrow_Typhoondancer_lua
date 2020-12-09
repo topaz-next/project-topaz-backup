@@ -1,0 +1,16 @@
+@@ -3,12 +3,12 @@
+ --  Mob: Merrow Typhoondancer
+ -- Note: Minion of Experimental Lamia
+ -----------------------------------
+-mixins = 
++mixins =
+     {
+         require("scripts/mixins/job_special"),
+         require("scripts/mixins/weapon_break")
+     }
+ -----------------------------------
+ 
+ function onMobDeath(mob, player, isKiller)
+-end
+\ No newline at end of file
++end

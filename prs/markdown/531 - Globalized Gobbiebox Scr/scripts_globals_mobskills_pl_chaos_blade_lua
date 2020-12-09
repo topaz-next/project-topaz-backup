@@ -1,0 +1,7 @@
+@@ -34,4 +34,4 @@ function onMobWeaponSkill(target, mob, skill)
+     MobStatusEffectMove(mob, target, typeEffect, 25, 0, 60)
+ 
+     return dmg
+-end
+\ No newline at end of file
++end

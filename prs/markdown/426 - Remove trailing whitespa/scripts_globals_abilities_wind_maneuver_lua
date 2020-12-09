@@ -1,0 +1,7 @@
+@@ -58,4 +58,4 @@ function onUseAbility(player,target,ability)
+     end
+ 
+     return tpz.effect.WIND_MANEUVER
+-end
+\ No newline at end of file
++end

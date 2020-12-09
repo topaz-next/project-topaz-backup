@@ -1,0 +1,7 @@
+@@ -9,4 +9,4 @@ local ID = require("scripts/zones/Den_of_Rancor/IDs")
+ 
+ function onTrigger(player,npc)
+     tpz.wsquest.handleQmTrigger(tpz.wsquest.spiral_hell,player,ID.mob.MOKUMOKUREN)
+-end
+\ No newline at end of file
++end

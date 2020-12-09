@@ -1,0 +1,7 @@
+@@ -62,4 +62,4 @@ function onTrigger(player, weather)
+     -- set weather
+     player:setWeather( weather )
+     player:PrintToPlayer( string.format("Set weather to %s.", weatherByNum[weather]) )
+-end
+\ No newline at end of file
++end

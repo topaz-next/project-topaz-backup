@@ -1,0 +1,7 @@
+@@ -139,4 +139,4 @@ class CTargetFind
+     position_t m_CPoint;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

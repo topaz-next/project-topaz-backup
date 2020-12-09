@@ -1,0 +1,7 @@
+@@ -36,4 +36,4 @@ function onTrigger(player, mentorMode, target)
+ 
+     -- set mentor mode
+     targ:setMentor(mentorMode)
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -15,4 +15,4 @@ function onSpellCast(caster,target,spell)
+     local effect = tpz.effect.SUBTLE_BLOW_PLUS
+     caster:addStatusEffect(effect,10,0,180)
+     return effect
+-end
+\ No newline at end of file
++end

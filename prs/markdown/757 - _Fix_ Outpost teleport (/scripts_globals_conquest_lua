@@ -1,0 +1,14 @@
+@@ -85,10 +85,10 @@ local function hasOutpost(player, region)
+     local region = region + 5
+     local hasOP = player:hasTeleport(player:getNation(), region)
+     if not hasOP then
+-        if UNLOCK_OUTPOST_WARPS == 2 then
++        if UNLOCK_OUTPOST_WARPS == 1 then
+             hasOP = true
+-        elseif UNLOCK_OUTPOST_WARPS == 1 then
+-            hasOP = region <= tpz.region.ELSHIMOUPLANDS
++        elseif UNLOCK_OUTPOST_WARPS == 2 then
++            hasOP = region >= tpz.region.RONFAURE
+         end
+     end
+     return hasOP

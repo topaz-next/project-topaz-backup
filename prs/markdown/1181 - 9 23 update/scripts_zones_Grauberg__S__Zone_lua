@@ -1,0 +1,20 @@
+@@ -7,6 +7,7 @@ local ID = require("scripts/zones/Grauberg_[S]/IDs")
+ require("scripts/globals/weather")
+ require("scripts/globals/status")
+ require("scripts/globals/helm")
++require("scripts/globals/settings")
+ -----------------------------------
+ 
+ function onInitialize(zone)
+@@ -26,9 +27,9 @@ end
+ 
+ function onZoneWeatherChange(weather)
+     local npc = GetNPCByID(ID.npc.INDESCRIPT_MARKINGS)
+-    if (weather == tpz.weather.WIND or weather == tpz.weather.GALES) then
++    if (weather == tpz.weather.WIND or weather == tpz.weather.GALES) and ENABLE_WOTG == 1 then
+         npc:setStatus(tpz.status.NORMAL)
+-    else
++    elseif ENABLE_WOTG == 1 then
+         npc:setStatus(tpz.status.DISAPPEAR)
+     end
+ end

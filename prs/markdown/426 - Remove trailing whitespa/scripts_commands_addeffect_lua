@@ -1,0 +1,7 @@
+@@ -92,4 +92,4 @@ function onTrigger(player, arg1, arg2, arg3, arg4, arg5, arg6)
+     else
+         targ:messagePublic(283, targ, id)
+     end
+-end
+\ No newline at end of file
++end

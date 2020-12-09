@@ -1,0 +1,61 @@
+@@ -1,17 +1,48 @@
+ -----------------------------------
+ -- Area: Ilrusi Atoll
+---  NPC: Ancient Lockbox
+--- !zone 55
++-- Ancient Lockbox
++-----------------------------------
++local ID = require("scripts/zones/Ilrusi_Atoll/IDs")
++require("scripts/globals/missions")
++require("scripts/globals/appraisal")
+ -----------------------------------
+ 
+-function onTrade(player,npc,trade)
+-end;
+-
+-function onTrigger(player,npc)
+-end;
++function onTrigger(player, npc)
++    local qItem =
++    {
++        [GOLDEN_SALVAGE] =
++        {
++            {
++                {itemid = 0, droprate = 100}, -- Nothing
++                {itemid = 2277, droprate = 619}, -- ??? earring
++                {itemid = 2286, droprate = 390}, -- ??? box
++            },
++        }
++    }
++    local regItem =
++    {
++        [GOLDEN_SALVAGE] =
++        {
++            {
++                {itemid = 4118, droprate = 934}, -- Hi-Potion 2
++                {itemid = 0, droprate = 100}, -- Nothing
++            },
++            {
++                {itemid = 0, droprate = 461}, -- Nothing
++                {itemid = 13688, droprate = 539}, -- Hi-Potion Tank
++            },
++            {
++                {itemid = 4172, droprate = 255}, -- Reraiser
++                {itemid = 0, droprate = 745}, -- Nothing
++            },
++        },
++    }
++    local area = player:getCurrentAssault()
++    appraisalUtil.assaultChestTrigger(player, npc, qItem[area], regItem[area], ID.text)
++end
+ 
+-function onEventUpdate(player,csid,option)
+-end;
++function onEventUpdate(player, csid, option)
++end
+ 
+-function onEventFinish(player,csid,option)
+-end;
+\ No newline at end of file
++function onEventFinish(player, csid, option)
++end

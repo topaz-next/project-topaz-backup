@@ -1,0 +1,7 @@
+@@ -44,4 +44,4 @@ function onEventFinish(player,csid,option)
+     elseif csid == 845 then
+         npcUtil.completeQuest(player, AHT_URHGAN, tpz.quest.id.ahtUrhgan.THREE_MEN_AND_A_CLOSET, { item=2184, var="threemenandaclosetCS"})
+     end
+-end
+\ No newline at end of file
++end

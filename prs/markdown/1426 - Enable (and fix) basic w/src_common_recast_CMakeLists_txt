@@ -1,0 +1,6 @@
+@@ -1,2 +1,5 @@
++project(recast CXX)
++set_property(GLOBAL PROPERTY CXX_STANDARD 17)
++
+ add_library(recast INTERFACE)
+ target_include_directories(recast SYSTEM INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})

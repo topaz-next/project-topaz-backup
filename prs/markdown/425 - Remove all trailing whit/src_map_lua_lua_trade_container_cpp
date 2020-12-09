@@ -1,0 +1,7 @@
+@@ -295,4 +295,4 @@ Lunar<CLuaTradeContainer>::Register_t CLuaTradeContainer::methods[] =
+     LUNAR_DECLARE_METHOD(CLuaTradeContainer,confirmItem),
+     LUNAR_DECLARE_METHOD(CLuaTradeContainer,confirmSlot),
+     {nullptr,nullptr}
+-};
+\ No newline at end of file
++};

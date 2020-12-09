@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ function onTrade(player,npc,trade)
+ end
+ 
+ function onTrigger(player,npc)
+-end
+\ No newline at end of file
++end

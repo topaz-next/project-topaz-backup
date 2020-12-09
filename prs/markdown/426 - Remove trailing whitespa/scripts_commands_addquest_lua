@@ -1,0 +1,7 @@
+@@ -52,4 +52,4 @@ function onTrigger(player, logId, questId, target)
+     -- add quest
+     targ:addQuest(logId, questId)
+     player:PrintToPlayer(string.format("Added %s quest %i to %s.", logName, questId, targ:getName()))
+-end
+\ No newline at end of file
++end

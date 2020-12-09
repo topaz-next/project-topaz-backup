@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ end
+ 
+ function onTrigger(player,npc)
+     player:messageSpecial(ID.text.BLOOD_STAINS)
+-end
+\ No newline at end of file
++end

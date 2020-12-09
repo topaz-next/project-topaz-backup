@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ function onPetAbility(target, pet, skill)
+     target:dispelStatusEffect()
+     skill:setMsg(tpz.msg.basic.NONE)
+     return 0
+-end
+\ No newline at end of file
++end

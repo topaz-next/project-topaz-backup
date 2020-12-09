@@ -1,0 +1,7 @@
+@@ -45,4 +45,4 @@ class CDeliveryBoxPacket : public CBasicPacket
+     CDeliveryBoxPacket(uint8 action, uint8 boxid, CItem* PItem, uint8 slotid, uint8 count, uint8 message);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

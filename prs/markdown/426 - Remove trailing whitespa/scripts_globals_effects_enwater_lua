@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ end
+ function onEffectLose(target,effect)
+     target:setMod(tpz.mod.ENSPELL_DMG,0)
+     target:setMod(tpz.mod.ENSPELL,0)
+-end
+\ No newline at end of file
++end

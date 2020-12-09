@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ CGuildMenuSellUpdatePacket::CGuildMenuSellUpdatePacket(CCharEntity* PChar, uint8
+     ref<uint8>(0x06) = stock;
+     ref<uint8>(0x07) = quantity;
+ 
+-}
+\ No newline at end of file
++}

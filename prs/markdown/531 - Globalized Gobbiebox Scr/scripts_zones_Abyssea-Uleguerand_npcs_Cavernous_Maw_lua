@@ -1,0 +1,7 @@
+@@ -19,4 +19,4 @@ function onEventFinish(player,csid,option)
+     if csid == 200 and option == 1 then
+         player:setPos(269,-7,-75,192,112)
+     end
+-end
+\ No newline at end of file
++end

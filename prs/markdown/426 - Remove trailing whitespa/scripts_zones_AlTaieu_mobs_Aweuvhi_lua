@@ -1,0 +1,7 @@
+@@ -28,4 +28,4 @@ function onMobDeath(mob, player, isKiller)
+         end
+ 
+     end
+-end;
+\ No newline at end of file
++end;

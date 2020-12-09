@@ -1,0 +1,17 @@
+@@ -19,6 +19,7 @@
+ ===========================================================================
+ */
+ 
++#include "roe.h"
+ #include "../common/showmsg.h"
+ #include "../common/timer.h"
+ 
+@@ -496,6 +497,8 @@ void CTreasurePool::TreasureWon(CCharEntity* winner, uint8 SlotID)
+ 
+     m_PoolItems[SlotID].TimeStamp = get_server_start_time();
+ 
++    roeutils::event(ROE_EVENT::ROE_LOOTITEM, winner, RoeDatagram("itemid", m_PoolItems[SlotID].ID));
++
+     for (uint32 i = 0; i < members.size(); ++i)
+     {
+         members[i]->pushPacket(new CTreasureLotItemPacket(winner, SlotID, 0, ITEMLOT_WIN));

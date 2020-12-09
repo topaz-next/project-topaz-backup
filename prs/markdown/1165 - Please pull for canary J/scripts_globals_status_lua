@@ -1,0 +1,43 @@
+@@ -24,6 +24,7 @@ tpz.zoneMisc =
+     TREASURE   = 0x0100, -- Presence in the global zone TreasurePool
+     AH         = 0x0200, -- Ability to use the auction house
+     YELL       = 0x0400, -- Send and receive /yell commands
++    TRUST      = 0x0800, -- Ability to cast trust magic
+ }
+ 
+ ------------------------------------
+@@ -1560,13 +1561,13 @@ tpz.mod =
+     COVER_TO_MP                     = 965, -- Converts a successful cover's phsyical damage to MP
+     COVER_MAGIC_AND_RANGED          = 966, -- Redirects ranged and single target magic attacks to the cover ability user
+     COVER_DURATION                  = 967, -- Increases Cover Duration
+-
++    WYVERN_SUBJOB_TRAITS            = 972, -- Adds subjob traits to wyvern
+ 
+     -- The spares take care of finding the next ID to use so long as we don't forget to list IDs that have been freed up by refactoring.
+     -- 570 - 825 used by WS DMG mods these are not spares.
+-    -- SPARE = 972, -- stuff
+     -- SPARE = 973, -- stuff
+     -- SPARE = 974, -- stuff
++    -- SPARE = 975, -- stuff
+ }
+ 
+ tpz.latent =
+@@ -2133,11 +2134,13 @@ tpz.MAX_SLOTID  = 15
+ 
+ tpz.objType =
+ {
+-    PC   = 0x01,
+-    NPC  = 0x02,
+-    MOB  = 0x04,
+-    PET  = 0x08,
+-    SHIP = 0x10,
++    PC     = 0x01,
++    NPC    = 0x02,
++    MOB    = 0x04,
++    PET    = 0x08,
++    SHIP   = 0x10,
++    TRUST  = 0x20,
++    FELLOW = 0x40,
+ }
+ 
+ ----------------------------------

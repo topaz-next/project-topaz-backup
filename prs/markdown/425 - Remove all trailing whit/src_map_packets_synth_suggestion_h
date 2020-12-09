@@ -1,0 +1,7 @@
+@@ -39,4 +39,4 @@ class CSynthSuggestionPacket : public CBasicPacket
+ 	CSynthSuggestionPacket(uint32 synthID);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

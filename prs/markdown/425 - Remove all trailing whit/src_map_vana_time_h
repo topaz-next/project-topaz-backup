@@ -1,0 +1,16 @@
+@@ -85,7 +85,7 @@ class CVanaTime
+ 	int32	 getCustomOffset();
+ 
+ 	void	 setCustomOffset(int32 offset);
+-	
++
+ 	time_point   lastConquestUpdate;
+     time_point   lastVHourlyUpdate;
+     time_point   lastVDailyUpdate;
+@@ -111,4 +111,4 @@ class CVanaTime
+ 	int32	 m_customOffset;						// Смещение игрового времени в игровых минутах
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

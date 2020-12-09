@@ -1,0 +1,16 @@
+@@ -43,7 +43,7 @@ class CTriggerHandler
+ public:
+     virtual ~CTriggerHandler() = default;
+     static	CTriggerHandler* getInstance();
+-    
++
+     void insertTrigger(Trigger_t);
+     void triggerTimer();
+ private:
+@@ -54,4 +54,4 @@ class CTriggerHandler
+ 
+     std::vector<Trigger_t> triggerList;
+ };
+-#endif
+\ No newline at end of file
++#endif

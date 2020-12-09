@@ -1,0 +1,7 @@
+@@ -18,4 +18,4 @@ function onSpellCast(caster,target,spell)
+         target:addBardSong(caster,tpz.effect.HYMNUS,1,0,duration,caster:getID(), 0, 1)
+ 
+     return tpz.effect.HYMNUS
+-end
+\ No newline at end of file
++end

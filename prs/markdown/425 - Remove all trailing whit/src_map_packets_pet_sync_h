@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CPetSyncPacket : public CBasicPacket
+ 	CPetSyncPacket(CCharEntity* PChar);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,7 @@
+@@ -39,4 +39,4 @@ class CDownloadingDataPacket: public CBasicPacket
+ 	CDownloadingDataPacket();
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

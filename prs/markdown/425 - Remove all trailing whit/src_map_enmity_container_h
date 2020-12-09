@@ -1,0 +1,7 @@
+@@ -76,4 +76,4 @@ class CEnmityContainer
+     CMobEntity*  m_EnmityHolder; //usually a monster
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,15 @@
+@@ -18,10 +18,10 @@ zones[tpz.zone.CAEDARVA_MIRE] =
+         NOTHING_OUT_OF_ORDINARY  = 6402, -- There is nothing out of the ordinary here.
+         FELLOW_MESSAGE_OFFSET    = 6417, -- I'm ready. I suppose.
+         FISHING_MESSAGE_OFFSET   = 7049, -- You can't fish here.
+-        MOVE_CLOSER              = 7309, -- You must move closer.
+-        IMPERIAL_CONTROL         = 7310, -- This gate guards an area under Imperial control.
+-        STAGING_POINT_AZOUPH     = 7311, -- Azouph Isle Staging Point.
+-        STAGING_POINT_DVUCCA     = 7314, -- Dvucca Isle Staging Point.
++        STAGING_GATE_CLOSER      = 7309, -- You must move closer.
++        STAGING_GATE_INTERACT    = 7310, -- This gate guards an area under Imperial control.
++        STAGING_GATE_AZOUPH      = 7311, -- Azouph Isle Staging Point.
++        STAGING_GATE_DVUCCA      = 7314, -- Dvucca Isle Staging Point.
+         CANNOT_LEAVE             = 7320, -- You cannot leave this area while in the possession of <keyitem>.
+         RESPONSE                 = 7329, -- There is no response...
+         LOGGING_IS_POSSIBLE_HERE = 7343, -- Logging is possible here if you have <item>.

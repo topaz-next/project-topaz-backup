@@ -1,0 +1,9 @@
+@@ -45681,7 +45681,7 @@ INSERT INTO `mob_spawn_points` VALUES (17387968,'Deloknok','Deloknok',46,-124,3,
+ INSERT INTO `mob_spawn_points` VALUES (17387969,'Purpleflash_Brukdok','Purpleflash Brukdok',47,-135.469,-0.091,-184.703,127);
+ INSERT INTO `mob_spawn_points` VALUES (17387970,'One-eyed_Gwajboj','One-eyed Gwajboj',48,-36,3,-211,57);
+ INSERT INTO `mob_spawn_points` VALUES (17387971,'Three-eyed_Prozpuz','Three-eyed Prozpuz',49,-32,4,-212,71);
+-INSERT INTO `mob_spawn_points` VALUES (17387972,'Hematic_Cyst','Hematic Cyst',50,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17387972,'Hematic_Cyst','Hematic Cyst',50,177,3.676,-372.524,199);
+ 
+ -- ------------------------------------------------------------
+ -- Monastic Cavern (Zone 150)

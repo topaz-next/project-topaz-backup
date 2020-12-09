@@ -1,0 +1,7 @@
+@@ -15,4 +15,4 @@ end
+ 
+ function onEffectLose(target,effect)
+     target:setMod(tpz.mod.BLINK,0)
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ function onUseAbility(player,target,ability)
+     player:addStatusEffect(tpz.effect.ASTRAL_FLOW,1,0,180)
+ 
+     return tpz.effect.ASTRAL_FLOW
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -28,4 +28,4 @@ function onUseAbility(player,target,ability)
+     ability:setMsg(tpz.msg.basic.FAMILIAR_PC)
+ 
+     return 0
+-end
+\ No newline at end of file
++end

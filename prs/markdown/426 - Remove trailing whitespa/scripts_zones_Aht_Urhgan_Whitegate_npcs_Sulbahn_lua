@@ -1,0 +1,7 @@
+@@ -44,4 +44,4 @@ function onEventFinish(player,csid,option)
+         player:messageSpecial(ID.text.IMAGE_SUPPORT,0,7,0)
+         player:addStatusEffect(tpz.effect.ALCHEMY_IMAGERY,3,0,480)
+     end
+-end
+\ No newline at end of file
++end

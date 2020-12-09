@@ -1,0 +1,7 @@
+@@ -33,4 +33,4 @@ end
+ function onItemUse(target)
+     target:delStatusEffectsByFlag(tpz.effectFlag.INFLUENCE, true)
+     target:addStatusEffect(tpz.effect.SIGNET,0,0,18000)
+-end
+\ No newline at end of file
++end

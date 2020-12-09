@@ -1,0 +1,18 @@
+@@ -0,0 +1,17 @@
++-----------------------------------
++--  Mob: Psycheflayer
++-- Area: Nyzul Isle
++-- Info: Specified Mob Group and Eliminate all Group
++-----------------------------------
++require("scripts/globals/nyzul")
++-----------------------------------
++
++function onMobSpawn(mob)
++    nyzul.specifiedEnemySet(mob)
++end
++
++function onMobDeath(mob, player, isKiller, firstCall)
++    nyzul.spawnChest(mob)
++    nyzul.specifiedGroupKill(mob, firstCall)
++    nyzul.specifiedEnemyKill(mob, firstCall)
++end

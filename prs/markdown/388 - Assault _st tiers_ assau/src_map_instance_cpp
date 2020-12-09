@@ -1,0 +1,9 @@
+@@ -263,8 +263,6 @@ void CInstance::Complete()
+ {
+     m_status = INSTANCE_COMPLETE;
+ 
+-    ClearEntities();
+-
+     luautils::OnInstanceComplete(this);
+ }
+ 

@@ -1,0 +1,7 @@
+@@ -22,4 +22,4 @@ function onUseAbility(player,target,ability)
+     else
+         player:addStatusEffect(tpz.effect.BOOST,power,1,180)
+     end
+-end
+\ No newline at end of file
++end

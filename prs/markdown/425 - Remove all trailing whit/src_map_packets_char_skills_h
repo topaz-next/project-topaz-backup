@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CCharSkillsPacket : public CBasicPacket
+ 	CCharSkillsPacket(CCharEntity* PChar);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,7 @@
+@@ -24,4 +24,4 @@ end
+ 
+ function onEventFinish(player,csid,option)
+     tpz.conquest.vendorOnEventFinish(player, option, vendorRegion)
+-end
+\ No newline at end of file
++end

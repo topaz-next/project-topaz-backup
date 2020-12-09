@@ -1,0 +1,7 @@
+@@ -93,4 +93,4 @@ class CWeaponSkill
+ 	string_t	m_name;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

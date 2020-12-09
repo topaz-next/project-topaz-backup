@@ -1,0 +1,11 @@
+@@ -0,0 +1,10 @@
++-----------------------------------
++--  Mob: Poroggo Gent
++-- Area: Nyzul Isle
++-- Info: Specified Mob Group
++-----------------------------------
++
++function onMobDeath(mob, player, isKiller, firstCall)
++    nyzul.spawnChest(mob)
++    nyzul.specifiedGroupKill(mob, firstCall)
++end

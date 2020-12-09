@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ function onAdditionalEffect(player,target,damage)
+         target:addStatusEffect(tpz.effect.SILENCE, 10, 0, 30)
+         return tpz.subEffect.SILENCE, tpz.msg.basic.ADD_EFFECT_STATUS, tpz.effect.SILENCE
+     end
+-end
+\ No newline at end of file
++end

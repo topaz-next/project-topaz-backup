@@ -1,0 +1,7 @@
+@@ -58,4 +58,4 @@ function onEventFinish( player, csid, option)
+             player:updateEvent(0,0,0,0,0,2);
+         end
+     end
+-end;
+\ No newline at end of file
++end;

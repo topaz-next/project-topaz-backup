@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CBazaarItemPacket: public CBasicPacket
+ 	CBazaarItemPacket(CItem* PItem, uint8 SlotID, uint16 Tax);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

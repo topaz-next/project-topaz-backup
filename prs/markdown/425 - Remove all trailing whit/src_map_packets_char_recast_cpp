@@ -1,0 +1,7 @@
+@@ -59,4 +59,4 @@ CCharRecastPacket::CCharRecastPacket(CCharEntity* PChar)
+             ref<uint32>(0x04) = recasttime;  // 2h ability (recast id is 0)
+         }
+     }
+-}
+\ No newline at end of file
++}

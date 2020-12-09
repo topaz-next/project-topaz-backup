@@ -1,0 +1,7 @@
+@@ -24,4 +24,4 @@ function onAdditionalEffect(player,target,damage)
+     end
+ 
+     return tpz.subEffect.WIND_DAMAGE,message,dmg
+-end
+\ No newline at end of file
++end

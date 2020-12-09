@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CInstanceEntryPacket : public CBasicPacket
+ 	CInstanceEntryPacket(CBaseEntity* PEntrance, uint32 response);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

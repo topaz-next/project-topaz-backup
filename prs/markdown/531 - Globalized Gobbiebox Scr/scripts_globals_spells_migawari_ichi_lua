@@ -1,0 +1,7 @@
+@@ -25,4 +25,4 @@ function onSpellCast(caster,target,spell)
+     local negationThreshold = math.floor(100 * ((ninjutsu / 5) / 100))
+     caster:addStatusEffect(effect,negationThreshold,0,60,0,100)
+     return effect
+-end
+\ No newline at end of file
++end

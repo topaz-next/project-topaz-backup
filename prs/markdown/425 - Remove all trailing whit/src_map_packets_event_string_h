@@ -1,0 +1,16 @@
+@@ -43,7 +43,7 @@ class CEventStringPacket : public CBasicPacket
+ 
+ 	CEventStringPacket(
+ 		CCharEntity* PChar,
+-		uint16 EventID, 
++		uint16 EventID,
+         const std::string& string0 = "",
+         const std::string& string1 = "",
+         const std::string& string2 = "",
+@@ -58,4 +58,4 @@ class CEventStringPacket : public CBasicPacket
+ 		uint32 param7 = 0);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

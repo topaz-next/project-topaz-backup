@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ function onUseAbility(player,target,ability)
+     target:delStatusEffect(tpz.effect.INNIN)
+     target:delStatusEffect(tpz.effect.YONIN)
+     target:addStatusEffect(tpz.effect.INNIN,30,15,300,0,20)
+-end
+\ No newline at end of file
++end

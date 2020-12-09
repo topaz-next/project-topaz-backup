@@ -1,0 +1,7 @@
+@@ -30,4 +30,4 @@ function onMobWeaponSkill(target, mob, skill)
+     mob:lowerEnmity(target, 20)
+ 
+     return dispel
+-end
+\ No newline at end of file
++end

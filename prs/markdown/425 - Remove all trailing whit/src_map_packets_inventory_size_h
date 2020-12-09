@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CInventorySizePacket: public CBasicPacket
+ 	CInventorySizePacket(CCharEntity* PChar);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

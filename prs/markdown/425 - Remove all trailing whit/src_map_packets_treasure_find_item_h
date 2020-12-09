@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ class CTreasureFindItemPacket : public CBasicPacket
+ 	CTreasureFindItemPacket(TreasurePoolItem* PItem, CBaseEntity* PEntity, bool isOldItem);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

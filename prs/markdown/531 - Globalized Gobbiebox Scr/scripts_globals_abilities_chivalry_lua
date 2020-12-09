@@ -1,0 +1,7 @@
+@@ -20,4 +20,4 @@ function onUseAbility(player,target,ability)
+     local amount = (tp * 0.05 + 0.0015 * tp * target:getStat(tpz.mod.MND)) * ((100 + merits - 5) / 100)
+     target:setTP(0)
+     return target:addMP(amount)
+-end
+\ No newline at end of file
++end

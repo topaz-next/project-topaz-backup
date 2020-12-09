@@ -1,0 +1,16 @@
+@@ -25,7 +25,7 @@ function onTrigger(player, cmd)
+     else
+         isHidden = 0
+     end
+-    
++
+     -- If hidden animate us beginning our hide..
+     if (isHidden == 1) then
+         player:setCharVar( "GMHidden", 1 )
+@@ -36,4 +36,4 @@ function onTrigger(player, cmd)
+         player:setGMHidden(false)
+         player:PrintToPlayer( "You are no longer GM hidden from other players." )
+     end
+-end
+\ No newline at end of file
++end

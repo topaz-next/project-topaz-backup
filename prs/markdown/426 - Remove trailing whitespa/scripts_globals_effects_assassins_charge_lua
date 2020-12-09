@@ -1,0 +1,7 @@
+@@ -23,4 +23,4 @@ function onEffectLose(target,effect)
+     if (effect:getSubPower() > 0) then -- tpz.mod.AUGMENTS_ASSASSINS_CHARGE
+         target:delMod(tpz.mod.CRITHITRATE, effect:getSubPower())
+     end
+-end
+\ No newline at end of file
++end

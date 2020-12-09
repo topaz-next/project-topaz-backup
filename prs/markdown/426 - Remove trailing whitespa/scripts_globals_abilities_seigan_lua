@@ -1,0 +1,7 @@
+@@ -24,4 +24,4 @@ function onUseAbility(player,target,ability)
+         target:delStatusEffect(tpz.effect.SEIGAN)
+         target:addStatusEffect(tpz.effect.SEIGAN,0,0,300)
+     end
+-end
+\ No newline at end of file
++end

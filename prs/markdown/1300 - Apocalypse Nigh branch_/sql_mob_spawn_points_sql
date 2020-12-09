@@ -1,0 +1,19 @@
+@@ -7769,12 +7769,12 @@ INSERT INTO `mob_spawn_points` VALUES (16924675,'Promathia','Promathia',1,520.40
+ INSERT INTO `mob_spawn_points` VALUES (16924676,'Promathia_2','Promathia',2,520.404,0,527.522,64);
+ INSERT INTO `mob_spawn_points` VALUES (16924677,'Promathia','Promathia',1,-519.557,120,-511.441,64);
+ INSERT INTO `mob_spawn_points` VALUES (16924678,'Promathia_2','Promathia',2,-519.557,120,-511.441,64);
+-INSERT INTO `mob_spawn_points` VALUES (16924679,'Kamlanaut','Kam\'lanaut',3,-518.190,-120.5,524.392,173); -- Apocalypse Nigh (Quest)
+-INSERT INTO `mob_spawn_points` VALUES (16924680,'Ealdnarche','Eald\'narche',4,-529.274,-120,516.185,167);
+-INSERT INTO `mob_spawn_points` VALUES (16924681,'Kamlanaut','Kam\'lanaut',3,511.559,-0.5,528.348,146);
+-INSERT INTO `mob_spawn_points` VALUES (16924682,'Ealdnarche','Eald\'narche',4,516.331,-0.5,518.179,199);
+-INSERT INTO `mob_spawn_points` VALUES (16924683,'Kamlanaut','Kam\'lanaut',3,520.361,0,493.3,0);
+-INSERT INTO `mob_spawn_points` VALUES (16924684,'Ealdnarche','Eald\'narche',4,530.361,0,493.3,0);
++INSERT INTO `mob_spawn_points` VALUES (16924679,'Kamlanaut','Kam\'lanaut',3,-518.190,-120.5,524.392,64); -- Apocalypse Nigh (Quest)
++INSERT INTO `mob_spawn_points` VALUES (16924680,'Ealdnarche','Eald\'narche',4,-529.274,-120,516.185,64);
++INSERT INTO `mob_spawn_points` VALUES (16924681,'Kamlanaut','Kam\'lanaut',3,511.559,-0.5,528.348,64);
++INSERT INTO `mob_spawn_points` VALUES (16924682,'Ealdnarche','Eald\'narche',4,516.331,-0.5,518.179,64);
++INSERT INTO `mob_spawn_points` VALUES (16924683,'Kamlanaut','Kam\'lanaut',3,520.361,0,493.3,64);
++INSERT INTO `mob_spawn_points` VALUES (16924684,'Ealdnarche','Eald\'narche',4,530.361,0,493.3,64);
+ INSERT INTO `mob_spawn_points` VALUES (16924685,'Disjoined_One','Disjoined One',0,0,0,0,0); -- Both Paths Taken (ROVM2-9-2)
+ INSERT INTO `mob_spawn_points` VALUES (16924686,'Iroha','Iroha',0,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (16924687,'Disjoined_One','Disjoined One',0,0,0,0,0);

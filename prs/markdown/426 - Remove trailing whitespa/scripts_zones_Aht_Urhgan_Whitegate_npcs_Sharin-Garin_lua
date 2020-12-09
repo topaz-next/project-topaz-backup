@@ -1,0 +1,7 @@
+@@ -34,4 +34,4 @@ function onEventFinish(player,csid,option)
+     elseif csid == 140 and option == 2 then
+         npcUtil.giveKeyItem(player,tpz.ki.RUNIC_PORTAL_USE_PERMIT)
+     end
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ function onSpellCast(caster,target,spell)
+     damage = BlueFinalAdjustments(caster, target, spell, damage, params)
+ 
+     return damage
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,19 @@
+@@ -49618,12 +49618,12 @@ INSERT INTO `mob_spawn_points` VALUES (17461297,'Dark_Aspic','Dark Aspic',9,-63.
+ INSERT INTO `mob_spawn_points` VALUES (17461298,'Funnel_Bats','Funnel Bats',4,-22.001,-0.006,-97.089,129);
+ INSERT INTO `mob_spawn_points` VALUES (17461299,'Funnel_Bats','Funnel Bats',4,-27.883,1.011,-100.918,71);
+ INSERT INTO `mob_spawn_points` VALUES (17461300,'Funnel_Bats','Funnel Bats',4,-24.162,0.012,-102.723,29);
+-INSERT INTO `mob_spawn_points` VALUES (17461301,'Mousse','Mousse',15,-21.231,0.968,-123.463,187);
+-INSERT INTO `mob_spawn_points` VALUES (17461302,'Mousse','Mousse',15,-32.273,1.000,-99.785,150);
+-INSERT INTO `mob_spawn_points` VALUES (17461303,'Mousse','Mousse',15,-19.582,0.954,-125.114,31);
+-INSERT INTO `mob_spawn_points` VALUES (17461304,'Mousse','Mousse',15,-19.178,0.964,-147.278,7);
+-INSERT INTO `mob_spawn_points` VALUES (17461305,'Mousse','Mousse',15,-20.786,1.047,-147.246,137);
+-INSERT INTO `mob_spawn_points` VALUES (17461306,'Mousse','Mousse',15,-20.579,0.998,-160.756,172);
++INSERT INTO `mob_spawn_points` VALUES (17461301,'Mousse','Mousse',3,-21.231,0.968,-123.463,187);
++INSERT INTO `mob_spawn_points` VALUES (17461302,'Mousse','Mousse',3,-32.273,1.000,-99.785,150);
++INSERT INTO `mob_spawn_points` VALUES (17461303,'Mousse','Mousse',3,-19.582,0.954,-125.114,31);
++INSERT INTO `mob_spawn_points` VALUES (17461304,'Mousse','Mousse',3,-19.178,0.964,-147.278,7);
++INSERT INTO `mob_spawn_points` VALUES (17461305,'Mousse','Mousse',3,-20.786,1.047,-147.246,137);
++INSERT INTO `mob_spawn_points` VALUES (17461306,'Mousse','Mousse',3,-20.579,0.998,-160.756,172);
+ INSERT INTO `mob_spawn_points` VALUES (17461307,'Sewer_Syrup','Sewer Syrup',10,-20.321,0.500,-160.689,59);
+ INSERT INTO `mob_spawn_points` VALUES (17461308,'Garm','Garm',8,-50.732,0.000,-143.825,191);
+ INSERT INTO `mob_spawn_points` VALUES (17461309,'Garm','Garm',8,-52.776,0.000,-135.172,224);

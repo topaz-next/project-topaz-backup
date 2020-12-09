@@ -1,0 +1,17 @@
+@@ -37410,11 +37410,11 @@ INSERT INTO `mob_spawn_points` VALUES (17281487,'Lake_Sahagin','Lake Sahagin',47
+ INSERT INTO `mob_spawn_points` VALUES (17281488,'Brook_Sahagin','Brook Sahagin',45,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17281489,'Brook_Sahagin','Brook Sahagin',45,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17281490,'Sahagin_Patriarch','Sahagin Patriarch',48,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17281491,'Nasus','Nasus',49,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17281492,'Nasus','Nasus',49,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17281493,'Nasus','Nasus',49,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17281494,'Nasus','Nasus',49,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17281495,'Nasus','Nasus',49,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17281491,'Nasus','Nasus',49,367.29,3.50,211.77,172);
++INSERT INTO `mob_spawn_points` VALUES (17281492,'Nasus','Nasus',49,363.69,3.50,210.44,180);
++INSERT INTO `mob_spawn_points` VALUES (17281493,'Nasus','Nasus',49,359.83,3.50,210.91,210);
++INSERT INTO `mob_spawn_points` VALUES (17281494,'Nasus','Nasus',49,356.66,3.50,211.67,215);
++INSERT INTO `mob_spawn_points` VALUES (17281495,'Nasus','Nasus',49,352.87,3.50,212.39,228);
+ INSERT INTO `mob_spawn_points` VALUES (17281496,'Nutcracker','Nutcracker',50,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17281547,'Siren','Siren',51,-406.471,16.683,-378.071,247);
+ 

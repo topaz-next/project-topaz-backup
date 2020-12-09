@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ class CEntityAnimationPacket : public CBasicPacket
+ 	CEntityAnimationPacket(CBaseEntity* PEntity, const char type[4]);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

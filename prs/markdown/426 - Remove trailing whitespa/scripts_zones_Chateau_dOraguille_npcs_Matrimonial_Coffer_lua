@@ -1,0 +1,7 @@
+@@ -19,4 +19,4 @@ end
+ 
+ function onEventFinish(player, csid, option)
+     tpz.matrimonialcoffer.finishEvent(player, csid, option)
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -44,4 +44,4 @@ function onTrigger(player, npcId, noDepop)
+         end
+         player:PrintToPlayer("NPC could not be moved to current pos - you are probably in the wrong zone.")
+     end
+-end
+\ No newline at end of file
++end

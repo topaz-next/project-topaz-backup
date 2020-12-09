@@ -1,0 +1,7 @@
+@@ -157,4 +157,4 @@ uint8* CLinkshellListPacket::GetData()
+ uint16 CLinkshellListPacket::GetSize()
+ {
+     return m_offset / 8 + 20;
+-}
+\ No newline at end of file
++}

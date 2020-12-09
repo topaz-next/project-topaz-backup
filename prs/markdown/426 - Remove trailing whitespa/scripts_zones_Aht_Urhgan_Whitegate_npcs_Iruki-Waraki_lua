@@ -1,0 +1,7 @@
+@@ -102,4 +102,4 @@ function onEventFinish(player,csid,option)
+         player:setCharVar("OperationTeatimeProgress",2)
+         player:confirmTrade()
+     end
+-end
+\ No newline at end of file
++end

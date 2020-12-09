@@ -1,0 +1,16 @@
+@@ -37434,6 +37434,7 @@ INSERT INTO `mob_spawn_points` VALUES (17281493,'Nasus','Nasus',49,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17281494,'Nasus','Nasus',49,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17281495,'Nasus','Nasus',49,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17281496,'Nutcracker','Nutcracker',50,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17281547,'Siren','Siren',51,-406.471,16.683,-378.071,247);
+ 
+ -- ------------------------------------------------------------
+ -- Yhoator Jungle (Zone 124)
+@@ -38691,6 +38692,7 @@ INSERT INTO `mob_spawn_points` VALUES (17293659,'Goblin_Bounty_Hunter','Goblin B
+ INSERT INTO `mob_spawn_points` VALUES (17293660,'Goblin_Bounty_Hunter','Goblin Bounty Hunter',47,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17293661,'Goblin_Bounty_Hunter','Goblin Bounty Hunter',47,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17293662,'Goblin_Bounty_Hunter','Goblin Bounty Hunter',47,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17293666,'Ophiotaurus','Ophiotaurus',48,-198.531,-20.027,75.318,156);
+ 
+ -- ------------------------------------------------------------
+ -- Behemoth's Dominion (Zone 127)

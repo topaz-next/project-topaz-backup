@@ -1,0 +1,7 @@
+@@ -20,4 +20,4 @@ function onMobWeaponSkill(target, mob, skill)
+     target:wakeUp()
+ 
+     return hp
+-end
+\ No newline at end of file
++end

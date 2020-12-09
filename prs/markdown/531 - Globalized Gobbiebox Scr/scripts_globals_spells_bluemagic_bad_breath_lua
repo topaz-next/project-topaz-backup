@@ -1,0 +1,7 @@
+@@ -92,4 +92,4 @@ function onSpellCast(caster,target,spell)
+ 
+     return damage
+ 
+-end
+\ No newline at end of file
++end

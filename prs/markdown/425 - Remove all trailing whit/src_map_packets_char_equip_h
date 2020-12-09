@@ -1,0 +1,7 @@
+@@ -39,4 +39,4 @@ class CEquipPacket : public CBasicPacket
+ 	CEquipPacket(uint8 EquipSlot, uint8 SlotID, uint8 containerID);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

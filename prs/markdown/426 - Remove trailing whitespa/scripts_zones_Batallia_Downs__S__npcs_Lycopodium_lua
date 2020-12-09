@@ -1,0 +1,7 @@
+@@ -26,4 +26,4 @@ function onEventFinish(player, csid, option)
+     if csid == 202 then
+         player:setMaskBit(player:getCharVar("LycopodiumTeleport_Mask"), "LycopodiumTeleport_Mask", 1, true)
+     end
+-end
+\ No newline at end of file
++end

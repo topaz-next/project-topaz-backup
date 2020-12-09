@@ -1,0 +1,20 @@
+@@ -72,6 +72,10 @@ void Initialize()
+     }
+     TPZ_DEBUG_BREAK_IF(g_PGuildShopList.size() != 0);
+ 
++    // Show in log day number used for guild rank items
++    int vanaDay = CVanaTime::getInstance()->getVanaTime() / (60 * 60 * 24);
++    ShowDebug(CL_CYAN"Guild Items initialized for Vanadiel day: %d\n" CL_RESET, vanaDay);
++
+     fmtQuery = "SELECT DISTINCT guildid FROM guild_shops ORDER BY guildid ASC LIMIT 256;";
+ 
+ 	if (Sql_Query(SqlHandle,fmtQuery) != SQL_ERROR && Sql_NumRows(SqlHandle) != 0)
+@@ -171,7 +175,7 @@ void UpdateGuildPointsPattern()
+     }
+ 
+     // load the pattern in case it was set by another server (and this server did not set it)
+-    Sql_Query(SqlHandle, "SELECT value FROM server_variables WHERE name = '[GUILD]pattern';");
++    ret = Sql_Query(SqlHandle, "SELECT value FROM server_variables WHERE name = '[GUILD]pattern';");
+     if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) == 1 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+     {
+         pattern = Sql_GetUIntData(SqlHandle, 0);

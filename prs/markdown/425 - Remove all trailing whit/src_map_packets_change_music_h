@@ -1,0 +1,7 @@
+@@ -39,4 +39,4 @@ class CChangeMusicPacket : public CBasicPacket
+     CChangeMusicPacket(uint8 BlockID, uint8 MusicTrackID);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

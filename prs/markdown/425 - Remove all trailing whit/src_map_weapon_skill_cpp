@@ -1,0 +1,7 @@
+@@ -198,4 +198,4 @@ uint8 CWeaponSkill::getSecondarySkillchain()
+ uint8 CWeaponSkill::getTertiarySkillchain()
+ {
+     return m_TertiarySkillchain;
+-}
+\ No newline at end of file
++}

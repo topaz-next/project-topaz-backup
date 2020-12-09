@@ -1,0 +1,7 @@
+@@ -44,4 +44,4 @@ function onEventFinish(player,csid,option)
+             player:messageSpecial(ID.text.NOT_HAVE_ENOUGH_GIL)
+         end
+     end
+-end
+\ No newline at end of file
++end

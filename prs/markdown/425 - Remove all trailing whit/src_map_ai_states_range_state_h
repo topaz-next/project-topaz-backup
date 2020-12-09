@@ -1,0 +1,7 @@
+@@ -47,4 +47,4 @@ class CRangeState : public CState
+     position_t m_startPos;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

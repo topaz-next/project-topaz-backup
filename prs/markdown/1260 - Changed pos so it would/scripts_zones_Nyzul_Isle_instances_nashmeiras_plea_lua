@@ -1,0 +1,29 @@
+@@ -35,15 +35,15 @@ function onInstanceProgressUpdate(instance, progress)
+     if (progress == 4) then
+         local chars = instance:getChars()
+ 
+-        for i, v in pairs(chars) do
+-            v:startEvent(203)
+-        end
+-
+         DespawnMob(ID.mob[59].RAZFAHD, instance)
+         SpawnMob(ID.mob[59].ALEXANDER, instance)
+ 
+     elseif(progress == 5) then
+         instance:complete()
++		v:setPos(126.6543, 0, 20.1798, 0, 72)
++		for i, v in pairs(chars) do
++			v:startEvent(203)
++        end
+     end
+ end
+ 
+@@ -56,7 +56,7 @@ function onInstanceComplete(instance)
+             v:setCharVar("AhtUrganStatus", 2)
+         end
+ 
+-        v:setPos(0, 0, 0, 0, 72)
++        v:setPos(126.6543, 0, 20.1798, 0, 72)
+     end
+ end
+ 

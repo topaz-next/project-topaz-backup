@@ -1,0 +1,16 @@
+@@ -5,7 +5,7 @@
+ -- Type: Magical
+ -- Utsusemi/Blink absorb: ignores shadows
+ -- Range: Melee
+--- 
++--
+ ---------------------------------------------
+ require("scripts/globals/monstertpmoves")
+ require("scripts/globals/settings")
+@@ -34,4 +34,4 @@ function onMobWeaponSkill(target, mob, skill)
+     skill:setMsg(MobPhysicalDrainMove(mob, target, skill, drainEffect, dmg))
+ 
+     return dmg
+-end
+\ No newline at end of file
++end

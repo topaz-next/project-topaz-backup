@@ -1,0 +1,9 @@
+@@ -55,7 +55,7 @@ class CLuaInstance
+     int32 getWipeTime(lua_State*);
+     int32 getEntity(lua_State*);
+     int32 getStage(lua_State*);
+-
++    int32 getLevelCap(lua_State*);
+     int32 setLevelCap(lua_State*);
+     int32 setLastTimeUpdate(lua_State*);
+     int32 setProgress(lua_State*);

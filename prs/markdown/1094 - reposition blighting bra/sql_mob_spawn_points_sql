@@ -1,0 +1,9 @@
+@@ -36166,7 +36166,7 @@ INSERT INTO `mob_spawn_points` VALUES (17269012,'Evil_Weapon','Evil Weapon',37,-
+ INSERT INTO `mob_spawn_points` VALUES (17269013,'Evil_Weapon','Evil Weapon',37,-240.725,1.853,223.185,127);
+ INSERT INTO `mob_spawn_points` VALUES (17269014,'Evil_Weapon','Evil Weapon',37,-151.677,14.433,140.143,51);
+ INSERT INTO `mob_spawn_points` VALUES (17269015,'Evil_Weapon','Evil Weapon',37,-164.179,10.037,143.394,8);
+-INSERT INTO `mob_spawn_points` VALUES (17269016,'Blighting_Brand','Blighting Brand',38,-178,1.68,165,127);
++INSERT INTO `mob_spawn_points` VALUES (17269016,'Blighting_Brand','Blighting Brand',38,-206.692,8.000,203.594,105);
+ INSERT INTO `mob_spawn_points` VALUES (17269017,'Diving_Beetle','Diving Beetle',36,-258.104,7.783,67.375,127);
+ INSERT INTO `mob_spawn_points` VALUES (17269018,'Diving_Beetle','Diving Beetle',36,-270.230,7.692,79.879,127);
+ INSERT INTO `mob_spawn_points` VALUES (17269019,'Diving_Beetle','Diving Beetle',36,-265.657,7.717,48.222,72);

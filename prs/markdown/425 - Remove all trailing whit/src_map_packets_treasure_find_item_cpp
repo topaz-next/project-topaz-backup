@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ CTreasureFindItemPacket::CTreasureFindItemPacket(TreasurePoolItem* PItem, CBaseE
+         ref<uint16>(0x12) = PEntity->targid;     // Entity Index
+         ref<uint8>(0x16) = PEntity->objtype == TYPE_NPC;
+     }
+-}
+\ No newline at end of file
++}

@@ -1,0 +1,7 @@
+@@ -635,4 +635,4 @@ class CZone
+     void CharZoneOut(CCharEntity* PChar);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,47 @@
+@@ -5783,27 +5783,25 @@ INSERT INTO `mob_spawn_points` VALUES (16892071,'Fomors_Elemental','Fomor\'s Ele
+ INSERT INTO `mob_spawn_points` VALUES (16892072,'Fomors_Avatar','Fomor\'s Avatar',38,102.910,-2.5,90.210,131);
+ INSERT INTO `mob_spawn_points` VALUES (16892073,'Caithleann','Caithleann',39,11,-2.5,-115,2);
+ INSERT INTO `mob_spawn_points` VALUES (16892074,'Indich','Indich',40,50,-2.250,-115,238);
+-INSERT INTO `mob_spawn_points` VALUES (16892075,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892076,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892077,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892078,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892079,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892080,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892081,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892082,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892083,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892084,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892085,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892086,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892087,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892088,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892089,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892090,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892091,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892092,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892093,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892094,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16892095,'Aqueduct_Spider','Aqueduct Spider',41,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (16892075,'Aqueduct_Spider','Aqueduct Spider',41,-184.829,-8.599,-18.618,113);
++INSERT INTO `mob_spawn_points` VALUES (16892076,'Aqueduct_Spider','Aqueduct Spider',41,-172.043,-7.971,-20.061,226);
++INSERT INTO `mob_spawn_points` VALUES (16892077,'Aqueduct_Spider','Aqueduct Spider',41,-179.935,-8.598,-20.308,158);
++INSERT INTO `mob_spawn_points` VALUES (16892078,'Aqueduct_Spider','Aqueduct Spider',41,-172.422,-7.981,-20.368,230);
++INSERT INTO `mob_spawn_points` VALUES (16892079,'Aqueduct_Spider','Aqueduct Spider',41,-181.484,-8.599,-14.892,207);
++INSERT INTO `mob_spawn_points` VALUES (16892080,'Aqueduct_Spider','Aqueduct Spider',41,-166.605,-7.6,-19.263,77);
++INSERT INTO `mob_spawn_points` VALUES (16892082,'Aqueduct_Spider','Aqueduct Spider',41,170.64,-3.393,59.518,255);
++INSERT INTO `mob_spawn_points` VALUES (16892084,'Aqueduct_Spider','Aqueduct Spider',41,139.104,0.542,85.091,64);
++INSERT INTO `mob_spawn_points` VALUES (16892085,'Aqueduct_Spider','Aqueduct Spider',41,139.294,0.494,84.736,64);
++INSERT INTO `mob_spawn_points` VALUES (16892086,'Aqueduct_Spider','Aqueduct Spider',41,146.118,4.228,98.83,127);
++INSERT INTO `mob_spawn_points` VALUES (16892087,'Aqueduct_Spider','Aqueduct Spider',41,149.036,4.828,98.766,255);
++INSERT INTO `mob_spawn_points` VALUES (16892088,'Aqueduct_Spider','Aqueduct Spider',41,165.571,7.39,98.786,0);
++INSERT INTO `mob_spawn_points` VALUES (16892089,'Aqueduct_Spider','Aqueduct Spider',41,140.235,-0.042,-86.459,63);
++INSERT INTO `mob_spawn_points` VALUES (16892090,'Aqueduct_Spider','Aqueduct Spider',41,140.464,-0.259,-84.944,191);
++INSERT INTO `mob_spawn_points` VALUES (16892091,'Aqueduct_Spider','Aqueduct Spider',41,166.74,-1.961,-61.09,127);
++INSERT INTO `mob_spawn_points` VALUES (16892092,'Aqueduct_Spider','Aqueduct Spider',41,171.08,-3.006,-60.91,255);
++INSERT INTO `mob_spawn_points` VALUES (16892093,'Aqueduct_Spider','Aqueduct Spider',41,181.066,-8.431,-81.765,63);
++INSERT INTO `mob_spawn_points` VALUES (16892095,'Aqueduct_Spider','Aqueduct Spider',41,181.26,-8.482,-82.43,63);
++
+ 
+ -- ------------------------------------------------------------
+ -- Riverne - Site #B01 (Zone 29)

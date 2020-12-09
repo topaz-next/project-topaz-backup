@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ function onTrigger(player, arg1, arg2)
+     if (targ:getID() ~= player:getID()) then
+         player:PrintToPlayer( string.format("Set %s's level to %i.", targ:getName(), level) )
+     end
+-end
+\ No newline at end of file
++end

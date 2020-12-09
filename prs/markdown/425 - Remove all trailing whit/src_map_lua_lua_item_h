@@ -1,0 +1,7 @@
+@@ -75,4 +75,4 @@ class CLuaItem
+     int32 isShield(lua_State*);             // is a Shield
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,7 @@
+@@ -12,4 +12,4 @@ end
+ 
+ function onTrigger(player,npc)
+     DEN_OF_RANCOR.onTriggerLantern(player, npc)
+-end
+\ No newline at end of file
++end

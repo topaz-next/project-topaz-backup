@@ -1,0 +1,7 @@
+@@ -226,4 +226,4 @@ function onEventFinish(player,csid,option)
+             player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED,ItemID)
+         end
+     end
+-end
+\ No newline at end of file
++end

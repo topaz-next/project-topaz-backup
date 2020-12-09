@@ -1,0 +1,7 @@
+@@ -40,4 +40,4 @@ CTradeItemPacket::CTradeItemPacket(CItem* PItem, uint8 slot)
+ 	ref<uint16>(0x08) = amount == 0 ? 0 : PItem->getID();
+ 	ref<uint8>(0x0A) = slot;
+ 	ref<uint8>(0x0B) = amount == 0 ? 0 : PItem->getSlotID();
+-}
+\ No newline at end of file
++}

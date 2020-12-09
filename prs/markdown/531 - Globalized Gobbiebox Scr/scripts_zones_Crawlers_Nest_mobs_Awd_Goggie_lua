@@ -1,0 +1,7 @@
+@@ -8,4 +8,4 @@ require("scripts/globals/titles")
+ 
+ function onMobDeath(mob, player, isKiller)
+     player:addTitle(tpz.title.BOGEYDOWNER)
+-end
+\ No newline at end of file
++end

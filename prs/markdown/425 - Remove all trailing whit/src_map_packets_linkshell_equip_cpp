@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ CLinkshellEquipPacket::CLinkshellEquipPacket(CCharEntity* PChar, uint8 number)
+         ref<uint8>(0x05) = PChar->equip[SLOT_LINK2];
+         ref<uint8>(0x06) = PChar->equipLoc[SLOT_LINK2];
+     }
+-}
+\ No newline at end of file
++}

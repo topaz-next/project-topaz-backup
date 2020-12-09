@@ -1,0 +1,7 @@
+@@ -36,4 +36,4 @@ function onEventFinish(player,csid,option)
+             player:setPos(0,0,0,0,246);
+         end
+     end
+-end;
+\ No newline at end of file
++end;

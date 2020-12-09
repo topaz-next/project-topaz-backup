@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ end
+ 
+ function onEffectLose(target,effect)
+     target:delMod(tpz.magic.resistMod[effect:getSubPower()], effect:getPower())
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ class CLinkshellListPacket
+     uint8 m_data[1024];
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

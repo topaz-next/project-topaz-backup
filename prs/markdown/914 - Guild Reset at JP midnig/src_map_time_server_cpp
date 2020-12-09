@@ -1,0 +1,30 @@
+@@ -77,12 +77,11 @@ int32 time_server(time_point tick,CTaskMgr::CTask* PTask)
+ 
+     }
+ 
+-    //Midnight
++    // Midnight
+     if (CVanaTime::getInstance()->getSysHour() == 0 && CVanaTime::getInstance()->getSysMinute() == 0)
+     {
+         if (tick > (CVanaTime::getInstance()->lastMidnight + 1h))
+         {
+-            guildutils::UpdateGuildPointsPattern();
+             CVanaTime::getInstance()->lastMidnight = tick;
+         }
+     }
+@@ -91,6 +90,7 @@ int32 time_server(time_point tick,CTaskMgr::CTask* PTask)
+     {
+         if (tick > (CVanaTime::getInstance()->lastVDailyUpdate + 4800ms))
+         {
++            // Vanadiel Time daily updates ("midnight")
+ 			zoneutils::ForEachZone([](CZone* PZone)
+ 			{
+                 luautils::OnGameDay(PZone);
+@@ -100,6 +100,7 @@ int32 time_server(time_point tick,CTaskMgr::CTask* PTask)
+ 				});
+ 			});
+ 
++            guildutils::UpdateGuildPointsPattern();
+             guildutils::UpdateGuildsStock();
+             zoneutils::SavePlayTime();
+ 

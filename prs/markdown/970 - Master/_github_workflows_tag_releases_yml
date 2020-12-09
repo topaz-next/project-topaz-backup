@@ -1,0 +1,44 @@
+@@ -0,0 +1,43 @@
++name: tag_releases
++on:
++  push:
++    branches:
++      - master
++  schedule:
++  - cron: "0 0 1,14 * *" # “At 00:00 on day-of-month 1 and 14.”
++
++jobs:
++  Linux_Tag_Release:
++    runs-on: ubuntu-18.04
++    steps:
++    - uses: actions/checkout@v1
++      with:
++        fetch-depth: 0 # Required to fetch tags
++        ref: release
++    - name: Configure git
++      run: |
++        git config --local user.email "action@github.com"
++        git config --local user.name "GitHub Action"
++    - name: Choose new tag
++      run: |
++        old_tag=`git describe --abbrev=0 --always`
++        echo "Old tag: $old_tag"
++        old_year_month=${old_tag:1:6}
++        current_year_month=$(date '+%Y%m')
++        if [ "$old_year_month" = "$current_year_month" ]; then
++            echo "Release in the same month"
++            new_ver="$((${old_tag:8:2} + 1))"
++            padded_new_ver=`printf %02d $new_ver`
++            new_tag="R$old_year_month-$padded_new_ver"
++        else
++            echo Release in a new month
++            new_tag="R`date '+%Y%m-01'`"
++        fi
++
++        echo "New tag: $new_tag"
++    - name: Apply tag
++      run: |
++        git tag -f $new_tag -m "Test"
++
++        git log --merges $old_tag..$new_tag --pretty="format:(%h) %s - %b, merged by: %an%n" > release_changelist.txt
++        cat release_changelist.txt

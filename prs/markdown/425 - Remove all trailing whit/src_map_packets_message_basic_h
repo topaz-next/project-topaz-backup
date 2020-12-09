@@ -1,0 +1,7 @@
+@@ -149,4 +149,4 @@ class CMessageBasicPacket : public CBasicPacket
+     uint16 getMessageID();
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

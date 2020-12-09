@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ end
+ function onUseAbility(player,target,ability)
+     target:delStatusEffect(tpz.effect.SEKKANOKI)
+     target:addStatusEffect(tpz.effect.SEKKANOKI,1,0,60)
+-end
+\ No newline at end of file
++end

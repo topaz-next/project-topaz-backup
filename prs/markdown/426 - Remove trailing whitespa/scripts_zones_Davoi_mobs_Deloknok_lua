@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ function onMobDeath(mob, player, isKiller)
+         player:addCharVar("theFirstMeetingKilledNM", 1)
+     end
+ 
+-end;
+\ No newline at end of file
++end;

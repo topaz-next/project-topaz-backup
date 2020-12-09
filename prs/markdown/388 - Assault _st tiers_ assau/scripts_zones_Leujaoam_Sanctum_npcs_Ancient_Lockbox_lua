@@ -1,0 +1,48 @@
+@@ -0,0 +1,47 @@
++-----------------------------------
++-- Area: Leujaoam Sanctum
++-- Ancient Lockbox
++-----------------------------------
++local ID = require("scripts/zones/Leujaoam_Sanctum/IDs")
++require("scripts/globals/missions")
++require("scripts/globals/appraisal")
++-----------------------------------
++
++function onTrigger(player,npc)
++    local qItem =
++    {
++        [LEUJAOAM_CLEANSING] =
++        {
++            {
++                {itemid = 0, droprate = 100}, -- Nothing
++                {itemid = 2278, droprate = 600}, -- ??? ring
++                {itemid = 2286, droprate = 300}, -- ??? box
++            },
++        }
++    }
++    local regItem =
++    {
++        [LEUJAOAM_CLEANSING] =
++        {
++            {
++                {itemid = 4119, droprate = 1000}, -- Hi-Potion 3
++            },
++            {
++                {itemid = 0, droprate = 900}, -- nothing
++                {itemid = 4119, droprate = 100}, -- Hi-Potion 3
++            },
++            {
++                {itemid = 0, droprate = 470}, -- nothing
++                {itemid = 4155, droprate = 530}, -- Remedy
++            },
++        },
++    }
++    local area = player:getCurrentAssault()
++    appraisalUtil.assaultChestTrigger(player, npc, qItem[area], regItem[area], ID.text)
++end
++
++function onEventUpdate(player,csid,option)
++end
++
++function onEventFinish(player,csid,option)
++end

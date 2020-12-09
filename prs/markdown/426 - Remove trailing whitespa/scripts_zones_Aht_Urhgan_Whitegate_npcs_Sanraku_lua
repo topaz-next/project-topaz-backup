@@ -1,0 +1,7 @@
+@@ -238,4 +238,4 @@ function onEventFinish(player,csid,option)
+         player:addCurrency("zeni_point", 2000)
+     end
+     ]]
+-end
+\ No newline at end of file
++end

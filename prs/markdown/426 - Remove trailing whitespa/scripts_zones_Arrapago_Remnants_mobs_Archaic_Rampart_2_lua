@@ -1,0 +1,7 @@
+@@ -54,4 +54,4 @@ function onMobDeath(mob, player, isKiller)
+ end
+ 
+ function onMobDespawn(mob)
+-end
+\ No newline at end of file
++end

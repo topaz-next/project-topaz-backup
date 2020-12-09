@@ -1,0 +1,68 @@
+@@ -3,34 +3,44 @@
+ --  Mob: Cursed Chest
+ -----------------------------------
+ require("scripts/globals/status")
++require("scripts/globals/assault")
+ -----------------------------------
+-
+-function onMobFight(mob,target)
+-    local PX = target:getXPos()
+-    local PY = target:getYPos()
+-    local PZ = target:getZPos()
+-    local MX = mob:getXPos()
+-    local MY = mob:getYPos()
+-    local MZ = mob:getZPos()
+-    local distanceMin = 3
+-    local distanceMax = 20
+-    if (CheckForDrawnIn(MX,MY,MZ,PX,PY,PZ,distanceMin,distanceMax) == true) then
+-        target:setPos(mob:getXPos(),mob:getYPos(),mob:getZPos())
+-    end
++function onMobSpawn(mob)
++    assaultUtil.adjustMobLevel(mob, mob:getID())
++    mob:setLocalVar("despawn", 0)
+ end
+ 
+-function CheckForDrawnIn(centerX,centerY,centerZ,playerX,playerY,playerZ,Rayon,maxRayon)
+-    local difX = playerX-centerX
+-    local difY = playerY-centerY
+-    local difZ = playerZ-centerZ
+-    local Distance = math.sqrt( math.pow(difX,2) + math.pow(difY,2) + math.pow(difZ,2) )
++function onMobEngaged(mob, target)
++    mob:AnimationSub(1)
++end
+ 
+-    if (Distance > Rayon and Distance < maxRayon) then
+-        return true
++function onMobFight(mob, target)
++    if mob:AnimationSub() ~= 1 then
++        mob:AnimationSub(1)
++    end
++    if mob:checkDistance(target) < 20 then
++        mob:setMobMod(tpz.mobMod.DRAW_IN, 1)
++        mob:setLocalVar("despawn", 0)
+     else
+-        return false
++        mob:setMobMod(tpz.mobMod.DRAW_IN, 0)
++        if mob:getLocalVar("despawn") == 0 then
++            mob:setLocalVar("despawn", os.time() + 30)
++        end
++    end
++    if mob:getLocalVar("despawn") ~= 0 then
++        if mob:getLocalVar("despawn") < os.time() then
++            DespawnMob(mob:getID(), instance)
++        end
+     end
+ end
+ 
++function onMobDespawn(mob)
++    local instance = mob:getInstance()
++    local npcID = mob:getID()
++
++    mob:AnimationSub(0)
++    mob:timer(5000, function(mob) instance:getEntity(bit.band(npcID, 0xFFF), tpz.objType.NPC):setStatus(tpz.status.NORMAL) end)
++end
++
+ function onMobDeath(mob, player, isKiller)
+-end
+\ No newline at end of file
++end

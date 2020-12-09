@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ function onEventFinish(player,csid,option)
+         player:setCharVar("UnderOathCS", 6)
+         player:delKeyItem(tpz.ki.STRANGE_SHEET_OF_PAPER)
+     end
+-end
+\ No newline at end of file
++end

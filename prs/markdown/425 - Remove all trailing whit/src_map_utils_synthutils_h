@@ -1,0 +1,7 @@
+@@ -59,4 +59,4 @@ namespace synthutils
+ 	int32 sendSynthDone(CCharEntity* PChar);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

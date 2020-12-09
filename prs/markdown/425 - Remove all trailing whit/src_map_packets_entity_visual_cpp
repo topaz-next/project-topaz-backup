@@ -1,0 +1,7 @@
+@@ -40,4 +40,4 @@ CEntityVisualPacket::CEntityVisualPacket(CBaseEntity * PEntity, const char type[
+ 		ref<uint16>(0x12) = PEntity->targid;
+ 	}
+ 	memcpy(data + ((0x0C) ), type, 4);
+-}
+\ No newline at end of file
++}

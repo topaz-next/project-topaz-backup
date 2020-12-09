@@ -1,0 +1,7 @@
+@@ -132,4 +132,4 @@ end
+ 
+ function lightCutsceneFinish( player)
+     player:setCharVar("I_CAN_HEAR_A_RAINBOW_Weather", 0)
+-end
+\ No newline at end of file
++end

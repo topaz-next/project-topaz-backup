@@ -1,0 +1,7 @@
+@@ -21,4 +21,4 @@ function onEffectLose(target,effect)
+     target:delMod(tpz.mod.HPP,-effect:getPower())
+     target:delMod(tpz.mod.MPP,-effect:getPower())
+     target:addMod(tpz.mod.MOVE,-effect:getPower())
+-end
+\ No newline at end of file
++end

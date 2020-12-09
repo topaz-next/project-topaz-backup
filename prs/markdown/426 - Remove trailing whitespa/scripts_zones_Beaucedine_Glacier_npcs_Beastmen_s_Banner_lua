@@ -1,0 +1,7 @@
+@@ -19,4 +19,4 @@ end;
+ 
+ function onEventFinish(player,csid,option)
+     -- printf("OPTION: %u",option);
+-end;
+\ No newline at end of file
++end;

@@ -1,0 +1,7 @@
+@@ -24,4 +24,4 @@ function onMobWeaponSkill(target, mob, skill)
+ 
+     return totaldamage
+ 
+-end
+\ No newline at end of file
++end

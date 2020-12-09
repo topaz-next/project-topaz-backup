@@ -1,0 +1,7 @@
+@@ -30,4 +30,4 @@ function onEventFinish(player,csid,option)
+     if csid == 15 then
+         npcUtil.completeQuest(player, AHT_URHGAN, tpz.quest.id.ahtUrhgan.OPERATION_TEATIME, {item=15602, var="OperationTeatimeProgress"})
+     end
+-end
+\ No newline at end of file
++end

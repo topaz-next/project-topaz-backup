@@ -1,0 +1,7 @@
+@@ -34,4 +34,4 @@ function onEventFinish(player,csid,option)
+     elseif csid == 252 and npcUtil.completeQuest(player, BASTOK, tpz.quest.id.bastok.THE_CURSE_COLLECTOR, {item = 16387, var = {"cCollectSilence", "cCollectCurse"}}) then
+         player:delKeyItem(tpz.ki.CURSEPAPER)
+     end
+-end
+\ No newline at end of file
++end

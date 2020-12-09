@@ -1,0 +1,7 @@
+@@ -39,4 +39,4 @@ function onPetAbility(target, pet, skill, summoner)
+     target:addStatusEffect(tpz.effect.EVASION_BOOST,25-buffvalue,0,duration)
+     skill:setMsg(tpz.msg.basic.NONE)
+     return 0
+-end
+\ No newline at end of file
++end

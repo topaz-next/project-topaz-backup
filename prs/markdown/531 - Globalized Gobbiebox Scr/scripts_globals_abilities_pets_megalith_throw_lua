@@ -1,0 +1,7 @@
+@@ -22,4 +22,4 @@ function onPetAbility(target, pet, skill)
+     target:takeDamage(totaldamage, pet, tpz.attackType.PHYSICAL, tpz.damageType.SLASHING)
+     target:updateEnmityFromDamage(pet,totaldamage)
+     return totaldamage
+-end
+\ No newline at end of file
++end

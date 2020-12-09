@@ -1,0 +1,7 @@
+@@ -25,4 +25,4 @@ function onEffectLose(target,effect)
+     --remove the remaining power
+     target:delMod(tpz.mod.EVA,-effect:getPower())
+     target:delMod(tpz.mod.ENMITY,-effect:getSubPower())
+-end
+\ No newline at end of file
++end

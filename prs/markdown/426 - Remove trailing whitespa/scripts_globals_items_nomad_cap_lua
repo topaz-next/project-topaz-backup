@@ -1,0 +1,7 @@
+@@ -23,4 +23,4 @@ function onItemUse(target)
+         return
+     end
+     print( "Unable to fetch target's nation." )
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CSynthResultMessagePacket : public CBasicPacket
+ 	CSynthResultMessagePacket(CCharEntity* PChar, SYNTH_MESSAGE messageID, uint16 itemID = 0, uint8 quantity = 0);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

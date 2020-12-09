@@ -1,0 +1,7 @@
+@@ -51,4 +51,4 @@ CCharEmotionPacket::CCharEmotionPacket(CCharEntity* PChar, uint32 TargetID, uint
+     }
+ 
+     ref<uint8>(0x16) = static_cast<uint8>(emoteMode);
+-}
+\ No newline at end of file
++}

@@ -1,0 +1,7 @@
+@@ -75,4 +75,4 @@ class CLuaBattlefield
+     int32 lose(lua_State*);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

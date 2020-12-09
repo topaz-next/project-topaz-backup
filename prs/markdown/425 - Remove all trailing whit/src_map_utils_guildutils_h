@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ namespace guildutils
+     CGuild* GetGuild(uint8 GuildID);
+ }
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,7 @@
+@@ -77,4 +77,4 @@ CPartyDefinePacket::CPartyDefinePacket(CParty* PParty)
+             }
+         }
+     }
+-}
+\ No newline at end of file
++}

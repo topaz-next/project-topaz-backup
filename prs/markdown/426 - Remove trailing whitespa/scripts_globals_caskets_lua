@@ -1,0 +1,7 @@
+@@ -1091,4 +1091,4 @@ tpz.caskets.onEventFinish = function(player, csid, option, npc)
+             end
+         end
+     end
+-end
+\ No newline at end of file
++end

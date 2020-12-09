@@ -1,0 +1,7 @@
+@@ -72,4 +72,4 @@ function onEventFinish(player,csid,option)
+         GetNPCByID(ID.npc.TRAP_DOOR_FLOOR_4):openDoor(6)
+         player:setLocalVar("passwordGuess", 0)
+     end
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -52,4 +52,4 @@ class CLuaZone
+     int32 battlefieldsFull(lua_State*);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,7 @@
+@@ -128,4 +128,4 @@ function onEventFinish(player,csid,option)
+             print("Unknown mog locker access type: "..accessType)
+         end
+     end
+-end
+\ No newline at end of file
++end

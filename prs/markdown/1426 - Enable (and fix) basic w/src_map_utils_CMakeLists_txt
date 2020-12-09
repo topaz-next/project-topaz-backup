@@ -1,0 +1,7 @@
+@@ -40,5 +40,5 @@ target_link_libraries(utils
+     PUBLIC
+     common
+     project_options
+-    #project_warnings
++    project_warnings
+ )

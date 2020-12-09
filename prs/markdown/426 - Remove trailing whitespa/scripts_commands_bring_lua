@@ -1,0 +1,7 @@
+@@ -44,4 +44,4 @@ function onTrigger(player, target, forceZone)
+     else
+         targ:setPos( player:getXPos(), player:getYPos(), player:getZPos(), player:getRotPos() )
+     end
+-end
+\ No newline at end of file
++end

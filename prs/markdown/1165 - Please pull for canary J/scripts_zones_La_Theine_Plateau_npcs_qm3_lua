@@ -1,0 +1,23 @@
+@@ -30,14 +30,14 @@ end
+ 
+ function onEventFinish(player, csid, option)
+     if (csid == 124) then
+-        player:tradeComplete();
+-        player:completeQuest(WINDURST, tpz.quest.id.windurst.I_CAN_HEAR_A_RAINBOW);
+-        player:addTitle(tpz.title.RAINBOW_WEAVER);
+-        player:unlockJob(tpz.job.SMN);
+-        player:addSpell(296);
+-        player:messageSpecial(ID.text.UNLOCK_SUMMONER);
+-        player:messageSpecial(ID.text.UNLOCK_CARBUNCLE);
+-        player:setCharVar("I_CAN_HEAR_A_RAINBOW", 0);
++        player:tradeComplete()
++        player:completeQuest(WINDURST, tpz.quest.id.windurst.I_CAN_HEAR_A_RAINBOW)
++        player:addTitle(tpz.title.RAINBOW_WEAVER)
++        player:unlockJob(tpz.job.SMN)
++        player:addSpell(296)
++        player:messageSpecial(ID.text.UNLOCK_SUMMONER)
++        player:messageSpecial(ID.text.UNLOCK_CARBUNCLE)
++        player:setCharVar("I_CAN_HEAR_A_RAINBOW",0)
+ 
+         local rainbow = GetNPCByID(ID.npc.RAINBOW)
+         rainbow:setLocalVar('setRainbow', 1)

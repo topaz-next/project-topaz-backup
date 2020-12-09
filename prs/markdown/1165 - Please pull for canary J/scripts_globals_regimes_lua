@@ -1,0 +1,31 @@
+@@ -1075,6 +1075,13 @@ tpz.regime.bookOnEventFinish = function(player, option, regimeType)
+         return
+     end
+ 
++
++    if option == 7 then
++        tpz.hunts.clearHuntVars(player)
++        return
++    end
++
++
+     local cost = opt.cost
+ 
+     -- charges player differently if they hold RoV KeyItem
+@@ -1215,6 +1222,16 @@ tpz.regime.bookOnEventFinish = function(player, option, regimeType)
+ 
+             player:showText(player, msgOffset)
+             player:showText(player, msgOffset + 1)
++
++            -- Records of Eminence: Undertake a FoV Training Regime
++            if player:getEminenceProgress(3) and regimeType == tpz.regime.type.FIELDS then
++                tpz.roe.onRecordTrigger(player, 3)
++            end
++
++            -- Records of Eminence: Undertake a GoV Training Regime
++            if player:getEminenceProgress(11) and regimeType == tpz.regime.type.GROUNDS then
++                tpz.roe.onRecordTrigger(player, 11)
++            end
+         end
+     end
+ end

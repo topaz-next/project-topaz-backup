@@ -1,0 +1,36 @@
+@@ -0,0 +1,35 @@
++---------------------------------------------------------------------------------------------------
++-- func: !trustmode <value>
++-- desc: set trust engagement mode for current player.
++--       1: Retail-like
++--       2: On Engage
++--       3: On Attack/R.Attack/Spellcast/Ability
++---------------------------------------------------------------------------------------------------
++
++cmdprops =
++{
++    permission = 0,
++    parameters = "i"
++}
++
++function error(player, msg)
++    player:PrintToPlayer(msg)
++    player:PrintToPlayer("!trustmode <value>")
++end
++
++function onTrigger(player, mode)
++
++    if mode == nil then
++        error(player, "You must provide a mode value.")
++        return
++    end
++
++    if mode < 0 or mode > 3 then
++        error(player, "Invalid mode value.")
++        return
++    end
++
++    player:setLocalVar("TrustEngageMode", mode)
++    player:setCharVar("TrustEngageMode", mode)
++    player:PrintToPlayer(string.format("%s's trust mode is now: %i", player:getName(), mode))
++end

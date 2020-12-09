@@ -1,0 +1,7 @@
+@@ -22,4 +22,4 @@ function onMobWeaponSkill(target, mob, skill)
+     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_LIGHT,MOBPARAM_IGNORE_SHADOWS)
+     target:delHP(dmg)
+     return dmg
+-end
+\ No newline at end of file
++end

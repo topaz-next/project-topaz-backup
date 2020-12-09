@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ function onMobDeath(mob, player, isKiller)
+     if player:getCurrentMission(COP) == tpz.mission.id.cop.CALM_BEFORE_THE_STORM and player:getCharVar("Cryptonberry_Executor_KILL") < 2 then
+         player:setCharVar("Cryptonberry_Executor_KILL", 1)
+     end
+-end
+\ No newline at end of file
++end

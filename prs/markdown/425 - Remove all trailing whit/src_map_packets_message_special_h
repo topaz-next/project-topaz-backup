@@ -1,0 +1,22 @@
+@@ -39,13 +39,13 @@ class CMessageSpecialPacket : public CBasicPacket
+ public:
+ 
+ 	CMessageSpecialPacket(
+-		CBaseEntity* PEntity, 
+-		uint16 messageID,  
+-		uint32 param0 = 0, 
+-		uint32 param1 = 0, 
+-		uint32 param2 = 0, 
+-		uint32 param3 = 0, 
++		CBaseEntity* PEntity,
++		uint16 messageID,
++		uint32 param0 = 0,
++		uint32 param1 = 0,
++		uint32 param2 = 0,
++		uint32 param3 = 0,
+ 		bool ShowName = false);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

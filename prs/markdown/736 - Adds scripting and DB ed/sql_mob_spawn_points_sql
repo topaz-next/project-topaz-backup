@@ -1,0 +1,9 @@
+@@ -34948,7 +34948,7 @@ INSERT INTO `mob_spawn_points` VALUES (17260609,'Zombie','Zombie',12,-420.689,-8
+ INSERT INTO `mob_spawn_points` VALUES (17260610,'Zombie','Zombie',12,-482.997,-16.383,-223.502,127);
+ INSERT INTO `mob_spawn_points` VALUES (17260611,'Ghoul','Ghoul',13,-361.735,-8.5,-202.387,127);
+ INSERT INTO `mob_spawn_points` VALUES (17260612,'Will-o-the-Wisp','Will-o\'-the-Wisp',14,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17260613,'Backoo','Backoo',0,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17260613,'Backoo','Backoo',55,-409.210,-7.740,-219.861,227);
+ INSERT INTO `mob_spawn_points` VALUES (17260614,'Bogy','Bogy',15,-357.743,-0.392,-322.516,55);
+ INSERT INTO `mob_spawn_points` VALUES (17260615,'Bogy','Bogy',15,-359.172,-0.142,-325.244,127);
+ INSERT INTO `mob_spawn_points` VALUES (17260616,'Goblin_Ambusher','Goblin Ambusher',9,-194.742,-9.064,-84.503,21);

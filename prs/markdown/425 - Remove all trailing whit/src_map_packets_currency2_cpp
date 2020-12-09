@@ -1,0 +1,7 @@
+@@ -44,4 +44,4 @@ CCurrencyPacket2::CCurrencyPacket2(CCharEntity* PChar)
+         ref<uint16>(0x12) = Sql_GetUIntData(SqlHandle, 5);
+         ref<uint32>(0x14) = Sql_GetIntData(SqlHandle, 6);
+     }
+-}
+\ No newline at end of file
++}

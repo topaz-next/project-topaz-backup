@@ -1,0 +1,16 @@
+@@ -29,7 +29,7 @@
+ #include "char_skills.h"
+ 
+ 
+-CCharSkillsPacket::CCharSkillsPacket(CCharEntity* PChar) 
++CCharSkillsPacket::CCharSkillsPacket(CCharEntity* PChar)
+ {
+ 	this->type = 0x62;
+ 	this->size = 0x80;
+@@ -38,4 +38,4 @@ CCharSkillsPacket::CCharSkillsPacket(CCharEntity* PChar)
+     ref<uint16>(0xAC) = 0x8000;
+     ref<uint16>(0xAE) = 0x8000;
+     ref<uint16>(0xB0) = 0x8000;
+-}
+\ No newline at end of file
++}

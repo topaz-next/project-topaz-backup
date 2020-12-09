@@ -1,0 +1,7 @@
+@@ -78,4 +78,4 @@ function onEventFinish(player,csid,option)
+             spendTravStones(player,4)
+         end
+     end
+-end
+\ No newline at end of file
++end

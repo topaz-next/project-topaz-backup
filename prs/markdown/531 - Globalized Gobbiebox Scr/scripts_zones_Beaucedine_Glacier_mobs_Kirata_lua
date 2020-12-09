@@ -1,0 +1,7 @@
+@@ -14,4 +14,4 @@ function onAdditionalEffect(mob, target, damage)
+ end
+ 
+ function onMobDeath(mob, player, isKiller)
+-end
+\ No newline at end of file
++end

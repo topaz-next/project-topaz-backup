@@ -1,0 +1,7 @@
+@@ -147,4 +147,4 @@ CCurrencyPacket1::CCurrencyPacket1(CCharEntity* PChar)
+         ref<uint16>(0xF4) = Sql_GetUIntData(SqlHandle, 76); // Light Crystals
+         ref<uint16>(0xF6) = Sql_GetUIntData(SqlHandle, 77); // Dark Crystals
+     }
+-}
+\ No newline at end of file
++}

@@ -1,0 +1,7 @@
+@@ -60,4 +60,4 @@ function onEventFinish( player, csid, option)
+     if (csid == 3) then
+         lightCutsceneFinish(player); -- Quest: I Can Hear A Rainbow
+     end
+-end;
+\ No newline at end of file
++end;

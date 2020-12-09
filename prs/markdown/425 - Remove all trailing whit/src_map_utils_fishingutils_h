@@ -1,0 +1,7 @@
+@@ -48,4 +48,4 @@ namespace fishingutils
+     void FishingAction(CCharEntity* PChar, FISHACTION action, uint16 stamina, uint32 special);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

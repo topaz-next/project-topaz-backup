@@ -1,0 +1,7 @@
+@@ -30,4 +30,4 @@ function onUseAbility(player,target,ability)
+     player:addStatusEffect(tpz.effect.TABULA_RASA,math.floor(helixbonus*1.5),0,180,0,math.floor(regenbonus*1.5))
+ 
+     return tpz.effect.TABULA_RASA
+-end
+\ No newline at end of file
++end

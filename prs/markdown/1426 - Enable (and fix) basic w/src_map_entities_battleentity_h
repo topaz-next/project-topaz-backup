@@ -1,0 +1,14 @@
+@@ -140,10 +140,10 @@ enum SKILLTYPE
+     SKILL_COOKING = 56,
+     SKILL_SYNERGY = 57,
+     SKILL_RID = 58,
+-    SKILL_DIG = 59
+-};
++    SKILL_DIG = 59,
+ 
+-#define MAX_SKILLTYPE	64
++    MAX_SKILLTYPE = 64,
++};
+ 
+ enum SUBSKILLTYPE
+ {

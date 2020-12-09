@@ -1,0 +1,7 @@
+@@ -13,4 +13,4 @@ end
+ 
+ function onItemUse(target)
+     target:addStatusEffect(tpz.effect.BLAZE_SPIKES, 20, 0, 210)
+-end
+\ No newline at end of file
++end

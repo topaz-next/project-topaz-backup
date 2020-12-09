@@ -1,0 +1,7 @@
+@@ -12,4 +12,4 @@ cmdprops =
+ function onTrigger(player)
+     player:capAllSkills()
+     player:PrintToPlayer( 'All skills capped!' )
+-end
+\ No newline at end of file
++end

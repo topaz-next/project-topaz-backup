@@ -1,0 +1,7 @@
+@@ -40,4 +40,4 @@ uint8 CBlueTrait::getPoints()
+ void CBlueTrait::setPoints(uint8 points)
+ {
+ 	m_points = points;
+-}
+\ No newline at end of file
++}

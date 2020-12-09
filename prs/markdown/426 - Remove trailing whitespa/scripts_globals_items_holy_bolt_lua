@@ -1,0 +1,7 @@
+@@ -30,4 +30,4 @@ function onAdditionalEffect(player,target,damage)
+         dmg = finalMagicNonSpellAdjustments(player,target,tpz.magic.ele.LIGHT,dmg)
+         return tpz.subEffect.LIGHT_DAMAGE, tpz.msg.basic.ADD_EFFECT_DMG, dmg
+     end
+-end
+\ No newline at end of file
++end

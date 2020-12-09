@@ -1,0 +1,62 @@
+@@ -23,6 +23,7 @@ along with this program.  If not, see http://www.gnu.org/licenses/
+ #define _TRUSTCONTROLLER_H
+ 
+ #include <memory>
++#include <optional>
+ 
+ #include "mob_controller.h"
+ 
+@@ -34,6 +35,14 @@ namespace gambits
+     class CGambitsContainer;
+ }
+ 
++enum class TRUST_MOVEMENT : uint8
++{
++    MELEE         = 0,
++    NO_MOVE       = 1,
++    RANGED        = 2,
++    SAFE_DISTANCE = 3,
++};
++
+ class CTrustController : public CMobController
+ {
+ public:
+@@ -48,22 +57,38 @@ class CTrustController : public CMobController
+ 
+     static constexpr float RoamDistance{ 2.0f };
+     static constexpr float SpawnDistance{ 3.0f };
++    static constexpr float RangedDistance{ 20.0f };
++    static constexpr float CastingDistance{ 20.0f };
+     static constexpr float WarpDistance{ 30.0f };
+ 
+     // TODO: Replace with reverse enmity container
+     CBattleEntity* GetTopEnmity();
+ 
+     std::unique_ptr<gambits::CGambitsContainer> m_GambitsContainer;
+ 
++    // TODO: Clean this up
++    void SetMovementType(TRUST_MOVEMENT movement)
++    {
++        m_MovementType = movement;
++    }
++
+ private:
+     void DoCombatTick(time_point tick) override;
++    void PickCombatPosition(float minDistance, float maxDistance);
+     void DoRoamTick(time_point tick) override;
+ 
++    bool GetEngageCondition();
++    void TryRest();
++
++    void Declump();
++
+     uint8 GetPartyPosition();
+ 
+     CBattleEntity* m_LastTopEnmity;
+     time_point m_CombatEndTime;
+     time_point m_LastHealTickTime;
++    TRUST_MOVEMENT m_MovementType;
++    std::optional<position_t> m_CombatPosition;
+ };
+ 
+ #endif // _TRUSTCONTROLLER

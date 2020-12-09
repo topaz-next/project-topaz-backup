@@ -1,0 +1,7 @@
+@@ -23,4 +23,4 @@ function onTrigger(player, visualstring)
+ 
+     -- push visual packet to player
+     player:entityVisualPacket(visualstring)
+-end
+\ No newline at end of file
++end

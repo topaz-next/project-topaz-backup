@@ -1,0 +1,7 @@
+@@ -35,4 +35,4 @@ function onTrigger(player, msgId, param1, param2, param3, param4, param5)
+     else
+         player:messageSpecial(msgId)
+     end
+-end
+\ No newline at end of file
++end

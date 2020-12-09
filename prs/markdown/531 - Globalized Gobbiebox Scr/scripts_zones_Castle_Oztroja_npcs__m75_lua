@@ -1,0 +1,7 @@
+@@ -35,4 +35,4 @@ function onEventFinish(player,csid,option)
+             GetNPCByID(ID.npc.BRASS_DOOR_FLOOR_4_H7 + 5):openDoor()
+         end
+     end
+-end
+\ No newline at end of file
++end

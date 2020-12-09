@@ -1,0 +1,7 @@
+@@ -48,4 +48,4 @@ namespace blueutils
+     void    CalculateTraits(CCharEntity* PChar);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

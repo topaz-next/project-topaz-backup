@@ -1,0 +1,7 @@
+@@ -38,4 +38,4 @@ function onTrigger(player, spellId, target)
+     targ:delSpell(spellId)
+     player:PrintToPlayer(string.format("Deleted spell %i from %s.",spellId,targ:getName()))
+ 
+-end
+\ No newline at end of file
++end

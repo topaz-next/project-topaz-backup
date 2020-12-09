@@ -1,0 +1,13 @@
+41484913ab6d70e803a7567a33b59c0df72e9e1b - Zach Toogood (zrtoogood@gmail.com) - GitHub Web Flow () - https://github.com/project-topaz/topaz/commit/41484913ab6d70e803a7567a33b59c0df72e9e1b
+36253e6893feecf0eae38c9bc9f2e170796ac2a9 - Zach Toogood (zrtoogood@gmail.com) - GitHub Web Flow () - https://github.com/project-topaz/topaz/commit/36253e6893feecf0eae38c9bc9f2e170796ac2a9
+e6e7408ddf406d571a292ad89e2a3fe3e2ea3f8f - Zach Toogood (zrtoogood@gmail.com) - GitHub Web Flow () - https://github.com/project-topaz/topaz/commit/e6e7408ddf406d571a292ad89e2a3fe3e2ea3f8f
+32d15ae009e06a938974e4866391c60c3c57ea51 - Zach Toogood (zrtoogood@gmail.com) - GitHub Web Flow () - https://github.com/project-topaz/topaz/commit/32d15ae009e06a938974e4866391c60c3c57ea51
+452e55cb4ec9ec0a70e5f84db3347aad706f9432 - Zach Toogood (zrtoogood@gmail.com) - GitHub Web Flow () - https://github.com/project-topaz/topaz/commit/452e55cb4ec9ec0a70e5f84db3347aad706f9432
+735f6331b6965abb5d346d8963beb3183ab23586 - Zach Toogood (zrtoogood@gmail.com) - GitHub Web Flow () - https://github.com/project-topaz/topaz/commit/735f6331b6965abb5d346d8963beb3183ab23586
+9bd57cf79d888b512be3eb2da9c40b0adb65632c - Zach Toogood (zrtoogood@gmail.com) - GitHub Web Flow () - https://github.com/project-topaz/topaz/commit/9bd57cf79d888b512be3eb2da9c40b0adb65632c
+2e5d6c0cb364767af8d925a1c5cec8ea431e71cf - Zach Toogood (zrtoogood@gmail.com) - GitHub Web Flow () - https://github.com/project-topaz/topaz/commit/2e5d6c0cb364767af8d925a1c5cec8ea431e71cf
+a157431cea6f319e41f79ba78f82ac486ebdb937 - Zach Toogood (zrtoogood@gmail.com) - GitHub Web Flow () - https://github.com/project-topaz/topaz/commit/a157431cea6f319e41f79ba78f82ac486ebdb937
+77d54bd52f90adacef174b8f7bbbe925bab22fda - Zach Toogood (zrtoogood@gmail.com) - GitHub Web Flow () - https://github.com/project-topaz/topaz/commit/77d54bd52f90adacef174b8f7bbbe925bab22fda
+4ac7a3ce323589b8a542eb62d8feb7621b45eca8 - Zach Toogood (zrtoogood@gmail.com) - GitHub Web Flow () - https://github.com/project-topaz/topaz/commit/4ac7a3ce323589b8a542eb62d8feb7621b45eca8
+7c62bf9384dbf841ff3a103b456a18117500a032 - Zach Toogood (zrtoogood@gmail.com) - GitHub Web Flow () - https://github.com/project-topaz/topaz/commit/7c62bf9384dbf841ff3a103b456a18117500a032
+1aa5461e4008df6565f59799fc44049442267493 - Zach Toogood (zrtoogood@gmail.com) - GitHub Web Flow () - https://github.com/project-topaz/topaz/commit/1aa5461e4008df6565f59799fc44049442267493

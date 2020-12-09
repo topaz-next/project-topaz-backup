@@ -1,0 +1,11 @@
+@@ -7775,8 +7775,8 @@ INSERT INTO `mob_spawn_points` VALUES (16924679,'Kamlanaut','Kam\'lanaut',3,-518
+ INSERT INTO `mob_spawn_points` VALUES (16924680,'Ealdnarche','Eald\'narche',4,-529.274,-120,516.185,167);
+ INSERT INTO `mob_spawn_points` VALUES (16924681,'Kamlanaut','Kam\'lanaut',3,511.559,-0.5,528.348,146);
+ INSERT INTO `mob_spawn_points` VALUES (16924682,'Ealdnarche','Eald\'narche',4,516.331,-0.5,518.179,199);
+-INSERT INTO `mob_spawn_points` VALUES (16924683,'Kamlanaut','Kam\'lanaut',3,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16924684,'Ealdnarche','Eald\'narche',4,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (16924683,'Kamlanaut','Kam\'lanaut',3,520.361,0,493.3,0);
++INSERT INTO `mob_spawn_points` VALUES (16924684,'Ealdnarche','Eald\'narche',4,530.361,0,493.3,0);
+ INSERT INTO `mob_spawn_points` VALUES (16924685,'Disjoined_One','Disjoined One',0,0,0,0,0); -- Both Paths Taken (ROVM2-9-2)
+ INSERT INTO `mob_spawn_points` VALUES (16924686,'Iroha','Iroha',0,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (16924687,'Disjoined_One','Disjoined One',0,0,0,0,0);

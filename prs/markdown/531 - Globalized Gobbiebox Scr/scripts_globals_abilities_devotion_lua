@@ -1,0 +1,7 @@
+@@ -45,4 +45,4 @@ function onUseAbility(player,target,ability)
+     target:addMP(healMP)
+ 
+     return healMP
+-end
+\ No newline at end of file
++end

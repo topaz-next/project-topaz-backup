@@ -1,0 +1,57 @@
+@@ -0,0 +1,56 @@
++require("scripts/globals/mixins")
++require("scripts/globals/status")
++
++
++g_mixins = g_mixins or {}
++
++g_mixins.instance_master = function(mob)
++
++    mob:addListener("SPAWN", "SPAWN_TIME", function(mob)
++        if mob:getMainJob() == tpz.job.BST then
++            mob:setLocalVar("spawnPet", os.time() + 10)
++            mob:setLocalVar("petSpawned", 0)
++        end
++    end)
++
++    mob:addListener("ROAM_TICK", "MASTER_RTICK", function(mob)
++        local instance = mob:getInstance()
++        local pet = instance:getEntity(bit.band(mob:getID() + 1, 0xFFF), tpz.objType.MOB)
++        local master = mob:getID()
++        local wait = mob:getLocalVar("spawnPet")
++    
++        if mob:getMainJob() == tpz.job.BST then
++            if wait < os.time() and mob:getLocalVar("petSpawned") == 0 then
++                mob:setLocalVar("petSpawned", 1)
++                mob:entityAnimationPacket("casm")
++                pet:setSpawn(mob:getXPos() + math.random(-2, 2), mob:getYPos(), mob:getZPos() + math.random(-2, 2))
++                mob:timer(4000, function(mob) SpawnMob(mob:getID() + 1, instance) mob:entityAnimationPacket("shsm") --[[pet:follow(master, tpz.follow.ROAM) master = pet]] end)
++            end
++        end
++    end)
++    
++    mob:addListener("ENGAGE", "MASTER_ENGAGE", function(mob, target)
++        local instance = mob:getInstance()
++        local pet = instance:getEntity(bit.band(mob:getID() + 1, 0xFFF), tpz.objType.MOB)
++
++        pet:updateEnmity(target)
++    end)
++    
++    mob:addListener("COMBAT_TICK", "MAAT_CTICK", function(mob)
++        local instance = mob:getInstance()
++        local wait = mob:getLocalVar("spawnPet")
++        local pet = instance:getEntity(bit.band(mob:getID() + 1, 0xFFF), tpz.objType.MOB)
++    
++        if mob:getMainJob() == tpz.job.BST then
++            if pet:getCurrentAction() == tpz.action.NONE and wait < os.time() and mob:getCurrentAction() ~= tpz.action.WEAPONSKILL_START
++                and mob:getCurrentAction() ~= tpz.action.WEAPONSKILL_FINISH and mob:getLocalVar("petSpawned") == 0 then
++                mob:entityAnimationPacket("casm")
++                mob:setLocalVar("petSpawned", 1)
++                pet:setSpawn(mob:getXPos() + math.random(-2, 2), mob:getYPos(), mob:getZPos() + math.random(-2, 2))
++                mob:timer(4000, function(mob) SpawnMob(mob:getID() + 1, instance) mob:entityAnimationPacket("shsm") end)
++            end
++        end
++    end)
++end
++
++return g_mixins.instance_master

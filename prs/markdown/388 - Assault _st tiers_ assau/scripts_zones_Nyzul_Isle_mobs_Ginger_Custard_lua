@@ -1,0 +1,26 @@
+@@ -0,0 +1,25 @@
++-----------------------------------
++--  Mob: Ginger Custard
++-- Area: Nyzul Isle
++-- Info: Enemy Leader, Absorbs light and fire elemental damage
++-----------------------------------
++require("scripts/globals/status")
++-----------------------------------
++require("scripts/globals/nyzul")
++-----------------------------------
++
++function onMobSpawn(mob)
++    mob:addMod(tpz.mod.FIRE_ABSORB, 100)
++    mob:addMod(tpz.mod.LIGHT_ABSORB, 100)
++end
++
++function onMobEngaged(mob,target)
++end
++
++function onMobFight(mob,target)
++end
++
++function onMobDeath(mob, player, isKiller, firstCall)
++    nyzul.spawnChest(mob)
++    nyzul.enemyLeaderKill(mob, firstCall)
++end

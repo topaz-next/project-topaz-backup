@@ -1,0 +1,7 @@
+@@ -21,4 +21,4 @@ function onAdditionalEffect(player,target,damage)
+         target:addStatusEffect(tpz.effect.DEFENSE_DOWN, 12, 0, 60)
+         return tpz.subEffect.DEFENSE_DOWN, tpz.msg.basic.ADD_EFFECT_STATUS, tpz.effect.DEFENSE_DOWN
+     end
+-end
+\ No newline at end of file
++end

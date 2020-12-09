@@ -1,0 +1,55 @@
+@@ -9,17 +9,20 @@ require("scripts/globals/missions")
+ require("scripts/globals/weather")
+ require("scripts/globals/status")
+ require("scripts/globals/zone")
++require("scripts/globals/settings")
+ -----------------------------------
+ 
+ function onInitialize(zone)
+-    UpdateNMSpawnPoint(ID.mob.JORMUNGAND)
+-    GetMobByID(ID.mob.JORMUNGAND):setRespawnTime(math.random(86400, 259200))
+-
+-    -- ffxiclopedia's pages for Black Coney and White Coney say 7 and 5 Earth seconds respectively, in game it is very fast
+-    -- https://ffxiclopedia.fandom.com/wiki/Black_Coney
+-    -- https://ffxiclopedia.fandom.com/wiki/White_Coney
+-    -- BG Wiki has no info. For now, triggers every 3 vana minutes
+-    GetNPCByID(ID.npc.RABBIT_FOOTPRINT):addPeriodicTrigger(0, 3, 0)
++if ENABLE_COP == 1 then
++		UpdateNMSpawnPoint(ID.mob.JORMUNGAND)
++		GetMobByID(ID.mob.JORMUNGAND):setRespawnTime(math.random(86400, 259200))
++
++		-- ffxiclopedia's pages for Black Coney and White Coney say 7 and 5 Earth seconds respectively, in game it is very fast
++		-- https://ffxiclopedia.fandom.com/wiki/Black_Coney
++		-- https://ffxiclopedia.fandom.com/wiki/White_Coney
++		-- BG Wiki has no info. For now, triggers every 3 vana minutes
++		GetNPCByID(ID.npc.RABBIT_FOOTPRINT):addPeriodicTrigger(0, 3, 0)
++	end
+ end
+ 
+ function onConquestUpdate(zone, updatetype)
+@@ -50,14 +53,16 @@ function onEventFinish(player, csid, option)
+ end
+ 
+ function onZoneWeatherChange(weather)
++	if ENABLE_COP == 1 then
+     local waterfall = GetNPCByID(ID.npc.WATERFALL)
+-    if (weather == tpz.weather.SNOW or weather == tpz.weather.BLIZZARDS) then
+-        if (waterfall:getAnimation() ~= tpz.anim.CLOSE_DOOR) then
+-            waterfall:setAnimation(tpz.anim.CLOSE_DOOR)
+-        end
+-    else
+-        if (waterfall:getAnimation() ~= tpz.anim.OPEN_DOOR) then
+-            waterfall:setAnimation(tpz.anim.OPEN_DOOR)
+-        end
+-    end
++		if (weather == tpz.weather.SNOW or weather == tpz.weather.BLIZZARDS) then
++			if (waterfall:getAnimation() ~= tpz.anim.CLOSE_DOOR) then
++				waterfall:setAnimation(tpz.anim.CLOSE_DOOR)
++			end
++		else
++			if (waterfall:getAnimation() ~= tpz.anim.OPEN_DOOR) then
++				waterfall:setAnimation(tpz.anim.OPEN_DOOR)
++			end
++		end
++	end
+ end

@@ -1,0 +1,12 @@
+@@ -38,8 +38,8 @@ class CItemContainer;
+ class CGuildMenuSellPacket : public CBasicPacket
+ {
+ public:
+-	
++
+ 	CGuildMenuSellPacket(CCharEntity* PChar, CItemContainer* PGuild);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

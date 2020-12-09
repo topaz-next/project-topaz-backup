@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CTradeItemPacket : public CBasicPacket
+ 	CTradeItemPacket(CItem* PItem, uint8 slot);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

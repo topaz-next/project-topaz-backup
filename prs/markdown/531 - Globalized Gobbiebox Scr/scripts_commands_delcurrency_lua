@@ -1,0 +1,13 @@
+@@ -43,9 +43,9 @@ function onTrigger(player,currency,amount,target)
+     if (amount > currentAmount) then
+         amount = currentAmount
+     end
+-    
++
+     -- delete currency
+     targ:delCurrency(currency,amount)
+     local newAmount = targ:getCurrency(currency)
+     player:PrintToPlayer(string.format("%i %s was taken from %s, for a total of %i.",amount,currency,targ:getName(),newAmount))
+-end
+\ No newline at end of file
++end

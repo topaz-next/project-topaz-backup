@@ -1,0 +1,7 @@
+@@ -39,4 +39,4 @@ class CServerMessagePacket: public CBasicPacket
+     CServerMessagePacket(const string_t message, int8 language, int32 timestamp, int32 message_offset);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

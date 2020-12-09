@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CPositionPacket : public CBasicPacket
+ 	CPositionPacket(CBaseEntity* PEntity);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

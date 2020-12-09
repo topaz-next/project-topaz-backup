@@ -1,0 +1,7 @@
+@@ -65,4 +65,4 @@ function onEventFinish(player,csid,option)
+         end
+     end
+ 
+-end;
+\ No newline at end of file
++end;

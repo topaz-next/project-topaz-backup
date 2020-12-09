@@ -1,0 +1,7 @@
+@@ -215,4 +215,4 @@ function tpz.goblinfootprint.startEvent(player, csid, option)
+     else
+         player:messageSpecial(ID.text.GOBLIN_SLIPPED_AWAY)
+     end
+-end
+\ No newline at end of file
++end

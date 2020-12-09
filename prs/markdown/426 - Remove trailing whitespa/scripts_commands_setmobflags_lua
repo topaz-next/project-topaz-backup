@@ -1,0 +1,16 @@
+@@ -21,7 +21,7 @@ function onTrigger(player, flags, target)
+         error(player, "You must supply a flags value.")
+         return
+     end
+-    
++
+     -- validate target
+     local targ
+     if (target == nil) then
+@@ -41,4 +41,4 @@ function onTrigger(player, flags, target)
+     -- set flags
+     player:setMobFlags(flags, targ:getID())
+     player:PrintToPlayer( string.format("Set %s %i flags to %i.", targ:getName(), targ:getID(), flags) )
+-end
+\ No newline at end of file
++end

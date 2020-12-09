@@ -1,0 +1,23 @@
+@@ -9,6 +9,7 @@ require("scripts/globals/missions")
+ require("scripts/globals/weather")
+ require("scripts/globals/status")
+ require("scripts/globals/zone")
++require("scripts/globals/settings")
+ -----------------------------------
+ 
+ function onInitialize(zone)
+@@ -51,12 +52,12 @@ end
+ 
+ function onZoneWeatherChange(weather)
+     local waterfall = GetNPCByID(ID.npc.WATERFALL)
+-    if (weather == tpz.weather.SNOW or weather == tpz.weather.BLIZZARDS) then
++    if (weather == tpz.weather.SNOW or weather == tpz.weather.BLIZZARDS) and ENABLE_COP == 1 then
+         if (waterfall:getAnimation() ~= tpz.anim.CLOSE_DOOR) then
+             waterfall:setAnimation(tpz.anim.CLOSE_DOOR)
+         end
+     else
+-        if (waterfall:getAnimation() ~= tpz.anim.OPEN_DOOR) then
++        if (waterfall:getAnimation() ~= tpz.anim.OPEN_DOOR)  and ENABLE_COP == 1 then
+             waterfall:setAnimation(tpz.anim.OPEN_DOOR)
+         end
+     end

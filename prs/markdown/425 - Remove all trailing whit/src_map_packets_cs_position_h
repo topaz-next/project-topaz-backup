@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CCSPositionPacket : public CBasicPacket
+ 	CCSPositionPacket(CCharEntity* PChar);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

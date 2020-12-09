@@ -1,0 +1,10 @@
+05c032b1ceec9266b606776a8a4b5d35af56b2c9 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/05c032b1ceec9266b606776a8a4b5d35af56b2c9
+8299975b409cf9755433f42a706aa5d349b109c4 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/8299975b409cf9755433f42a706aa5d349b109c4
+3eadd2da388acaeab434bd9ebc49617bf08388b9 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/3eadd2da388acaeab434bd9ebc49617bf08388b9
+edc5b6d557ea0f2f96a9ba1f081d8235886ac220 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/edc5b6d557ea0f2f96a9ba1f081d8235886ac220
+663802aa44a8fca6f6145e8f9a50913e74444d8b - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/663802aa44a8fca6f6145e8f9a50913e74444d8b
+6e0b4f2ef29841bebd381701e0de6ac1c7a66597 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/6e0b4f2ef29841bebd381701e0de6ac1c7a66597
+220a4da744e7ea75678d6af5a146c0bfc512bc89 - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/220a4da744e7ea75678d6af5a146c0bfc512bc89
+30c81c96e9158dce886600a24f8a9fcdb2ef7d8b - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/30c81c96e9158dce886600a24f8a9fcdb2ef7d8b
+14adb2f8171d07e4cc6e0c08a4b4f3d15798ab3a - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/14adb2f8171d07e4cc6e0c08a4b4f3d15798ab3a
+f902fb831f0d2d486bdd8c80ad5e74ef1502715d - Zach Toogood (zrtoogood@gmail.com) - Zach Toogood (zrtoogood@gmail.com) - https://github.com/project-topaz/topaz/commit/f902fb831f0d2d486bdd8c80ad5e74ef1502715d

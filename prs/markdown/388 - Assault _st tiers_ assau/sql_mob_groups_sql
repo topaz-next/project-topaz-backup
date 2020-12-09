@@ -1,0 +1,18 @@
+@@ -2908,7 +2908,7 @@ INSERT INTO `mob_groups` VALUES (2151,4263,63,'Vulcanian_Bomb',0,128,0,0,0,0,0,0
+ INSERT INTO `mob_groups` VALUES (2152,4281,63,'Wamouracampa',0,128,0,0,0,0,0,0);
+ INSERT INTO `mob_groups` VALUES (2153,4336,63,'Whyjham',0,0,0,0,0,81,83,0);
+ INSERT INTO `mob_groups` VALUES (2154,4465,63,'Yanshaal',1,0,0,0,0,1,1,0);
+-INSERT INTO `mob_groups` VALUES (10633,5872,63,'Qiqirn_Mine',0,128,0,0,0,75,75,0);
++INSERT INTO `mob_groups` VALUES (10633,5872,63,'Qiqirn_Mine',0,128,0,0,0,75,75,1);
+ 
+ -- ------------------------------------------------------------
+ -- Navukgo_Execution_Chamber (Zone 64)
+@@ -3004,7 +3004,7 @@ INSERT INTO `mob_groups` VALUES (1,5466,66,'Mamool_Ja_Warder_whm',0,128,0,0,9999
+ INSERT INTO `mob_groups` VALUES (2,5465,66,'Mamool_Ja_Warder_bst',0,128,0,0,0,77,78,0);
+ INSERT INTO `mob_groups` VALUES (3,2539,66,'Mamool_Jas_Lizard',0,128,0,0,0,70,70,0);
+ INSERT INTO `mob_groups` VALUES (4,2544,66,'Mamool_Ja_Warder_nin',0,128,0,0,0,77,78,0);
+-INSERT INTO `mob_groups` VALUES (5,1037,66,'Dilapidated_Gate',0,128,0,0,0,75,75,0);
++INSERT INTO `mob_groups` VALUES (5,1037,66,'Dilapidated_Gate',0,128,0,9999,0,75,75,1);
+ INSERT INTO `mob_groups` VALUES (6,3225,66,'Puk_Executioner',0,128,0,0,0,77,78,0);
+ INSERT INTO `mob_groups` VALUES (7,2515,66,'Mamool_Ja_Executioner_wh',0,128,0,0,9999,77,78,0);
+ INSERT INTO `mob_groups` VALUES (8,5467,66,'Mamool_Ja_Executioner_bl',0,128,0,0,0,77,78,0);

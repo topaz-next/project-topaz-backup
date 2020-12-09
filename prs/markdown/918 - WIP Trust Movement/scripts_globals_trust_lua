@@ -1,0 +1,15 @@
+@@ -24,6 +24,14 @@ tpz.trust.message_offset =
+     SPECIAL_MOVE_1 = 18,
+ }
+ 
++tpz.trust.movement =
++{
++    MELEE         = 0,
++    NO_MOVE       = 1,
++    RANGED        = 2,
++    SAFE_DISTANCE = 3,
++}
++
+ local rovKIBattlefieldIDs = set{
+     5,    -- Shattering Stars (WAR LB5)
+     6,    -- Shattering Stars (BLM LB5)

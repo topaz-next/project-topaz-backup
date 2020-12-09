@@ -1,0 +1,9 @@
+@@ -32,6 +32,8 @@ function onMobSpawn(mob)
+         [tpz.magic.spell.STAR_SIBYL] = tpz.trust.message_offset.TEAMWORK_2,
+     })
+ 
++    mob:setTrustMovement(tpz.trust.movement.NO_MOVE)
++
+     mob:addSimpleGambit(ai.t.PARTY, ai.c.HPP_LT, 25, ai.r.MA, ai.s.HIGHEST, tpz.magic.spellFamily.CURE)
+ 
+     mob:addSimpleGambit(ai.t.PARTY, ai.c.STATUS, tpz.effect.SLEEP_I, ai.r.MA, ai.s.SPECIFIC, tpz.magic.spell.CURE)

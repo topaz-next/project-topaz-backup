@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ end
+ function onUseAbility(player,target,ability)
+     local merits = player:getMerit(tpz.merit.DARK_SEAL)
+     player:addStatusEffect(tpz.effect.DARK_SEAL,merits,0,60)
+-end
+\ No newline at end of file
++end

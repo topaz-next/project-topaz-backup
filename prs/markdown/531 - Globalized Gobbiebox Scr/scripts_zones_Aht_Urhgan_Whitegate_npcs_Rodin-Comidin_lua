@@ -1,0 +1,7 @@
+@@ -35,4 +35,4 @@ function onEventFinish(player,csid,option)
+     elseif csid == 3141 then
+         npcUtil.giveKeyItem(player, tpz.ki.NYZUL_ISLE_ROUTE)
+     end
+-end
+\ No newline at end of file
++end

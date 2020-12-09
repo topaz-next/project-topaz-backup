@@ -1,0 +1,26 @@
+@@ -30,12 +30,12 @@
+ 
+ 
+ CMessageSpecialPacket::CMessageSpecialPacket(
+-	CBaseEntity* PEntity, 
+-	uint16 messageID,  
+-	uint32 param0, 
+-	uint32 param1, 
+-	uint32 param2, 
+-	uint32 param3, 
++	CBaseEntity* PEntity,
++	uint16 messageID,
++	uint32 param0,
++	uint32 param1,
++	uint32 param2,
++	uint32 param3,
+ 	bool ShowName)
+ {
+ 	this->type = 0x2A;
+@@ -64,4 +64,4 @@ CMessageSpecialPacket::CMessageSpecialPacket(
+ 	}
+ 
+ 	ref<uint16>(0x1A) = messageID;
+-}
+\ No newline at end of file
++}

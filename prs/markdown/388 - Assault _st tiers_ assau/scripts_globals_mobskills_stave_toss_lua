@@ -1,0 +1,19 @@
+@@ -8,8 +8,7 @@ require("scripts/globals/status")
+ ---------------------------------------------
+ 
+ function onMobSkillCheck(target,mob,skill)
+-    -- If animationSub is 1, mob has already lost the staff. If zero, still has staff.
+-    if mob:AnimationSub() == 1 then
++    if mob:AnimationSub() == 1 and mob:getMainJob() < tpz.job.WHM and mob:getMainJob() > tpz.job.BLM then
+         return 1
+     else
+         return 0
+@@ -23,7 +22,7 @@ function onMobWeaponSkill(target, mob, skill)
+     local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT)
+     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,tpz.attackType.PHYSICAL,tpz.damageType.BLUNT,info.hitslanded)
+ 
+-    mob:AnimationSub(1) -- Mob loses Staff on using Stave Toss
++    mob:AnimationSub(1)
+     target:takeDamage(dmg, mob, tpz.attackType.PHYSICAL, tpz.damageType.BLUNT)
+     return dmg
+ end

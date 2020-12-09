@@ -1,0 +1,16 @@
+@@ -24,7 +24,7 @@ function onZoneIn(player, prevZone)
+ 
+     -- FIRST LOGIN (START CS)
+     if player:getPlaytime(false) == 0 then
+-        if OPENING_CUTSCENE_ENABLE == 1 then
++        if NEW_CHARACTER_CUTSCENE == 1 then
+             cs = 1
+         end
+         player:setPos(-45, -0, 26, 213)
+@@ -68,4 +68,4 @@ function onEventFinish(player, csid, option)
+     elseif csid == 176 then
+         finishMissionTimeline(player, 1, csid, option)
+     end
+-end
+\ No newline at end of file
++end

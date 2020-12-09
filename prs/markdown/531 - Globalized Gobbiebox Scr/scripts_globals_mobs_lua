@@ -1,0 +1,7 @@
+@@ -480,4 +480,4 @@ tpz.mob.onAddEffect = function(mob, target, damage, effect, params)
+     end
+ 
+     return 0, 0, 0
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ end
+ 
+ function onItemUse(target)
+     target:addItem(19198,99)
+-end
+\ No newline at end of file
++end

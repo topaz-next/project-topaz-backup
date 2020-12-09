@@ -1,0 +1,7 @@
+@@ -47,4 +47,4 @@ class CBazaarCheckPacket : public CBasicPacket
+ 	CBazaarCheckPacket(CCharEntity* PChar, BAZAARCHECK type);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

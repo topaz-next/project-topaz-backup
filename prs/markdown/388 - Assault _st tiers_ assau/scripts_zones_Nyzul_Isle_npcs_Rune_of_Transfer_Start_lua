@@ -1,0 +1,51 @@
+@@ -0,0 +1,50 @@
++-----------------------------------
++-- Area:  Nyzul_Isle
++-- NPC:   Rune of Transfer
++-- Notes: Allows players to select a floor to transport to
++-- !pos -20.000 -4.000 -11.000
++-----------------------------------
++local ID = require("scripts/zones/Nyzul_Isle/IDs")
++require("scripts/globals/keyitems")
++require("scripts/globals/npc_util")
++require("scripts/globals/nyzul")
++require("scripts/zones/Nyzul_Isle/instances/Nyzul_Isle_Investigation")
++-----------------------------------
++
++function onTrigger(player, npc)
++    local tokens = player:getCurrency("nyzul_isle_assault_point")
++    local prefered = 0 -- Todo: set prefered items at Sorrowfull_sage
++    local floorGroup = math.floor(player:getCharVar("NyzulFloorProgress")/5)
++    local floorProgress = 0xFFFFFFFC - bit.bxor(bit.lshift(2,floorGroup+1)-1,3)
++
++    if not player:hasKeyItem(tpz.keyItem.RUNIC_DISC) then
++        player:messageSpecial(ID.text.NEW_USER, tpz.keyItem.RUNIC_DISC)
++        npcUtil.giveKeyItem(player, tpz.keyItem.RUNIC_DISC)
++    else
++        player:startEvent(94, tpz.keyItem.RUNIC_DISC, tokens, 1, prefered, 100, 200, 300, floorProgress)
++	end
++end
++
++function onEventUpdate(player, csid, option)
++end
++
++function onEventFinish(player, csid, option, npc)
++    local instance = npc:getInstance()
++    local chars = instance:getChars()
++
++    if csid == 94 then
++        local floorCost = nyzul.floorCost[option]
++        if player:getCurrency("nyzul_isle_assault_point") >= floorCost.cost then
++            player:delCurrency("nyzul_isle_assault_point", floorCost.cost)
++            npc:setLocalVar("Nyzul_Isle_StartingFloor", floorCost.level)
++            npc:setLocalVar("Nyzul_Current_Floor", floorCost.level)
++            npc:setLocalVar("[Lamp]PartySize", player:getPartySize())
++            for i,v in pairs(chars) do
++                v:startEvent(95)
++            end
++            pickSetPoint(player, npc)
++        else 
++            player:messageSpecial(ID.text.INSUFFICIENT_TOKENS)
++        end
++    end
++end

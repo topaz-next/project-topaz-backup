@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CCampaignPacket : public CBasicPacket
+ 	CCampaignPacket(CCharEntity* PChar, uint8 number);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

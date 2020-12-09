@@ -1,0 +1,7 @@
+@@ -21,4 +21,4 @@ function onUseWeaponSkill(player, target, wsID, tp, primary, action, taChar)
+     local ftpmp = fTP(tp, 0.15, 0.22, 0.35)
+     player:addHP(ftphp * player:getMaxHP())
+     return 0, 0, false, ftpmp * player:getMaxMP()
+-end
+\ No newline at end of file
++end

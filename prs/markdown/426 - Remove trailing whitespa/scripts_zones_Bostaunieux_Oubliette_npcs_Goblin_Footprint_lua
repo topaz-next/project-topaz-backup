@@ -1,0 +1,7 @@
+@@ -20,4 +20,4 @@ end
+ 
+ function onEventFinish(player, csid, option)
+     tpz.goblinfootprint.startEvent(player, csid, option)
+-end
+\ No newline at end of file
++end

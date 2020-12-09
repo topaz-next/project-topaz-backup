@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ class CMenuMeritPacket : public CBasicPacket
+ 	CMenuMeritPacket(CCharEntity* PChar);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

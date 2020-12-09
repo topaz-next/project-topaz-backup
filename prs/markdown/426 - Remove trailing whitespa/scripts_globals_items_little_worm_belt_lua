@@ -1,0 +1,7 @@
+@@ -15,4 +15,4 @@ end
+ 
+ function onItemUse(target)
+     target:addItem(17396, 12) -- little_worm
+-end
+\ No newline at end of file
++end

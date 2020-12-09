@@ -1,0 +1,17 @@
+@@ -213,6 +213,7 @@ class CCharEntity : public CBattleEntity
+     CAutomatonEntity*       PAutomaton;                     // Automaton statistics
+ 
+     std::vector<CTrustEntity*> PTrusts; // Active trusts
++    CBattleEntity*	PClaimedMob;
+ 
+ 
+     // Эти миссии не нуждаются в списке пройденных, т.к. клиент автоматически
+@@ -321,7 +322,7 @@ class CCharEntity : public CBattleEntity
+ 
+     CItemEquipment*	getEquip(SLOTTYPE slot);
+ 
+-    void		ReloadPartyInc();
++    void        ReloadPartyInc();
+     void        ReloadPartyDec();
+     bool        ReloadParty();
+     void        ClearTrusts();

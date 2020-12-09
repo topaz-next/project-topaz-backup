@@ -1,0 +1,6 @@
+@@ -1,2 +1,5 @@
++project(lua_lib CXX)
++set_property(GLOBAL PROPERTY CXX_STANDARD 17)
++
+ add_library(lua_lib INTERFACE)
+ target_include_directories(lua_lib SYSTEM INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})

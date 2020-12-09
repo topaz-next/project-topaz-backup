@@ -1,0 +1,13 @@
+@@ -22,10 +22,10 @@ function onTrigger(player, npc)
+             player:setCharVar("ZilartStatus", ZilartStatus + 1)
+             player:messageSpecial(ID.text.YOU_PLACE_THE, tpz.ki.FIRE_FRAGMENT)
+ 
+-            if (ZilartStatus == 255) then
++            if (player:getCharVar("ZilartStatus") == 257) then
+                 player:startEvent(1)
+             end
+-        elseif (ZilartStatus == 255) then -- Execute cutscene if the player is interrupted.
++        elseif (ZilartStatus == 257) then -- Execute cutscene if the player is interrupted.
+             player:startEvent(1)
+         else
+             player:messageSpecial(ID.text.IS_SET_IN_THE_PEDESTAL, tpz.ki.FIRE_FRAGMENT)

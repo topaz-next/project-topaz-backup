@@ -1,0 +1,7 @@
+@@ -24,4 +24,4 @@ end
+ 
+ function onEffectLose(target,effect)
+     target:setAnimation(tpz.anim.NONE)
+-end
+\ No newline at end of file
++end

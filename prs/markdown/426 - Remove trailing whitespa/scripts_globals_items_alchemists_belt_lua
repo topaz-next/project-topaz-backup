@@ -1,0 +1,7 @@
+@@ -29,4 +29,4 @@ end
+ 
+ function onEffectLose(target, effect)
+     target:delMod(tpz.mod.ALCHEMY, 1)
+-end
+\ No newline at end of file
++end

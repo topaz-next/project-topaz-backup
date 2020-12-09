@@ -1,0 +1,7 @@
+@@ -18,4 +18,4 @@ end
+ function onEffectLose(target,effect)
+     target:delMod(tpz.mod.REGEN_DOWN, effect:getPower())
+ 
+-end
+\ No newline at end of file
++end

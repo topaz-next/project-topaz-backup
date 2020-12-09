@@ -1,0 +1,9 @@
+@@ -13952,7 +13952,7 @@ INSERT INTO `item_basic` VALUES (16724,0,'heavy_darksteel_axe','heavy_dst._axe',
+ INSERT INTO `item_basic` VALUES (16725,0,'massive_darksteel_axe','massive_dst._axe',1,2080,6,0,8021);
+ INSERT INTO `item_basic` VALUES (16726,0,'forsetis_axe','forsetis_axe',1,34820,6,0,7885);
+ INSERT INTO `item_basic` VALUES (16727,0,'eisentaenzer','eisentaenzer',1,63572,0,1,0);
+-INSERT INTO `item_basic` VALUES (16728,0,'schwarz_axt','schwarz_axt',1,63572,0,1,0);
++INSERT INTO `item_basic` VALUES (16728,0,'schwarz_axe','schwarz_axe',1,63572,0,1,0);
+ INSERT INTO `item_basic` VALUES (16729,0,'berserkers_axe','berserkers_axe',1,2052,6,0,9381);
+ INSERT INTO `item_basic` VALUES (16730,0,'colossal_axe','colossal_axe',1,2084,6,0,11550);
+ INSERT INTO `item_basic` VALUES (16731,0,'colossal_axe_+1','colossal_axe_+1',1,2080,6,0,11892);

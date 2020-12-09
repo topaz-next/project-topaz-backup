@@ -1,0 +1,7 @@
+@@ -327,4 +327,4 @@ g_mixins.job_special = function(mob)
+     end)
+ end
+ 
+-return g_mixins.job_special
+\ No newline at end of file
++return g_mixins.job_special

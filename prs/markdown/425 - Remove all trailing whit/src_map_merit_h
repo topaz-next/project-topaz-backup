@@ -1,0 +1,7 @@
+@@ -595,4 +595,4 @@ namespace meritNameSpace
+ 	extern int16 groupOffset[MCATEGORY_COUNT/64-1];				// the first merit offset of each catagory
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

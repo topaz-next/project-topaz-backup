@@ -1,0 +1,7 @@
+@@ -20,4 +20,4 @@ function onPetAbility(target, pet, skill)
+     skill:setMsg(tpz.msg.basic.SELF_HEAL)
+     target:addHP(base)
+     return base
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,22 @@
+@@ -0,0 +1,21 @@
++-----------------------------------
++--  Mob: Uriri Samariri
++-- Area: Nyzul Isle
++-- Info: Enemy Leader, Spams Water Bomb
++-----------------------------------
++require("scripts/globals/nyzul")
++-----------------------------------
++
++function onMobSpawn(mob)
++end
++
++function onMobEngaged(mob,target)
++end
++
++function onMobFight(mob,target)
++end
++
++function onMobDeath(mob, player, isKiller, firstCall)
++    nyzul.spawnChest(mob)
++    nyzul.enemyLeaderKill(mob, firstCall)
++end

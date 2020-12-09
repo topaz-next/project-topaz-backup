@@ -1,0 +1,7 @@
+@@ -30,4 +30,4 @@ function onTrigger(player, tp)
+ 
+     -- set pet tp
+     targ:setTP( tp )
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,8 @@
+@@ -605,7 +605,6 @@ class CZone
+     string_t        m_zoneName;             // имя зоны
+     uint16          m_zonePort;             // порт зоны
+     uint32          m_zoneIP;               // IP зоны
+-    bool            m_useNavMesh;           // Use navmesh for roaming, chasing
+ 
+     WEATHER         m_Weather;              // текущая погода
+     uint32          m_WeatherChangeTime;    // время начала текущей погоды

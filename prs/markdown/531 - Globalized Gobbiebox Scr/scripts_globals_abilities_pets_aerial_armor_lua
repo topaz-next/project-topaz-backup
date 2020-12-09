@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ function onPetAbility(target, pet, skill)
+     target:addStatusEffect(tpz.effect.BLINK,3,0,900)
+     skill:setMsg(tpz.msg.basic.SKILL_GAIN_EFFECT)
+     return tpz.effect.BLINK
+-end
+\ No newline at end of file
++end

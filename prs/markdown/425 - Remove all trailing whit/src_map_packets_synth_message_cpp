@@ -1,0 +1,16 @@
+@@ -37,7 +37,7 @@ CSynthMessagePacket::CSynthMessagePacket(CCharEntity * PChar, SYNTH_MESSAGE mess
+     {
+         ref<uint8>(0x06) = quantity;
+         ref<uint16>(0x08) = itemID;
+-    } 
++    }
+ 
+     for (uint8 i = 0; i < 4; i++)
+     {
+@@ -66,4 +66,4 @@ CSynthMessagePacket::CSynthMessagePacket(CCharEntity * PChar, SYNTH_MESSAGE mess
+             ref<uint16>(0x0A + ((slotID - 1) * 2)) = itemID;
+     }
+ 
+-}
+\ No newline at end of file
++}

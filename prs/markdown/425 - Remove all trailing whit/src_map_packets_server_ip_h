@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CServerIPPacket : public CBasicPacket
+ 	CServerIPPacket(CCharEntity* PChar, uint8 type, uint64 ipp);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,9 @@
+@@ -205,7 +205,7 @@ bool CheckFisherLuck(CCharEntity* PChar)
+                 uint8 logid = (uint8)Sql_GetIntData(SqlHandle,5);
+                 uint8 quest = (uint8)Sql_GetIntData(SqlHandle,6);
+ 
+-                if(logid < MAX_QUESTAREA && quest < MAX_QUESTID)
++                if(logid < MAX_QUESTAREA)
+ 	            {
+ 		            uint8 current  = PChar->m_questLog[logid].current [quest/8] & (1 << (quest % 8));
+ 		            uint8 complete = PChar->m_questLog[logid].complete[quest/8] & (1 << (quest % 8));

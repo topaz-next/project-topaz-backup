@@ -1,0 +1,7 @@
+@@ -245,4 +245,4 @@ function tpz.battlefield.HealPlayers(battlefield, players)
+         player:messageBasic(msgBasic.RECOVERS_HP_AND_MP, recoverHP, recoverMP)
+         player:messageBasic(msgBasic.ALL_ABILITIES_RECHARGED)
+     end
+-end
+\ No newline at end of file
++end

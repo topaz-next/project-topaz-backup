@@ -1,0 +1,7 @@
+@@ -15,4 +15,4 @@ end
+ 
+ function onItemUse(target)
+     target:addItem(19262, 99) -- 99x magnus_stone
+-end
+\ No newline at end of file
++end

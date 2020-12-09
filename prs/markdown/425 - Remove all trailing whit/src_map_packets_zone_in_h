@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CZoneInPacket : public CBasicPacket
+ 	CZoneInPacket(CCharEntity* PChar, int16);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

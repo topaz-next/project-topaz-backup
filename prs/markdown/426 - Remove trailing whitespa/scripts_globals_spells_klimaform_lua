@@ -1,0 +1,7 @@
+@@ -18,4 +18,4 @@ function onSpellCast(caster,target,spell)
+     target:addStatusEffect(tpz.effect.KLIMAFORM,1,0,180)
+ 
+     return tpz.effect.KLIMAFORM
+-end
+\ No newline at end of file
++end

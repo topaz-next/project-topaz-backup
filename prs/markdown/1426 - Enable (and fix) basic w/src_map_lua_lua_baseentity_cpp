@@ -1,0 +1,69 @@
+@@ -699,17 +699,14 @@ inline int32 CLuaBaseEntity::injectPacket(lua_State *L)
+             return 0;
+         }
+ 
+-        if (size <= 256)
++        fseek(File, 0, SEEK_SET);
++        if (fread(*PPacket, 1, size * 2, File) != size * 2)
+         {
+-            fseek(File, 0, SEEK_SET);
+-            if (fread(*PPacket, 1, size * 2, File) != size * 2)
+-            {
+-                ShowError(CL_RED"CLuaBaseEntity::injectPacket : Did not read entire packet\n" CL_RESET);
+-                return 0;
+-            }
+-
+-            ((CCharEntity*)m_PBaseEntity)->pushPacket(PPacket);
++            ShowError(CL_RED"CLuaBaseEntity::injectPacket : Did not read entire packet\n" CL_RESET);
++            return 0;
+         }
++
++        ((CCharEntity*)m_PBaseEntity)->pushPacket(PPacket);
+         fclose(File);
+     }
+     else
+@@ -6270,7 +6267,7 @@ inline int32 CLuaBaseEntity::addQuest(lua_State *L)
+     uint8 questLogID = (uint8)lua_tointeger(L, lua_isnumber(L, 1) ? 1 : -1);
+     uint8 questID = (uint8)lua_tointeger(L, 2);
+ 
+-    if (questLogID < MAX_QUESTAREA && questID < MAX_QUESTID)
++    if (questLogID < MAX_QUESTAREA)
+     {
+         uint8 current = PChar->m_questLog[questLogID].current[questID / 8] & (1 << (questID % 8));
+         uint8 complete = PChar->m_questLog[questLogID].complete[questID / 8] & (1 << (questID % 8));
+@@ -6314,7 +6311,7 @@ inline int32 CLuaBaseEntity::delQuest(lua_State *L)
+     uint8 questLogID = (uint8)lua_tointeger(L, lua_isnumber(L, 1) ? 1 : -1);
+     uint8 questID = (uint8)lua_tointeger(L, 2);
+ 
+-    if (questLogID < MAX_QUESTAREA && questID < MAX_QUESTID)
++    if (questLogID < MAX_QUESTAREA)
+     {
+         uint8 current = PChar->m_questLog[questLogID].current[questID / 8] & (1 << (questID % 8));
+         uint8 complete = PChar->m_questLog[questLogID].complete[questID / 8] & (1 << (questID % 8));
+@@ -6360,7 +6357,7 @@ inline int32 CLuaBaseEntity::getQuestStatus(lua_State *L)
+     uint8 questLogID = (uint8)lua_tointeger(L, lua_isnumber(L, 1) ? 1 : -1);
+     uint8 questID = (uint8)lua_tointeger(L, 2);
+ 
+-    if (questLogID < MAX_QUESTAREA && questID < MAX_QUESTID)
++    if (questLogID < MAX_QUESTAREA)
+     {
+         uint8 current = ((CCharEntity*)m_PBaseEntity)->m_questLog[questLogID].current[questID / 8] & (1 << (questID % 8));
+         uint8 complete = ((CCharEntity*)m_PBaseEntity)->m_questLog[questLogID].complete[questID / 8] & (1 << (questID % 8));
+@@ -6398,7 +6395,7 @@ inline int32 CLuaBaseEntity::hasCompletedQuest(lua_State *L)
+     uint8 questLogID = (uint8)lua_tointeger(L, lua_isnumber(L, 1) ? 1 : -1);
+     uint8 questID = (uint8)lua_tointeger(L, 2);
+ 
+-    if (questLogID < MAX_QUESTAREA && questID < MAX_QUESTID)
++    if (questLogID < MAX_QUESTAREA)
+     {
+         uint8 complete = ((CCharEntity*)m_PBaseEntity)->m_questLog[questLogID].complete[questID / 8] & (1 << (questID % 8));
+ 
+@@ -6434,7 +6431,7 @@ inline int32 CLuaBaseEntity::completeQuest(lua_State *L)
+     uint8 questLogID = (uint8)lua_tointeger(L, lua_isnumber(L, 1) ? 1 : -1);
+     uint8 questID = (uint8)lua_tointeger(L, 2);
+ 
+-    if (questLogID < MAX_QUESTAREA && questID < MAX_QUESTID)
++    if (questLogID < MAX_QUESTAREA)
+     {
+         uint8 complete = PChar->m_questLog[questLogID].complete[questID / 8] & (1 << (questID % 8));
+ 

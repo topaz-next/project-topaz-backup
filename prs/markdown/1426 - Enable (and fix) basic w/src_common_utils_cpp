@@ -1,0 +1,9 @@
+@@ -155,7 +155,7 @@ uint8 relativeAngle(uint8 world, int16 diff)
+     uint8 angle = world + diff;
+     if (angle < 0)
+     {
+-        angle = 256 - abs(angle);
++        angle = 256 - angle;
+     }
+     else
+     {

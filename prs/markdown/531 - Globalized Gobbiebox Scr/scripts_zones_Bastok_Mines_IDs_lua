@@ -1,0 +1,19 @@
+@@ -17,6 +17,7 @@ zones[tpz.zone.BASTOK_MINES] =
+         KEYITEM_OBTAINED               = 6391, -- Obtained key item: <keyitem>.
+         KEYITEM_LOST                   = 6392, -- Lost key item: <keyitem>.
+         NOT_HAVE_ENOUGH_GIL            = 6393, -- You do not have enough gil.
++        YOU_MUST_WAIT_ANOTHER_N_DAYS   = 6424, -- You must wait another ≺number≻ [day/days] to perform that action.
+         HOMEPOINT_SET                  = 6479, -- Home point set!
+         YOU_ACCEPT_THE_MISSION         = 6508, -- You have accepted the mission.
+         ORIGINAL_MISSION_OFFSET        = 6513, -- You can consult the Mission section of the main menu to review your objectives. Speed and efficiency are your priorities. Dismissed.
+@@ -72,8 +73,8 @@ zones[tpz.zone.BASTOK_MINES] =
+         EMALIVEULAUX_COP_NOT_COMPLETED = 12241, -- I'd like to start my own business someday, but I just haven't found anything that truly interests me.
+         EMALIVEULAUX_OPEN_DIALOG       = 12242, -- Rare Tavnazian imports! Get them before they're gone!
+         EMALIVEULAUX_CLOSED_DIALOG     = 12243, -- I'd love to sell you goods imported from the island of Tavnazia, but with the area under foreign control, I can't secure my trade routes...
+-        COMMON_SENSE_SURVIVAL          = 15991, -- It appears that you have arrived at a new survival guide provided by the Adventurers' Mutual Aid Network. Common sense dictates that you should now be able to teleport here from similar tomes throughout the world.
+-        TEAR_IN_FABRIC_OF_SPACE        = 16579, -- There appears to be a tear in the fabric of space...
++        COMMON_SENSE_SURVIVAL          = 15996, -- It appears that you have arrived at a new survival guide provided by the Adventurers' Mutual Aid Network. Common sense dictates that you should now be able to teleport here from similar tomes throughout the world.
++        TEAR_IN_FABRIC_OF_SPACE        = 16593, -- There appears to be a tear in the fabric of space...
+     },
+     mob =
+     {

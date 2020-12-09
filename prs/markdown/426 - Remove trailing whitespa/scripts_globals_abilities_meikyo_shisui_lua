@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ end
+ function onUseAbility(player,target,ability)
+     player:addStatusEffect(tpz.effect.MEIKYO_SHISUI,1,0,30)
+     player:addTP(3000)
+-end
+\ No newline at end of file
++end

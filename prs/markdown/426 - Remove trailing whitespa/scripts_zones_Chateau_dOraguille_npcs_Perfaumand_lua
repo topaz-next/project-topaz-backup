@@ -1,0 +1,7 @@
+@@ -31,4 +31,4 @@ function onEventFinish(player,csid,option)
+         player:setMaskBit(player:getCharVar("WildcatSandy"),"WildcatSandy",18,true);
+     end
+ 
+-end;
+\ No newline at end of file
++end;

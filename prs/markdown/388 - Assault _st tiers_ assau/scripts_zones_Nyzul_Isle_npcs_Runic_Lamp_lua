@@ -1,0 +1,156 @@
+@@ -0,0 +1,155 @@
++-----------------------------------
++-- Area:  Nyzul Isle
++-- NPC:   Runic Lamp
++-- animition sub 1 == glow
++-----------------------------------
++local ID = require("scripts/zones/Nyzul_Isle/IDs")
++require("scripts/globals/status")
++require("scripts/globals/nyzul")
++-----------------------------------
++
++function onTrigger(player, npc)
++    local instance = npc:getInstance()
++    local chars = instance:getChars()
++    local startRune = instance:getEntity(bit.band(ID.npc.RUNE_TRANSFER_START, 0xFFF), tpz.objType.NPC)
++    local OBJECTIVE = startRune:getLocalVar("[Lamps]Objective")
++    local lampRegister = startRune:getLocalVar("[Lamps]lampRegister")
++    local lampOrder = npc:getLocalVar("[Lamp]order")
++    local wait = npc:getLocalVar("[Lamp]Wait") - os.time()
++
++    if OBJECTIVE == nyzul.lampsObjective.REGISTER then -- 1 lamp spawns and everyone must touch
++        if player:getLocalVar("Register") == 0 then
++            player:setLocalVar("Register", 1)
++            player:messageSpecial(ID.text.LAMP_CERTIFICATION_REGISTERED)
++            startRune:setLocalVar("[Lamp]PartySize", startRune:getLocalVar("[Lamp]PartySize") -1)
++            if startRune:getLocalVar("[Lamp]PartySize") == 0 then
++                npc:AnimationSub(1)
++                instance:setProgress(1)
++            end
++        else
++            player:messageSpecial(ID.text.LAMP_CERTIFICATION_CODE)
++        end
++    elseif OBJECTIVE == nyzul.lampsObjective.ACTIVATE_ALL then
++        if npc:AnimationSub() ~= 1 and wait <= 0 then
++            player:messageSpecial(ID.text.LAMP_SAME_TIME)
++            player:startEvent(3,5)
++        elseif npc:AnimationSub() == 1 then
++            player:messageSpecial(ID.text.LAMP_ACTIVE)
++        else
++            player:messageSpecial(ID.text.LAMP_CANNOT_ACTIVATE)
++        end
++    elseif OBJECTIVE == nyzul.lampsObjective.ORDER then
++    print("lamp: "..npc:getID().." order: "..lampOrder.." sub: "..npc:AnimationSub().." register: "..lampRegister)       
++    if (bit.band(lampRegister, bit.lshift(1,lampOrder)) == 0) then
++            print("unregistered lamp")
++            player:messageSpecial(ID.text.LAMP_ORDER)
++            player:startEvent(3,6)
++        elseif npc:AnimationSub() == 3 then
++            player:messageSpecial(ID.text.LAMP_NOT_ALL_ACTIVE)
++        else
++            player:messageSpecial(ID.text.LAMP_CANNOT_ACTIVATE)
++        end
++    end
++end
++
++function onEventUpdate(player, csid, option)
++end
++
++function onEventFinish(player, csid, option, npc)
++    local instance = npc:getInstance()
++    local startRune = instance:getEntity(bit.band(ID.npc.RUNE_TRANSFER_START, 0xFFF), tpz.objType.NPC)
++    local OBJECTIVE = startRune:getLocalVar("[Lamps]Objective")
++    local lampCount = startRune:getLocalVar("[Lamp]count") +1
++    local pressCount = startRune:getLocalVar("[Lamp]pressCount")
++    local lampOrder = npc:getLocalVar("[Lamp]order")
++    local lampRegister = startRune:getLocalVar("[Lamps]lampRegister")
++    local winCondition = false
++
++    if csid == 3 and option == 1 then
++        if OBJECTIVE == nyzul.lampsObjective.ACTIVATE_ALL then
++            npc:AnimationSub(1)
++            npc:timer(90000, function(npc) npc:AnimationSub(0) npc:setLocalVar("[Lamp]Wait", os.time() + 30) end)
++            if instance:getEntity(bit.band(ID.npc.RUNIC_LAMP_1, 0xFFF), tpz.objType.NPC):AnimationSub() == 1 and
++            instance:getEntity(bit.band(ID.npc.RUNIC_LAMP_2, 0xFFF), tpz.objType.NPC):AnimationSub() == 1 and
++            instance:getEntity(bit.band(ID.npc.RUNIC_LAMP_3, 0xFFF), tpz.objType.NPC):AnimationSub() == 1 then
++                if lampCount == 3 then
++                    instance:setProgress(1)
++                elseif instance:getEntity(bit.band(ID.npc.RUNIC_LAMP_4, 0xFFF), tpz.objType.NPC):AnimationSub() == 1 then
++                    if lampCount == 4 then
++                        instance:setProgress(1)
++                    elseif instance:getEntity(bit.band(ID.npc.RUNIC_LAMP_5, 0xFFF), tpz.objType.NPC):AnimationSub() == 1 then
++                        instance:setProgress(1)
++                    end
++                end
++            end
++        end
++    elseif csid == 3 and option == 2 then
++        if OBJECTIVE == nyzul.lampsObjective.ORDER then
++            print("registering lamp, register: "..startRune:getLocalVar("[Lamps]lampRegister"))
++            lampRegister = lampRegister + bit.lshift(1,lampOrder)
++            startRune:setLocalVar("[Lamps]lampRegister", lampRegister)
++            startRune:setLocalVar("[Lamp]pressCount", pressCount + 1)
++            npc:setLocalVar("[Lamp]press", pressCount + 1)
++            print("lamp registered, register: "..startRune:getLocalVar("[Lamps]lampRegister"))
++            print("lamp count: "..startRune:getLocalVar("[Lamp]count").." press count: "..startRune:getLocalVar("[Lamp]pressCount"))
++            if lampCount == 3 and lampRegister > 13 then
++                for i = ID.npc.RUNIC_LAMP_1, ID.npc.RUNIC_LAMP_3 do
++                    local NPC = instance:getEntity(bit.band(i, 0xFFF), tpz.objType.NPC)
++                    local lampPress = NPC:getLocalVar("[Lamp]press")
++                    local setOrder = NPC:getLocalVar("[Lamp]order")
++                    print("lamp: "..i.." lampPress: "..lampPress.." setOrder: "..setOrder)
++                    NPC:AnimationSub(1)
++                    if lampPress ~= setOrder then
++                        NPC:timer(10000, function(NPC)
++                            NPC:AnimationSub(0)
++                            startRune:setLocalVar("[Lamps]lampRegister", 0)
++                            startRune:setLocalVar("[Lamp]pressCount", 0)
++                        end)
++                        winCondition = false
++                    else
++                        winCondition = true
++                    end
++                end
++            elseif lampCount == 4 and lampRegister > 29 then
++                for i = ID.npc.RUNIC_LAMP_1, ID.npc.RUNIC_LAMP_4 do
++                    local NPC = instance:getEntity(bit.band(i, 0xFFF), tpz.objType.NPC)
++                    local lampPress = NPC:getLocalVar("[Lamp]press")
++                    local setOrder = NPC:getLocalVar("[Lamp]order")
++                    print("lamp: "..i.." lampPress: "..lampPress.." setOrder: "..setOrder)
++                    NPC:AnimationSub(1)
++                    if lampPress ~= setOrder then
++                        NPC:timer(10000, function(NPC)
++                            NPC:AnimationSub(0)
++                            startRune:setLocalVar("[Lamps]lampRegister", 0)
++                            startRune:setLocalVar("[Lamp]pressCount", 0)
++                        end)
++                        winCondition = false
++                    else
++                        winCondition = true
++                    end
++                end
++            elseif lampCount == 5 and lampRegister > 61 then
++                for i = ID.npc.RUNIC_LAMP_1, ID.npc.RUNIC_LAMP_5 do
++                    local NPC = instance:getEntity(bit.band(i, 0xFFF), tpz.objType.NPC)
++                    local lampPress = NPC:getLocalVar("[Lamp]press")
++                    local setOrder = NPC:getLocalVar("[Lamp]order")
++                    print("lamp: "..i.." lampPress: "..lampPress.." setOrder: "..setOrder)
++                    NPC:AnimationSub(1)
++                    if lampPress ~= setOrder then
++                        NPC:timer(10000, function(NPC)
++                            NPC:AnimationSub(0)
++                            startRune:setLocalVar("[Lamps]lampRegister", 0)
++                            startRune:setLocalVar("[Lamp]pressCount", 0)
++                        end)
++                        winCondition = false
++                    else
++                        winCondition = true
++                    end
++                end
++            end
++            if winCondition == true then
++                instance:setProgress(5)
++            end
++        end
++    end
++end

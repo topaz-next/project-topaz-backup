@@ -1,0 +1,7 @@
+@@ -72,4 +72,4 @@ function onUseAbility(player, target, ability, action)
+     local del = player:delItem(2178, 1) or player:delItem(2974, 1)
+     target:updateClaim(player)
+     return dmg
+-end
+\ No newline at end of file
++end

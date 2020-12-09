@@ -1,0 +1,30 @@
+@@ -279,6 +279,22 @@ inline int32 CLuaItem::isShield(lua_State* L)
+ 
+     return 1;
+ }
++
++int32 CLuaItem::getAppraisalID(lua_State* L)
++{
++    TPZ_DEBUG_BREAK_IF(m_PLuaItem == nullptr);
++
++    auto PItem = dynamic_cast<CItem*>(m_PLuaItem);
++    if (PItem)
++    {
++        lua_pushinteger(L, PItem->m_extra[0x16]);
++    }
++    else
++        lua_pushinteger(L, 0);
++
++    return 1;
++}
++
+ //==========================================================//
+ 
+ const char CLuaItem::className[] = "CItem";
+@@ -305,5 +321,6 @@ Lunar<CLuaItem>::Register_t CLuaItem::methods[] =
+     LUNAR_DECLARE_METHOD(CLuaItem,isTwoHanded),
+     LUNAR_DECLARE_METHOD(CLuaItem,isHandToHand),
+     LUNAR_DECLARE_METHOD(CLuaItem,isShield),
++    LUNAR_DECLARE_METHOD(CLuaItem,getAppraisalID),
+     {nullptr,nullptr}
+ };

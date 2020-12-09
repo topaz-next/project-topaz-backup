@@ -1,0 +1,7 @@
+@@ -54,4 +54,4 @@ CAddtoEquipSet::CAddtoEquipSet(uint8* orig)
+             ref<uint8>(0x07 + 0x04 * i) = ::ref<uint8>(orig, 0x0F + (0x04 * i));
+         }
+     }
+-}
+\ No newline at end of file
++}

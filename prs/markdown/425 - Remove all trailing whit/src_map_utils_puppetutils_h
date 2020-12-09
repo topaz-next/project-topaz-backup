@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ namespace puppetutils
+     void UpdateAttachments(CCharEntity* PChar);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

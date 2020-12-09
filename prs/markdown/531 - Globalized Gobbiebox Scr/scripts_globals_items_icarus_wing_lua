@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ end
+ function onItemUse(target)
+     target:addTP(1000)
+     target:addStatusEffect(tpz.effect.MEDICINE,0,0,7200)
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -101,4 +101,4 @@ class CItemContainer
+ 	CItem*	m_ItemList[MAX_CONTAINER_SIZE+1];
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,7 @@
+@@ -19,4 +19,4 @@ function onMobWeaponSkill(target, mob, skill)
+     target:addMP(mp)
+ 
+     return mp
+-end
+\ No newline at end of file
++end

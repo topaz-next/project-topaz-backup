@@ -1,0 +1,69 @@
+@@ -0,0 +1,67 @@
++name: tag_releases
++on:
++  schedule:
++  - cron: "0 0 1,14 * *" # “At 00:00 on day-of-month 1 and 14.”
++
++jobs:
++  tag_release:
++    runs-on: ubuntu-18.04
++    strategy:
++      matrix:
++        release_type: ["release", "canary"]
++    steps:
++    - uses: actions/checkout@v1
++      with:
++        fetch-depth: 0 # Fetches all tags (Needed!)
++        ref: ${{ matrix.release_type }}
++    - name: Configure git
++      run: |
++        git config --local user.email "action@github.com"
++        git config --local user.name "GitHub Action"
++    - name: Choose new tag and apply
++      run: |
++        old_tag=`git describe --tags --always`
++        echo "Old tag: $old_tag"
++        old_year_month=${old_tag:1:6}
++        current_year_month=$(date '+%Y%m')
++        type=`git branch --show-current | tr a-z A-Z | cut -c1`
++        if [ "$old_year_month" = "$current_year_month" ]; then
++            echo "Release made in the same month"
++            new_ver="$((${old_tag:8:2} + 1))"
++            padded_new_ver=`printf %02d $new_ver`
++            new_tag="$type$old_year_month-$padded_new_ver"
++        else
++            echo Release made in a new month
++            new_tag="$type`date '+%Y%m-01'`"
++        fi
++
++        echo "New tag: $new_tag"
++        git tag "$new_tag" -f
++        echo "::set-env name=NEW_TAG::$new_tag" # Exports for use with actions later
++
++        echo "**Merges:**" > release_changelist.md
++        echo "" >> release_changelist.md
++        git log --merges $old_tag..$new_tag --pretty="format:(%h) %s - %b" >> release_changelist.md
++        echo "" >> release_changelist.md
++        echo "" >> release_changelist.md
++        echo "**This release was made possible by the hard work of:**" >> release_changelist.md
++        echo "" >> release_changelist.md
++
++        git shortlog --no-merges -sn $old_tag..$new_tag | awk '{ gsub(/  +/, "" ); print $2; }' >> release_changelist.md
++    - name: Push tags
++      uses: ad-m/github-push-action@master
++      with:
++        github_token: ${{ secrets.GITHUB_TOKEN }}
++        tags: true
++        force: true
++    - name: Create Release
++      id: create_release
++      uses: actions/create-release@v1
++      env:
++        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
++      with:
++        tag_name: ${{ env.NEW_TAG }}
++        release_name: ${{ env.NEW_TAG }}
++        body_path: release_changelist.md
++        draft: false
++        prerelease: false
+\ No newline at end of file

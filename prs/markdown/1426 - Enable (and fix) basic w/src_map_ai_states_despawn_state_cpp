@@ -1,0 +1,12 @@
+@@ -26,9 +26,8 @@ along with this program.  If not, see http://www.gnu.org/licenses/
+ #include "../ai_container.h"
+ #include "../../zone.h"
+ 
+-CDespawnState::CDespawnState(CBaseEntity* _PEntity, duration spawnTime) :
+-    CState(_PEntity, _PEntity->targid),
+-    m_spawnTime(spawnTime)
++CDespawnState::CDespawnState(CBaseEntity* _PEntity, duration spawnTime)
++: CState(_PEntity, _PEntity->targid)
+ {
+     if (_PEntity->status != STATUS_DISAPPEAR && !(static_cast<CMobEntity*>(_PEntity)->m_Behaviour & BEHAVIOUR_NO_DESPAWN))
+     {

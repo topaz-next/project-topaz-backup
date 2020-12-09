@@ -1,0 +1,7 @@
+@@ -33,4 +33,4 @@ function onTrigger(player, target, rank)
+     end
+     player:PrintToPlayer(string.format("You set %s's rank to %d", target, rank))
+     targ:setRank(rank)
+-end
+\ No newline at end of file
++end

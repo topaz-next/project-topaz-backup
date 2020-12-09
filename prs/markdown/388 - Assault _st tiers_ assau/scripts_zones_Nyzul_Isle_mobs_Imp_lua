@@ -1,0 +1,18 @@
+@@ -3,7 +3,14 @@
+ --  Mob: Imp
+ -----------------------------------
+ mixins = {require("scripts/mixins/families/imp")}
++require("scripts/globals/nyzul")
+ -----------------------------------
+ 
+-function onMobDeath(mob, player, isKiller)
+-end
+\ No newline at end of file
++function onMobSpawn(mob)
++    nyzul.specifiedEnemySet(mob)
++end
++
++function onMobDeath(mob, player, isKiller, firstCall)
++    nyzul.spawnChest(mob)
++    nyzul.specifiedEnemyKill(mob, firstCall)
++end

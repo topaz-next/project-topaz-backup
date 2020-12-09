@@ -1,0 +1,7 @@
+@@ -53,4 +53,4 @@ class CBattlefieldHandler
+     std::map<uint32, uint8>                      m_ReservedAreas;   // <charid, area>
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

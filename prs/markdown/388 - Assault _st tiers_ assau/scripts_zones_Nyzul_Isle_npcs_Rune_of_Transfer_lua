@@ -1,0 +1,76 @@
+@@ -0,0 +1,75 @@
++-----------------------------------
++-- Area:  Nyzul Isle
++-- NPC:   Rune of Transfer
++-- Notes: Displays currentFloor floor objective, activates when objective completed.
++-----------------------------------
++local ID = require("scripts/zones/Nyzul_Isle/IDs")
++require("scripts/globals/keyitems")
++require("scripts/globals/status")
++require("scripts/zones/Nyzul_Isle/instances/nyzul_isle_investigation")
++require("scripts/globals/nyzul")
++require("scripts/zones/Nyzul_Isle/globals/points")
++-----------------------------------
++
++function onTrigger(player, npc)
++    local instance = npc:getInstance()
++
++    if npc:AnimationSub() == 1 then
++        player:startEvent(201, 7, 2, 5348, 5348, 5348, 5348, 5348, 5348)
++    end
++    if npc:AnimationSub() == 0 then
++        player:messageSpecial(ID.text.ELIMINATE_ENEMY_LEADER + instance:getStage())
++    end
++end
++
++function onEventUpdate(player, csid, option)
++end
++
++function onEventFinish(player, csid, option, npc)
++    local instance = npc:getInstance()
++    local startRune = instance:getEntity(bit.band(ID.npc.RUNE_TRANSFER_START, 0xFFF), tpz.objType.NPC)
++    local chars = instance:getChars()
++    local mobs = instance:getMobs()
++
++    if csid == 1 then
++        for _,v in ipairs(chars) do
++            v:setPos(0,0,0,0,72)
++        end
++    elseif csid == 201 and option == 2 then
++        startRune:setLocalVar("Nyzul_Current_Floor", startRune:getLocalVar("Nyzul_Current_Floor") + 1)
++        instance:setProgress(0)
++        for _, enemy in ipairs(mobs) do
++            DespawnMob(enemy, instance)
++        end
++        if instance:getStage() == nyzul.objective.ACTIVATE_ALL_LAMPS then
++            for i = ID.npc.RUNIC_LAMP_1, ID.npc.RUNIC_LAMP_5 do
++                instance:getEntity(bit.band(i, 0xFFF), tpz.objType.NPC):setStatus(tpz.status.DISAPPEAR)
++                instance:getEntity(bit.band(i, 0xFFF), tpz.objType.NPC):AnimationSub(0)
++            end
++        end
++        for _,v in pairs(chars) do
++            v:startEvent(95)
++        end
++        pickSetPoint(player, npc)
++    elseif csid == 201 and option == 1 then
++        local partySize = player:getPartySize()
++        local currentFloor = startRune:getLocalVar("Nyzul_Current_Floor")
++        local startFloor = startRune:getLocalVar("Nyzul_Isle_StartingFloor")
++        local tokens = 0
++        
++        if partySize <= 3 then
++            tokens = ((currentFloor - startFloor)*200 + (currentFloor * 10))
++        else
++            tokens = ((currentFloor - startFloor)*200 + (currentFloor * 10)) * (((13 - partySize)*10)/100)
++        end
++        for _,v in pairs(chars) do
++            if (v:getVar("NyzulFloorProgress") + 1) >= startFloor and v:getVar("NyzulFloorProgress") < currentFloor then
++                v:setVar("NyzulFloorProgress", currentFloor)
++                v:messageSpecial(ID.text.FLOOR_RECORD, tpz.keyItem.RUNIC_DISC, currentFloor)
++            end
++            v:addCurrency("nyzul_isle_assault_point", tokens)
++            v:messageSpecial(ID.text.OBTAIN_TOKENS, tokens)
++            v:startEvent(1)
++        end
++    end
++end

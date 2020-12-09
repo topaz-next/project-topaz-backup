@@ -1,0 +1,61 @@
+@@ -489,19 +489,22 @@ void CCharEntity::RemoveTrust(CTrustEntity* PTrust)
+         PTrust->PAI->Despawn();
+         PTrusts.erase(trustIt);
+     }
++
+     if (PParty != nullptr)
+     {
+-        PParty->ReloadParty();
++        if (PTrusts.size() < 1 && PParty->members.size() == 1)
++        {
++            PParty->DisbandParty();
++        }
++        else
++        {
++            PParty->ReloadParty();
++        }
+     }
+ }
+ 
+ void CCharEntity::ClearTrusts()
+ {
+-    if (PTrusts.size() == 0)
+-    {
+-        return;
+-    }
+-
+     for (auto trust : PTrusts)
+     {
+         trust->PAI->Despawn();
+@@ -1684,6 +1687,7 @@ void CCharEntity::Die(duration _duration)
+     m_deathSyncTime = server_clock::now() + death_update_frequency;
+     PAI->ClearStateStack();
+     PAI->Internal_Die(_duration);
++    this->ClearTrusts();
+ 
+     // reraise modifiers
+     if (this->getMod(Mod::RERAISE_I) > 0)
+@@ -1726,6 +1730,23 @@ int32 CCharEntity::GetTimeRemainingUntilDeathHomepoint()
+     return 0x0003A020 - (60 * GetSecondsElapsedSinceDeath());
+ }
+ 
++
++int32 CCharEntity::GetTimeCreated()
++{
++    const char* fmtQuery = "SELECT UNIX_TIMESTAMP(timecreated) FROM chars WHERE charid = %u;";
++
++    int32 ret = Sql_Query(SqlHandle, fmtQuery, id);
++
++    if (ret != SQL_ERROR &&
++        Sql_NumRows(SqlHandle) != 0 &&
++        Sql_NextRow(SqlHandle) == SQL_SUCCESS)
++    {
++        return Sql_GetIntData(SqlHandle, 0);
++    }
++    
++    return 0;
++}
++
+ bool CCharEntity::hasMoghancement(uint16 moghancementID)
+ {
+     return m_moghancementID == moghancementID;

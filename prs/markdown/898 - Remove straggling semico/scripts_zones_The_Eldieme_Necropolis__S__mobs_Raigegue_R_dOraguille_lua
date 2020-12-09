@@ -1,0 +1,6 @@
+@@ -4,4 +4,4 @@
+ -----------------------------------
+ 
+ function onMobDeath(mob, player, isKiller)
+-end;
++end

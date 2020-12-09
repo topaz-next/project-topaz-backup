@@ -1,0 +1,7 @@
+@@ -37,4 +37,4 @@ function onEventFinish(player,csid,option)
+         player:addKeyItem(tpz.ki.MAGICITE_ORASTONE)
+         player:messageSpecial(ID.text.KEYITEM_OBTAINED,tpz.ki.MAGICITE_ORASTONE)
+     end
+-end
+\ No newline at end of file
++end

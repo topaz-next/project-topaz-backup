@@ -1,0 +1,7 @@
+@@ -6,4 +6,4 @@ mixins = {require("scripts/mixins/families/qutrub")}
+ -----------------------------------
+ 
+ function onMobDeath(mob, player, isKiller)
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -123,4 +123,4 @@ class CItemEquipment : public CItemUsable
+     void    SetAugmentMod(uint16 type, uint8 value);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

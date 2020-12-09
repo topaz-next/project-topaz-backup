@@ -1,0 +1,7 @@
+@@ -71,4 +71,4 @@ function onUseAbility(player,target,ability)
+ 
+     spirit:delMP(power)
+     return player:addMP(power)
+-end
+\ No newline at end of file
++end

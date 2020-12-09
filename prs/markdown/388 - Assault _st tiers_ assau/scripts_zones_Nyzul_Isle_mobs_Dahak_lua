@@ -1,0 +1,12 @@
+@@ -0,0 +1,11 @@
++-----------------------------------
++--  Mob: Dahak
++-- Area: Nyzul Isle
++-----------------------------------
++require("scripts/globals/nyzul")
++-----------------------------------
++
++function onMobDeath(mob, player, isKiller, firstCall)
++    nyzul.spawnChest(mob)
++    nyzul.eliminateAllKill(mob, firstCall)
++end

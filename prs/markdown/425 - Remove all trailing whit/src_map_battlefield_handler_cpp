@@ -1,0 +1,7 @@
+@@ -283,4 +283,4 @@ bool CBattlefieldHandler::ReachedMaxCapacity(int battlefieldId) const
+     }
+     // we have a free battlefield
+     return false;
+-}
+\ No newline at end of file
++}

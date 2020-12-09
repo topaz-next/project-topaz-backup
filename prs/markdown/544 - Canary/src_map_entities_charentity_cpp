@@ -1,0 +1,129 @@
+@@ -183,6 +183,7 @@ CCharEntity::CCharEntity()
+     PWideScanTarget = nullptr;
+ 
+     PAutomaton = nullptr;
++    PClaimedMob = nullptr;
+     PRecastContainer = std::make_unique<CCharRecastContainer>(this);
+     PLatentEffectContainer = new CLatentEffectContainer(this);
+ 
+@@ -481,19 +482,22 @@ void CCharEntity::RemoveTrust(CTrustEntity* PTrust)
+         PTrust->PAI->Despawn();
+         PTrusts.erase(trustIt);
+     }
++
+     if (PParty != nullptr)
+     {
+-        PParty->ReloadParty();
++        if (PTrusts.size() < 1 && PParty->members.size() == 1)
++        {
++            PParty->DisbandParty();
++        }
++        else
++        {
++            PParty->ReloadParty();
++        }
+     }
+ }
+ 
+ void CCharEntity::ClearTrusts()
+ {
+-    if (PTrusts.size() == 0)
+-    {
+-        return;
+-    }
+-
+     for (auto trust : PTrusts)
+     {
+         trust->PAI->Despawn();
+@@ -619,6 +623,7 @@ bool CCharEntity::CanUseSpell(CSpell* PSpell)
+ 
+ void CCharEntity::OnChangeTarget(CBattleEntity* PNewTarget)
+ {
++    battleutils::RelinquishClaim(this);
+     pushPacket(new CLockOnPacket(this, PNewTarget));
+     PLatentEffectContainer->CheckLatentsTargetChange();
+ }
+@@ -631,6 +636,7 @@ void CCharEntity::OnEngage(CAttackState& state)
+ 
+ void CCharEntity::OnDisengage(CAttackState& state)
+ {
++    battleutils::RelinquishClaim(this);
+     CBattleEntity::OnDisengage(state);
+     if (state.HasErrorMsg())
+     {
+@@ -898,6 +904,7 @@ void CCharEntity::OnWeaponSkillFinished(CWeaponSkillState& state, action_t& acti
+                 }
+             }
+         }
++        battleutils::ClaimMob(PBattleTarget, this);
+     }
+     else
+     {
+@@ -1320,9 +1327,6 @@ void CCharEntity::OnRangedAttack(CRangeState& state, action_t& action)
+             actionTarget.reaction = REACTION_EVADE;
+             actionTarget.speceffect = SPECEFFECT_NONE;
+             actionTarget.messageID = 354;
+-
+-            battleutils::ClaimMob(PTarget, this);
+-
+             hitCount = i; // end barrage, shot missed
+         }
+ 
+@@ -1391,8 +1395,6 @@ void CCharEntity::OnRangedAttack(CRangeState& state, action_t& action)
+         actionTarget.messageID = 0;
+         actionTarget.reaction = REACTION_EVADE;
+         PTarget->loc.zone->PushPacket(PTarget, CHAR_INRANGE_SELF, new CMessageBasicPacket(PTarget, PTarget, 0, shadowsTaken, MSGBASIC_SHADOW_ABSORB));
+-
+-        battleutils::ClaimMob(PTarget, this);
+     }
+ 
+     if (actionTarget.speceffect == SPECEFFECT_HIT && actionTarget.param > 0)
+@@ -1411,7 +1413,7 @@ void CCharEntity::OnRangedAttack(CRangeState& state, action_t& action)
+ 
+         StatusEffectContainer->DelStatusEffect(EFFECT_SANGE);
+     }
+-
++    battleutils::ClaimMob(PTarget, this);
+     battleutils::RemoveAmmo(this, ammoConsumed);
+     // only remove detectables
+     StatusEffectContainer->DelStatusEffectsByFlag(EFFECTFLAG_DETECTABLE);
+@@ -1657,6 +1659,7 @@ void CCharEntity::Die()
+     else
+         loc.zone->PushPacket(this, CHAR_INRANGE_SELF, new CMessageBasicPacket(this, this, 0, 0, MSGBASIC_FALLS_TO_GROUND));
+ 
++    battleutils::RelinquishClaim(this);
+     Die(death_duration);
+     SetDeathTimestamp((uint32)time(nullptr));
+ 
+@@ -1677,6 +1680,7 @@ void CCharEntity::Die(duration _duration)
+     m_deathSyncTime = server_clock::now() + death_update_frequency;
+     PAI->ClearStateStack();
+     PAI->Internal_Die(_duration);
++    this->ClearTrusts();
+ 
+     // reraise modifiers
+     if (this->getMod(Mod::RERAISE_I) > 0)
+@@ -1719,6 +1723,23 @@ int32 CCharEntity::GetTimeRemainingUntilDeathHomepoint()
+     return 0x0003A020 - (60 * GetSecondsElapsedSinceDeath());
+ }
+ 
++
++int32 CCharEntity::GetTimeCreated()
++{
++    const char* fmtQuery = "SELECT UNIX_TIMESTAMP(timecreated) FROM chars WHERE charid = %u;";
++
++    int32 ret = Sql_Query(SqlHandle, fmtQuery, id);
++
++    if (ret != SQL_ERROR &&
++        Sql_NumRows(SqlHandle) != 0 &&
++        Sql_NextRow(SqlHandle) == SQL_SUCCESS)
++    {
++        return Sql_GetIntData(SqlHandle, 0);
++    }
++    
++    return 0;
++}
++
+ bool CCharEntity::hasMoghancement(uint16 moghancementID)
+ {
+     return m_moghancementID == moghancementID;

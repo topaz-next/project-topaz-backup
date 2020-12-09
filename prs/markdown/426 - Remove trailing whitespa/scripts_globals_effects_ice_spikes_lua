@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ end
+ function onEffectLose(target,effect)
+     target:delMod(tpz.mod.SPIKES,2)
+     target:delMod(tpz.mod.SPIKES_DMG, effect:getPower())
+-end
+\ No newline at end of file
++end

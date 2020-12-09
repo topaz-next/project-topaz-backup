@@ -1,0 +1,7 @@
+@@ -46,4 +46,4 @@ function onSpellCast(caster,target,spell)
+    -- Missing ENIMITY DOWN
+ 
+     return damage
+-end
+\ No newline at end of file
++end

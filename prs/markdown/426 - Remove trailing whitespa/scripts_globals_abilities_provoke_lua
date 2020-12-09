@@ -1,0 +1,7 @@
+@@ -12,4 +12,4 @@ end
+ 
+ function onUseAbility(user,target,ability)
+     --leave blank please! This file will be deleted when the core is updated.
+-end
+\ No newline at end of file
++end

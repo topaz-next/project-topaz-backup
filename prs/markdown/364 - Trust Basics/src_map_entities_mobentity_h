@@ -1,0 +1,18 @@
+@@ -169,7 +169,7 @@ class CMobEntity : public CBattleEntity
+     virtual void OnCastFinished(CMagicState&, action_t&) override;
+ 
+     virtual void OnDisengage(CAttackState&) override;
+-    virtual void OnDeathTimer() override;public:
++    virtual void OnDeathTimer() override;
+ 
+     virtual void OnDespawn(CDespawnState&) override;
+ 
+@@ -256,8 +256,6 @@ class CMobEntity : public CBattleEntity
+     void DistributeRewards();
+     void DropItems(CCharEntity* PChar);
+ 
+-
+-
+ private:
+ 
+     time_point    m_DespawnTimer {time_point::min()};  // Despawn Timer to despawn mob after set duration

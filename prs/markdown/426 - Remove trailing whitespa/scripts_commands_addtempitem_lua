@@ -1,0 +1,7 @@
+@@ -33,4 +33,4 @@ function onTrigger(player, itemId, quantity)
+ 
+     -- add temp item
+     player:addTempItem(itemId, quantity, 0, 0, 0, 0, 0, 0, 0, 0)
+-end
+\ No newline at end of file
++end

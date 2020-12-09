@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ end
+ 
+ function onItemUse(target)
+     target:addStatusEffect(tpz.effect.COSTUME,823,0,3600)
+-end
+\ No newline at end of file
++end

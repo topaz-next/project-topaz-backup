@@ -1,0 +1,42 @@
+@@ -42747,6 +42747,10 @@ INSERT INTO `mob_spawn_points` VALUES (17346748,'Aries','Aries',34,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17346750,'Evil_Oscar','Evil Oscar',35,-396,94,-63,46);
+ INSERT INTO `mob_spawn_points` VALUES (17346752,'Evil_Oscar','Evil Oscar',35,-156.065,-26.009,116.97,46);
+ INSERT INTO `mob_spawn_points` VALUES (17346754,'Evil_Oscar','Evil Oscar',35,83.928,-146.026,296.804,46);
++-- MISSING GROUPID 36
++INSERT INTO `mob_spawn_points` VALUES (17346789,'Atori-Tutori_qm','Atori-Tutori_???',37,-396,94,-64,45);
++INSERT INTO `mob_spawn_points` VALUES (17346790,'Atori-Tutori_qm','Atori-Tutori_???',37,-156.065,-26.009,115.97,45);
++INSERT INTO `mob_spawn_points` VALUES (17346791,'Atori-Tutori_qm','Atori-Tutori_???',37,83.928,-146.026,295.804,45);
+ INSERT INTO `mob_spawn_points` VALUES (17347046,'Chest_OPlenty','Chest O\'Plenty',0,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17347047,'Chest_OPlenty','Chest O\'Plenty',0,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17347056,'Terminal_Coffer','Terminal Coffer',0,0,0,0,0);
+@@ -44077,6 +44081,9 @@ INSERT INTO `mob_spawn_points` VALUES (17367297,'Titanis_Max','Titanis Max',42,2
+ INSERT INTO `mob_spawn_points` VALUES (17367298,'Titanis_Jax','Titanis Jax',43,223.224,-60,135.946,126);
+ INSERT INTO `mob_spawn_points` VALUES (17367299,'Titanis_Xax','Titanis Xax',44,227.224,-60,135.946,126);
+ INSERT INTO `mob_spawn_points` VALUES (17367300,'Titanis_Dax','Titanis Dax',45,227.224,-60,141.946,126);
++INSERT INTO `mob_spawn_points` VALUES (17367332,'Atori-Tutori_qm','Atori-Tutori_???',46,-177,60,-141,130);
++INSERT INTO `mob_spawn_points` VALUES (17367333,'Atori-Tutori_qm','Atori-Tutori_???',46,23.274,0,18.964,130);
++INSERT INTO `mob_spawn_points` VALUES (17367334,'Atori-Tutori_qm','Atori-Tutori_???',46,223.224,-60,138.946,130);
+ 
+ -- ------------------------------------------------------------
+ -- Giddeus (Zone 145)
+@@ -44710,6 +44717,9 @@ INSERT INTO `mob_spawn_points` VALUES (17375446,'Giant_Moa','Giant Moa',48,0,0,0
+ INSERT INTO `mob_spawn_points` VALUES (17375447,'Giant_Moa','Giant Moa',48,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17375449,'Giant_Moa','Giant Moa',48,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17375450,'Giant_Moa','Giant Moa',48,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17375491,'Atori-Tutori_qm','Atori-Tutori_???',49,-138,56,-224,189);
++INSERT INTO `mob_spawn_points` VALUES (17375492,'Atori-Tutori_qm','Atori-Tutori_???',49,22.231,-4,-24.076,189);
++INSERT INTO `mob_spawn_points` VALUES (17375493,'Atori-Tutori_qm','Atori-Tutori_???',49,182.059,-64,175.999,189);
+ INSERT INTO `mob_spawn_points` VALUES (17375748,'Chest_OPlenty','Chest_O\'Plenty',0,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17375749,'Chest_OPlenty','Chest_O\'Plenty',0,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (17375760,'Chest_OPlenty','Chest_O\'Plenty',0,0,0,0,0);
+@@ -59601,6 +59611,10 @@ INSERT INTO `mob_spawn_points` VALUES (17621298,'Seed_Orc','Seed Orc',57,400.028
+ INSERT INTO `mob_spawn_points` VALUES (17621299,'Seed_Quadav','Seed Quadav',58,404.028,197.5,-407.177,192);
+ INSERT INTO `mob_spawn_points` VALUES (17621300,'Seed_Yagudo','Seed Yagudo',59,396.028,197.875,-407.177,192);
+ INSERT INTO `mob_spawn_points` VALUES (17621301,'Seed_Goblin','Seed Goblin',60,400.028,197.875,-410.677,192);
++-- MISSING GROUPID 61
++INSERT INTO `mob_spawn_points` VALUES (17621302,'Atori-Tutori_qm','Atori-Tutori_???',62,-399,-201,399,190);
++INSERT INTO `mob_spawn_points` VALUES (17621303,'Atori-Tutori_qm','Atori-Tutori_???',62,1.073,-1,-0.901,190);
++INSERT INTO `mob_spawn_points` VALUES (17621304,'Atori-Tutori_qm','Atori-Tutori_???',62,401.028,199,-400.677,190);
+ 
+ -- ------------------------------------------------------------
+ -- Cloister of Flames(Zone 207)

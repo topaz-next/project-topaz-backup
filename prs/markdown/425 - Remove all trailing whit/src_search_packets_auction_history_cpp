@@ -1,0 +1,7 @@
+@@ -86,4 +86,4 @@ uint8* CAHHistoryPacket::GetData()
+ uint16 CAHHistoryPacket::GetSize()
+ {
+     return 0x20 + 40 * m_count + 28;
+-}
+\ No newline at end of file
++}

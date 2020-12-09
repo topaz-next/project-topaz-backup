@@ -1,0 +1,7 @@
+@@ -39,4 +39,4 @@ end
+ function onItemUse(target)
+     local effect = tpz.effect.ENLIGHT
+     doEnspell(target,target,nil,effect)
+-end
+\ No newline at end of file
++end

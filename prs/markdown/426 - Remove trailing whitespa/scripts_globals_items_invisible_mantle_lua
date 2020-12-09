@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ function onItemUse(target)
+     else
+         target:addStatusEffect(tpz.effect.INVISIBLE, 0, 10, math.floor(180 * SNEAK_INVIS_DURATION_MULTIPLIER))
+     end
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,16 @@
+@@ -21,7 +21,7 @@ function onTrigger(player, model, slot, target)
+         error(player, "Invalid model ID.")
+         return
+     end
+-    
++
+     -- validate slot
+     if (slot == nil or slot < 0 or slot > 8) then
+         error(player, "Invalid slot ID.")
+@@ -55,4 +55,4 @@ function onTrigger(player, model, slot, target)
+     -- set model
+     targ:setModelId(model, slot)
+     player:PrintToPlayer(string.format("Set %s's %s slot to model %i.", targ:getName(), slotNameByNum[slot], model))
+-end
+\ No newline at end of file
++end

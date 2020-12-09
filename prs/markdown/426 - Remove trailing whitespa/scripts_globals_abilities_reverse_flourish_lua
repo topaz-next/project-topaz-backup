@@ -1,0 +1,7 @@
+@@ -65,4 +65,4 @@ function onUseAbility(player,target,ability)
+     player:delStatusEffect(tpz.effect.FINISHING_MOVE_5)
+ 
+     return TPGain
+-end
+\ No newline at end of file
++end

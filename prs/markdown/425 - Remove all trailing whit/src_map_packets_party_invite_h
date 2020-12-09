@@ -1,0 +1,7 @@
+@@ -47,4 +47,4 @@ class CPartyInvitePacket : public CBasicPacket
+ 	CPartyInvitePacket(uint32 id, uint16 targid, CCharEntity* PInviter, INVITETYPE InviteType);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

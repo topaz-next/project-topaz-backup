@@ -1,0 +1,36 @@
+@@ -0,0 +1,35 @@
++---------------------------------------------
++--  Torrent
++--  Description: Unequips a random piece of equipment.
++--  Type: Enfeebling
++--  Ignore Shadows, Single target
++--  Note: If it takes off main weapon, anything held in Sub slot is unequipped as well.
++---------------------------------------------
++require("scripts/globals/status")
++require("scripts/globals/monstertpmoves")
++---------------------------------------------
++function onMobSkillCheck(target,mob,skill)
++    if target:isPC() then
++        return 0
++    else
++        return 1
++    end
++end
++
++function onMobWeaponSkill(target, mob, skill)
++    local typeEffect = tpz.effect.ENCUMBRANCE_I
++    
++    if not target:hasStatusEffect(typeEffect) then
++        local slot = math.random(0, 15)
++        local removed = bit.lshift(1, slot)
++        target:unequipItem(slot)
++        if slot == tpz.slot.MAIN then
++            target:unequipItem(dsp.slot.SUB)
++        end
++        skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, removed, 0, 60))
++    else
++        skill:setMsg(tpz.msg.basic.SKILL_MISS)
++    end
++    
++    return typeEffect
++end

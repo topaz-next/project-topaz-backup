@@ -1,0 +1,7 @@
+@@ -23,4 +23,4 @@ function onPetAbility(target, pet, skill)
+     target:updateEnmityFromDamage(pet,damage)
+ 
+     return damage
+-end
+\ No newline at end of file
++end

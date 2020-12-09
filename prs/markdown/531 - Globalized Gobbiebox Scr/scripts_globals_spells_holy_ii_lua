@@ -1,0 +1,7 @@
+@@ -19,4 +19,4 @@ function onSpellCast(caster,target,spell)
+     params.resistBonus = 0
+     dmg = doDivineNuke(caster, target, spell, params)
+     return dmg
+-end
+\ No newline at end of file
++end

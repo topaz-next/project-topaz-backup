@@ -1,0 +1,8 @@
+@@ -64631,7 +64631,6 @@ INSERT INTO `mob_spawn_points` VALUES (17846658,'Colkhab','Colkhab',31,-143,0.00
+ INSERT INTO `mob_spawn_points` VALUES (17846673,'Unfettered_Twitherym','Unfettered Twitherym',32,210,-0.5,115,0);
+ INSERT INTO `mob_spawn_points` VALUES (17846674,'Supernal_Chapuli','Supernal Chapuli',33,276.94,-0.5,-129.24,115);
+ INSERT INTO `mob_spawn_points` VALUES (17846677,'Taxet','Tax\'et',34,-280,-0.5,-290,233);
+-
+ -- ------------------------------------------------------------
+ -- Foret de Hennetiel (Zone 262)
+ -- ------------------------------------------------------------

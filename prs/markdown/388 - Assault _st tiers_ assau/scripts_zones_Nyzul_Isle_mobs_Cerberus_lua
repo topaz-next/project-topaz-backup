@@ -1,0 +1,28 @@
+@@ -0,0 +1,27 @@
++-----------------------------------
++--  Mob: Cerberus
++-- Area: Nyzul Isle
++-- Info: Floor 60 80 and 100 Boss
++-----------------------------------
++require("scripts/globals/status")
++require("scripts/globals/nyzul")
++-----------------------------------
++
++function onMobSpawn(mob)
++end
++
++function onMobEngaged(mob,target)
++end
++
++function onMobFight(mob,target)
++    if mob:getHPP() > 25 then
++        mob:setMod(tpz.mod.REGAIN, 10)
++    else
++        mob:setMod(tpz.mod.REGAIN, 70)
++    end
++end
++
++function onMobDeath(mob, player, isKiller, firstCall)
++    nyzul.spawnChest(mob)
++    nyzul.enemyLeaderKill(mob, firstCall)
++end

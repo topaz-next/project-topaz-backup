@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CTradeActionPacket : public CBasicPacket
+ 	CTradeActionPacket(CCharEntity* PChar, uint32 action);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

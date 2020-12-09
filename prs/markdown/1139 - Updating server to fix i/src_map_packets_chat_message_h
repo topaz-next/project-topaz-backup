@@ -1,0 +1,7 @@
+@@ -77,4 +77,4 @@ class CChatMessagePacket : public CBasicPacket
+     CChatMessagePacket(CCharEntity* PChar, CHAT_MESSAGE_TYPE MessageType, const std::string& message, const std::string& sender = std::string());
+ };
+ 
+-#endif
++#endif
+\ No newline at end of file

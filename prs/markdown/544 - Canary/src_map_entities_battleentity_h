@@ -1,0 +1,8 @@
+@@ -580,6 +580,7 @@ class CBattleEntity : public CBaseEntity
+             func(this, std::forward<Args>(args)...);
+         }
+     }
++
+     template        <typename F, typename... Args>
+     void            ForAlliance(F func, Args&&... args)
+     {

@@ -1,0 +1,7 @@
+@@ -253,4 +253,4 @@ void md5(unsigned char *text, unsigned char *hash, int size)
+ 	md5_starts( &ctx );
+ 	md5_update( &ctx, (uint8 *) text, size);
+ 	md5_finish( &ctx, hash );
+-}
+\ No newline at end of file
++}

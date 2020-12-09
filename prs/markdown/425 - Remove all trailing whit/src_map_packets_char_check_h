@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ class CCheckPacket : public CBasicPacket
+ 	CCheckPacket(CCharEntity* PChar, CCharEntity* PTarget);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

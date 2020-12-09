@@ -1,0 +1,7 @@
+@@ -35,4 +35,4 @@ function onTrigger(player, target)
+     -- set flags
+     local flags = targ:getMobFlags()
+     player:PrintToPlayer(string.format("%s's flags: %u", targ:getName(), flags))
+-end
+\ No newline at end of file
++end

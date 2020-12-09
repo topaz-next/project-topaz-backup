@@ -1,0 +1,7 @@
+@@ -61,4 +61,4 @@ function onEventFinish(player,csid,option)
+         player:setCharVar("golemyear",0);
+         player:setCharVar("golemwait",0);
+     end
+-end;
+\ No newline at end of file
++end;

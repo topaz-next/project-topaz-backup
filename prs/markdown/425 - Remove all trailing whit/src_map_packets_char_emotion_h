@@ -1,0 +1,7 @@
+@@ -94,4 +94,4 @@ class CCharEmotionPacket : public CBasicPacket
+     CCharEmotionPacket(CCharEntity* PChar, uint32 TargetID, uint16 TargetIndex, Emote EmoteID, EmoteMode emoteMode, uint16 extra);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

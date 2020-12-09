@@ -1,0 +1,44 @@
+@@ -77,22 +77,6 @@ tpz.besieged.hasRunicPortal = function(player, portal)
+     return player:hasTeleport(tpz.teleport.type.RUNIC_PORTAL, portal)
+ end
+ 
+-tpz.besieged.hasAssaultOrders = function(player)
+-    local event = 0
+-    local keyitem = 0
+-
+-    for i = 0, 4 do
+-        local ki = tpz.ki.LEUJAOAM_ASSAULT_ORDERS + i
+-        if player:hasKeyItem(ki) then
+-            event = 120 + i
+-            keyitem = ki
+-            break
+-        end
+-    end
+-
+-    return event, keyitem
+-end
+-
+ -- TODO: Implement Astral Candescence
+ tpz.besieged.getAstralCandescence = function()
+     return 1 -- Hardcoded to 1 for now
+@@ -112,20 +96,6 @@ tpz.besieged.getMercenaryRank = function(player)
+     return rank
+ end
+ 
+-local assaultLevels =
+-{
+-    50, 50, 60, 60, 60, 70, 70, 70, 70, 70,
+-    60, 60, 70, 60, 70, 50, 70, 70, 70, 70,
+-    50, 60, 70, 70, 70, 60, 70, 70, 70, 70,
+-    70, 70, 70, 60, 70, 50, 60, 70, 70, 70,
+-    60, 70, 70, 50, 60, 70, 60, 70, 70, 70,
+-    75, 99
+-}
+-
+-function getRecommendedAssaultLevel(assaultid)
+-    return assaultLevels[assaultid]
+-end
+-
+ function getMapBitmask(player)
+     local mamook = player:hasKeyItem(tpz.ki.MAP_OF_MAMOOK) and 1 or 0 -- Map of Mammok
+     local halvung = player:hasKeyItem(tpz.ki.MAP_OF_HALVUNG) and 2 or 0 -- Map of Halvung

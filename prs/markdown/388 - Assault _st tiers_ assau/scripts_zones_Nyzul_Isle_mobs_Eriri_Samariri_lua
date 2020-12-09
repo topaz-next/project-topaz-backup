@@ -1,0 +1,23 @@
+@@ -0,0 +1,22 @@
++-----------------------------------
++--  Mob: Eiri Samasriri
++-- Area: Nyzul Isle
++-- Info: Enemy Leader, Spams Frog Song
++-- 
++-----------------------------------
++require("scripts/globals/nyzul")
++-----------------------------------
++
++function onMobSpawn(mob)
++end
++
++function onMobEngaged(mob,target)
++end
++
++function onMobFight(mob,target)
++end
++
++function onMobDeath(mob, player, isKiller, firstCall)
++    nyzul.spawnChest(mob)
++    nyzul.enemyLeaderKill(mob, firstCall)
++end

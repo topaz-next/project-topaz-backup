@@ -1,0 +1,7 @@
+@@ -58,4 +58,4 @@ function onUseAbility(player,target,ability)
+         player:addStatusEffect(tpz.effect.BUILDING_FLOURISH,3,0,60, 0, player:getMerit(tpz.merit.BUILDING_FLOURISH_EFFECT))
+     end
+ 
+-end
+\ No newline at end of file
++end

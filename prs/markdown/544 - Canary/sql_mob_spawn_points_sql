@@ -1,0 +1,145 @@
+@@ -3801,21 +3801,21 @@ INSERT INTO `mob_spawn_points` VALUES (16851258,'Satiator','Satiator',21,-65.131
+ -- Spire of Dem (Zone 19)
+ -- ------------------------------------------------------------
+ 
+-INSERT INTO `mob_spawn_points` VALUES (16855041,'Progenerator','Progenerator',1,-240,60,1,190);
+-INSERT INTO `mob_spawn_points` VALUES (16855042,'Offspring','Offspring',2,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16855043,'Offspring','Offspring',2,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16855044,'Offspring','Offspring',2,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16855045,'Offspring','Offspring',2,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16855046,'Progenerator','Progenerator',1,0.001,0,0.963,190);
+-INSERT INTO `mob_spawn_points` VALUES (16855047,'Offspring','Offspring',2,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16855048,'Offspring','Offspring',2,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16855049,'Offspring','Offspring',2,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16855050,'Offspring','Offspring',2,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16855051,'Progenerator','Progenerator',1,239.997,-60,0.975,190);
+-INSERT INTO `mob_spawn_points` VALUES (16855052,'Offspring','Offspring',2,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16855053,'Offspring','Offspring',2,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16855054,'Offspring','Offspring',2,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16855055,'Offspring','Offspring',2,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (16855041,'Progenerator','Progenerator',1,-240,60,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855042,'Offspring','Offspring',2,-240,60,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855043,'Offspring','Offspring',2,-240,60,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855044,'Offspring','Offspring',2,-240,60,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855045,'Offspring','Offspring',2,-240,60,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855046,'Progenerator','Progenerator',1,0.001,0.001,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855047,'Offspring','Offspring',2,0.001,0.001,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855048,'Offspring','Offspring',2,0.001,0.001,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855049,'Offspring','Offspring',2,0.001,0.001,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855050,'Offspring','Offspring',2,0.001,0.001,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855051,'Progenerator','Progenerator',1,240,-60,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855052,'Offspring','Offspring',2,240,-60,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855053,'Offspring','Offspring',2,240,-60,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855054,'Offspring','Offspring',2,240,-60,0,190);
++INSERT INTO `mob_spawn_points` VALUES (16855055,'Offspring','Offspring',2,240,-60,0,190);
+ INSERT INTO `mob_spawn_points` VALUES (16855056,'Ingester','Ingester',3,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (16855057,'Neoingester','Neoingester',4,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (16855058,'Neogorger','Neogorger',5,0,0,0,0);
+@@ -4625,27 +4625,27 @@ INSERT INTO `mob_spawn_points` VALUES (16867684,'Craver','Craver',34,-277.323,-0
+ -- Spire of Vahzl (Zone 23)
+ -- ------------------------------------------------------------
+ 
+-INSERT INTO `mob_spawn_points` VALUES (16871425,'Agonizer','Agonizer',1,-239,57,1,187);
+-INSERT INTO `mob_spawn_points` VALUES (16871426,'Procreator','Procreator',2,-234,57,-5,187);
+-INSERT INTO `mob_spawn_points` VALUES (16871427,'Offspring','Offspring',3,-239.942,57.928,25.105,5);
+-INSERT INTO `mob_spawn_points` VALUES (16871428,'Offspring','Offspring',3,-239.725,57.704,24.082,236);
+-INSERT INTO `mob_spawn_points` VALUES (16871429,'Offspring','Offspring',3,-238.722,57.5,26.771,53);
+-INSERT INTO `mob_spawn_points` VALUES (16871430,'Offspring','Offspring',3,-238.722,57.5,26.771,53);
+-INSERT INTO `mob_spawn_points` VALUES (16871431,'Cumulator','Cumulator',4,-246,57,-5,187);
+-INSERT INTO `mob_spawn_points` VALUES (16871432,'Agonizer','Agonizer',1,0.987,-3,1.065,187);
+-INSERT INTO `mob_spawn_points` VALUES (16871433,'Procreator','Procreator',2,5.987,-3,-4.935,187);
+-INSERT INTO `mob_spawn_points` VALUES (16871434,'Offspring','Offspring',3,-3.142,-0.176,14.475,155);
+-INSERT INTO `mob_spawn_points` VALUES (16871435,'Offspring','Offspring',3,0.210,-0.448,19.275,88);
+-INSERT INTO `mob_spawn_points` VALUES (16871436,'Offspring','Offspring',3,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16871437,'Offspring','Offspring',3,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16871438,'Cumulator','Cumulator',4,-6.013,-3,-4.935,187);
+-INSERT INTO `mob_spawn_points` VALUES (16871439,'Agonizer','Agonizer',1,241.071,-63,1.101,187);
+-INSERT INTO `mob_spawn_points` VALUES (16871440,'Procreator','Procreator',2,246.071,-63,-4.899,187);
+-INSERT INTO `mob_spawn_points` VALUES (16871441,'Offspring','Offspring',3,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16871442,'Offspring','Offspring',3,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16871443,'Offspring','Offspring',3,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16871444,'Offspring','Offspring',3,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16871445,'Cumulator','Cumulator',4,234.071,-63,-4.899,187);
++INSERT INTO `mob_spawn_points` VALUES (16871425,'Agonizer','Agonizer',1,-245,60.75,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871426,'Procreator','Procreator',2,-235,60.75,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871427,'Offspring','Offspring',3,-240,60.75,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871428,'Offspring','Offspring',3,-240,60.75,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871429,'Offspring','Offspring',3,-240,60.75,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871430,'Offspring','Offspring',3,-240,60.75,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871431,'Cumulator','Cumulator',4,-240,60.75,-5,187);
++INSERT INTO `mob_spawn_points` VALUES (16871432,'Agonizer','Agonizer',1,-5,0,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871433,'Procreator','Procreator',2,5,0,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871434,'Offspring','Offspring',3,0.001,0.001,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871435,'Offspring','Offspring',3,0.001,0.001,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871436,'Offspring','Offspring',3,0.001,0.001,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871437,'Offspring','Offspring',3,0.001,0.001,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871438,'Cumulator','Cumulator',4,0,0,-5,187);
++INSERT INTO `mob_spawn_points` VALUES (16871439,'Agonizer','Agonizer',1,235,-59.25,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871440,'Procreator','Procreator',2,245,-59.25,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871441,'Offspring','Offspring',3,240,-59.25,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871442,'Offspring','Offspring',3,240,-59.25,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871443,'Offspring','Offspring',3,240,-59.25,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871444,'Offspring','Offspring',3,240,-59.25,0,187);
++INSERT INTO `mob_spawn_points` VALUES (16871445,'Cumulator','Cumulator',4,240,-59.25,-5,187);
+ INSERT INTO `mob_spawn_points` VALUES (16871446,'Memory_Receptacle','Memory Receptacle',0,0,0,0,0); -- Pulling the Plug (ENM)
+ INSERT INTO `mob_spawn_points` VALUES (16871447,'Memory_Receptacle','Memory Receptacle',0,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (16871448,'Memory_Receptacle','Memory Receptacle',0,0,0,0,0);
+@@ -7775,8 +7775,8 @@ INSERT INTO `mob_spawn_points` VALUES (16924679,'Kamlanaut','Kam\'lanaut',3,-518
+ INSERT INTO `mob_spawn_points` VALUES (16924680,'Ealdnarche','Eald\'narche',4,-529.274,-120,516.185,167);
+ INSERT INTO `mob_spawn_points` VALUES (16924681,'Kamlanaut','Kam\'lanaut',3,511.559,-0.5,528.348,146);
+ INSERT INTO `mob_spawn_points` VALUES (16924682,'Ealdnarche','Eald\'narche',4,516.331,-0.5,518.179,199);
+-INSERT INTO `mob_spawn_points` VALUES (16924683,'Kamlanaut','Kam\'lanaut',3,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16924684,'Ealdnarche','Eald\'narche',4,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (16924683,'Kamlanaut','Kam\'lanaut',3,520.361,0,493.3,0);
++INSERT INTO `mob_spawn_points` VALUES (16924684,'Ealdnarche','Eald\'narche',4,530.361,0,493.3,0);
+ INSERT INTO `mob_spawn_points` VALUES (16924685,'Disjoined_One','Disjoined One',0,0,0,0,0); -- Both Paths Taken (ROVM2-9-2)
+ INSERT INTO `mob_spawn_points` VALUES (16924686,'Iroha','Iroha',0,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (16924687,'Disjoined_One','Disjoined One',0,0,0,0,0);
+@@ -13435,6 +13435,28 @@ INSERT INTO `mob_spawn_points` VALUES (17035470,'Black_Shuck','Black Shuck',14,4
+ -- ------------------------------------------------------------
+ 
+ INSERT INTO `mob_spawn_points` VALUES (17039400,'Khimaira_13','Khimaira 13',1,383.144,-116.5,381.355,128);
++INSERT INTO `mob_spawn_points` VALUES (17039373,'Pudding_Master','Pudding Master',2159,384.500,-116.500,380.000,0);
++INSERT INTO `mob_spawn_points` VALUES (17039374,'Immortal_Flan','Immortal Flan',2156,384.000,-116.500,383.000,128);
++-- Pos from ID 17039375 to 17039393 not retail accurate.
++INSERT INTO `mob_spawn_points` VALUES (17039375,'Immortal_Flan','Immortal Flan',2156,384.000,-116.500,374.000,128);
++INSERT INTO `mob_spawn_points` VALUES (17039376,'Immortal_Flan','Immortal Flan',2156,382.000,-116.500,390.000,128);
++INSERT INTO `mob_spawn_points` VALUES (17039377,'Immortal_Flan','Immortal Flan',2156,382.000,-116.500,368.000,128);
++INSERT INTO `mob_spawn_points` VALUES (17039378,'Immortal_Flan','Immortal Flan',2156,378.000,-116.500,394.000,128);
++INSERT INTO `mob_spawn_points` VALUES (17039379,'Immortal_Flan','Immortal Flan',2156,378.000,-116.500,366.000,128);
++INSERT INTO `mob_spawn_points` VALUES (17039380,'Pudding_Master','Pudding Master',2159,-16.212,-16.4338,-20.053,0);
++INSERT INTO `mob_spawn_points` VALUES (17039381,'Immortal_Flan','Immortal Flan',2156,-16.212,-16.4338,-17.053,128);
++INSERT INTO `mob_spawn_points` VALUES (17039382,'Immortal_Flan','Immortal Flan',2156,-16.212,-16.4338,-26.053,128);
++INSERT INTO `mob_spawn_points` VALUES (17039383,'Immortal_Flan','Immortal Flan',2156,-18.712,-16.4338,-10.053,128);
++INSERT INTO `mob_spawn_points` VALUES (17039384,'Immortal_Flan','Immortal Flan',2156,-18.712,-16.4338,-32.053,128);
++INSERT INTO `mob_spawn_points` VALUES (17039385,'Immortal_Flan','Immortal Flan',2156,-22.712,-16.4338,-6.053,128);
++INSERT INTO `mob_spawn_points` VALUES (17039386,'Immortal_Flan','Immortal Flan',2156,-22.712,-16.4338,-34.053,128);
++INSERT INTO `mob_spawn_points` VALUES (17039387,'Pudding_Master','Pudding Master',2159,384.769,83.596,-420.301,0);
++INSERT INTO `mob_spawn_points` VALUES (17039388,'Immortal_Flan','Immortal Flan',2156,384.269,83.596,-417.301,128);
++INSERT INTO `mob_spawn_points` VALUES (17039389,'Immortal_Flan','Immortal Flan',2156,384.269,83.596,-426.301,128);
++INSERT INTO `mob_spawn_points` VALUES (17039390,'Immortal_Flan','Immortal Flan',2156,382.269,83.596,-410.301,128);
++INSERT INTO `mob_spawn_points` VALUES (17039391,'Immortal_Flan','Immortal Flan',2156,382.269,83.596,-432.301,128);
++INSERT INTO `mob_spawn_points` VALUES (17039392,'Immortal_Flan','Immortal Flan',2156,378.269,83.596,-406.301,128);
++INSERT INTO `mob_spawn_points` VALUES (17039393,'Immortal_Flan','Immortal Flan',2156,378.269,83.596,-434.301,128);
+ 
+ -- ------------------------------------------------------------
+ -- Mamook (Zone 65)
+@@ -13864,12 +13886,12 @@ INSERT INTO `mob_spawn_points` VALUES (17043877,'Mamool_Ja_Chamberlain','Mamool
+ INSERT INTO `mob_spawn_points` VALUES (17043878,'Mamool_Ja_Palatine','Mamool Ja Palatine',56,-295,18,-384,253);
+ INSERT INTO `mob_spawn_points` VALUES (17043879,'Mamool_Ja_Palatine','Mamool Ja Palatine',56,-295,18,-376,253);
+ INSERT INTO `mob_spawn_points` VALUES (17043880,'Carpophagous_Puk','Carpophagous Puk',57,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17043881,'Poroggo_Casanova','Poroggo Casanova',58,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17043882,'Mikilulu','Mikilulu',59,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17043883,'Mikiruru','Mikiruru',60,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17043884,'Nikilulu','Nikilulu',61,-37.477,5.704,-98.310,90);
+-INSERT INTO `mob_spawn_points` VALUES (17043885,'Mikiluru','Mikiluru',62,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (17043886,'Mikirulu','Mikirulu',63,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (17043881,'Poroggo_Casanova','Poroggo Casanova',58,-42.477,5.904,-98.310,90);
++INSERT INTO `mob_spawn_points` VALUES (17043882,'Mikilulu','Mikilulu',59,-42.477,5.904,-101.310,90);
++INSERT INTO `mob_spawn_points` VALUES (17043883,'Mikiruru','Mikiruru',60,-40.477,5.804,-101.310,90);
++INSERT INTO `mob_spawn_points` VALUES (17043884,'Nikilulu','Nikilulu',61,-46.477,5.804,-101.310,90);
++INSERT INTO `mob_spawn_points` VALUES (17043885,'Mikiluru','Mikiluru',62,-47.477,5.804,-98.310,90);
++INSERT INTO `mob_spawn_points` VALUES (17043886,'Mikirulu','Mikirulu',63,-49.477,5.990,-100.310,90);
+ INSERT INTO `mob_spawn_points` VALUES (17043887,'Chamrosh','Chamrosh',64,206,14,-285,249);
+ INSERT INTO `mob_spawn_points` VALUES (17043888,'Iriri_Samariri','Iriri Samariri',65,-118,7,-80,193);
+ INSERT INTO `mob_spawn_points` VALUES (17043889,'Wartkin','Wartkin',66,0,0,0,0);

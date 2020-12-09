@@ -1,0 +1,7 @@
+@@ -74,4 +74,4 @@ class CZoneInstance : public CZone
+     instanceList_t instanceList;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

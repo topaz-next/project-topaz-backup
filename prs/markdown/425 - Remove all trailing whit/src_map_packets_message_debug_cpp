@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ CMessageDebugPacket::CMessageDebugPacket(CBaseEntity* PSender, CBaseEntity* PTar
+ 	ref<uint16>(0x18) = messageID;
+ 
+ 	//ref<uint8>(data,(0x1A)) = 0x01;
+-}
+\ No newline at end of file
++}

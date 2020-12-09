@@ -1,0 +1,7 @@
+@@ -18,4 +18,4 @@ end
+ function onEffectLose(target,effect)
+     target:delMod(tpz.mod.REGEN_DOWN, effect:getPower())
+     target:delMod(tpz.mod.INT, -getElementalDebuffStatDownFromDOT(effect:getPower()) - effect:getSubPower())
+-end
+\ No newline at end of file
++end

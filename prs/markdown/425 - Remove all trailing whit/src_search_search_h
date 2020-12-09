@@ -1,0 +1,7 @@
+@@ -54,4 +54,4 @@ struct search_req
+     uint8 nameLen;
+ };
+ 
+-extern search_config_t search_config;
+\ No newline at end of file
++extern search_config_t search_config;

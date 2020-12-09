@@ -1,0 +1,7 @@
+@@ -25,4 +25,4 @@ end
+ 
+ function onEffectLose(target, effect)
+     target:delMod(tpz.mod.SUBTLE_BLOW, 20)
+-end
+\ No newline at end of file
++end

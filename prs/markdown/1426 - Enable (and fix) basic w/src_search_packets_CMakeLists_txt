@@ -1,0 +1,13 @@
+@@ -12,4 +12,10 @@ set(SOURCES
+     search_list.cpp
+     search_list.h)
+ 
+-add_library(search_packets OBJECT ${SOURCES})
+\ No newline at end of file
++add_library(search_packets OBJECT ${SOURCES})
++
++target_link_libraries(search_packets
++    common
++    project_options
++    project_warnings
++)

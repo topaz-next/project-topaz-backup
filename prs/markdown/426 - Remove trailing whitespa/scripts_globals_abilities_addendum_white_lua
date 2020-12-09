@@ -1,0 +1,7 @@
+@@ -40,4 +40,4 @@ function onUseAbility(player,target,ability)
+     player:addStatusEffectEx(tpz.effect.ADDENDUM_WHITE,tpz.effect.ADDENDUM_WHITE,effectbonus,0,7200,0,regenbonus,true)
+ 
+     return tpz.effect.ADDENDUM_WHITE
+-end
+\ No newline at end of file
++end

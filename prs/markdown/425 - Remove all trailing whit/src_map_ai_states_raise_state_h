@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ class CRaiseState : public CState
+     CBattleEntity* const m_PEntity;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

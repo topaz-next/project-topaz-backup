@@ -1,0 +1,7 @@
+@@ -61,4 +61,4 @@ class CItemState : public CState
+     bool m_interruptable {true};
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

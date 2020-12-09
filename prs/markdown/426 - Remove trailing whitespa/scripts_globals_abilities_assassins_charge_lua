@@ -1,0 +1,7 @@
+@@ -15,4 +15,4 @@ end
+ function onUseAbility(player,target,ability)
+     local merits = player:getMerit(tpz.merit.ASSASSINS_CHARGE)
+     player:addStatusEffect(tpz.effect.ASSASSINS_CHARGE, merits - 5, 0, 60, player:getMod(tpz.mod.AUGMENTS_ASSASSINS_CHARGE), merits / 5)
+-end
+\ No newline at end of file
++end

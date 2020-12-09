@@ -1,0 +1,21 @@
+@@ -3451,6 +3451,12 @@ inline int32 CLuaBaseEntity::addItem(lua_State *L)
+                     int8 encoded[12];
+                     PItem->setSignature(EncodeStringSignature((int8*)signature, encoded));
+                 }
++                lua_getfield(L, 1, "appraisal");
++                if (!lua_isnil(L, -1))
++                {
++                    uint8* appid = (uint8*)lua_tointeger(L, -1);
++                    PItem->setAppraisalID(appid);
++                }
+                 lua_pop(L, 2);
+ 
+                 if (PItem->isType(ITEM_EQUIPMENT))
+@@ -12552,6 +12558,7 @@ inline int32 CLuaBaseEntity::setMobLevel(lua_State *L)
+     if (auto PMob = dynamic_cast<CMobEntity*>(m_PBaseEntity))
+     {
+         PMob->SetMLevel((uint8)lua_tointeger(L, 1));
++        PMob->SetSLevel((uint8)lua_tointeger(L, 1)/2);
+         mobutils::CalculateStats(PMob);
+         mobutils::GetAvailableSpells(PMob);
+     }

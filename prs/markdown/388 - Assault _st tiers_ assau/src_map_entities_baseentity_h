@@ -1,0 +1,20 @@
+@@ -206,7 +206,7 @@ class CBaseEntity
+     uint8           GetRotPos();
+     void            HideName(bool hide); // hide / show name
+     bool            IsNameHidden();     // checks if name is hidden
+-
++    bool            IsTargetable();     // checks if entity is targetable
+     CBaseEntity*    GetEntity(uint16 targid, uint8 filter = -1);
+ 
+     void            ResetLocalVars();
+@@ -240,8 +240,8 @@ class CBaseEntity
+     uint8           allegiance;         // what types of targets the entity can fight
+     uint8           updatemask;         // what to update next server tick to players nearby
+ 
+-    std::unique_ptr<CAIContainer> PAI;       // AI container
+-    CBattlefield* PBattlefield;            // pointer to battlefield (if in one)
++    std::unique_ptr<CAIContainer> PAI;  // AI container
++    CBattlefield* PBattlefield;         // pointer to battlefield (if in one)
+     CInstance*		PInstance;
+ protected:
+     std::map<std::string, uint32> m_localVars;

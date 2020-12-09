@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ class CBazaarPurchasePacket : public CBasicPacket
+ 	CBazaarPurchasePacket(CCharEntity* PChar, bool result);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

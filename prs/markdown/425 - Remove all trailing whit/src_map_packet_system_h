@@ -1,0 +1,7 @@
+@@ -36,4 +36,4 @@ extern void(*PacketParser[512])(map_session_data_t*, CCharEntity*, CBasicPacket)
+ void PrintPacket(CBasicPacket data);
+ void PacketParserInitialize();
+ 
+-#endif
+\ No newline at end of file
++#endif

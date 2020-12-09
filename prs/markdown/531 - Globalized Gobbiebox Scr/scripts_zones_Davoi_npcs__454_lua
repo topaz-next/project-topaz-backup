@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ function onSpawn(npc)
+     }
+ 
+     npc:setElevator(elevator.id, elevator.lowerDoor, elevator.upperDoor, elevator.elevator, elevator.reversedAnimations)
+-end;
+\ No newline at end of file
++end;

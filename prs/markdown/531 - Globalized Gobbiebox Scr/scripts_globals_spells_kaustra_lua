@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ function onSpellCast(caster,target,spell)
+     target:addStatusEffect(tpz.effect.KAUSTRA,math.floor(dmg/3),3,duration)
+ 
+     return dmg
+-end
+\ No newline at end of file
++end

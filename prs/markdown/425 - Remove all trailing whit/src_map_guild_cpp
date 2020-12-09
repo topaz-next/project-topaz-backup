@@ -1,0 +1,7 @@
+@@ -131,4 +131,4 @@ std::pair<uint16, uint16> CGuild::getDailyGPItem(CCharEntity* PChar)
+         // we don't later calculate a negative quantity in CGuild::addGuildPoints
+         return std::make_pair(GPItem[0].item->getID(), std::max<uint16>(0, (GPItem[0].maxpoints - curPoints)));
+     }
+-}
+\ No newline at end of file
++}

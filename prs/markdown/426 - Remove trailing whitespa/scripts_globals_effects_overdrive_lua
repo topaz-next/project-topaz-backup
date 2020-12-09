@@ -1,0 +1,7 @@
+@@ -44,4 +44,4 @@ function onEffectLose(target, effect)
+         pet:delMod(tpz.mod.REVA, 50)
+         pet:delMod(tpz.mod.DMG, -50)
+     end
+-end
+\ No newline at end of file
++end

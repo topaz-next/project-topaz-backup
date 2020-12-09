@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ class CCharHealthPacket : public CBasicPacket
+     CCharHealthPacket(CTrustEntity* PTrust);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

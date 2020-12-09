@@ -1,0 +1,7 @@
+@@ -45,4 +45,4 @@ class CDeathState : public CState
+     time_point m_raiseTime;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

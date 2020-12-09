@@ -1,0 +1,7 @@
+@@ -495,4 +495,4 @@ void CDataLoader::ExpireAHItems()
+     }
+     ShowMessage("Sent %u expired auction house items back to sellers\n", expiredAuctions);
+     Sql_Free(sqlH2);
+-}
+\ No newline at end of file
++}

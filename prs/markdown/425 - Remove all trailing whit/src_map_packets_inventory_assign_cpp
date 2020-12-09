@@ -1,0 +1,7 @@
+@@ -36,4 +36,4 @@ CInventoryAssignPacket::CInventoryAssignPacket(CItem* PItem, uint8 Flag)
+     ref<uint8>(0x0A) = PItem->getLocationID();
+     ref<uint8>(0x0B) = PItem->getSlotID();
+ 	ref<uint8>(0x0C) = Flag;
+-}
+\ No newline at end of file
++}

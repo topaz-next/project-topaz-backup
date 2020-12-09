@@ -1,0 +1,7 @@
+@@ -32,4 +32,4 @@ function onTrigger(player, target)
+     if (targ:getID() ~= player:getID()) then
+         player:PrintToPlayer(string.format("%s has been logged off.",targ:getName()))
+     end
+-end
+\ No newline at end of file
++end

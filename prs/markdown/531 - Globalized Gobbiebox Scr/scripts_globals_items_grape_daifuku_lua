@@ -1,0 +1,7 @@
+@@ -56,4 +56,4 @@ function onEffectLose(target, effect)
+     target:delPetMod(tpz.mod.FOOD_ACC_CAP, 75)
+     target:delPetMod(tpz.mod.FOOD_RACCP, 10)
+     target:delPetMod(tpz.mod.FOOD_RACC_CAP, 75)
+-end
+\ No newline at end of file
++end

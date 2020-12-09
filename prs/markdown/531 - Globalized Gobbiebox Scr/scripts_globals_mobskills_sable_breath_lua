@@ -1,0 +1,7 @@
+@@ -35,4 +35,4 @@ function onMobWeaponSkill(target, mob, skill)
+ 
+     target:takeDamage(dmg, mob, tpz.attackType.BREATH, tpz.damageType.DARK)
+     return dmg
+-end
+\ No newline at end of file
++end

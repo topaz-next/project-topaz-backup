@@ -1,0 +1,7 @@
+@@ -62,4 +62,4 @@ int32 do_close_lobbyview(login_session_data_t*, int32 fd);
+ 
+ int32 lobby_createchar(login_session_data_t* loginsd, int8* buf);
+ int32 lobby_createchar_save(uint32 accid, uint32 charid, char_mini* createchar);
+-#endif
+\ No newline at end of file
++#endif

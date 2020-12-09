@@ -1,0 +1,13 @@
+@@ -32,9 +32,9 @@ class CItemGeneral : public CItem
+ 
+ 	CItemGeneral(uint16);
+ 	virtual ~CItemGeneral();
+-	
++
+ private:
+ 
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

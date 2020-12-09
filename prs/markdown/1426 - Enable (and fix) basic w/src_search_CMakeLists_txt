@@ -1,0 +1,7 @@
+@@ -35,5 +35,5 @@ target_compile_definitions(topaz_search PUBLIC DEFINE_OWN_MAIN)
+ target_link_libraries(topaz_search
+     common
+     project_options
+-    #project_warnings
++    project_warnings
+ )

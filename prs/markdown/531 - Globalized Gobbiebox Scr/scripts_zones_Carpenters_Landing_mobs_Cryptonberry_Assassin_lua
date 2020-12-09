@@ -1,0 +1,7 @@
+@@ -45,4 +45,4 @@ function onMobDeath(mob, player, isKiller)
+         local offset = mob:getID() - ID.mob.CRYPTONBERRY_EXECUTOR
+         player:setCharVar(string.format("Cryptonberry_Assassins-%i_KILL", offset), 1)
+     end
+-end
+\ No newline at end of file
++end

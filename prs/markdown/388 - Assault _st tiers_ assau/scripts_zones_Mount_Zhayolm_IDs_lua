@@ -1,0 +1,10 @@
+@@ -17,6 +17,9 @@ zones[tpz.zone.MOUNT_ZHAYOLM] =
+         KEYITEM_OBTAINED        = 6391, -- Obtained key item: <keyitem>.
+         FELLOW_MESSAGE_OFFSET   = 6417, -- I'm ready. I suppose.
+         FISHING_MESSAGE_OFFSET  = 7049, -- You can't fish here.
++        STAGING_GATE_CLOSER     = 7309, -- You must move closer.
++        STAGING_GATE_INTERACT   = 7310, -- This gate guards an area under Imperial control.
++        STAGING_GATE_HALVUNG    = 7313, -- Halvung Staging Point.
+         RESPONSE                = 7329, -- There is no response...
+         MINING_IS_POSSIBLE_HERE = 7418, -- Mining is possible here if you have <item>.
+         CANNOT_ENTER            = 7477, -- You cannot enter at this time. Please wait a while before trying again.

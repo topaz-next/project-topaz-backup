@@ -1,0 +1,7 @@
+@@ -72,4 +72,4 @@ CCharHealthPacket::CCharHealthPacket(CTrustEntity* PTrust)
+     ref<uint8>(0x21) = PTrust->GetMLevel();
+     ref<uint8>(0x22) = PTrust->GetSJob();
+     ref<uint8>(0x23) = PTrust->GetSLevel();
+-}
+\ No newline at end of file
++}

@@ -1,0 +1,7 @@
+@@ -8,4 +8,4 @@ function onMobEngaged(mob,target)
+ end
+ 
+ function onMobDeath(mob, player, isKiller)
+-end
+\ No newline at end of file
++end

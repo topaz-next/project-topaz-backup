@@ -1,0 +1,7 @@
+@@ -15,4 +15,4 @@ end
+ 
+ function onMobDeath(mob,player,isKiller)
+     tpz.wsquest.handleWsnmDeath(tpz.wsquest.empyreal_arrow,player)
+-end
+\ No newline at end of file
++end

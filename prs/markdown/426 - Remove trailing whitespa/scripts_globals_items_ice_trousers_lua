@@ -1,0 +1,7 @@
+@@ -13,4 +13,4 @@ end
+ 
+ function onItemUse(target)
+     target:addStatusEffect(tpz.effect.ICE_SPIKES, 7, 0, 180)
+-end
+\ No newline at end of file
++end

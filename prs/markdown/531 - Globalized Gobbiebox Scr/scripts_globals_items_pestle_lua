@@ -1,0 +1,7 @@
+@@ -30,4 +30,4 @@ function onAdditionalEffect(player,target,damage)
+         target:addMP(-drain)
+         return tpz.subEffect.MP_DRAIN, tpz.msg.basic.ADD_EFFECT_MP_DRAIN, player:addMP(drain)
+     end
+-end
+\ No newline at end of file
++end

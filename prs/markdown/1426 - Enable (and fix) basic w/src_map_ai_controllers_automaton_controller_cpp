@@ -1,0 +1,19 @@
+@@ -1101,7 +1101,7 @@ bool CAutomatonController::TryEnhance()
+         }
+     }
+ 
+-    PAutomaton->StatusEffectContainer->ForEachEffect([&protect, &shell, &haste, &stoneskin, &phalanx](CStatusEffect* PStatus)
++    PAutomaton->StatusEffectContainer->ForEachEffect([&protect, &shell, &haste](CStatusEffect* PStatus)
+     {
+         if (PStatus->GetDuration() > 0)
+         {
+@@ -1403,7 +1403,8 @@ namespace autoSpell
+                     (uint16)Sql_GetUIntData(SqlHandle, 1),
+                     (uint8)Sql_GetUIntData(SqlHandle, 2),
+                     (EFFECT)Sql_GetUIntData(SqlHandle, 3),
+-                    (IMMUNITY)Sql_GetUIntData(SqlHandle, 4)
++                    (IMMUNITY)Sql_GetUIntData(SqlHandle, 4),
++                    {},
+                 };
+ 
+                 uint32 removes = Sql_GetUIntData(SqlHandle, 5);

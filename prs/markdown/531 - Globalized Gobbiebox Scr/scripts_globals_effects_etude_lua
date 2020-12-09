@@ -1,0 +1,7 @@
+@@ -22,4 +22,4 @@ end
+ 
+ function onEffectLose(target,effect)
+     target:delMod(effect:getSubPower(), effect:getPower())
+-end
+\ No newline at end of file
++end

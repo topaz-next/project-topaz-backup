@@ -1,0 +1,7 @@
+@@ -14,4 +14,4 @@ end
+ 
+ function onEffectLose(target,effect)
+     target:speed(effect:getPower())
+-end
+\ No newline at end of file
++end

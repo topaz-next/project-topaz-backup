@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ function onTrigger(player, target)
+     if (targ:getID() ~= player:getID()) then
+         player:PrintToPlayer( string.format( "%s was returned to zone %i.", targ:getName(), zoneId ) )
+     end
+-end
+\ No newline at end of file
++end

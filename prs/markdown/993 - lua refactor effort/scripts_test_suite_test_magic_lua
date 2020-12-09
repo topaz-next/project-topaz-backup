@@ -1,0 +1,7 @@
+@@ -0,0 +1,5 @@
++local magicBasics = require("scripts/test_suite/tests/magic_basics")
++
++magicBasics()
++
++print("Magic Test Suite Complete")
+\ No newline at end of file

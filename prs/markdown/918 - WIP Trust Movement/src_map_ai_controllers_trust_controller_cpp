@@ -1,0 +1,295 @@
+@@ -33,6 +33,7 @@ along with this program.  If not, see http://www.gnu.org/licenses/
+ #include "../../packets/char.h"
+ #include "../../recast_container.h"
+ #include "../../mob_spell_container.h"
++#include "../../utils/charutils.h"
+ 
+ CTrustController::CTrustController(CCharEntity* PChar, CTrustEntity* PTrust) : CMobController(PTrust)
+ {
+@@ -49,6 +50,7 @@ CTrustController::~CTrustController()
+     POwner->allegiance = ALLEGIANCE_PLAYER;
+     POwner->status = STATUS_DISAPPEAR;
+     m_LastTopEnmity = nullptr;
++    m_MovementType = TRUST_MOVEMENT::MELEE;
+ }
+ 
+ void CTrustController::Despawn()
+@@ -89,6 +91,7 @@ void CTrustController::DoCombatTick(time_point tick)
+         POwner->PAI->Internal_Disengage();
+         m_LastTopEnmity = nullptr;
+         m_CombatEndTime = m_Tick;
++        m_CombatPosition = std::nullopt;
+     }
+ 
+     if (POwner->PMaster->GetBattleTargetID() != POwner->GetBattleTargetID())
+@@ -98,51 +101,42 @@ void CTrustController::DoCombatTick(time_point tick)
+     }
+ 
+     auto PMaster = static_cast<CCharEntity*>(POwner->PMaster);
+-    float currentDistance = distance(POwner->loc.p, POwner->PMaster->loc.p);
+     PTarget = POwner->GetBattleTarget();
+-    uint8 currentPartyPos = GetPartyPosition();
+ 
+-    if (PTarget)
++    if (!PTarget) { return; }
++
++    float currentDistanceFromMaster = distance(POwner->loc.p, PMaster->loc.p);
++    float currentDistanceFromTarget = distance(POwner->loc.p, PTarget->loc.p);
++
++    if (POwner->PAI->CanFollowPath())
+     {
+-        if (POwner->PAI->CanFollowPath())
++        // Warp in if too far away
++        if (currentDistanceFromMaster > WarpDistance || currentDistanceFromTarget > WarpDistance)
+         {
+-            POwner->PAI->PathFind->LookAt(PTarget->loc.p);
+-            std::unique_ptr<CBasicPacket> err;
+-            if (!POwner->CanAttack(PTarget, err) && POwner->speed > 0)
+-            {
+-                if (currentDistance < WarpDistance && POwner->PAI->PathFind->PathAround(PTarget->loc.p, PATHFLAG_RUN | PATHFLAG_WALLHACK))
+-                {
+-                    POwner->PAI->PathFind->FollowPath();
+-                }
+-                else if (POwner->GetSpeed() > 0)
+-                {
+-                    POwner->PAI->PathFind->WarpTo(PMaster->loc.p, RoamDistance);
+-                }
+-            }
+-            else
+-            {
+-                for (auto POtherTrust : PMaster->PTrusts)
+-                {
+-                    if (POtherTrust != POwner && !POtherTrust->PAI->PathFind->IsFollowingPath() && distance(POtherTrust->loc.p, POwner->loc.p) < 1.0f)
+-                    {
+-                        auto angle = getangle(POwner->loc.p, PTarget->loc.p) + 64;
+-                        auto amount = (currentPartyPos % 2) ? 1.0f : -1.0f;
+-                        position_t new_pos{ POwner->loc.p.x - (cosf(rotationToRadian(angle)) * amount),
+-                            PTarget->loc.p.y, POwner->loc.p.z + (sinf(rotationToRadian(angle)) * amount), 0, 0 };
+-
+-                        if (POwner->PAI->PathFind->ValidPosition(new_pos))
+-                        {
+-                            POwner->PAI->PathFind->PathTo(new_pos, PATHFLAG_RUN | PATHFLAG_WALLHACK);
+-                        }
+-                        break;
+-                    }
+-                }
+-            }
+-            POwner->PAI->PathFind->FollowPath();
++            POwner->PAI->PathFind->WarpTo(PMaster->loc.p, RangedDistance);
++        }
++
++        // Testing
++        if (POwner->GetMJob() == JOB_WHM)
++        {
++            PickCombatPosition(15.0f, 20.0f);
++        }
++        else if (POwner->GetMJob() == JOB_BRD || POwner->GetMJob() == JOB_BLM)
++        {
++            PickCombatPosition(10.0f, 15.0f);
+         }
++        else
++        {
++            PickCombatPosition(0.0f, 5.0f);
++        }
++
++        //Declump();
++
++        POwner->PAI->PathFind->LookAt(PTarget->loc.p);
+ 
+         m_GambitsContainer->Tick(tick);
+ 
++        // Customisation Bindings
+         auto currentTopEnmity = GetTopEnmity();
+         if (m_LastTopEnmity != currentTopEnmity)
+         {
+@@ -154,14 +148,62 @@ void CTrustController::DoCombatTick(time_point tick)
+     }
+ }
+ 
++void CTrustController::PickCombatPosition(float minDistance, float maxDistance)
++{
++    // Basic melee positioning
++    if (minDistance < 2.0f)
++    {
++        std::unique_ptr<CBasicPacket> err;
++        if (!POwner->CanAttack(PTarget, err))
++        {
++            POwner->PAI->PathFind->PathInRange(PTarget->loc.p, float(POwner->GetMeleeRange() + PTarget->m_ModelSize), PATHFLAG_RUN);
++            POwner->PAI->PathFind->FollowPath();
++        }
++        return;
++    }
++
++    float currentDistanceFromMaster = distance(POwner->loc.p, POwner->PMaster->loc.p);
++    float currentDistanceFromTarget = distance(POwner->loc.p, PTarget->loc.p);
++    bool outsideOfDesiredRange = currentDistanceFromMaster > WarpDistance || currentDistanceFromTarget < minDistance || currentDistanceFromTarget > maxDistance;
++
++    if (!m_CombatPosition)
++    {
++        auto randomDistance = tpzrand::GetRandomNumber(minDistance, maxDistance);
++
++        // Pick angle within ~45deg of current angle to mob
++        auto randomAngle = (getangle(PTarget->loc.p, POwner->loc.p) + tpzrand::GetRandomNumber(-22, 22)) % 255;
++
++        auto position = nearPosition(PTarget->loc.p, randomDistance, rotationToRadian(randomAngle));
++
++        // Set combat position
++        if (outsideOfDesiredRange && POwner->PAI->PathFind->ValidPosition(position))
++        {
++            m_CombatPosition = position;
++        }
++        else
++        {
++            m_CombatPosition = POwner->loc.p;
++        }
++    }
++
++    float distanceToPoint = distance(POwner->loc.p, m_CombatPosition.value());
++    bool isOnPoint = distanceToPoint < 2.0f;
++
++    if (POwner->PAI->PathFind->PathTo(m_CombatPosition.value(), PATHFLAG_RUN))
++    {
++        POwner->PAI->PathFind->FollowPath();
++    }
++    else if (isOnPoint && outsideOfDesiredRange)
++    {
++        m_CombatPosition = std::nullopt;
++    }
++}
++
+ void CTrustController::DoRoamTick(time_point tick)
+ {
+     auto PMaster = static_cast<CCharEntity*>(POwner->PMaster);
+-    auto masterLastAttackTime = static_cast<CPlayerController*>(PMaster->PAI->GetController())->getLastAttackTime();
+-    bool masterMeleeSwing = masterLastAttackTime > server_clock::now() - 1s;
+-    bool trustEngageCondition = PMaster->GetBattleTarget() && masterMeleeSwing;
+ 
+-    if (PMaster->PAI->IsEngaged() && trustEngageCondition)
++    if (PMaster->PAI->IsEngaged() && GetEngageCondition())
+     {
+         POwner->PAI->Internal_Engage(PMaster->GetBattleTargetID());
+     }
+@@ -170,35 +212,72 @@ void CTrustController::DoRoamTick(time_point tick)
+     CBattleEntity* PFollowTarget = (GetPartyPosition() > 0) ? (CBattleEntity*)PMaster->PTrusts.at(currentPartyPos - 1) : POwner->PMaster;
+     float currentDistance = distance(POwner->loc.p, PFollowTarget->loc.p);
+ 
+-    for (auto POtherTrust : PMaster->PTrusts)
++    if (currentDistance > WarpDistance)
+     {
+-        if (POtherTrust != POwner && distance(POtherTrust->loc.p, POwner->loc.p) < 1.0f && !POwner->PAI->PathFind->IsFollowingPath())
++        POwner->PAI->PathFind->WarpTo(PFollowTarget->loc.p);
++    }
++    else if (currentDistance > RoamDistance)
++    {
++        if (currentDistance < RoamDistance * 3.0f && POwner->PAI->PathFind->PathAround(PFollowTarget->loc.p, RoamDistance, PATHFLAG_RUN | PATHFLAG_WALLHACK))
+         {
+-            auto angle = getangle(POwner->loc.p, POtherTrust->loc.p) + 64;
+-            auto amount = (currentPartyPos % 2) ? 1.0f : -1.0f;
+-            position_t new_pos{ POwner->loc.p.x - (cosf(rotationToRadian(angle)) * amount),
+-                POtherTrust->loc.p.y, POwner->loc.p.z + (sinf(rotationToRadian(angle)) * amount), 0, 0 };
++            POwner->PAI->PathFind->FollowPath();
++        }
++        else if (POwner->GetSpeed() > 0)
++        {
++            POwner->PAI->PathFind->StepTo(PFollowTarget->loc.p, true);
++        }
++    }
++
++    TryRest();
++}
+ 
+-            if (POwner->PAI->PathFind->ValidPosition(new_pos) && POwner->PAI->PathFind->PathAround(new_pos, RoamDistance, PATHFLAG_RUN | PATHFLAG_WALLHACK))
++bool CTrustController::GetEngageCondition()
++{
++    bool trustEngageCondition = false;
++
++    auto PMaster = static_cast<CCharEntity*>(POwner->PMaster);
++    auto masterLastAttackTime = static_cast<CPlayerController*>(PMaster->PAI->GetController())->getLastAttackTime();
++    bool masterMeleeSwing = masterLastAttackTime > server_clock::now() - 1s;
++
++    switch (PMaster->GetLocalVar("TrustEngageMode"))
++    {
++        case 0: // No LocalVar: go see if there is a CharVar
++        {
++            int32 mode = charutils::GetCharVar(PMaster, "TrustEngageMode");
++            if (!mode)
+             {
+-                POwner->PAI->PathFind->FollowPath();
++                // No mode set: Set to retail behaviour
++                PMaster->SetLocalVar("TrustEngageMode", 1);
++            }
++            else
++            {
++                PMaster->SetLocalVar("TrustEngageMode", mode);
+             }
+             break;
+         }
+-    }
+-
+-    if (currentDistance > RoamDistance)
+-    {
+-        if (currentDistance < WarpDistance && POwner->PAI->PathFind->PathAround(PFollowTarget->loc.p, RoamDistance, PATHFLAG_RUN | PATHFLAG_WALLHACK))
++        case 2: // On Engage
+         {
+-            POwner->PAI->PathFind->FollowPath();
++            trustEngageCondition = PMaster->GetBattleTarget();
++            break;
+         }
+-        else if (POwner->GetSpeed() > 0)
++        case 3: // On Attack/R.Attack/Spellcast/JA
++        {
++            // TODO: 
++            //trustEngageCondition = PMaster->GetBattleTarget();
++            //break;
++            [[fallthrough]];
++        }
++        default: // Default retail behaviour
+         {
+-            POwner->PAI->PathFind->WarpTo(PFollowTarget->loc.p, RoamDistance);
++            trustEngageCondition = PMaster->GetBattleTarget() && masterMeleeSwing;
++            break;
+         }
+     }
++    return trustEngageCondition;
++}
+ 
++void CTrustController::TryRest()
++{
+     if (POwner->CanRest() &&
+         m_Tick - m_CombatEndTime > 10s &&
+         m_Tick - m_LastHealTickTime > 3s)
+@@ -216,6 +295,34 @@ void CTrustController::DoRoamTick(time_point tick)
+     }
+ }
+ 
++void CTrustController::Declump()
++{
++    if (POwner->PAI->PathFind->IsFollowingPath())
++    {
++        return;
++    }
++
++    auto PMaster = static_cast<CCharEntity*>(POwner->PMaster);
++    uint8 currentPartyPos = GetPartyPosition();
++    for (auto POtherTrust : PMaster->PTrusts)
++    {
++        if (POtherTrust != POwner && distance(POtherTrust->loc.p, POwner->loc.p) < 1.0f && !POwner->PAI->PathFind->IsFollowingPath())
++        {
++            auto angle = getangle(POwner->loc.p, POtherTrust->loc.p) + 64;
++            auto amount = (currentPartyPos % 2) ? 1.0f : -1.0f;
++            position_t new_pos{ POwner->loc.p.x - (cosf(rotationToRadian(angle)) * amount),
++                POtherTrust->loc.p.y, POwner->loc.p.z + (sinf(rotationToRadian(angle)) * amount), 0, 0 };
++
++            if (POwner->PAI->PathFind->ValidPosition(new_pos))
++            {
++                POwner->PAI->PathFind->PathTo(new_pos, PATHFLAG_RUN | PATHFLAG_WALLHACK);
++                POwner->PAI->PathFind->FollowPath();
++            }
++            break;
++        }
++    }
++}
++
+ bool CTrustController::Ability(uint16 targid, uint16 abilityid)
+ {
+     if (static_cast<CMobEntity*>(POwner)->PRecastContainer->HasRecast(RECAST_ABILITY, abilityid, 0))

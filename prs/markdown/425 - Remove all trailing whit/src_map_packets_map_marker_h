@@ -1,0 +1,7 @@
+@@ -31,4 +31,4 @@ class CMapMarkerPacket : public CBasicPacket
+     CMapMarkerPacket(CCharEntity* PChar);
+ };
+ 
+-#endif // _CMAPMARKERPACKET_H_
+\ No newline at end of file
++#endif // _CMAPMARKERPACKET_H_

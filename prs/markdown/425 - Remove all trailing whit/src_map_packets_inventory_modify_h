@@ -1,0 +1,7 @@
+@@ -39,4 +39,4 @@ class CInventoryModifyPacket: public CBasicPacket
+ 	CInventoryModifyPacket(uint8 LocationID, uint8 slotID, uint32 quantity);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,40 @@
+@@ -7775,8 +7775,8 @@ INSERT INTO `mob_spawn_points` VALUES (16924679,'Kamlanaut','Kam\'lanaut',3,-518
+ INSERT INTO `mob_spawn_points` VALUES (16924680,'Ealdnarche','Eald\'narche',4,-529.274,-120,516.185,167);
+ INSERT INTO `mob_spawn_points` VALUES (16924681,'Kamlanaut','Kam\'lanaut',3,511.559,-0.5,528.348,146);
+ INSERT INTO `mob_spawn_points` VALUES (16924682,'Ealdnarche','Eald\'narche',4,516.331,-0.5,518.179,199);
+-INSERT INTO `mob_spawn_points` VALUES (16924683,'Kamlanaut','Kam\'lanaut',3,0,0,0,0);
+-INSERT INTO `mob_spawn_points` VALUES (16924684,'Ealdnarche','Eald\'narche',4,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (16924683,'Kamlanaut','Kam\'lanaut',3,520.361,0,493.3,0);
++INSERT INTO `mob_spawn_points` VALUES (16924684,'Ealdnarche','Eald\'narche',4,530.361,0,493.3,0);
+ INSERT INTO `mob_spawn_points` VALUES (16924685,'Disjoined_One','Disjoined One',0,0,0,0,0); -- Both Paths Taken (ROVM2-9-2)
+ INSERT INTO `mob_spawn_points` VALUES (16924686,'Iroha','Iroha',0,0,0,0,0);
+ INSERT INTO `mob_spawn_points` VALUES (16924687,'Disjoined_One','Disjoined One',0,0,0,0,0);
+@@ -13435,6 +13435,28 @@ INSERT INTO `mob_spawn_points` VALUES (17035470,'Black_Shuck','Black Shuck',14,4
+ -- ------------------------------------------------------------
+ 
+ INSERT INTO `mob_spawn_points` VALUES (17039400,'Khimaira_13','Khimaira 13',1,383.144,-116.5,381.355,128);
++INSERT INTO `mob_spawn_points` VALUES (17039373,'Pudding_Master','Pudding Master',2159,384.500,-116.500,380.000,0);
++INSERT INTO `mob_spawn_points` VALUES (17039374,'Immortal_Flan','Immortal Flan',2156,384.000,-116.500,383.000,128);
++-- Pos from ID 17039375 to 17039393 not retail accurate.
++INSERT INTO `mob_spawn_points` VALUES (17039375,'Immortal_Flan','Immortal Flan',2156,384.000,-116.500,374.000,128);
++INSERT INTO `mob_spawn_points` VALUES (17039376,'Immortal_Flan','Immortal Flan',2156,382.000,-116.500,390.000,128);
++INSERT INTO `mob_spawn_points` VALUES (17039377,'Immortal_Flan','Immortal Flan',2156,382.000,-116.500,368.000,128);
++INSERT INTO `mob_spawn_points` VALUES (17039378,'Immortal_Flan','Immortal Flan',2156,378.000,-116.500,394.000,128);
++INSERT INTO `mob_spawn_points` VALUES (17039379,'Immortal_Flan','Immortal Flan',2156,378.000,-116.500,366.000,128);
++INSERT INTO `mob_spawn_points` VALUES (17039380,'Pudding_Master','Pudding Master',2159,-16.212,-16.4338,-20.053,0);
++INSERT INTO `mob_spawn_points` VALUES (17039381,'Immortal_Flan','Immortal Flan',2156,-16.212,-16.4338,-17.053,128);
++INSERT INTO `mob_spawn_points` VALUES (17039382,'Immortal_Flan','Immortal Flan',2156,-16.212,-16.4338,-26.053,128);
++INSERT INTO `mob_spawn_points` VALUES (17039383,'Immortal_Flan','Immortal Flan',2156,-18.712,-16.4338,-10.053,128);
++INSERT INTO `mob_spawn_points` VALUES (17039384,'Immortal_Flan','Immortal Flan',2156,-18.712,-16.4338,-32.053,128);
++INSERT INTO `mob_spawn_points` VALUES (17039385,'Immortal_Flan','Immortal Flan',2156,-22.712,-16.4338,-6.053,128);
++INSERT INTO `mob_spawn_points` VALUES (17039386,'Immortal_Flan','Immortal Flan',2156,-22.712,-16.4338,-34.053,128);
++INSERT INTO `mob_spawn_points` VALUES (17039387,'Pudding_Master','Pudding Master',2159,384.769,83.596,-420.301,0);
++INSERT INTO `mob_spawn_points` VALUES (17039388,'Immortal_Flan','Immortal Flan',2156,384.269,83.596,-417.301,128);
++INSERT INTO `mob_spawn_points` VALUES (17039389,'Immortal_Flan','Immortal Flan',2156,384.269,83.596,-426.301,128);
++INSERT INTO `mob_spawn_points` VALUES (17039390,'Immortal_Flan','Immortal Flan',2156,382.269,83.596,-410.301,128);
++INSERT INTO `mob_spawn_points` VALUES (17039391,'Immortal_Flan','Immortal Flan',2156,382.269,83.596,-432.301,128);
++INSERT INTO `mob_spawn_points` VALUES (17039392,'Immortal_Flan','Immortal Flan',2156,378.269,83.596,-406.301,128);
++INSERT INTO `mob_spawn_points` VALUES (17039393,'Immortal_Flan','Immortal Flan',2156,378.269,83.596,-434.301,128);
+ 
+ -- ------------------------------------------------------------
+ -- Mamook (Zone 65)

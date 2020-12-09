@@ -1,0 +1,128 @@
+@@ -3,6 +3,7 @@ require("scripts/zones/Promyvion-Holla/IDs")
+ require("scripts/zones/Promyvion-Mea/IDs")
+ require("scripts/zones/Promyvion-Vahzl/IDs")
+ require("scripts/globals/status")
++require("scripts/globals/settings")
+ ------------------------------------
+ 
+ tpz = tpz or {}
+@@ -13,39 +14,45 @@ tpz.promyvion = tpz.promyvion or {}
+ ------------------------------------
+ 
+ local function maxFloor(ID)
+-    local m = 0
++	if ENABLE_COP == 1 then
++		local m = 0
+ 
+-    for _, v in pairs(ID.mob.MEMORY_RECEPTACLES) do
+-        m = math.max(m, v[1])
+-    end
++		for _, v in pairs(ID.mob.MEMORY_RECEPTACLES) do
++			m = math.max(m, v[1])
++		end
+ 
+-    return m
++		return m
++	end
+ end
+ 
+ local function randomizeFloorExit(ID, floor)
+-    local streams = {}
++	if ENABLE_COP == 1 then
++		local streams = {}
+ 
+-    for _, v in pairs(ID.mob.MEMORY_RECEPTACLES) do
+-        if v[1] == floor then
+-            GetNPCByID(v[3]):setLocalVar("[promy]floorExit", 0)
+-            table.insert(streams, v[3])
+-        end
+-    end
++		for _, v in pairs(ID.mob.MEMORY_RECEPTACLES) do
++			if v[1] == floor then
++				GetNPCByID(v[3]):setLocalVar("[promy]floorExit", 0)
++				table.insert(streams, v[3])
++			end
++		end
+ 
+     local exitStreamId = streams[math.random(#streams)]
+     GetNPCByID(exitStreamId):setLocalVar("[promy]floorExit", 1)
++	end
+ end
+ 
+ local function findMother(mob)
+-    local ID = zones[mob:getZoneID()]
+-    local mobId = mob:getID()
+-    local mother = 0
+-    for k, v in pairs(ID.mob.MEMORY_RECEPTACLES) do
+-        if k < mobId and k > mother then
+-            mother = k
+-        end
+-    end
+-    return mother
++	if ENABLE_COP == 1 then
++		local ID = zones[mob:getZoneID()]
++		local mobId = mob:getID()
++		local mother = 0
++		for k, v in pairs(ID.mob.MEMORY_RECEPTACLES) do
++			if k < mobId and k > mother then
++				mother = k
++			end
++		end
++		return mother
++	end
+ end
+ 
+ ------------------------------------
+@@ -61,22 +68,26 @@ tpz.promyvion.initZone = function(zone)
+     end
+ 
+     -- randomize floor exits
+-    for i = 1, maxFloor(ID) do
+-        randomizeFloorExit(ID, i)
+-    end
++	if ENABLE_COP == 1 then
++		for i = 1, maxFloor(ID) do
++			randomizeFloorExit(ID, i)
++		end
++	end
+ end
+ 
+ tpz.promyvion.strayOnSpawn = function(mob)
+-    local mother = GetMobByID(findMother(mob))
++	if ENABLE_COP == 1 then
++		local mother = GetMobByID(findMother(mob))
+ 
+-    if mother ~= nil and mother:isSpawned() then
+-        mob:setPos(mother:getXPos(), mother:getYPos() - 5, mother:getZPos())
+-        mother:AnimationSub(1)
++		if mother ~= nil and mother:isSpawned() then
++			mob:setPos(mother:getXPos(), mother:getYPos() - 5, mother:getZPos())
++			mother:AnimationSub(1)
++		end
+     end
+ end
+ 
+ tpz.promyvion.receptacleOnFight = function(mob, target)
+-    if os.time() > mob:getLocalVar("[promy]nextStray") then
++    if os.time() > mob:getLocalVar("[promy]nextStray") and ENABLE_COP == 1 then
+         local ID = zones[mob:getZoneID()]
+         local mobId = mob:getID()
+         local numStrays = ID.mob.MEMORY_RECEPTACLES[mobId][2]
+@@ -96,7 +107,7 @@ tpz.promyvion.receptacleOnFight = function(mob, target)
+ end
+ 
+ tpz.promyvion.receptacleOnDeath = function(mob, isKiller)
+-    if isKiller then
++    if isKiller and ENABLE_COP == 1 then
+         local ID = zones[mob:getZoneID()]
+         local mobId = mob:getID()
+         local floor = ID.mob.MEMORY_RECEPTACLES[mobId][1]
+@@ -117,7 +128,7 @@ tpz.promyvion.receptacleOnDeath = function(mob, isKiller)
+ end
+ 
+ tpz.promyvion.onRegionEnter = function(player, region)
+-    if player:getAnimation() == 0 then
++    if player:getAnimation() == 0 and ENABLE_COP == 1 then
+         local ID = zones[player:getZoneID()]
+         local regionId = region:GetRegionID()
+         local event = nil

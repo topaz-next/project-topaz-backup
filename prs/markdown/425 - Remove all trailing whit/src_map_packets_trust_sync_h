@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ class CTrustSyncPacket : public CBasicPacket
+     CTrustSyncPacket(CCharEntity* PChar, CTrustEntity* PTrust);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

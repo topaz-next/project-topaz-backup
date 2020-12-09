@@ -1,0 +1,13 @@
+@@ -32,9 +32,9 @@ class CItemCurrency : public CItem
+ 
+ 	CItemCurrency(uint16);
+ 	virtual ~CItemCurrency();
+-	
++
+ private:
+ 
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

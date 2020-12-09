@@ -1,0 +1,7 @@
+@@ -29,4 +29,4 @@ function onUseAbility(player,target,ability)
+         pet:setHP(math.max(pet:getHP() * percent, 1))
+         pet:setMP(pet:getMP() * percent)
+     end
+-end
+\ No newline at end of file
++end

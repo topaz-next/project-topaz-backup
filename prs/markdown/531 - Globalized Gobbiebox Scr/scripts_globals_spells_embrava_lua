@@ -1,0 +1,7 @@
+@@ -27,4 +27,4 @@ function onSpellCast(caster, target, spell)
+     target:addStatusEffect(tpz.effect.EMBRAVA, skill, 0, duration)
+ 
+     return tpz.effect.EMBRAVA
+-end
+\ No newline at end of file
++end

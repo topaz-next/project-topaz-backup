@@ -1,0 +1,10 @@
+@@ -43,4 +43,7 @@ target_link_libraries(
+   project_options
+   # project_warnings
+   )
+- 
+\ No newline at end of file
++ 
++if(TRACY_ENABLE)
++    target_link_libraries(common PUBLIC tracy_client)
++endif(TRACY_ENABLE)

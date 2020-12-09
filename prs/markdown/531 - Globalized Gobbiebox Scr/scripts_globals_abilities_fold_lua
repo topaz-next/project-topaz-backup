@@ -1,0 +1,7 @@
+@@ -29,4 +29,4 @@ function onUseAbility(player,target,ability)
+     end
+ 
+     return tpz.effect.FOLD
+-end
+\ No newline at end of file
++end

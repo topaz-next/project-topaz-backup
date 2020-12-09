@@ -1,0 +1,25 @@
+@@ -52,7 +52,7 @@ function FormMagicBurst(ele, target)
+             return resonance:getTier(), resonance:getSubPower()
+         end
+     end -- if resonance
+-    
++
+     return 0, 0
+ end
+ 
+@@ -64,7 +64,7 @@ function MobFormMagicBurst(element, target)
+             return resonance:getTier(), resonance:getSubPower()
+         end
+     end -- if resonance
+-    
++
+     return 0, 0
+ end
+ 
+@@ -77,4 +77,4 @@ end
+ function doesElementMatchWeaponskill(ele, SCProp)
+     isMatch = matches[ele + 1][SCProp + 1]
+     return (isMatch ~= nil and isMatch > 0)
+-end
+\ No newline at end of file
++end

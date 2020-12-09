@@ -1,0 +1,7 @@
+@@ -44,4 +44,4 @@ function onTrigger(player, target)
+         targ:addKeyItem( v )
+     end
+     player:PrintToPlayer(string.format("%s now has all maps.",targ:getName()))
+-end
+\ No newline at end of file
++end

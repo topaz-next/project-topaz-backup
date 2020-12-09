@@ -1,0 +1,7 @@
+@@ -52,4 +52,4 @@ function onTrigger(player, target, level)
+     targ:setGMLevel(level)
+     player:PrintToPlayer(string.format( "%s set to tier %i.", targ:getName(), level ))
+     targ:PrintToPlayer(string.format( "You have been set to tier %i.", level ))
+-end
+\ No newline at end of file
++end

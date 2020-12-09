@@ -1,0 +1,11 @@
+@@ -38856,8 +38856,8 @@ INSERT INTO `mob_spawn_points` VALUES (17305779,'Bloodwing_Maimer','Bloodwing Ma
+ INSERT INTO `mob_spawn_points` VALUES (17305780,'Bloodwing_Maimer','Bloodwing Maimer',20,462,-0.146,464,64);
+ INSERT INTO `mob_spawn_points` VALUES (17305781,'Bloodwing_Maimer','Bloodwing Maimer',20,452,0.21,436,64);
+ INSERT INTO `mob_spawn_points` VALUES (17305782,'Bloodwing_Maimer','Bloodwing Maimer',20,464,0.173,436,64);
+-INSERT INTO `mob_spawn_points` VALUES (17305783,'Bloodwing_Deathrainer','Bloodwing Deathrainer',20,450,0.001,438,64);
+-INSERT INTO `mob_spawn_points` VALUES (17305784,'Bloodwing_Deathrainer','Bloodwing Deathrainer',20,466,0.5,438,64);
++INSERT INTO `mob_spawn_points` VALUES (17305783,'Bloodwing_Deathrainer','Bloodwing Deathrainer',21,450,0.001,438,64);
++INSERT INTO `mob_spawn_points` VALUES (17305784,'Bloodwing_Deathrainer','Bloodwing Deathrainer',21,466,0.5,438,64);
+ INSERT INTO `mob_spawn_points` VALUES (17305785,'Excenmille','Excenmille',22,458,-0.006,416,192);
+ 
+ 

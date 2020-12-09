@@ -1,0 +1,14 @@
+@@ -27,10 +27,10 @@ function onTrigger(player,target)
+             return
+         end
+     end
+-    
++
+     -- reset target recasts
+     targ:resetRecasts()
+     if (targ:getID() ~= player:getID()) then
+         player:PrintToPlayer( string.format( "Reset %s's recast timers.", targ:getName() ) )
+     end
+-end
+\ No newline at end of file
++end

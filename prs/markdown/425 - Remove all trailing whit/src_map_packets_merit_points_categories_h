@@ -1,0 +1,7 @@
+@@ -48,4 +48,4 @@ class CMeritPointsCategoriesPacket : public CBasicPacket
+     void MeritPointsCategoriesPacket(CCharEntity* PChar, uint8 offset);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

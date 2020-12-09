@@ -1,0 +1,7 @@
+@@ -30,4 +30,4 @@ function onUseAbility(player,target,ability)
+         pet:setHP(math.max(playerHP * bonus, 1))
+         player:setHP(math.max(petHP * bonus, 1))
+     end
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,16 @@
+@@ -89,7 +89,7 @@ uint16 CUContainer::GetTarget()
+ *  Устанавливаем цель обмена                                            *
+ *                                                                       *
+ ************************************************************************/
+-	
++
+ void CUContainer::SetTarget(uint16 Target)
+ {
+     m_target = Target;
+@@ -234,4 +234,4 @@ CItem* CUContainer::GetItem(uint8 slotID)
+ 		return m_PItem[slotID];
+ 	}
+ 	return nullptr;
+-}
+\ No newline at end of file
++}

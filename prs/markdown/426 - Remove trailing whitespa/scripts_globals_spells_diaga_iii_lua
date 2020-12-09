@@ -1,0 +1,7 @@
+@@ -60,4 +60,4 @@ function onSpellCast(caster, target, spell)
+     end
+ 
+     return final
+-end
+\ No newline at end of file
++end

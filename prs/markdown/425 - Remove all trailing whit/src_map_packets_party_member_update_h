@@ -1,0 +1,7 @@
+@@ -46,4 +46,4 @@ class CPartyMemberUpdatePacket : public CBasicPacket
+ 	CPartyMemberUpdatePacket(uint32 id, const int8* name, uint16 memberFlags, uint8 MemberNumber, uint16 ZoneID);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

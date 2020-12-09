@@ -1,0 +1,28 @@
+@@ -1,4 +1,4 @@
+-﻿/*
++/*
+ ===========================================================================
+ 
+   Copyright (c) 2010-2015 Darkstar Dev Teams
+@@ -23,19 +23,12 @@
+ #define _CFISHINGPACKET_H
+ 
+ #include "../../common/cbasetypes.h"
+-
+ #include "basic.h"
+ 
+-/************************************************************************
+-*																		*
+-*  																		*
+-*																		*
+-************************************************************************/
+-
+ class CFishingPacket : public CBasicPacket
+ {
+ public:
+     CFishingPacket(uint16 stamina, uint16 regen, uint16 response, uint16 hitDmg, uint16 arrowDelay, uint16 missRegen, uint16 gameTime, uint8 sense, uint32 special);
+ };
+ 
+-#endif
++#endif
+\ No newline at end of file

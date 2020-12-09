@@ -1,0 +1,25 @@
+@@ -26,7 +26,7 @@
+ #include "../common/mmo.h"
+ 
+ /************************************************************************
+-*                                                                       *  
++*                                                                       *
+ *                                                                       *
+ *                                                                       *
+ ************************************************************************/
+@@ -47,7 +47,7 @@ class CRegion
+ 	void	SetLRCorner(float x, float y, float z);		// нижний правый угол (Lower Right)
+ 
+ 	bool	isPointInside(position_t pos);
+-	
++
+ private:
+ 
+ 	uint32 m_RegionID;									// номер региона
+@@ -59,4 +59,4 @@ class CRegion
+ 	bool circle;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

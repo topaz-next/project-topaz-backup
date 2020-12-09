@@ -1,0 +1,16 @@
+@@ -30,7 +30,7 @@ function onTrigger(player, arg1, arg2)
+             target = arg1
+         end
+     end
+-    
++
+     -- validate power
+     if (power == nil or power > 3) then
+         power = 3
+@@ -58,4 +58,4 @@ function onTrigger(player, arg1, arg2)
+     else
+         player:PrintToPlayer( string.format( "%s is not dead.", targ:getName() ) )
+     end
+-end
+\ No newline at end of file
++end

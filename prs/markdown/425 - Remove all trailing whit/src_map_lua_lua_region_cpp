@@ -1,0 +1,7 @@
+@@ -127,4 +127,4 @@ Lunar<CLuaRegion>::Register_t CLuaRegion::methods[] =
+     LUNAR_DECLARE_METHOD(CLuaRegion,AddCount),
+     LUNAR_DECLARE_METHOD(CLuaRegion,DelCount),
+     {nullptr,nullptr}
+-};
+\ No newline at end of file
++};

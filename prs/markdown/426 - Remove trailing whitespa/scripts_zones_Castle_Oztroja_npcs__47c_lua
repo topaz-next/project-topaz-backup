@@ -1,0 +1,7 @@
+@@ -45,4 +45,4 @@ function onEventFinish(player,csid,option)
+     if csid == 43 then
+         player:setCharVar("MissionStatus", 4)
+     end
+-end
+\ No newline at end of file
++end

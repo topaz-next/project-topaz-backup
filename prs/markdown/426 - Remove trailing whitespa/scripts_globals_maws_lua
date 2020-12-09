@@ -1,0 +1,7 @@
+@@ -126,4 +126,4 @@ tpz.maws.onEventFinish = function(player, csid, option)
+         addMaw()
+     end
+ 
+-end
+\ No newline at end of file
++end

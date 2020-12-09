@@ -1,0 +1,7 @@
+@@ -56,4 +56,4 @@ class CSynthAnimationPacket : public CBasicPacket
+ 	CSynthAnimationPacket(CCharEntity* PChar, uint16 effect, uint8 param);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

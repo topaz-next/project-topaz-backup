@@ -1,0 +1,7 @@
+@@ -28,4 +28,4 @@ function onUseAbility(player,target,ability)
+ 
+ 
+     target:addStatusEffect(tpz.effect.WARCRY,power,0,duration,0,merit)
+-end
+\ No newline at end of file
++end

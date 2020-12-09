@@ -1,0 +1,26 @@
+@@ -7,6 +7,9 @@
+ import HP_masks_to_blobs
+ import crystal_storage
+ import broken_linkshells
++import add_daily_tally_column
++import add_timecreated_column
++import spell_family_column
+ 
+ credentials = {}
+ db = None
+@@ -80,10 +83,13 @@ def run_all_migrations():
+     run_migration(HP_masks_to_blobs)
+     run_migration(crystal_storage)
+     run_migration(broken_linkshells)
++    run_migration(add_daily_tally_column)
++    run_migration(add_timecreated_column)
++    run_migration(spell_family_column)
+     close()
+ 
+     print("Finished running all migrations")
+     success = input("Please close the window")
+ 
+ if __name__ == "__main__":
+-    run_all_migrations()
+\ No newline at end of file
++    run_all_migrations()

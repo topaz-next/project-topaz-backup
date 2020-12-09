@@ -1,0 +1,16 @@
+@@ -30,7 +30,7 @@ enum REVIVAL_TYPE
+ {
+ 	TYPE_HOMEPOINT	= 0,
+ 	TYPE_RAISE		= 1,
+-	TYPE_TRACTOR	= 2 
++	TYPE_TRACTOR	= 2
+ };
+ 
+ /************************************************************************
+@@ -48,4 +48,4 @@ class CRaiseTractorMenuPacket : public CBasicPacket
+ 	CRaiseTractorMenuPacket(CCharEntity* PChar, REVIVAL_TYPE type);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

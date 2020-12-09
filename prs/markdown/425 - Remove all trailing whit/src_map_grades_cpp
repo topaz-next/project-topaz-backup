@@ -1,0 +1,7 @@
+@@ -199,4 +199,4 @@ namespace grade
+         return StatScale[rank][scale];
+     }
+ 
+-}; // namespace grade
+\ No newline at end of file
++}; // namespace grade

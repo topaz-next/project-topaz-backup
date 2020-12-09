@@ -1,0 +1,7 @@
+@@ -195,4 +195,4 @@ void CStatusEffect::addMod(Mod modType, int16 amount)
+ 		}
+ 	}
+ 	modList.push_back(CModifier(modType, amount));
+-}
+\ No newline at end of file
++}

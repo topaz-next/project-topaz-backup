@@ -1,0 +1,7 @@
+@@ -29,4 +29,4 @@ function onUseAbility(player,target,ability)
+     player:addStatusEffect(tpz.effect.TRANQUILITY,player:getMerit(tpz.merit.TRANQUILITY),0,60)
+ 
+     return tpz.effect.TRANQUILITY
+-end
+\ No newline at end of file
++end

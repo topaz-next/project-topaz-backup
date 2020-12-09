@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CBlueTrait : public CTrait
+     uint8 m_category;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

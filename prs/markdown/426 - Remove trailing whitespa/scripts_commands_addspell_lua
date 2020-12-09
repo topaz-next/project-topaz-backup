@@ -1,0 +1,7 @@
+@@ -38,4 +38,4 @@ function onTrigger(player, spellId, target)
+     local silent = false
+     targ:addSpell(spellId, silent, save)
+     player:PrintToPlayer(string.format("Added spell %i to %s.",spellId,targ:getName()))
+-end
+\ No newline at end of file
++end

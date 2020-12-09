@@ -1,0 +1,7 @@
+@@ -45,4 +45,4 @@ function onTrigger(player, itemId, target)
+     else
+         player:PrintToPlayer(string.format("%s does not have item %i.", targ:getName(), itemId))
+     end
+-end
+\ No newline at end of file
++end

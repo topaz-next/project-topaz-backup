@@ -1,0 +1,16 @@
+@@ -128,7 +128,7 @@ class CItemFurnishing : public CItem
+ 	void	setLevel(uint8 level);
+ 	void	setRotation(uint8 rotation);
+     void    setOrder(uint8 order);
+-	
++
+ private:
+ 
+ 	uint8	m_storage;
+@@ -137,4 +137,4 @@ class CItemFurnishing : public CItem
+ 	uint8	m_aura;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,7 @@
+@@ -102,4 +102,4 @@ uint8* CAHItemsListPacket::GetData()
+ uint16 CAHItemsListPacket::GetSize()
+ {
+     return 0x18 + 0x0A * m_count + 28;
+-}
+\ No newline at end of file
++}

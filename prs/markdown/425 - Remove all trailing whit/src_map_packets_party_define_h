@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CPartyDefinePacket : public CBasicPacket
+ 	CPartyDefinePacket(CParty* PParty);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

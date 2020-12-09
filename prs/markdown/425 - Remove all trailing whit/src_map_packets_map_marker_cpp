@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ CMapMarkerPacket::CMapMarkerPacket(CCharEntity* PChar)
+     ref<uint16>(0x16) = (PChar->teleport.homepoint.access[3] & 0xFFFF0000) >> 16;
+ 
+     // TODO: Cavernous Maws, Abyssea Maws, Survival Guides
+-}
+\ No newline at end of file
++}

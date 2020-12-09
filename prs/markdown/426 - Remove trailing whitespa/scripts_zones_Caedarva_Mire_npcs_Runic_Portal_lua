@@ -1,0 +1,7 @@
+@@ -50,4 +50,4 @@ function onEventFinish(player, csid, option)
+ 
+         tpz.teleport.toChamberOfPassage(player)
+     end
+-end
+\ No newline at end of file
++end

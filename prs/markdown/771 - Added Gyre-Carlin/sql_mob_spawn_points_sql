@@ -1,0 +1,9 @@
+@@ -2016,7 +2016,7 @@ INSERT INTO `mob_spawn_points` VALUES (16814327,'Gazer','Gazer',53,25.536,-0.336
+ INSERT INTO `mob_spawn_points` VALUES (16814328,'Diremite','Diremite',54,9.065,-0.352,168.035,227);
+ INSERT INTO `mob_spawn_points` VALUES (16814329,'Diremite','Diremite',54,34.530,-0.352,165.232,58);
+ INSERT INTO `mob_spawn_points` VALUES (16814330,'Diremite','Diremite',54,34.057,-0.352,165.306,28);
+-INSERT INTO `mob_spawn_points` VALUES (16814331,'Gyre-Carlin','Gyre-Carlin',56,0,0,0,0);
++INSERT INTO `mob_spawn_points` VALUES (16814331,'Gyre-Carlin','Gyre-Carlin',56,34.057,-0.352,165.306,0);
+ INSERT INTO `mob_spawn_points` VALUES (16814332,'Snowball','Snowball',55,35.097,-0.352,189.678,25);
+ INSERT INTO `mob_spawn_points` VALUES (16814333,'Maze_Lizard','Maze Lizard',18,106.6,-0.352,62.976,188);
+ INSERT INTO `mob_spawn_points` VALUES (16814334,'Maze_Lizard','Maze Lizard',18,114.906,-0.352,69.7,157);

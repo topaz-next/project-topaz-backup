@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CMenuConfigPacket : public CBasicPacket
+ 	CMenuConfigPacket(CCharEntity* PChar);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

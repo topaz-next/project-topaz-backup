@@ -1,0 +1,7 @@
+@@ -342,4 +342,4 @@ Lunar<CLuaStatusEffect>::Register_t CLuaStatusEffect::methods[] =
+     LUNAR_DECLARE_METHOD(CLuaStatusEffect,setFlag),
+     LUNAR_DECLARE_METHOD(CLuaStatusEffect,unsetFlag),
+     {nullptr,nullptr}
+-};
+\ No newline at end of file
++};

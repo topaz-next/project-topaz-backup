@@ -1,0 +1,8 @@
+@@ -39,6 +39,7 @@ class CNpcEntity : public CBaseEntity {
+     bool        IsHPHidden();
+     void        Untargetable(bool untargetable);
+     bool        IsUntargetable();
++    virtual bool isWideScannable() override;
+     virtual void PostTick() override;
+     virtual void Tick(time_point) override {}
+ 

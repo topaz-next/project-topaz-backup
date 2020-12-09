@@ -1,0 +1,7 @@
+@@ -23,4 +23,4 @@ function onAdditionalEffect(player,target,damage)
+         end
+         return tpz.subEffect.PARALYSIS, tpz.msg.basic.ADD_EFFECT_STATUS, tpz.effect.PARALYSIS
+     end
+-end
+\ No newline at end of file
++end

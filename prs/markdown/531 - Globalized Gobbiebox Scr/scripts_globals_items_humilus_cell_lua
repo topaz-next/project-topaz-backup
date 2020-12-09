@@ -1,0 +1,7 @@
+@@ -13,4 +13,4 @@ end
+ 
+ function onItemUse(target)
+     return salvageUtil.onCellItemUse(target, tpz.effect.DEBILITATION, 0x080, 18)
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -29,4 +29,4 @@ function onUseAbility(player,target,ability)
+     player:addStatusEffect(tpz.effect.PENURY,1,0,60)
+ 
+     return tpz.effect.PENURY
+-end
+\ No newline at end of file
++end

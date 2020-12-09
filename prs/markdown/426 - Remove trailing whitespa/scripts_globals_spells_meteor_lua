@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ function onSpellCast(caster,target,spell)
+     dmg = finalMagicAdjustments(caster,target,spell,dmg)
+     return dmg
+ 
+-end
+\ No newline at end of file
++end

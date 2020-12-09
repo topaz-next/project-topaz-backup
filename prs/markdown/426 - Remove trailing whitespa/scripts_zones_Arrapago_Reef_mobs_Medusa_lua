@@ -1,0 +1,7 @@
+@@ -63,4 +63,4 @@ end
+ 
+ function onMobDespawn(mob)
+     for i = 1,4 do DespawnMob(ID.mob.MEDUSA + i) end
+-end
+\ No newline at end of file
++end

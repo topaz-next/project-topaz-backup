@@ -1,0 +1,16 @@
+@@ -15,7 +15,7 @@ end
+ function onBattlefieldRegister(player,battlefield)
+     SetServerVariable("[SW_Apollyon]UniqueID",os.time());
+     HideArmouryCrates(SW_Apollyon,APOLLYON_NW_SW);
+-    SetServerVariable("[SW_Apollyon]MimicTrigger",0);    
++    SetServerVariable("[SW_Apollyon]MimicTrigger",0);
+     SetServerVariable("[SW_Apollyon]ElementalTrigger",0);
+ end;
+ 
+@@ -35,4 +35,4 @@ function onBattlefieldLeave(player,battlefield,leavecode)
+         SetServerVariable("[SW_Apollyon]UniqueID",0);
+         player:setPos(-668,0.1,-666);
+     end
+-end;
+\ No newline at end of file
++end;

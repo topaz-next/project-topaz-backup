@@ -1,0 +1,722 @@
+@@ -0,0 +1,721 @@
++[1;37m[Info][0m Topaz[09/Sep 11:27][1;37m[Info][0m Console Silent Setting: 0
++[09/Sep 11:27][1;32m[Status][0m The login-server-auth is [1;32mready[0m (Server is listening on the port 54231).
++
++[09/Sep 11:27][1;32m[Status][0m The login-server-lobbydata is [1;32mready[0m (Server is listening on the port 54230).
++
++[09/Sep 11:27][1;32m[Status][0m The login-server-lobbyview is [1;32mready[0m (Server is listening on the port 54001).
++
++[09/Sep 11:27][1;32m[Status][0m The login-server is [1;32mready[0m to work...
++[09/Sep 11:27][1;32m[Status][0m Console input thread is ready..
++[09/Sep 11:48][1;32m[Status][0m [1;37mlogin_parse[0m: account<[1;37mCypherWulf[0m> was created
++[09/Sep 11:48][1;37m[Info][0m [1;37mlogin_parse[0m:[1;37m192.168.0.26[0mshutdown socket...
++[09/Sep 11:48][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[09/Sep 11:49][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[09/Sep 11:49][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[09/Sep 11:49][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[09/Sep 11:49][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[09/Sep 11:51][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<22>[0m from ip:<192.168.0.26>
++[09/Sep 11:51][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<21>[0m from ip:<192.168.0.26>
++[09/Sep 11:51][1;36m[Debug][0m [1;37mlobby_createchar[0m: char<[1;37mCypherwulf[0m> successfully saved
++[09/Sep 11:51][1;32m[Status][0m [1;37mlobbyview_parse[0m: char <[1;37mCypherwulf[0m> was successfully created
++[09/Sep 11:51][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[09/Sep 11:51][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[09/Sep 11:51][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[09/Sep 11:51][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[09/Sep 11:51][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(192.168.0.5),zoneport:(54230) for char:(1)
++[09/Sep 11:51][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[09/Sep 12:03][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[09/Sep 12:03][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[1;37m[Info][0m Topaz[09/Sep 12:23][1;37m[Info][0m Console Silent Setting: 0
++[09/Sep 12:23][1;32m[Status][0m The login-server-auth is [1;32mready[0m (Server is listening on the port 54231).
++
++[09/Sep 12:23][1;32m[Status][0m The login-server-lobbydata is [1;32mready[0m (Server is listening on the port 54230).
++
++[09/Sep 12:23][1;32m[Status][0m The login-server-lobbyview is [1;32mready[0m (Server is listening on the port 54001).
++
++[09/Sep 12:23][1;32m[Status][0m The login-server is [1;32mready[0m to work...
++[09/Sep 12:23][1;32m[Status][0m Console input thread is ready..
++[09/Sep 14:08][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[09/Sep 14:08][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[09/Sep 14:08][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[09/Sep 14:08][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[09/Sep 14:08][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[09/Sep 14:10][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<22>[0m from ip:<192.168.0.26>
++[09/Sep 14:10][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<21>[0m from ip:<192.168.0.26>
++[09/Sep 14:10][1;36m[Debug][0m [1;37mlobby_createchar[0m: char<[1;37mSaturu[0m> successfully saved
++[09/Sep 14:10][1;32m[Status][0m [1;37mlobbyview_parse[0m: char <[1;37mSaturu[0m> was successfully created
++[09/Sep 14:10][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[09/Sep 14:10][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[09/Sep 14:11][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[09/Sep 14:11][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[09/Sep 14:11][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(192.168.0.5),zoneport:(54230) for char:(2)
++[09/Sep 14:11][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[09/Sep 15:10][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[09/Sep 15:10][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[09/Sep 17:31][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[09/Sep 17:31][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[09/Sep 17:31][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[09/Sep 17:31][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[09/Sep 17:31][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[09/Sep 17:32][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[09/Sep 17:32][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[09/Sep 17:32][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(192.168.0.5),zoneport:(54230) for char:(2)
++[09/Sep 17:32][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[09/Sep 17:47][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[09/Sep 17:47][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[09/Sep 17:47][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[09/Sep 17:47][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[09/Sep 17:58][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[09/Sep 17:58][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[09/Sep 17:58][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(192.168.0.5),zoneport:(54230) for char:(2)
++[09/Sep 17:58][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[09/Sep 18:00][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[09/Sep 18:00][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[09/Sep 18:00][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[09/Sep 18:00][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[09/Sep 18:00][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[09/Sep 18:00][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[09/Sep 18:00][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(192.168.0.5),zoneport:(54230) for char:(2)
++[09/Sep 18:00][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[09/Sep 18:26][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[09/Sep 18:26][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[09/Sep 18:30][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[09/Sep 18:30][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[09/Sep 18:30][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[09/Sep 18:30][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[09/Sep 18:37][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[09/Sep 18:37][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[09/Sep 18:37][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[09/Sep 18:37][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[09/Sep 18:37][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[09/Sep 18:37][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[09/Sep 18:37][1;37m[Info][0m lobbydata_parse: zoneid:(115),zoneip:(192.168.0.5),zoneport:(54230) for char:(2)
++[09/Sep 18:37][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[09/Sep 19:10][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[09/Sep 19:10][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[09/Sep 19:10][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[09/Sep 19:10][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[09/Sep 19:10][1;37m[Info][0m [1;37mlobbyview_parse[0m: [1;37mCypherWulf[0m shutdown the socket
++[09/Sep 19:10][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[09/Sep 19:10][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[1;37m[Info][0m Topaz[09/Sep 21:37][1;37m[Info][0m Console Silent Setting: 0
++[09/Sep 21:37][1;32m[Status][0m The login-server-auth is [1;32mready[0m (Server is listening on the port 54231).
++
++[09/Sep 21:37][1;32m[Status][0m The login-server-lobbydata is [1;32mready[0m (Server is listening on the port 54230).
++
++[09/Sep 21:37][1;32m[Status][0m The login-server-lobbyview is [1;32mready[0m (Server is listening on the port 54001).
++
++[09/Sep 21:37][1;32m[Status][0m The login-server is [1;32mready[0m to work...
++[09/Sep 21:37][1;32m[Status][0m Console input thread is ready..
++[09/Sep 21:38][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[09/Sep 21:38][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[09/Sep 21:38][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[09/Sep 21:38][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[09/Sep 21:38][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[09/Sep 21:39][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[09/Sep 21:39][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[09/Sep 21:39][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(192.168.0.5),zoneport:(54230) for char:(2)
++[09/Sep 21:39][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[09/Sep 21:44][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[09/Sep 21:44][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[09/Sep 21:46][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[09/Sep 21:46][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[09/Sep 21:46][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[09/Sep 21:47][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[09/Sep 21:47][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[09/Sep 21:47][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[09/Sep 21:47][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[09/Sep 21:47][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[09/Sep 21:47][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[09/Sep 21:47][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[09/Sep 21:47][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(192.168.0.5),zoneport:(54230) for char:(2)
++[09/Sep 21:47][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[09/Sep 23:09][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[09/Sep 23:09][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[1;37m[Info][0m Topaz[10/Sep 09:04][1;37m[Info][0m Console Silent Setting: 0
++[10/Sep 09:04][1;32m[Status][0m The login-server-auth is [1;32mready[0m (Server is listening on the port 54231).
++
++[10/Sep 09:04][1;32m[Status][0m The login-server-lobbydata is [1;32mready[0m (Server is listening on the port 54230).
++
++[10/Sep 09:04][1;32m[Status][0m The login-server-lobbyview is [1;32mready[0m (Server is listening on the port 54001).
++
++[10/Sep 09:04][1;32m[Status][0m The login-server is [1;32mready[0m to work...
++[10/Sep 09:04][1;32m[Status][0m Console input thread is ready..
++[10/Sep 09:21][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 09:21][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<172.58.139.76>
++[10/Sep 09:21][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<172.58.139.76>
++[10/Sep 09:21][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<172.58.139.76>
++[10/Sep 09:21][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<172.58.139.76>
++[10/Sep 09:21][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<172.58.139.76>
++[10/Sep 09:21][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<172.58.139.76>
++[10/Sep 09:21][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(71.34.147.205),zoneport:(54230) for char:(1)
++[10/Sep 09:21][1;32m[Status][0m lobbydata_parse: client 172.58.139.76 finished work with [1;32mlobbyview[0m
++[10/Sep 09:23][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 09:23][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[10/Sep 09:25][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 09:25][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 09:25][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 09:25][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 09:25][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 09:26][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[10/Sep 09:26][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[10/Sep 09:26][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(71.34.147.205),zoneport:(54230) for char:(2)
++[10/Sep 09:26][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[10/Sep 09:30][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 09:30][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 09:30][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 09:30][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 09:34][1;37m[Info][0m [1;37mlobbyview_parse[0m: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 09:34][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 09:34][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[10/Sep 09:35][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 09:35][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 09:35][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 09:35][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 09:35][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 09:35][1;37m[Info][0m [1;37mlobbyview_parse[0m: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 09:36][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 09:36][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[10/Sep 09:36][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 09:37][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 09:37][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 09:37][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 09:37][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 09:38][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[10/Sep 09:38][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[10/Sep 09:38][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(71.34.147.205),zoneport:(54230) for char:(2)
++[10/Sep 09:38][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[10/Sep 09:39][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 09:39][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[10/Sep 09:40][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 09:40][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 09:40][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[10/Sep 09:41][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 09:41][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 09:41][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 09:41][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 09:41][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 09:48][1;37m[Info][0m [1;37mlobbyview_parse[0m: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 09:48][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 09:48][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[10/Sep 10:00][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 10:00][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 10:00][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 10:00][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 10:00][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 10:00][1;37m[Info][0m [1;37mlobbyview_parse[0m: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 10:01][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 10:01][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[1;37m[Info][0m Topaz[10/Sep 10:01][1;37m[Info][0m Console Silent Setting: 0
++[10/Sep 10:01][1;32m[Status][0m The login-server-auth is [1;32mready[0m (Server is listening on the port 54231).
++
++[10/Sep 10:01][1;32m[Status][0m The login-server-lobbydata is [1;32mready[0m (Server is listening on the port 54230).
++
++[10/Sep 10:01][1;32m[Status][0m The login-server-lobbyview is [1;32mready[0m (Server is listening on the port 54001).
++
++[10/Sep 10:01][1;32m[Status][0m The login-server is [1;32mready[0m to work...
++[10/Sep 10:01][1;32m[Status][0m Console input thread is ready..
++[10/Sep 10:01][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 10:02][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 10:02][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 10:02][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 10:02][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 10:02][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[10/Sep 10:02][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[10/Sep 10:02][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(71.34.147.205),zoneport:(54230) for char:(1)
++[10/Sep 10:02][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[10/Sep 10:04][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 10:04][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[10/Sep 10:07][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 10:07][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 10:07][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 10:07][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 10:07][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 10:08][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[10/Sep 10:08][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[10/Sep 10:08][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(71.34.147.205),zoneport:(54230) for char:(1)
++[10/Sep 10:08][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[10/Sep 10:28][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 10:28][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[1;37m[Info][0m Topaz[10/Sep 11:09][1;37m[Info][0m Console Silent Setting: 0
++[10/Sep 11:09][1;32m[Status][0m The login-server-auth is [1;32mready[0m (Server is listening on the port 54231).
++
++[10/Sep 11:09][1;32m[Status][0m The login-server-lobbydata is [1;32mready[0m (Server is listening on the port 54230).
++
++[10/Sep 11:09][1;32m[Status][0m The login-server-lobbyview is [1;32mready[0m (Server is listening on the port 54001).
++
++[10/Sep 11:09][1;32m[Status][0m The login-server is [1;32mready[0m to work...
++[10/Sep 11:09][1;32m[Status][0m Console input thread is ready..
++[10/Sep 12:19][1;32m[Status][0m [1;37mlogin_parse[0m: account<[1;37mNeoHiryuu[0m> was created
++[10/Sep 12:19][1;37m[Info][0m [1;37mlogin_parse[0m:[1;37m71.195.222.172[0mshutdown socket...
++[10/Sep 12:19][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 12:19][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 12:19][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 12:19][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 12:20][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 12:20][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 12:20][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 12:20][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 12:20][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 12:21][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 12:21][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 12:21][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 12:21][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 12:21][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 12:21][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 12:22][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 12:22][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 12:22][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 12:23][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 12:23][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 12:23][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 12:24][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 12:24][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 12:24][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 12:24][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 12:24][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 12:24][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 12:27][1;37m[Info][0m login_parse:[1;37m<NeoHIryuu>[0m was connected
++[10/Sep 12:27][1;37m[Info][0m lobbydata_parse: [1;37mNeoHIryuu[0m shutdown the socket
++[10/Sep 12:27][1;37m[Info][0m lobbydata_parse: [1;37mNeoHIryuu[0m's login_session_data is deleted
++[10/Sep 12:30][1;37m[Info][0m login_parse:[1;37m<NeoHIryuu>[0m was connected
++[10/Sep 12:31][1;37m[Info][0m lobbydata_parse: [1;37mNeoHIryuu[0m shutdown the socket
++[10/Sep 12:31][1;37m[Info][0m lobbydata_parse: [1;37mNeoHIryuu[0m's login_session_data is deleted
++[10/Sep 12:34][1;37m[Info][0m login_parse:[1;37m<NeoHIryuu>[0m was connected
++[10/Sep 12:34][1;37m[Info][0m lobbydata_parse: [1;37mNeoHIryuu[0m shutdown the socket
++[10/Sep 12:34][1;37m[Info][0m lobbydata_parse: [1;37mNeoHIryuu[0m's login_session_data is deleted
++[10/Sep 12:34][1;37m[Info][0m login_parse:[1;37m<NeoHIryuu>[0m was connected
++[10/Sep 12:34][1;37m[Info][0m lobbydata_parse: [1;37mNeoHIryuu[0m shutdown the socket
++[10/Sep 12:34][1;37m[Info][0m lobbydata_parse: [1;37mNeoHIryuu[0m's login_session_data is deleted
++[10/Sep 12:36][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 12:36][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 12:36][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 12:37][1;33m[Warning][0m login_parse: unexisting user[1;37m<neohiryuu>[0m tried to connect
++[10/Sep 12:37][1;37m[Info][0m [1;37mlogin_parse[0m:[1;37m71.195.222.172[0mshutdown socket...
++[10/Sep 12:37][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 12:37][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 12:37][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 12:37][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 12:37][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 12:37][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[10/Sep 12:37][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[10/Sep 12:37][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(71.34.147.205),zoneport:(54230) for char:(1)
++[10/Sep 12:37][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[10/Sep 12:40][1;32m[Status][0m [1;37mlogin_parse[0m: account<[1;37mNeoHiryuu[0m> was created
++[10/Sep 12:40][1;37m[Info][0m [1;37mlogin_parse[0m:[1;37m71.195.222.172[0mshutdown socket...
++[10/Sep 12:40][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 12:40][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 12:40][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[1;37m[Info][0m Topaz[10/Sep 12:41][1;37m[Info][0m Console Silent Setting: 0
++[10/Sep 12:41][1;32m[Status][0m The login-server-auth is [1;32mready[0m (Server is listening on the port 54231).
++
++[10/Sep 12:41][1;32m[Status][0m The login-server-lobbydata is [1;32mready[0m (Server is listening on the port 54230).
++
++[10/Sep 12:41][1;32m[Status][0m The login-server-lobbyview is [1;32mready[0m (Server is listening on the port 54001).
++
++[10/Sep 12:41][1;32m[Status][0m The login-server is [1;32mready[0m to work...
++[10/Sep 12:41][1;32m[Status][0m Console input thread is ready..
++[10/Sep 12:41][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 12:42][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 12:42][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 12:43][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 12:43][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 12:43][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 12:47][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 12:47][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 12:47][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[10/Sep 12:49][1;33m[Warning][0m login_parse: undefined code:[0], ip sender:<172.58.139.153>
++[10/Sep 12:49][1;37m[Info][0m [1;37mlogin_parse[0m:[1;37m172.58.139.153[0mshutdown socket...
++[10/Sep 12:49][1;33m[Warning][0m login_parse: unexisting user[1;37m<NeoHiryuu>[0m tried to connect
++[10/Sep 12:49][1;37m[Info][0m [1;37mlogin_parse[0m:[1;37m172.58.139.153[0mshutdown socket...
++[10/Sep 12:50][1;32m[Status][0m [1;37mlogin_parse[0m: account<[1;37mbob[0m> was created
++[10/Sep 12:50][1;37m[Info][0m [1;37mlogin_parse[0m:[1;37m172.58.139.153[0mshutdown socket...
++[10/Sep 12:50][1;37m[Info][0m login_parse:[1;37m<bob>[0m was connected
++[10/Sep 12:50][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<172.58.139.153>
++[10/Sep 12:50][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<172.58.139.153>
++[10/Sep 12:50][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<172.58.139.153>
++[10/Sep 12:50][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<172.58.139.153>
++[10/Sep 12:50][1;37m[Info][0m [1;37mlobbyview_parse[0m: [1;37mbob[0m shutdown the socket
++[10/Sep 12:50][1;37m[Info][0m lobbydata_parse: [1;37mbob[0m shutdown the socket
++[10/Sep 12:50][1;37m[Info][0m lobbydata_parse: [1;37mbob[0m's login_session_data is deleted
++[1;37m[Info][0m Topaz[10/Sep 12:53][1;37m[Info][0m Console Silent Setting: 0
++[10/Sep 12:53][1;32m[Status][0m The login-server-auth is [1;32mready[0m (Server is listening on the port 54231).
++
++[10/Sep 12:53][1;32m[Status][0m The login-server-lobbydata is [1;32mready[0m (Server is listening on the port 54230).
++
++[10/Sep 12:53][1;32m[Status][0m The login-server-lobbyview is [1;32mready[0m (Server is listening on the port 54001).
++
++[10/Sep 12:53][1;32m[Status][0m The login-server is [1;32mready[0m to work...
++[10/Sep 12:53][1;32m[Status][0m Console input thread is ready..
++[10/Sep 12:57][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 12:58][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 12:58][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 12:58][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 12:58][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 12:58][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[10/Sep 12:58][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[10/Sep 12:58][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(71.34.147.205),zoneport:(54230) for char:(1)
++[10/Sep 12:58][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[10/Sep 13:05][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 13:05][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 13:05][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 13:05][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 13:05][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[10/Sep 13:05][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[10/Sep 13:05][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(71.34.147.205),zoneport:(54230) for char:(1)
++[10/Sep 13:05][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[10/Sep 13:17][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 13:17][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[1;37m[Info][0m Topaz[10/Sep 13:37][1;37m[Info][0m Console Silent Setting: 0
++[10/Sep 13:37][1;32m[Status][0m The login-server-auth is [1;32mready[0m (Server is listening on the port 54231).
++
++[10/Sep 13:37][1;32m[Status][0m The login-server-lobbydata is [1;32mready[0m (Server is listening on the port 54230).
++
++[10/Sep 13:37][1;32m[Status][0m The login-server-lobbyview is [1;32mready[0m (Server is listening on the port 54001).
++
++[10/Sep 13:37][1;32m[Status][0m The login-server is [1;32mready[0m to work...
++[10/Sep 13:37][1;32m[Status][0m Console input thread is ready..
++[10/Sep 13:39][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 13:39][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 13:39][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[10/Sep 13:39][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 13:39][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 13:39][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 13:39][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[10/Sep 13:39][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[10/Sep 13:39][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(71.34.147.205),zoneport:(54230) for char:(1)
++[10/Sep 13:39][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[10/Sep 13:40][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 13:40][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<71.195.222.172>
++[10/Sep 13:40][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[10/Sep 13:40][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<71.195.222.172>
++[10/Sep 13:40][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<71.195.222.172>
++[10/Sep 13:40][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<71.195.222.172>
++[10/Sep 13:41][1;37m[Info][0m [1;37mlobbyview_parse[0m: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 13:41][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 13:41][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 13:42][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 13:42][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<71.195.222.172>
++[10/Sep 13:42][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[10/Sep 13:42][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<71.195.222.172>
++[10/Sep 13:42][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<71.195.222.172>
++[10/Sep 13:42][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<71.195.222.172>
++[10/Sep 13:43][1;37m[Info][0m [1;37mlobbyview_parse[0m: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 13:43][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 13:43][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 13:45][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 13:45][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<71.195.222.172>
++[10/Sep 13:45][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[10/Sep 13:45][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<71.195.222.172>
++[10/Sep 13:45][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<71.195.222.172>
++[10/Sep 13:45][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<71.195.222.172>
++[10/Sep 13:46][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 13:46][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[10/Sep 13:46][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 13:47][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 13:47][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[10/Sep 13:47][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 13:47][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 13:47][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<22>[0m from ip:<71.195.222.172>
++[10/Sep 13:47][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 13:48][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<21>[0m from ip:<71.195.222.172>
++[10/Sep 13:48][1;36m[Debug][0m [1;37mlobby_createchar[0m: char<[1;37mJiko[0m> successfully saved
++[10/Sep 13:48][1;32m[Status][0m [1;37mlobbyview_parse[0m: char <[1;37mJiko[0m> was successfully created
++[10/Sep 13:48][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<71.195.222.172>
++[10/Sep 13:48][1;37m[Info][0m [1;37mlobbyview_parse[0m: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 13:48][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 13:48][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[10/Sep 13:48][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 13:48][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 13:48][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 13:48][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[10/Sep 13:48][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[10/Sep 13:48][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(71.34.147.205),zoneport:(54230) for char:(2)
++[10/Sep 13:48][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[10/Sep 13:50][1;37m[Info][0m [1;37mlobbyview_parse[0m: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 13:50][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m has logged in 2 times! Removing older logins.
++[10/Sep 13:50][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 13:50][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<71.195.222.172>
++[10/Sep 13:50][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[10/Sep 13:50][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<71.195.222.172>
++[10/Sep 13:50][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<71.195.222.172>
++[10/Sep 13:50][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<71.195.222.172>
++[10/Sep 13:50][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<71.195.222.172>
++[10/Sep 13:50][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<71.195.222.172>
++[10/Sep 13:50][1;37m[Info][0m lobbydata_parse: zoneid:(241),zoneip:(71.34.147.205),zoneport:(54230) for char:(3)
++[10/Sep 13:50][1;32m[Status][0m lobbydata_parse: client 71.195.222.172 finished work with [1;32mlobbyview[0m
++[10/Sep 13:52][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<71.195.222.172>
++[10/Sep 13:52][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[10/Sep 13:52][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<71.195.222.172>
++[10/Sep 13:52][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<71.195.222.172>
++[10/Sep 13:52][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<71.195.222.172>
++[10/Sep 13:52][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<71.195.222.172>
++[10/Sep 13:52][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<71.195.222.172>
++[10/Sep 13:52][1;37m[Info][0m lobbydata_parse: zoneid:(241),zoneip:(71.34.147.205),zoneport:(54230) for char:(3)
++[10/Sep 13:52][1;35m[SQL][0m DB error - Duplicate entry '3' for key 'PRIMARY'
++SQL: INSERT INTO accounts_sessions(accid,charid,session_key,server_addr,server_port,client_addr, version_mismatch) VALUES(1001,3,x'0000000000000000000000000000000056e05dad',3448971847,54230,1204018860,1)
++[10/Sep 13:52][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<71.195.222.172>
++[10/Sep 13:52][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<71.195.222.172>
++[10/Sep 13:52][1;37m[Info][0m lobbydata_parse: zoneid:(241),zoneip:(71.34.147.205),zoneport:(54230) for char:(3)
++[10/Sep 13:52][1;35m[SQL][0m DB error - Duplicate entry '3' for key 'PRIMARY'
++SQL: INSERT INTO accounts_sessions(accid,charid,session_key,server_addr,server_port,client_addr, version_mismatch) VALUES(1001,3,x'0000000000000000000000000000000056e05dad',3448971847,54230,1204018860,1)
++[10/Sep 13:53][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<71.195.222.172>
++[10/Sep 13:53][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<71.195.222.172>
++[10/Sep 13:53][1;37m[Info][0m lobbydata_parse: zoneid:(241),zoneip:(71.34.147.205),zoneport:(54230) for char:(3)
++[10/Sep 13:53][1;32m[Status][0m lobbydata_parse: client 71.195.222.172 finished work with [1;32mlobbyview[0m
++[10/Sep 13:55][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<71.195.222.172>
++[10/Sep 13:55][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[10/Sep 13:55][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<71.195.222.172>
++[10/Sep 13:55][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<71.195.222.172>
++[10/Sep 13:55][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<71.195.222.172>
++[10/Sep 13:55][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<71.195.222.172>
++[10/Sep 13:55][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<71.195.222.172>
++[10/Sep 13:55][1;37m[Info][0m lobbydata_parse: zoneid:(241),zoneip:(71.34.147.205),zoneport:(54230) for char:(3)
++[10/Sep 13:55][1;32m[Status][0m lobbydata_parse: client 71.195.222.172 finished work with [1;32mlobbyview[0m
++[10/Sep 13:59][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 13:59][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[10/Sep 14:01][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[10/Sep 14:01][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m has logged in 2 times! Removing older logins.
++[10/Sep 14:01][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 14:01][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[10/Sep 14:01][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[10/Sep 14:01][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[10/Sep 14:01][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[10/Sep 14:01][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[10/Sep 14:01][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[10/Sep 14:01][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[10/Sep 14:01][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(71.34.147.205),zoneport:(54230) for char:(2)
++[10/Sep 14:01][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[10/Sep 14:02][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<71.195.222.172>
++[10/Sep 14:02][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[10/Sep 14:02][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<71.195.222.172>
++[10/Sep 14:02][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<71.195.222.172>
++[10/Sep 14:02][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<71.195.222.172>
++[10/Sep 14:02][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<71.195.222.172>
++[10/Sep 14:02][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<71.195.222.172>
++[10/Sep 14:02][1;37m[Info][0m lobbydata_parse: zoneid:(241),zoneip:(71.34.147.205),zoneport:(54230) for char:(3)
++[10/Sep 14:02][1;32m[Status][0m lobbydata_parse: client 71.195.222.172 finished work with [1;32mlobbyview[0m
++[10/Sep 14:05][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:05][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:05][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:05][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:07][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:07][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:14][1;36m[Debug][0m Message: Received message 1 from 71.34.147.205:54230
++[10/Sep 14:14][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:15][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:15][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:15][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:15][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:17][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:17][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:19][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:19][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:20][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:20][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:37][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:37][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:38][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:38][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:41][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:41][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:41][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 14:41][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 14:43][1;37m[Info][0m login_parse:[1;37m<NeoHiryuu>[0m was connected
++[10/Sep 14:43][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<71.195.222.172>
++[10/Sep 14:43][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[10/Sep 14:43][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<71.195.222.172>
++[10/Sep 14:43][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<71.195.222.172>
++[10/Sep 14:43][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<71.195.222.172>
++[10/Sep 14:43][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<71.195.222.172>
++[10/Sep 14:43][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<71.195.222.172>
++[10/Sep 14:43][1;37m[Info][0m lobbydata_parse: zoneid:(241),zoneip:(71.34.147.205),zoneport:(54230) for char:(3)
++[10/Sep 14:43][1;32m[Status][0m lobbydata_parse: client 71.195.222.172 finished work with [1;32mlobbyview[0m
++[10/Sep 14:44][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:44][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:45][1;36m[Debug][0m Message: Received message 2 from 71.34.147.205:54230
++[10/Sep 14:45][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:46][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:46][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:53][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:53][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:54][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:54][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:56][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:56][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:57][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:57][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:57][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:57][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 14:57][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 14:57][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 15:03][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 15:03][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 15:05][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 15:05][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 15:06][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 15:06][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 15:06][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 15:06][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 15:12][1;36m[Debug][0m Message: Received message 8 from 71.34.147.205:54230
++[10/Sep 15:12][1;36m[Debug][0m Message:  -> rerouting to 71.34.147.205:54230
++[10/Sep 15:12][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<71.195.222.172>
++[10/Sep 15:12][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[10/Sep 15:12][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<71.195.222.172>
++[10/Sep 15:12][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<71.195.222.172>
++[10/Sep 15:12][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<71.195.222.172>
++[10/Sep 15:12][1;36m[Debug][0m Message: Received message 9 from 71.34.147.205:54230
++[10/Sep 15:12][1;37m[Info][0m [1;37mlobbyview_parse[0m: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 15:12][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[10/Sep 15:12][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[10/Sep 15:12][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m shutdown the socket
++[10/Sep 15:12][1;37m[Info][0m lobbydata_parse: [1;37mNeoHiryuu[0m's login_session_data is deleted
++[10/Sep 21:37][1;37m[Info][0m Pinging SQL server to keep connection alive...
++[10/Sep 21:37][1;37m[Info][0m Pinging SQL server to keep connection alive...
++[11/Sep 05:36][1;37m[Info][0m Pinging SQL server to keep connection alive...
++[11/Sep 05:36][1;37m[Info][0m Pinging SQL server to keep connection alive...
++[11/Sep 10:10][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[11/Sep 10:11][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[11/Sep 10:11][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[11/Sep 10:11][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[11/Sep 10:11][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[11/Sep 10:11][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[11/Sep 10:12][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<22>[0m from ip:<192.168.0.26>
++[11/Sep 10:12][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<21>[0m from ip:<192.168.0.26>
++[11/Sep 10:12][1;36m[Debug][0m [1;37mlobby_createchar[0m: char<[1;37mImielle[0m> successfully saved
++[11/Sep 10:12][1;32m[Status][0m [1;37mlobbyview_parse[0m: char <[1;37mImielle[0m> was successfully created
++[11/Sep 10:12][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[11/Sep 10:12][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[11/Sep 10:12][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[11/Sep 10:12][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[11/Sep 10:12][1;37m[Info][0m lobbydata_parse: zoneid:(232),zoneip:(71.34.147.205),zoneport:(54230) for char:(4)
++[11/Sep 10:12][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[11/Sep 10:37][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[11/Sep 10:37][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[11/Sep 13:36][1;37m[Info][0m Pinging SQL server to keep connection alive...
++[11/Sep 13:36][1;37m[Info][0m Pinging SQL server to keep connection alive...
++[11/Sep 17:23][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[11/Sep 17:23][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[11/Sep 17:23][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[11/Sep 17:23][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[11/Sep 17:23][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[11/Sep 17:23][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[11/Sep 17:24][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[11/Sep 17:24][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[11/Sep 17:24][1;37m[Info][0m lobbydata_parse: zoneid:(240),zoneip:(71.34.147.205),zoneport:(54230) for char:(1)
++[11/Sep 17:24][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[11/Sep 17:27][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[11/Sep 17:27][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[11/Sep 17:54][1;33m[Warning][0m login_parse: unexisting user[1;37m<bandedessinee>[0m tried to connect
++[11/Sep 17:54][1;37m[Info][0m [1;37mlogin_parse[0m:[1;37m77.8.143.160[0mshutdown socket...
++[11/Sep 17:55][1;32m[Status][0m [1;37mlogin_parse[0m: account<[1;37mafro[0m> was created
++[11/Sep 17:55][1;37m[Info][0m [1;37mlogin_parse[0m:[1;37m77.8.143.160[0mshutdown socket...
++[11/Sep 17:55][1;37m[Info][0m login_parse:[1;37m<afro>[0m was connected
++[11/Sep 17:55][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<77.8.143.160>
++[11/Sep 17:55][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[11/Sep 17:55][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<77.8.143.160>
++[11/Sep 17:55][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<77.8.143.160>
++[11/Sep 17:55][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<77.8.143.160>
++[11/Sep 17:56][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<22>[0m from ip:<77.8.143.160>
++[11/Sep 17:56][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<21>[0m from ip:<77.8.143.160>
++[11/Sep 17:56][1;36m[Debug][0m [1;37mlobby_createchar[0m: char<[1;37mAfro[0m> successfully saved
++[11/Sep 17:56][1;32m[Status][0m [1;37mlobbyview_parse[0m: char <[1;37mAfro[0m> was successfully created
++[11/Sep 17:56][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<77.8.143.160>
++[11/Sep 17:56][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<77.8.143.160>
++[11/Sep 17:56][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<77.8.143.160>
++[11/Sep 17:56][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<77.8.143.160>
++[11/Sep 17:56][1;37m[Info][0m lobbydata_parse: zoneid:(241),zoneip:(71.34.147.205),zoneport:(54230) for char:(5)
++[11/Sep 17:56][1;32m[Status][0m lobbydata_parse: client 77.8.143.160 finished work with [1;32mlobbyview[0m
++[11/Sep 18:13][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<77.8.143.160>
++[11/Sep 18:13][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[11/Sep 18:13][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<77.8.143.160>
++[11/Sep 18:13][1;37m[Info][0m lobbydata_parse: [1;37mafro[0m shutdown the socket
++[11/Sep 18:13][1;37m[Info][0m lobbydata_parse: [1;37mafro[0m's login_session_data is deleted
++[11/Sep 21:22][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[11/Sep 21:22][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[11/Sep 21:22][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[11/Sep 21:22][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[11/Sep 21:22][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[11/Sep 21:22][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[11/Sep 21:22][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[11/Sep 21:22][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[11/Sep 21:22][1;37m[Info][0m lobbydata_parse: zoneid:(131),zoneip:(71.34.147.205),zoneport:(54230) for char:(1)
++[11/Sep 21:22][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[11/Sep 21:35][1;37m[Info][0m Pinging SQL server to keep connection alive...
++[11/Sep 21:35][1;37m[Info][0m Pinging SQL server to keep connection alive...
++[11/Sep 22:08][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[11/Sep 22:08][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[11/Sep 22:08][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[11/Sep 22:08][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[11/Sep 22:08][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[11/Sep 22:08][1;37m[Info][0m [1;37mlobbyview_parse[0m: [1;37mCypherWulf[0m shutdown the socket
++[11/Sep 22:08][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m shutdown the socket
++[11/Sep 22:08][1;37m[Info][0m lobbydata_parse: [1;37mCypherWulf[0m's login_session_data is deleted
++[12/Sep 03:02][1;37m[Info][0m login_parse:[1;37m<afro>[0m was connected
++[12/Sep 03:09][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<77.8.143.160>
++[12/Sep 03:09][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[12/Sep 03:09][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<77.8.143.160>
++[12/Sep 03:09][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<77.8.143.160>
++[12/Sep 03:09][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<77.8.143.160>
++[12/Sep 03:10][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<77.8.143.160>
++[12/Sep 03:10][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<77.8.143.160>
++[12/Sep 03:10][1;37m[Info][0m lobbydata_parse: zoneid:(241),zoneip:(71.34.147.205),zoneport:(54230) for char:(5)
++[12/Sep 03:10][1;32m[Status][0m lobbydata_parse: client 77.8.143.160 finished work with [1;32mlobbyview[0m
++[12/Sep 04:42][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<77.8.143.160>
++[12/Sep 04:42][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[12/Sep 04:42][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<77.8.143.160>
++[12/Sep 04:42][1;37m[Info][0m lobbydata_parse: [1;37mafro[0m shutdown the socket
++[12/Sep 04:42][1;37m[Info][0m lobbydata_parse: [1;37mafro[0m's login_session_data is deleted
++[12/Sep 05:35][1;37m[Info][0m Pinging SQL server to keep connection alive...
++[12/Sep 05:35][1;37m[Info][0m Pinging SQL server to keep connection alive...
++[12/Sep 13:34][1;37m[Info][0m Pinging SQL server to keep connection alive...
++[12/Sep 13:34][1;37m[Info][0m Pinging SQL server to keep connection alive...
++[12/Sep 20:14][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[12/Sep 20:14][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[12/Sep 20:14][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[12/Sep 20:14][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[12/Sep 20:14][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[12/Sep 20:14][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[12/Sep 20:15][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<14>[0m from ip:<192.168.0.26>
++[12/Sep 20:15][1;37m[Info][0m [1;37mlobbyview_parse[0m:attempt to delete char:<[1;37m1[0m> from ip:<192.168.0.26>
++[12/Sep 20:15][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[12/Sep 20:15][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[12/Sep 20:15][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<22>[0m from ip:<192.168.0.26>
++[12/Sep 20:16][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<21>[0m from ip:<192.168.0.26>
++[12/Sep 20:16][1;36m[Debug][0m [1;37mlobby_createchar[0m: char<[1;37mCypherwulf[0m> successfully saved
++[12/Sep 20:16][1;32m[Status][0m [1;37mlobbyview_parse[0m: char <[1;37mCypherwulf[0m> was successfully created
++[12/Sep 20:16][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[12/Sep 20:16][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[12/Sep 20:16][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[12/Sep 20:16][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[12/Sep 20:16][1;37m[Info][0m lobbydata_parse: zoneid:(232),zoneip:(71.34.147.205),zoneport:(54230) for char:(4)
++[12/Sep 20:16][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[12/Sep 20:17][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[12/Sep 20:17][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[12/Sep 20:17][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[12/Sep 20:17][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[12/Sep 20:17][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[1;37m[Info][0m Topaz[12/Sep 20:51][1;37m[Info][0m Console Silent Setting: 0
++[12/Sep 20:51][1;32m[Status][0m The login-server-auth is [1;32mready[0m (Server is listening on the port 54231).
++
++[12/Sep 20:51][1;32m[Status][0m The login-server-lobbydata is [1;32mready[0m (Server is listening on the port 54230).
++
++[12/Sep 20:51][1;32m[Status][0m The login-server-lobbyview is [1;32mready[0m (Server is listening on the port 54001).
++
++[12/Sep 20:51][1;32m[Status][0m The login-server is [1;32mready[0m to work...
++[12/Sep 20:51][1;32m[Status][0m Console input thread is ready..
++[12/Sep 20:58][1;37m[Info][0m login_parse:[1;37m<CypherWulf>[0m was connected
++[12/Sep 20:58][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[12/Sep 20:58][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[12/Sep 20:58][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[12/Sep 20:58][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[12/Sep 20:58][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>
++[12/Sep 20:59][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<7>[0m from ip:<192.168.0.26>
++[12/Sep 20:59][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a2>[0m from ip:<192.168.0.26>
++[12/Sep 20:59][1;37m[Info][0m lobbydata_parse: zoneid:(235),zoneip:(71.34.147.205),zoneport:(54230) for char:(6)
++[12/Sep 20:59][1;32m[Status][0m lobbydata_parse: client 192.168.0.26 finished work with [1;32mlobbyview[0m
++[12/Sep 21:00][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<26>[0m from ip:<192.168.0.26>
++[12/Sep 21:00][1;31m[Error][0m lobbyview_parse: Incorrect client version: got 302009xx_x, expected 302007xx_x
++[12/Sep 21:00][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<1f>[0m from ip:<192.168.0.26>
++[12/Sep 21:00][1;36m[Debug][0m lobbydata_parse:Incoming Packet:[1;37m<a1>[0m from ip:<192.168.0.26>
++[12/Sep 21:00][1;36m[Debug][0m lobbyview_parse:Incoming Packet:[1;37m<24>[0m from ip:<192.168.0.26>

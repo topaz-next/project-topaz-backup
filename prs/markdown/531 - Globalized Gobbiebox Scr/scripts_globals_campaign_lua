@@ -1,0 +1,7 @@
+@@ -178,4 +178,4 @@ function getSigilTimeStamp(player)
+ end
+ 
+ -- TODO:
+--- Past nation teleport
+\ No newline at end of file
++-- Past nation teleport

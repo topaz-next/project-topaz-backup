@@ -1,0 +1,7 @@
+@@ -28,4 +28,4 @@ function onMobWeaponSkill(target, mob, skill)
+     target:takeDamage(realDmg, mob, tpz.attackType.MAGICAL, tpz.damageType.ELEMENTAL)
+ 
+     return realDmg
+-end
+\ No newline at end of file
++end

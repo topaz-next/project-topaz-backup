@@ -1,0 +1,7 @@
+@@ -10,4 +10,4 @@ require("scripts/globals/status")
+ 
+ function onItemCheck(target)
+ 
+-end
+\ No newline at end of file
++end

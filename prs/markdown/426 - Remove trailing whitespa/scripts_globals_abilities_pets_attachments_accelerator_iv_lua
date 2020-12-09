@@ -1,0 +1,7 @@
+@@ -30,4 +30,4 @@ function onManeuverLose(pet, maneuvers)
+     elseif maneuvers == 3 then
+         pet:delMod(tpz.mod.EVA, 20)
+     end
+-end
+\ No newline at end of file
++end

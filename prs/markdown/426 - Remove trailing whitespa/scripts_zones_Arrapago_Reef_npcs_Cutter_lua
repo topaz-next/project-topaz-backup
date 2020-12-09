@@ -1,0 +1,16 @@
+@@ -44,7 +44,7 @@ function onEventUpdate(player,csid,option,target)
+ 
+         player:createInstance(53,60);
+         player:setLocalVar("theblackcoffinfight",0)
+-        
++
+         elseif player:getLocalVar("againstalloddsfight") == 1 then
+         if (party ~= nil) then
+             for i,v in ipairs(party) do
+@@ -86,4 +86,4 @@ function onInstanceCreated(player,target,instance)
+         player:messageText(target,ID.text.CANNOT_ENTER, false);
+         player:instanceEntry(target,3);
+     end
+-end
+\ No newline at end of file
++end

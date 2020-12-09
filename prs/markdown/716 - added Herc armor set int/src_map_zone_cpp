@@ -1,0 +1,75 @@
+@@ -364,7 +364,7 @@ void CZone::LoadZoneSettings()
+     {
+         m_zoneName.insert(0, (const char*)Sql_GetData(SqlHandle, 0));
+ 
+-        m_zoneIP = inet_addr((const char*)Sql_GetData(SqlHandle, 1));
++        inet_pton(AF_INET, (const char*)Sql_GetData(SqlHandle, 1), &m_zoneIP);
+         m_zonePort = (uint16)Sql_GetUIntData(SqlHandle, 2);
+         m_zoneMusic.m_songDay = (uint8)Sql_GetUIntData(SqlHandle, 3);   // background music (day)
+         m_zoneMusic.m_songNight = (uint8)Sql_GetUIntData(SqlHandle, 4);   // background music (night)
+@@ -446,6 +446,22 @@ void CZone::InsertPET(CBaseEntity* PPet)
+     m_zoneEntities->InsertPET(PPet);
+ }
+ 
++/************************************************************************
++*                                                                       *
++*  Add a trust to the zone                                              *
++*                                                                       *
++************************************************************************/
++
++void CZone::InsertTRUST(CBaseEntity* PTrust)
++{
++    m_zoneEntities->InsertTRUST(PTrust);
++}
++
++void CZone::DeleteTRUST(CBaseEntity* PTrust)
++{
++    m_zoneEntities->DeleteTRUST(PTrust);
++}
++
+ /************************************************************************
+ *                                                                       *
+ *  Добавляем в зону активную область                                    *
+@@ -659,6 +675,11 @@ void CZone::SpawnPETs(CCharEntity* PChar)
+     m_zoneEntities->SpawnPETs(PChar);
+ }
+ 
++void CZone::SpawnTRUSTs(CCharEntity* PChar)
++{
++    m_zoneEntities->SpawnTRUSTs(PChar);
++}
++
+ /************************************************************************
+ *                                                                       *
+ *  Проверка видимости NPCs персонажем.                                  *
+@@ -822,6 +843,22 @@ void CZone::ForEachMobInstance(CBaseEntity* PEntity, std::function<void(CMobEnti
+     }
+ }
+ 
++void CZone::ForEachTrust(std::function<void(CTrustEntity*)> func)
++{
++    for (auto PTrust : m_zoneEntities->m_trustList)
++    {
++        func((CTrustEntity*)PTrust.second);
++    }
++}
++
++void CZone::ForEachTrustInstance(CBaseEntity* PEntity, std::function<void(CTrustEntity*)> func)
++{
++    for (auto PTrust : m_zoneEntities->m_trustList)
++    {
++        func((CTrustEntity*)PTrust.second);
++    }
++}
++
+ void CZone::ForEachNpc(std::function<void(CNpcEntity*)> func)
+ {
+     for (auto PNpc : m_zoneEntities->m_npcList)
+@@ -969,6 +1006,7 @@ void CZone::CharZoneOut(CCharEntity* PChar)
+     PChar->SpawnNPCList.clear();
+     PChar->SpawnMOBList.clear();
+     PChar->SpawnPETList.clear();
++    PChar->SpawnTRUSTList.clear();
+ 
+     if (PChar->PParty && PChar->loc.destination != 0 && PChar->m_moghouseID == 0)
+     {

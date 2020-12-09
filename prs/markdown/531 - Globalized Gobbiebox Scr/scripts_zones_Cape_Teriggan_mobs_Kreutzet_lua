@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ function onMobDespawn(mob)
+     mob:setRespawnTime(math.random(32400,43200))
+     mob:setLocalVar("cooldown",os.time() + mob:getRespawnTime()/1000)
+     DisallowRespawn(mob:getID(), true) -- prevents accidental 'pop' during no wind weather and immediate despawn
+-end
+\ No newline at end of file
++end

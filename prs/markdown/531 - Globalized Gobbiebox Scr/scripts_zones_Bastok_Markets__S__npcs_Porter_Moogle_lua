@@ -1,0 +1,7 @@
+@@ -33,4 +33,4 @@ end;
+ 
+ function onEventFinish(player,csid,option)
+     porterEventFinish(player, csid, option, e.TALK_EVENT_ID);
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,10 @@
+@@ -119,7 +119,8 @@ class CItem
+ 
+     const int8* getReceiver();
+     void        setReceiver(int8* receiver);
+-
++    void        setAppraisalID(uint8* appID);
++    
+     virtual const int8* getSignature();
+     virtual void setSignature(int8* signature);
+ 

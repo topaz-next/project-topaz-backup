@@ -1,0 +1,7 @@
+@@ -37,4 +37,4 @@ function onEventFinish(player,csid,option)
+         player:addStatusEffect(tpz.effect.GOLDSMITHING_IMAGERY, 1, 0, 120)
+         player:messageSpecial(ID.text.GOLDSMITHING_SUPPORT, 0, 3, 1)
+     end
+-end
+\ No newline at end of file
++end

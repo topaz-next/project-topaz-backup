@@ -1,0 +1,7 @@
+@@ -30,4 +30,4 @@ function onAdditionalEffect(player, target, damage)
+     end
+ 
+     return 0, 0, 0
+-end
+\ No newline at end of file
++end

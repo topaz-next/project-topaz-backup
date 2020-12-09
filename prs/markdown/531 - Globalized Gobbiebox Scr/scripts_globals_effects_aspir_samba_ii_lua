@@ -1,0 +1,7 @@
+@@ -9,4 +9,4 @@ function onEffectTick(target,effect)
+ end
+ 
+ function onEffectLose(target,effect)
+-end
+\ No newline at end of file
++end

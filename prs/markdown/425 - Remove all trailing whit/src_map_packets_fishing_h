@@ -1,0 +1,7 @@
+@@ -38,4 +38,4 @@ class CFishingPacket : public CBasicPacket
+     CFishingPacket(uint16 stamina, uint16 regen, uint16 response, uint16 hitDmg, uint16 arrowDelay, uint16 missRegen, uint16 gameTime, uint8 sense, uint32 special);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

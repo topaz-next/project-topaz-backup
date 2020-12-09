@@ -1,0 +1,7 @@
+@@ -37,4 +37,4 @@ function onTrigger(player, amount, target)
+     -- give XP to target
+     targ:addExp(amount)
+     player:PrintToPlayer( string.format( "Gave %i exp to %s. They are now level %i.", amount, targ:getName(), targ:getMainLvl() ))
+-end
+\ No newline at end of file
++end

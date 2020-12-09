@@ -1,0 +1,7 @@
+@@ -14,4 +14,4 @@ end
+ 
+ function onUseAbility(player,target,ability)
+     player:petRetreat()
+-end
+\ No newline at end of file
++end

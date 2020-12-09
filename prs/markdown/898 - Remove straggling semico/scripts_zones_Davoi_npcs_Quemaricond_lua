@@ -1,0 +1,6 @@
+@@ -58,4 +58,4 @@ function onEventFinish(player, csid, option, npc)
+     end
+ 
+     npc:wait(0)
+-end;
++end

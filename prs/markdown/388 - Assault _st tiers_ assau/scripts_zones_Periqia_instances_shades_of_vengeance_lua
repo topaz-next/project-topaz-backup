@@ -1,0 +1,14 @@
+@@ -15,10 +15,10 @@ function afterInstanceRegister(player)
+ end;
+ 
+ function onInstanceCreated(instance)
+-    for i,v in pairs(ID.mob[79]) do
+-        SpawnMob(v, instance);
++    for _, v in pairs(ID.mob[tpz.mission.id.toau.SHADES_OF_VENGEANCE].MOBS_START) do
++        SpawnMob(v, instance)
+     end
+-end;
++end
+ 
+ function onInstanceTimeUpdate(instance, elapsed)
+     updateInstanceTime(instance, elapsed, ID.text)

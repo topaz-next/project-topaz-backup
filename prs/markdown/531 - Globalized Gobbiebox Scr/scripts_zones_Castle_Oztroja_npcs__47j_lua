@@ -1,0 +1,7 @@
+@@ -30,4 +30,4 @@ function onEventFinish(player,csid,option)
+         brassDoor:openDoor(6)
+     end
+ 
+-end
+\ No newline at end of file
++end

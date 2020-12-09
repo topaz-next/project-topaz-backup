@@ -1,0 +1,7 @@
+@@ -164,4 +164,4 @@ tpz.manaclipper.onTransportEvent = function(player, transport)
+     elseif aboard == 2 then
+         player:startEvent(16)
+     end
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,94 @@
+@@ -58612,13 +58612,13 @@ INSERT INTO `mob_spawn_points` VALUES (17596732,'Roly-Poly','Roly-Poly',44,-140,
+ -- Cloister of Gales (Zone 201)
+ -- ------------------------------------------------------------
+ 
+-INSERT INTO `mob_spawn_points` VALUES (17600513,'Garuda_Prime','Garuda Prime',1,503,41,-367,105);
++INSERT INTO `mob_spawn_points` VALUES (17600513,'Garuda_Prime_Trial','Garuda Prime',1,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17600514,'Garuda_Prime','Garuda Prime',1,23.115,-19.001,32.999,105);
+ INSERT INTO `mob_spawn_points` VALUES (17600515,'Garuda_Prime','Garuda Prime',1,-376.94,-78.992,512.872,105);
+ INSERT INTO `mob_spawn_points` VALUES (17600516,'Ogmios','Ogmios',2,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17600517,'Ogmios','Ogmios',2,23.115,-19.001,32.999,105);
+ INSERT INTO `mob_spawn_points` VALUES (17600518,'Ogmios','Ogmios',2,-376.94,-78.992,512.872,105);
+-INSERT INTO `mob_spawn_points` VALUES (17600519,'Garuda_Prime','Garuda Prime',3,503,41,-367,105);
++INSERT INTO `mob_spawn_points` VALUES (17600519,'Garuda_Prime_Trial','Garuda Prime',3,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17600520,'Garuda_Prime','Garuda Prime',3,23.115,-19.001,32.999,105);
+ INSERT INTO `mob_spawn_points` VALUES (17600521,'Garuda_Prime','Garuda Prime',3,-376.94,-78.992,512.872,105);
+ INSERT INTO `mob_spawn_points` VALUES (17600522,'Garuda_Prime','Garuda Prime',3,502,41.362,-370,96);
+@@ -58644,7 +58644,7 @@ INSERT INTO `mob_spawn_points` VALUES (17600539,'Garuda_Prime','Garuda Prime',3,
+ -- Cloister of Storms (Zone 202)
+ -- ------------------------------------------------------------
+ 
+-INSERT INTO `mob_spawn_points` VALUES (17604609,'Ramuh_Prime','Ramuh Prime',1,503,41,-367,105);
++INSERT INTO `mob_spawn_points` VALUES (17604609,'Ramuh_Prime_Trial','Ramuh Prime',1,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17604610,'Ramuh_Prime','Ramuh Prime',1,23.048,-19.001,33.005,105);
+ INSERT INTO `mob_spawn_points` VALUES (17604611,'Ramuh_Prime','Ramuh Prime',1,-377.066,-79.002,513.045,105);
+ INSERT INTO `mob_spawn_points` VALUES (17604612,'Lightning_Gremlin','Lightning Gremlin',2,503,41,-367,105);
+@@ -58653,7 +58653,7 @@ INSERT INTO `mob_spawn_points` VALUES (17604614,'Lightning_Gremlin','Lightning G
+ INSERT INTO `mob_spawn_points` VALUES (17604615,'Thunder_Gremlin','Thunder Gremlin',3,22.048,-19.001,34.005,100);
+ INSERT INTO `mob_spawn_points` VALUES (17604616,'Lightning_Gremlin','Lightning Gremlin',2,-377.066,-79.002,513.045,105);
+ INSERT INTO `mob_spawn_points` VALUES (17604617,'Thunder_Gremlin','Thunder Gremlin',3,-378.066,-79.002,514.045,100);
+-INSERT INTO `mob_spawn_points` VALUES (17604618,'Ramuh_Prime','Ramuh Prime',4,503,41,-367,105);
++INSERT INTO `mob_spawn_points` VALUES (17604618,'Ramuh_Prime_Trial','Ramuh Prime',4,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17604619,'Ramuh_Prime','Ramuh Prime',4,23.048,-19.001,33.005,105);
+ INSERT INTO `mob_spawn_points` VALUES (17604620,'Ramuh_Prime','Ramuh Prime',4,-377.066,-79.002,513.045,105);
+ INSERT INTO `mob_spawn_points` VALUES (17604621,'Ramuh_Prime','Ramuh Prime',4,0,0,0,0);
+@@ -58679,7 +58679,7 @@ INSERT INTO `mob_spawn_points` VALUES (17604638,'Ramuh_Prime','Ramuh Prime',4,-3
+ -- Cloister of Frost (Zone 203)
+ -- ------------------------------------------------------------
+ 
+-INSERT INTO `mob_spawn_points` VALUES (17608705,'Shiva_Prime','Shiva Prime',1,503,41,-367,105);
++INSERT INTO `mob_spawn_points` VALUES (17608705,'Shiva_Prime_Trial','Shiva Prime',1,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17608706,'Shiva_Prime','Shiva Prime',1,23.07,-18.991,32.86,105);
+ INSERT INTO `mob_spawn_points` VALUES (17608707,'Shiva_Prime','Shiva Prime',1,-377.091,-78.999,512.996,105);
+ INSERT INTO `mob_spawn_points` VALUES (17608708,'Dryad','Dryad',2,503,41,-367,105);
+@@ -58700,7 +58700,7 @@ INSERT INTO `mob_spawn_points` VALUES (17608722,'Dryad','Dryad',2,-377.091,-78.9
+ INSERT INTO `mob_spawn_points` VALUES (17608723,'Dryad','Dryad',2,-376.091,-78.999,513.996,105);
+ INSERT INTO `mob_spawn_points` VALUES (17608724,'Dryad','Dryad',2,-378.091,-78.999,511.996,105);
+ INSERT INTO `mob_spawn_points` VALUES (17608725,'Dryad','Dryad',2,-377.091,-78.999,511.996,105);
+-INSERT INTO `mob_spawn_points` VALUES (17608726,'Shiva_Prime','Shiva Prime',3,503,41,-367,105);
++INSERT INTO `mob_spawn_points` VALUES (17608726,'Shiva_Prime_Trial','Shiva Prime',3,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17608727,'Shiva_Prime','Shiva Prime',3,23.07,-18.991,32.86,105);
+ INSERT INTO `mob_spawn_points` VALUES (17608728,'Shiva_Prime','Shiva Prime',3,-377.091,-78.999,512.996,105);
+ INSERT INTO `mob_spawn_points` VALUES (17608729,'Shiva_Prime','Shiva Prime',3,0,0,0,0);
+@@ -59604,10 +59604,10 @@ INSERT INTO `mob_spawn_points` VALUES (17621301,'Seed_Goblin','Seed Goblin',60,4
+ -- Cloister of Flames(Zone 207)
+ -- ------------------------------------------------------------
+ 
+-INSERT INTO `mob_spawn_points` VALUES (17625089,'Ifrit_Prime','Ifrit Prime',1,503,41,-367,105);
++INSERT INTO `mob_spawn_points` VALUES (17625089,'Ifrit_Prime_Trial','Ifrit Prime',1,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17625090,'Ifrit_Prime','Ifrit Prime',1,22.924,-18.996,32.955,105);
+ INSERT INTO `mob_spawn_points` VALUES (17625091,'Ifrit_Prime','Ifrit Prime',1,-376.95,-79.007,513.097,105);
+-INSERT INTO `mob_spawn_points` VALUES (17625092,'Ifrit_Prime','Ifrit Prime',2,503,41,-367,105);
++INSERT INTO `mob_spawn_points` VALUES (17625092,'Ifrit_Prime_Trial','Ifrit Prime',2,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17625093,'Ifrit_Prime','Ifrit Prime',2,22.924,-18.996,32.955,105);
+ INSERT INTO `mob_spawn_points` VALUES (17625094,'Ifrit_Prime','Ifrit Prime',2,-376.95,-79.007,513.097,105);
+ INSERT INTO `mob_spawn_points` VALUES (17625095,'Ifrit_Prime','Ifrit Prime',2,0,0,0,0);
+@@ -60101,13 +60101,13 @@ INSERT INTO `mob_spawn_points` VALUES (17629645,'Girtablulu','Girtablulu',38,-14
+ -- Cloister of Tremors (Zone 209)
+ -- ------------------------------------------------------------
+ 
+-INSERT INTO `mob_spawn_points` VALUES (17633281,'Titan_Prime','Titan Prime',1,503,41,-367,105);
++INSERT INTO `mob_spawn_points` VALUES (17633281,'Titan_Prime_Trial','Titan Prime',1,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17633282,'Titan_Prime','Titan Prime',1,22.907,-19.005,33.085,105);
+ INSERT INTO `mob_spawn_points` VALUES (17633283,'Titan_Prime','Titan Prime',1,-376.962,-79.004,513.055,105);
+ INSERT INTO `mob_spawn_points` VALUES (17633284,'Galgalim','Galgalim',2,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17633285,'Galgalim','Galgalim',2,22.907,-19.005,33.085,105);
+ INSERT INTO `mob_spawn_points` VALUES (17633286,'Galgalim','Galgalim',2,-376.962,-79.004,513.055,105);
+-INSERT INTO `mob_spawn_points` VALUES (17633287,'Titan_Prime','Titan Prime',3,503,41,-367,105);
++INSERT INTO `mob_spawn_points` VALUES (17633287,'Titan_Prime_Trial','Titan Prime',3,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17633288,'Titan_Prime','Titan Prime',3,22.907,-19.005,33.085,105);
+ INSERT INTO `mob_spawn_points` VALUES (17633289,'Titan_Prime','Titan Prime',3,-376.962,-79.004,513.055,105);
+ INSERT INTO `mob_spawn_points` VALUES (17633290,'Titan_Prime','Titan Prime',3,0,0,0,0);
+@@ -60133,10 +60133,10 @@ INSERT INTO `mob_spawn_points` VALUES (17633307,'Titan_Prime','Titan Prime',3,-3
+ -- Cloister of Tides (Zone 211)
+ -- ------------------------------------------------------------
+ 
+-INSERT INTO `mob_spawn_points` VALUES (17641473,'Leviathan_Prime','Leviathan Prime',1,503,41,-367,105);
++INSERT INTO `mob_spawn_points` VALUES (17641473,'Leviathan_Prime_Trial','Leviathan Prime',1,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17641474,'Leviathan_Prime','Leviathan Prime',1,22.94,-18.991,32.879,105);
+ INSERT INTO `mob_spawn_points` VALUES (17641475,'Leviathan_Prime','Leviathan Prime',1,-377.046,-78.994,512.925,105);
+-INSERT INTO `mob_spawn_points` VALUES (17641476,'Leviathan_Prime','Leviathan Prime',2,503,41,-367,105);
++INSERT INTO `mob_spawn_points` VALUES (17641476,'Leviathan_Prime_Trial','Leviathan Prime',2,503,41,-367,105);
+ INSERT INTO `mob_spawn_points` VALUES (17641477,'Leviathan_Prime','Leviathan Prime',2,22.94,-18.991,32.879,105);
+ INSERT INTO `mob_spawn_points` VALUES (17641478,'Leviathan_Prime','Leviathan Prime',2,-377.046,-78.994,512.925,105);
+ INSERT INTO `mob_spawn_points` VALUES (17641479,'Leviathan_Prime','Leviathan Prime',2,0,0,0,0);

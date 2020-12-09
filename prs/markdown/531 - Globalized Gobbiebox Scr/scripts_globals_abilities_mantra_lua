@@ -1,0 +1,7 @@
+@@ -20,4 +20,4 @@ function onUseAbility(player,target,ability)
+     target:addStatusEffect(tpz.effect.MAX_HP_BOOST,merits,0,180)
+ 
+     return tpz.effect.MANTRA
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,58 @@
+@@ -49,22 +49,22 @@ RESTRICT_CONTENT = 0
+ 
+ -- CHARACTER CONFIG
+ INITIAL_LEVEL_CAP = 50 -- The initial level cap for new players.  There seems to be a hardcap of 255.
+-MAX_LEVEL = 99 -- Level max of the server, lowers the attainable cap by disabling Limit Break quests.
++MAX_LEVEL = 75 -- Level max of the server, lowers the attainable cap by disabling Limit Break quests.
+ NORMAL_MOB_MAX_LEVEL_RANGE_MIN = 0 -- Lower Bound of Max Level Range for Normal Mobs (0 = Uncapped)
+ NORMAL_MOB_MAX_LEVEL_RANGE_MAX = 0 -- Upper Bound of Max Level Range for Normal Mobs (0 = Uncapped)
+-START_GIL = 10 -- Amount of gil given to newly created characters.
+-START_INVENTORY = 30 -- Starting inventory and satchel size.  Ignores values < 30.  Do not set above 80!
++START_GIL = 10000 -- Amount of gil given to newly created characters.
++START_INVENTORY = 80 -- Starting inventory and satchel size.  Ignores values < 30.  Do not set above 80!
+ NEW_CHARACTER_CUTSCENE = 1 -- Set to 1 to enable opening cutscenes, 0 to disable.
+-SUBJOB_QUEST_LEVEL = 18 -- Minimum level to accept either subjob quest.  Set to 0 to start the game with subjobs unlocked.
++SUBJOB_QUEST_LEVEL = 0 -- Minimum level to accept either subjob quest.  Set to 0 to start the game with subjobs unlocked.
+ ADVANCED_JOB_LEVEL = 30 -- Minimum level to accept advanced job quests.  Set to 0 to start the game with advanced jobs.
+-ALL_MAPS = 0 -- Set to 1 to give starting characters all the maps.
+-UNLOCK_OUTPOST_WARPS = 0 -- Set to 1 to give starting characters all outpost warps.  2 to add Tu'Lia and Tavnazia.
++ALL_MAPS = 1 -- Set to 1 to give starting characters all the maps.
++UNLOCK_OUTPOST_WARPS = 1 -- Set to 1 to give starting characters all outpost warps.  2 to add Tu'Lia and Tavnazia.
+ 
+ SHOP_PRICE      = 1.000 -- Multiplies prices in NPC shops.
+-GIL_RATE        = 1.000 -- Multiplies gil earned from quests.  Won't always display in game.
++GIL_RATE        = 5.000 -- Multiplies gil earned from quests.  Won't always display in game.
+ BAYLD_RATE      = 1.000 -- Multiples bayld earned from quests.
+-EXP_RATE        = 1.000 -- Multiplies exp earned from fov and quests.
+-TABS_RATE       = 1.000 -- Multiplies tabs earned from fov.
++EXP_RATE        = 6.000 -- Multiplies exp earned from fov and quests.
++TABS_RATE       = 5.000 -- Multiplies tabs earned from fov.
+ CURE_POWER      = 1.000 -- Multiplies amount healed from Healing Magic, including the relevant Blue Magic.
+ ELEMENTAL_POWER = 1.000 -- Multiplies damage dealt by Elemental and non-drain Dark Magic.
+ DIVINE_POWER    = 1.000 -- Multiplies damage dealt by Divine Magic.
+@@ -104,8 +104,8 @@ LandKingSystem_HQ = 1
+     BETWEEN_2DYNA_WAIT_TIME = 24       -- Hours before player can re-enter Dynamis. Default is 1 Earthday (24 hours).
+         DYNA_MIDNIGHT_RESET = true     -- if true, makes the wait time count by number of server midnights instead of full 24 hour intervals
+              DYNA_LEVEL_MIN = 65       -- level min for entering in Dynamis
+-    TIMELESS_HOURGLASS_COST = 500000   -- refund for the timeless hourglass for Dynamis.
+-   PRISMATIC_HOURGLASS_COST = 50000    -- cost of the prismatic hourglass for Dynamis.
++    TIMELESS_HOURGLASS_COST = 5000   -- refund for the timeless hourglass for Dynamis.
++   PRISMATIC_HOURGLASS_COST = 500    -- cost of the prismatic hourglass for Dynamis.
+      CURRENCY_EXCHANGE_RATE = 100      -- X Tier 1 ancient currency -> 1 Tier 2, and so on.  Certain values may conflict with shop items.  Not designed to exceed 198.
+ RELIC_2ND_UPGRADE_WAIT_TIME = 7200     -- wait time for 2nd relic upgrade (stage 2 -> stage 3) in seconds. 7200s = 2 hours.
+ RELIC_3RD_UPGRADE_WAIT_TIME = 3600     -- wait time for 3rd relic upgrade (stage 3 -> stage 4) in seconds. 3600s = 1 hour.
+@@ -134,12 +134,12 @@ USE_OLD_CURE_FORMULA = false -- true/false. if true, uses older cure formula (3*
+ USE_OLD_MAGIC_DAMAGE = false -- true/false. if true, uses older magic damage formulas
+ 
+ -- CELEBRATIONS
+-EXPLORER_MOOGLE_LV = 10 -- Enables Explorer Moogle teleports and sets required level. Zero to disable.
++EXPLORER_MOOGLE_LV = 1 -- Enables Explorer Moogle teleports and sets required level. Zero to disable.
+ HALLOWEEN_2005 = 0 -- Set to 1 to Enable the 2005 version of Harvest Festival, will start on Oct. 20 and end Nov. 1.
+ HALLOWEEN_YEAR_ROUND = 0 -- Set to 1 to have Harvest Festival initialize outside of normal times.
+ 
+ -- MISC
+-HOMEPOINT_HEAL = 0 --Set to 1 if you want Home Points to heal you like in single-player Final Fantasy games.
++HOMEPOINT_HEAL = 1 --Set to 1 if you want Home Points to heal you like in single-player Final Fantasy games.
+ RIVERNE_PORTERS = 120 -- Time in seconds that Unstable Displacements in Cape Riverne stay open after trading a scale.
+ LANTERNS_STAY_LIT = 1200 -- time in seconds that lanterns in the Den of Rancor stay lit.
+ ENABLE_COP_ZONE_CAP = 0 -- enable or disable lvl cap

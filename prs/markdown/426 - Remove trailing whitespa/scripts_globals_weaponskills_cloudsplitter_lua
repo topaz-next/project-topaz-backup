@@ -1,0 +1,7 @@
+@@ -37,4 +37,4 @@ function onUseWeaponSkill(player, target, wsID, tp, primary, action, taChar)
+     end
+ 
+     return tpHits, extraHits, criticalHit, damage
+-end
+\ No newline at end of file
++end

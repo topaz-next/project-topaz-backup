@@ -1,0 +1,7 @@
+@@ -62,4 +62,4 @@ class CItemShop : public CItem
+     uint16    m_InitialQuantity;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

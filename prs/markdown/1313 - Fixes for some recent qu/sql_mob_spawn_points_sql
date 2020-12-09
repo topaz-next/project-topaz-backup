@@ -1,0 +1,9 @@
+@@ -56513,7 +56513,7 @@ INSERT INTO `mob_spawn_points` VALUES (17568131,'Water_Elemental','Water Element
+ INSERT INTO `mob_spawn_points` VALUES (17568132,'Bombast','Bombast',44,-154.0,-27.73,-197.25,230);
+ INSERT INTO `mob_spawn_points` VALUES (17568133,'Stroper_Chyme','Stroper Chyme',32,-109.9,-28.00,-179.73,6);
+ INSERT INTO `mob_spawn_points` VALUES (17568134,'Polevik','Polevik',45,-50.25,0.0829,2.829,57);
+-INSERT INTO `mob_spawn_points` VALUES (17568135,'Gerwitzs_Axe','Gerwitz\'s Axe',46,-52,27,-81,255);
++INSERT INTO `mob_spawn_points` VALUES (17568135,'Gerwitzs_Axe','Gerwitz\'s Axe',46,13.000,31.574,165.000,106);
+ INSERT INTO `mob_spawn_points` VALUES (17568136,'Gerwitzs_Sword','Gerwitz\'s Sword',47,-99.83,-28.00,-77.763,97);
+ INSERT INTO `mob_spawn_points` VALUES (17568137,'Gerwitzs_Soul','Gerwitz\'s Soul',48,-132.5,-28.43,-246.92,36);
+ INSERT INTO `mob_spawn_points` VALUES (17568138,'Necroplasm','Necroplasm',49,-91.09,31.725,161.143,244);

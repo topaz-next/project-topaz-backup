@@ -1,0 +1,7 @@
+@@ -8,4 +8,4 @@ end
+ 
+ function onMobDespawn(mob)
+     mob:setRespawnTime(math.random(3600, 10800)) -- 1 to 3 hours
+-end
+\ No newline at end of file
++end

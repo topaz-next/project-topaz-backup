@@ -1,0 +1,7 @@
+@@ -49,4 +49,4 @@ CLinkshellMessagePacket::CLinkshellMessagePacket(const int8* poster, const int8*
+         ref<uint32>(0x88) = posttime;
+     }
+     ref<uint32>(0x9C) = 0x02;
+-}
+\ No newline at end of file
++}

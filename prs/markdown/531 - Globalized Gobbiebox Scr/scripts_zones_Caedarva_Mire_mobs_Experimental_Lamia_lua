@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ function onMobWeaponSkill(target, mob, skill)
+ end
+ 
+ function onMobDeath(mob, player, isKiller)
+-end
+\ No newline at end of file
++end

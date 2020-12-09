@@ -1,0 +1,7 @@
+@@ -73,4 +73,4 @@ void CItemFish::SetRank(bool rank)
+         ref<uint8>(m_extra, 4) |= 0x01;
+     else
+         ref<uint8>(m_extra, 4) &= ~0x01;
+-}
+\ No newline at end of file
++}

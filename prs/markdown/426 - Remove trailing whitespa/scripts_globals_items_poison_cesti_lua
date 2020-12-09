@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ function onAdditionalEffect(player,target,damage)
+         target:addStatusEffect(tpz.effect.POISON, 4, 3, 30)
+         return tpz.subEffect.POISON, tpz.msg.basic.ADD_EFFECT_STATUS, tpz.effect.POISON
+     end
+-end
+\ No newline at end of file
++end

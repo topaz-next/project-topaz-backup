@@ -1,0 +1,38 @@
+@@ -791,11 +791,12 @@ INSERT INTO `mob_skill_lists` VALUES ('MamoolJa',176,1732);
+ INSERT INTO `mob_skill_lists` VALUES ('MamoolJa',176,1733);
+ INSERT INTO `mob_skill_lists` VALUES ('MamoolJa',176,1734);
+ -- INSERT INTO `mob_skill_lists` VALUES ('MamoolJa',176,1735);
+--- INSERT INTO `mob_skill_lists` VALUES ('MamoolJa',176,1736);
++INSERT INTO `mob_skill_lists` VALUES ('MamoolJa',176,1736);
+ -- INSERT INTO `mob_skill_lists` VALUES ('MamoolJa',176,1737);
+ -- INSERT INTO `mob_skill_lists` VALUES ('MamoolJa',176,1738);
+ -- INSERT INTO `mob_skill_lists` VALUES ('MamoolJa',176,1839);
+ -- INSERT INTO `mob_skill_lists` VALUES ('MamoolJa',176,1840);
++INSERT INTO `mob_skill_lists` VALUES ('MamoolJa',176,1925);
+ -- 177: MamoolJa Knight?
+ INSERT INTO `mob_skill_lists` VALUES ('Mandragora',178,300);
+ INSERT INTO `mob_skill_lists` VALUES ('Mandragora',178,301);
+@@ -913,10 +914,10 @@ INSERT INTO `mob_skill_lists` VALUES ('Puk',198,1720);
+ INSERT INTO `mob_skill_lists` VALUES ('Puk',198,1721);
+ INSERT INTO `mob_skill_lists` VALUES ('Puk',198,1722);
+ INSERT INTO `mob_skill_lists` VALUES ('Puk',198,1723);
+-INSERT INTO `mob_skill_lists` VALUES ('Qiqirn',199,1725);
+--- INSERT INTO `mob_skill_lists` VALUES ('Qiqirn',199,1726);
+-INSERT INTO `mob_skill_lists` VALUES ('Qiqirn',199,1727);
+-INSERT INTO `mob_skill_lists` VALUES ('Qiqirn',199,1728);
++INSERT INTO `mob_skill_lists` VALUES ('Qiqirn',199,1725); -- Kibosh
++INSERT INTO `mob_skill_lists` VALUES ('Qiqirn',199,1726); -- Cutpurse
++INSERT INTO `mob_skill_lists` VALUES ('Qiqirn',199,1727); -- Sandspray
++INSERT INTO `mob_skill_lists` VALUES ('Qiqirn',199,1728); -- Faze
+ INSERT INTO `mob_skill_lists` VALUES ('Quadav',200,611);
+ INSERT INTO `mob_skill_lists` VALUES ('Quadav',200,612);
+ INSERT INTO `mob_skill_lists` VALUES ('Quadav',200,613);
+@@ -1397,7 +1398,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Gotoh_Zha_the_Redolent',305,1921);
+ INSERT INTO `mob_skill_lists` VALUES ('Gotoh_Zha_the_Redolent',305,1922);
+ INSERT INTO `mob_skill_lists` VALUES ('Gotoh_Zha_the_Redolent',305,1923);
+ INSERT INTO `mob_skill_lists` VALUES ('Gotoh_Zha_the_Redolent',305,1924);
+--- INSERT INTO `mob_skill_lists` VALUES ('Gotoh_Zha_the_Redolent',305,1925);
++INSERT INTO `mob_skill_lists` VALUES ('Gotoh_Zha_the_Redolent',305,1925);
+ -- INSERT INTO `mob_skill_lists` VALUES ('Gotoh_Zha_the_Redolent',305,1926);
+ INSERT INTO `mob_skill_lists` VALUES ('Gotoh_Zha_the_Redolent',305,2361);
+ -- 306: Dea

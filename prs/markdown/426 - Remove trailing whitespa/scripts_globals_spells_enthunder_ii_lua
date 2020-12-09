@@ -1,0 +1,7 @@
+@@ -13,4 +13,4 @@ function onSpellCast(caster,target,spell)
+     local effect = tpz.effect.ENTHUNDER_II
+     doEnspell(caster,target,spell,effect)
+     return effect
+-end
+\ No newline at end of file
++end

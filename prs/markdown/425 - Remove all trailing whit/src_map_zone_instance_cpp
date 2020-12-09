@@ -1,0 +1,7 @@
+@@ -357,4 +357,4 @@ CInstance* CZoneInstance::CreateInstance(uint8 instanceid)
+ {
+     instanceList.push_back(std::make_unique<CInstance>(this, instanceid));
+     return instanceList.back().get();
+-}
+\ No newline at end of file
++}

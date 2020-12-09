@@ -1,0 +1,7 @@
+@@ -38,4 +38,4 @@ function onManeuverLose(pet, maneuvers)
+         pet:delMod(tpz.mod.MATT, 10)
+         pet:delMod(tpz.mod.AUTO_MAGIC_DELAY, -3)
+     end
+-end
+\ No newline at end of file
++end

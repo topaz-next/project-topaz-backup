@@ -1,0 +1,7 @@
+@@ -28,4 +28,4 @@ function onEventFinish(player,csid,option)
+         npcUtil.giveKeyItem(player, tpz.ki.ANTIQUE_AUTOMATON)
+         player:setCharVar("NoStringsAttachedProgress", 4)
+     end
+-end
+\ No newline at end of file
++end

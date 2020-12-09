@@ -1,0 +1,7 @@
+@@ -60,4 +60,4 @@ function onEventFinish(player,csid,option)
+     elseif csid == 103 then
+         player:addQuest(CRYSTAL_WAR, tpz.quest.id.crystalWar.LOST_IN_TRANSLOCATION)
+     end
+-end
+\ No newline at end of file
++end

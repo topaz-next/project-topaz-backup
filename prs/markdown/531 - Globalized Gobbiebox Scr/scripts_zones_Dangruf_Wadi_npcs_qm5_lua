@@ -1,0 +1,7 @@
+@@ -56,4 +56,4 @@ function onEventFinish(player,csid,option)
+         player:setCharVar("thickAsThievesGamblingCS",5)
+     end
+ 
+-end
+\ No newline at end of file
++end

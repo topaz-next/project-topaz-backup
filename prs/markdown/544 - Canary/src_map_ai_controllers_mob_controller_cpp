@@ -1,0 +1,58 @@
+@@ -478,12 +478,26 @@ void CMobController::CastSpell(SpellID spellid)
+         {
+             PCastTarget = PTarget;
+         }
+-        Cast(PCastTarget->targid, spellid);
++
++        if (PCastTarget)
++        {
++            Cast(PCastTarget->targid, spellid);
++        }
+     }
+ }
+ 
+ void CMobController::DoCombatTick(time_point tick)
+ {
++    if (PMob->m_OwnerID.targid != 0 && static_cast<CCharEntity*>(PMob->GetEntity(PMob->m_OwnerID.targid))->PClaimedMob != static_cast<CBattleEntity*>(PMob))
++    {
++        if (m_Tick >= m_DeclaimTime + 3s)
++        {
++            PMob->m_OwnerID.clean();
++            PMob->updatemask |= UPDATE_STATUS;
++        }
++    }
++
++
+     HandleEnmity();
+     PTarget = static_cast<CBattleEntity*>(PMob->GetEntity(PMob->GetBattleTargetID()));
+ 
+@@ -675,7 +689,7 @@ void CMobController::DoRoamTick(time_point tick)
+     else if (PMob->m_OwnerID.id != 0 && !(PMob->m_roamFlags & ROAMFLAG_IGNORE))
+     {
+         // i'm claimed by someone and need hate towards this person
+-        PTarget = (CBattleEntity*)PMob->GetEntity(PMob->m_OwnerID.targid, TYPE_PC | TYPE_MOB | TYPE_PET);
++        PTarget = (CBattleEntity*)PMob->GetEntity(PMob->m_OwnerID.targid, TYPE_PC | TYPE_MOB | TYPE_PET | TYPE_TRUST);
+ 
+         PMob->PEnmityContainer->AddBaseEnmity(PTarget);
+ 
+@@ -727,6 +741,8 @@ void CMobController::DoRoamTick(time_point tick)
+                 if (PMob->GetHPP() == 100)
+                 {
+                     // at max health undirty exp
++                    PMob->m_HiPCLvl = 0;
++                    PMob->m_HiPartySize = 0;
+                     PMob->m_giveExp = true;
+                 }
+             }
+@@ -995,6 +1011,11 @@ void CMobController::TapDeaggroTime()
+     m_DeaggroTime = m_Tick;
+ }
+ 
++void CMobController::TapDeclaimTime()
++{
++    m_DeclaimTime = m_Tick;
++}
++
+ bool CMobController::Cast(uint16 targid, SpellID spellid)
+ {
+     FaceTarget(targid);

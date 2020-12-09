@@ -1,0 +1,13 @@
+@@ -0,0 +1,12 @@
++-----------------------------------
++--  Mob: Western Shadow
++-- Area: Nyzul Isle
++-- Info: NM
++-----------------------------------
++require("scripts/globals/nyzul")
++-----------------------------------
++
++function onMobDeath(mob, player, isKiller, firstCall)
++    nyzul.spawnChest(mob)
++    nyzul.eliminateAllKill(mob, firstCall)
++end

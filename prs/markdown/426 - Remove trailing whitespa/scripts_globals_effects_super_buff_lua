@@ -1,0 +1,7 @@
+@@ -26,4 +26,4 @@ function onEffectLose(target,effect)
+     target:delMod(tpz.mod.MATT,power)
+     target:delMod(tpz.mod.MEVA,power)
+     target:AnimationSub(0)
+-end
+\ No newline at end of file
++end

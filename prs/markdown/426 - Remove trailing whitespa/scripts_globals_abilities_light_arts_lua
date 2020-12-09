@@ -1,0 +1,7 @@
+@@ -38,4 +38,4 @@ function onUseAbility(player,target,ability)
+     player:addStatusEffect(tpz.effect.LIGHT_ARTS,effectbonus,0,7200,0,regenbonus)
+ 
+     return tpz.effect.LIGHT_ARTS
+-end
+\ No newline at end of file
++end

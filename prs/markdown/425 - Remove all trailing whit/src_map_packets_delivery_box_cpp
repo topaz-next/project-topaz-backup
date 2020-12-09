@@ -1,0 +1,16 @@
+@@ -76,7 +76,7 @@ CDeliveryBoxPacket::CDeliveryBoxPacket(uint8 action, uint8 boxid, CItem* PItem,
+             }
+             else
+             {
+-                ref<uint8>(0x10) = PItem->isSent() ? 0x03 : 0x05;    // 0x05 in send: canceled. other values are unknown 
++                ref<uint8>(0x10) = PItem->isSent() ? 0x03 : 0x05;    // 0x05 in send: canceled. other values are unknown
+                 memcpy(data + 0x14 , PItem->getReceiver(), strlen((const char*)PItem->getReceiver()));    // Receiver's name.  Client disables "Return" if it starts with "AH"
+             }
+         }
+@@ -106,4 +106,4 @@ CDeliveryBoxPacket::CDeliveryBoxPacket(uint8 action, uint8 boxid, CItem* PItem,
+         ref<uint32>(0x38) = PItem->getQuantity();
+         memcpy(data + 0x3C , PItem->m_extra, sizeof(PItem->m_extra));
+     }
+-}
+\ No newline at end of file
++}

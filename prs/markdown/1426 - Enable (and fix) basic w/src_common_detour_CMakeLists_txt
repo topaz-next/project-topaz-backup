@@ -1,0 +1,7 @@
+@@ -1,3 +1,6 @@
++project(detour CXX)
++set_property(GLOBAL PROPERTY CXX_STANDARD 17)
++
+ set(SOURCES
+     DetourAlloc.cpp
+     DetourAlloc.h

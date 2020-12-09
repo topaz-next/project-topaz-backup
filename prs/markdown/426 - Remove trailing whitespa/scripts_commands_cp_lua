@@ -1,0 +1,12 @@
+@@ -20,8 +20,8 @@ function onTrigger(player, cp)
+         error(player, "Invalid amount.")
+         return
+     end
+-    
++
+     -- add cp
+     player:addCP( cp )
+     player:PrintToPlayer(string.format("Added %i cp to %s.", cp, player:getName()))
+-end
+\ No newline at end of file
++end

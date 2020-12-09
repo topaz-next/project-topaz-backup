@@ -1,0 +1,7 @@
+@@ -96,4 +96,4 @@ class CInstance : public CZoneEntities
+     std::set<uint32> m_enteredChars;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

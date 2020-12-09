@@ -1,0 +1,7 @@
+@@ -210,4 +210,4 @@ TIMETYPE CVanaTime::SyncTime()
+         }
+     }
+     return TIME_NONE;
+-}
+\ No newline at end of file
++}

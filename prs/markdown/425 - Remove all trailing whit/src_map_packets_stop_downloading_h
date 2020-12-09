@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ class CStopDownloadingPacket : public CBasicPacket
+ 	CStopDownloadingPacket(CCharEntity* PChar, std::vector< std::pair< uint32, string_t > > blacklist);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

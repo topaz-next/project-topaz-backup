@@ -1,0 +1,22 @@
+@@ -67466,8 +67466,8 @@ INSERT INTO `mob_spawn_points` VALUES (17883390,'Putrid_Acuex','Putrid Acuex',16
+ INSERT INTO `mob_spawn_points` VALUES (17883391,'Putrid_Acuex','Putrid Acuex',16,149.84,10.102,116.194,15);
+ INSERT INTO `mob_spawn_points` VALUES (17883392,'Moist_Funguar','Moist Funguar',17,147.46,10.185,122.333,136);
+ INSERT INTO `mob_spawn_points` VALUES (17883393,'Moist_Funguar','Moist Funguar',17,133.85,9.9849,110.916,117);
+-INSERT INTO `mob_spawn_points` VALUES (17883394,'Bloodmoon_Umbril','Bloodmoon Umbril',5,154.57,9.7889,137.944,214);
+-INSERT INTO `mob_spawn_points` VALUES (17883395,'Bloodmoon_Umbril','Bloodmoon Umbril',5,165.20,10.227,145.658,93);
++INSERT INTO `mob_spawn_points` VALUES (17883394,'Bloodmoon_Umbril','Bloodmoon Umbril',44,154.57,9.7889,137.944,214);
++INSERT INTO `mob_spawn_points` VALUES (17883395,'Bloodmoon_Umbril','Bloodmoon Umbril',44,165.20,10.227,145.658,93);
+ INSERT INTO `mob_spawn_points` VALUES (17883396,'Moist_Funguar','Moist Funguar',17,159.17,9.3859,162.046,167);
+ INSERT INTO `mob_spawn_points` VALUES (17883397,'Moist_Funguar','Moist Funguar',17,155.26,9.4409,159.893,212);
+ INSERT INTO `mob_spawn_points` VALUES (17883398,'Moist_Funguar','Moist Funguar',17,159.34,9.9189,137.591,139);
+@@ -67602,8 +67602,8 @@ INSERT INTO `mob_spawn_points` VALUES (17883531,'Moist_Funguar','Moist Funguar',
+ INSERT INTO `mob_spawn_points` VALUES (17883532,'Moist_Funguar','Moist Funguar',17,140.42,10.512,38.7120,75);
+ INSERT INTO `mob_spawn_points` VALUES (17883533,'Moist_Funguar','Moist Funguar',17,139.42,9.2919,68.9010,229);
+ INSERT INTO `mob_spawn_points` VALUES (17883534,'Putrid_Acuex','Putrid Acuex',16,97.111,9.1850,173.513,11);
+-INSERT INTO `mob_spawn_points` VALUES (17883536,'Bloodmoon_Umbril','Bloodmoon Umbril',5,211.89,14.545,136.524,164);
+-INSERT INTO `mob_spawn_points` VALUES (17883537,'Bloodmoon_Umbril','Bloodmoon Umbril',5,204.46,10.897,139.977,146);
++INSERT INTO `mob_spawn_points` VALUES (17883536,'Bloodmoon_Umbril','Bloodmoon Umbril',44,211.89,14.545,136.524,164);
++INSERT INTO `mob_spawn_points` VALUES (17883537,'Bloodmoon_Umbril','Bloodmoon Umbril',44,204.46,10.897,139.977,146);
+ INSERT INTO `mob_spawn_points` VALUES (17883538,'Pungent_Fungus','Pungent Fungus',19,414.63,28.976,-189.39,41);
+ INSERT INTO `mob_spawn_points` VALUES (17883539,'Pungent_Fungus','Pungent Fungus',19,375.28,28.739,-219.71,93);
+ INSERT INTO `mob_spawn_points` VALUES (17883540,'Pungent_Fungus','Pungent Fungus',19,284.24,29.5,-192.03,4);

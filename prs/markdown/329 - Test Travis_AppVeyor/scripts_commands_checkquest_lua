@@ -1,0 +1,47 @@
+@@ -61,7 +61,45 @@ function onTrigger(player,logId,questId,target)
+         [2] = function (x) status = "COMPLETED"; end,
+     }
+ 
++    -- fetch a quest table if there is one
++    local quest = tpz.quest.getQuest(logId, questId)
++
++    local quest_status_string = ''
++
+     -- show quest status
+-    player:PrintToPlayer( string.format( "%s's status for %s quest ID %i is: %s", targ:getName(), logName, questId, status ) );
++    if quest then
++        quest_status_string = quest_status_string .. string.format("%s's status for %s quest '%s' is: %s", targ:getName(), logName, quest.name, status)
++    else
++        quest_status_string = quest_status_string .. string.format("%s's status for %s quest ID %i is: %s", targ:getName(), logName, questId, status )
++    end
++
++    -- print any known quest vars
++    if quest then
++        quest_status_string = quest_status_string .. string.format("\nCurrently on stage: %i", quest.getStage(targ))
++        if quest.vars.additional then
++            local quest_vars_string = ''
++            for name, var in pairs(quest.vars.additional) do
++                quest_vars_string = string.format(quest_vars_string.. ", %s: %i", name, quest.getVar(targ, name))
++            end
++            if string.len(quest_vars_string) > 1 then
++                quest_vars_string = string.format("\n%s's additional quest vars are".. quest_vars_string, targ:getName())
++                quest_status_string = quest_status_string .. quest_vars_string
++            end
++        end
++
++        local held_items_string = '' -- See if the quest is holding any items for the player
++        local held_item = quest.holdingItem(player)
++        local stack = 1
++        while held_item and held_item > 0 do
++            held_items_string = held_items_string .. string.format(", %i", held_item)
++            stack = stack + 1
++            held_item = quest.holdingItem(player, stack)
++        end
++        if string.len(held_items_string) > 1 then
++            held_items_string = string.format("\nFollowing held for %s".. held_items_string, targ:getName())
++            quest_status_string = quest_status_string .. held_items_string
++        end
++    end
+ 
++    player:PrintToPlayer(quest_status_string)
+ end;

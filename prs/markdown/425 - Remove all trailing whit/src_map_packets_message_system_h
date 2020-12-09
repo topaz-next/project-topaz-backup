@@ -1,0 +1,7 @@
+@@ -39,4 +39,4 @@ class CMessageSystemPacket : public CBasicPacket
+ 	CMessageSystemPacket(uint32 param0, uint32 param1, uint16 messageID);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

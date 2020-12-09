@@ -1,0 +1,19 @@
+@@ -58,9 +58,9 @@ function isBaseNyzulWeapon(itemId)
+             return true
+         end
+     end
+-    
++
+     return false
+-    
++
+ end
+ 
+ -- Provides a power for using a chocobo shirt with bunch of gysahl greens
+@@ -71,4 +71,4 @@ function ChocoboShirt(player)
+         power = power + 1
+     end
+     return power
+-end
+\ No newline at end of file
++end

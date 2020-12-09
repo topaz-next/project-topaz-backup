@@ -1,0 +1,7 @@
+@@ -32,4 +32,4 @@ function onEffectGain(target,effect)
+ end
+ 
+ function onEffectLose(target,effect)
+-end
+\ No newline at end of file
++end

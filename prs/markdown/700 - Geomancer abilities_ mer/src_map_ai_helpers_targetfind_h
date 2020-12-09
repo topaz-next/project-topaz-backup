@@ -1,0 +1,8 @@
+@@ -99,6 +99,7 @@ class CTargetFind
+ 	void addAllInParty(CBattleEntity* PTarget, bool withPet);
+ 	void addAllInMobList(CBattleEntity* PTarget, bool withPet);
+     void addAllInEnmityList();
++    void addAllInRange(CBattleEntity* PTarget, float radius, uint8 allegiance);
+ 	void addEntity(CBattleEntity* PTarget, bool withPet);
+ 
+     // helpers

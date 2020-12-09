@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CMessageDebugPacket : public CBasicPacket
+ 	CMessageDebugPacket(CBaseEntity* PSender, CBaseEntity* PTarget, int32 param0, int32 param1, uint16 messageID);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

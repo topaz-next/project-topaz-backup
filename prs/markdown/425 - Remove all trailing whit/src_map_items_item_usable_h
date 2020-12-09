@@ -1,0 +1,16 @@
+@@ -60,7 +60,7 @@ class CItemUsable : public CItem
+ 
+ private:
+ 
+-	uint8	m_UseDelay;         // задержка использования после экипировки 
++	uint8	m_UseDelay;         // задержка использования после экипировки
+ 	uint8	m_MaxCharges;       // максимальное количество зарядов предмета
+ 	uint16	m_Animation;
+ 	uint16	m_AnimationTime;    // время анимации для правильного отображения сообщения (эффектов)
+@@ -71,4 +71,4 @@ class CItemUsable : public CItem
+     uint16  m_AoE;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

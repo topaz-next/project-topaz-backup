@@ -1,0 +1,7 @@
+@@ -146,4 +146,4 @@ function onEventFinish(player,csid,option)
+    if (csid == 32000) then
+ 
+    end
+-end;
+\ No newline at end of file
++end;

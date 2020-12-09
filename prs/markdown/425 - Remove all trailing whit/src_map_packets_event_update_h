@@ -1,0 +1,7 @@
+@@ -47,4 +47,4 @@ class CEventUpdatePacket : public CBasicPacket
+ 		uint32 param7 = 0);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

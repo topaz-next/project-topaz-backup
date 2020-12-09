@@ -1,0 +1,3 @@
+@@ -0,0 +1 @@
++echo %date% %time% >> game_crash_log.txt
+\ No newline at end of file

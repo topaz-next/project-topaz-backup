@@ -1,0 +1,7 @@
+@@ -15,4 +15,4 @@ end
+ 
+ function onEffectLose(target,effect)
+     target:delMod(tpz.mod.RACC,effect:getPower())
+-end
+\ No newline at end of file
++end

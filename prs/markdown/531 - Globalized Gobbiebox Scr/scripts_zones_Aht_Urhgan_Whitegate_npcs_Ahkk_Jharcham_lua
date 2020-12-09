@@ -1,0 +1,7 @@
+@@ -43,4 +43,4 @@ function onEventFinish(player,csid,option)
+         player:moghouseFlag(16)
+         player:completeQuest(AHT_URHGAN,tpz.quest.id.ahtUrhgan.KEEPING_NOTES)
+     end
+-end
+\ No newline at end of file
++end

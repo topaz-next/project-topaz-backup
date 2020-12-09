@@ -1,0 +1,7 @@
+@@ -76,4 +76,4 @@ function onEventFinish(player, csid, option)
+     elseif csid == 22 then
+         player:setCharVar("SOA_1_CS2",  1)
+     end
+-end
+\ No newline at end of file
++end

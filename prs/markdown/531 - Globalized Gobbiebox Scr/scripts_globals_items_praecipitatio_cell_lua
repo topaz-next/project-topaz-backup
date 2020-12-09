@@ -1,0 +1,7 @@
+@@ -16,4 +16,4 @@ end
+ function onItemUse(target)
+     target:delStatusEffectSilent(tpz.effect.OMERTA)
+     target:messageText(target, zones[target:getZoneID()].text.CELL_OFFSET + 10)
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,9 @@
+@@ -35,7 +35,7 @@ end
+ function onEventFinish(player, csid, option)
+ 
+     if csid == 1 then
+-        player:setPos(0, 0, 0, 0, 72)
++        player:setPos(126.6543, 0, 20.1798, 0, 72)
+     end
+ end
+ 

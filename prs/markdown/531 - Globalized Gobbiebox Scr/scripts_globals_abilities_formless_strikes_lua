@@ -1,0 +1,7 @@
+@@ -15,4 +15,4 @@ end
+ 
+ function onUseAbility(player,target,ability)
+    player:addStatusEffect(tpz.effect.FORMLESS_STRIKES,1,0,180)
+-end
+\ No newline at end of file
++end

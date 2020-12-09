@@ -1,0 +1,7 @@
+@@ -10,4 +10,4 @@ require("scripts/globals/wsquest")
+ 
+ function onTrigger(player, npc)
+     tpz.wsquest.handleQmTrigger(tpz.wsquest.asuran_fists, player, ID.mob.BODACH)
+-end
+\ No newline at end of file
++end

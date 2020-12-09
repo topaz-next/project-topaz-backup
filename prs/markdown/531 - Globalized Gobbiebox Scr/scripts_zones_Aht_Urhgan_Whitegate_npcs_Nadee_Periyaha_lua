@@ -1,0 +1,7 @@
+@@ -31,4 +31,4 @@ function onEventFinish(player,csid,option)
+     if csid == 849 then
+         player:setCharVar("ratraceCS",2)
+     end
+-end
+\ No newline at end of file
++end

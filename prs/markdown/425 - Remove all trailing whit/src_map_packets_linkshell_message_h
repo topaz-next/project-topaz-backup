@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CLinkshellMessagePacket : public CBasicPacket
+     CLinkshellMessagePacket(const int8* poster, const int8* message, const int8* lsname, uint32 posttime, bool ls1);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

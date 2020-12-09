@@ -1,0 +1,7 @@
+@@ -11,4 +11,4 @@ function onAdditionalEffect(player,target,damage)
+         target:setMobMod(tpz.mobMod.ADD_EFFECT, 0)
+     end
+     return 0, 0, 0
+-end
+\ No newline at end of file
++end

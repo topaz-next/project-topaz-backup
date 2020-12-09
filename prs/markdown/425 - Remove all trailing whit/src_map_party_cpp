@@ -1,0 +1,16 @@
+@@ -834,7 +834,7 @@ void CParty::ReloadTreasurePool(CCharEntity* PChar)
+ 
+     if (PChar->PTreasurePool != nullptr && PChar->PTreasurePool->GetPoolType() == TREASUREPOOL_ZONE)
+         return;
+-    
++
+ 
+ 
+     //alliance
+@@ -1233,4 +1233,4 @@ void CParty::RefreshFlags(std::vector<partyInfo_t>& info)
+             }
+         }
+     }
+-}
+\ No newline at end of file
++}

@@ -1,0 +1,7 @@
+@@ -29,4 +29,4 @@ function onItemUse(target)
+     }
+     -- print(crystal[day])
+     target:addItem(crystal[day],math.random(2,12))
+-end
+\ No newline at end of file
++end

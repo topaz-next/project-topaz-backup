@@ -1,0 +1,22 @@
+@@ -0,0 +1,21 @@
++---------------------------------------------------------------------------------------------------
++-- func: checkinstance
++-- desc: Displays Stage and Progress inside instance
++---------------------------------------------------------------------------------------------------
++
++cmdprops =
++{
++    permission = 1,
++    parameters = ""
++};
++
++function error(player, msg)
++end
++
++function onTrigger(player, progress)
++    local instance = player:getInstance()
++    local progress = instance:getProgress()
++    local stage = instance:getStage()
++
++    player:PrintToPlayer(string.format("Stage: %i Progress: %i", stage, progress))
++end

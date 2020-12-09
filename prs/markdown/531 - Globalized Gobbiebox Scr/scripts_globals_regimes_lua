@@ -1,0 +1,7 @@
+@@ -1357,4 +1357,4 @@ tpz.regime.checkRegime = function(player, mob, regimeId, index, regimeType)
+     else
+         clearPlayerVars(player)
+     end
+-end
+\ No newline at end of file
++end

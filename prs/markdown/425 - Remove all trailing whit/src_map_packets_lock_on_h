@@ -1,0 +1,7 @@
+@@ -42,4 +42,4 @@ class CLockOnPacket : public CBasicPacket
+ 	CLockOnPacket(CCharEntity* PChar, CBattleEntity* PTarget);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

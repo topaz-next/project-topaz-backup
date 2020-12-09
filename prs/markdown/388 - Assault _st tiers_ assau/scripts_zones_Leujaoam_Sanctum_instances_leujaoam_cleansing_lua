@@ -1,0 +1,96 @@
+@@ -1,72 +1,44 @@
+ -----------------------------------
+---
+ -- Assault: Leujaoam Cleansing
+---
++-- General Afkaam is to inspect Leujaoam Sanctum. Destroy all creatures in the area that may pose a threat to the general.
+ -----------------------------------
+-require("scripts/globals/instance")
+ local ID = require("scripts/zones/Leujaoam_Sanctum/IDs")
++require("scripts/globals/instance")
++require("scripts/globals/missions")
++require("scripts/globals/assault")
++require("scripts/globals/zone")
+ -----------------------------------
+ 
+ function afterInstanceRegister(player)
+-    local instance = player:getInstance();
+-    player:messageSpecial(ID.text.ASSAULT_01_START, 1);
+-    player:messageSpecial(ID.text.TIME_TO_COMPLETE, instance:getTimeLimit());
+-end;
++    assaultUtil.afterInstanceRegister(player, 5343, ID.text, ID.mob)
++end
+ 
+ function onInstanceCreated(instance)
+-
+-    for i,v in pairs(ID.mob[1]) do
+-        SpawnMob(v, instance);
+-    end
+-
+-    local rune = instance:getEntity(bit.band(ID.npc.RUNE_OF_RELEASE, 0xFFF), tpz.objType.NPC);
+-    local box = instance:getEntity(bit.band(ID.npc.ANCIENT_LOCKBOX, 0xFFF), tpz.objType.NPC);
+-    rune:setPos(476,8.479,39,49);
+-    box:setPos(476,8.479,40,49);
+-
+-    instance:getEntity(bit.band(ID.npc._1XN, 0xFFF), tpz.objType.NPC):setAnimation(8);
+-
+-end;
++    instance:getEntity(bit.band(ID.npc.RUNE_OF_RELEASE, 0xFFF), tpz.objType.NPC):setPos(476.000,8.479,40.000,49)
++    instance:getEntity(bit.band(ID.npc.ANCIENT_LOCKBOX, 0xFFF), tpz.objType.NPC):setPos(476.000,8.479,39.000,49)
++end
+ 
+ function onInstanceTimeUpdate(instance, elapsed)
+     updateInstanceTime(instance, elapsed, ID.text)
+-end;
++end
+ 
+ function onInstanceFailure(instance)
+-
+-    local chars = instance:getChars();
+-
+-    for i,v in pairs(chars) do
+-        v:messageSpecial(ID.text.MISSION_FAILED,10,10);
+-        v:startEvent(102);
+-    end
+-end;
++    assaultUtil.onInstanceFailure(instance, 102, ID.text)
++end
+ 
+ function onInstanceProgressUpdate(instance, progress)
+-
+-    if (progress >= 15) then
+-        instance:complete();
++    if progress >= 15 then
++        instance:complete()
+     end
+-
+-end;
++end
+ 
+ function onInstanceComplete(instance)
++    assaultUtil.onInstanceComplete(player, instance, 8, 8, ID.text, ID.npc)
++end
+ 
+-    local chars = instance:getChars();
+-
+-    for i,v in pairs(chars) do
+-        v:messageSpecial(ID.text.RUNE_UNLOCKED_POS, 8, 8);
+-    end
+-
+-    local rune = instance:getEntity(bit.band(ID.npc.RUNE_OF_RELEASE, 0xFFF), tpz.objType.NPC);
+-    local box = instance:getEntity(bit.band(ID.npc.ANCIENT_LOCKBOX, 0xFFF), tpz.objType.NPC);
+-    rune:setStatus(tpz.status.NORMAL);
+-    box:setStatus(tpz.status.NORMAL);
+-
+-end;
+-
+-function onEventUpdate(player,csid,option)
++function onEventUpdate(player, csid, option)
+ end
+ 
+-function onEventFinish(player,csid,option)
+-end
+\ No newline at end of file
++function onEventFinish(player, csid, option)
++    assaultUtil.instanceOnEventFinish(player, 102, tpz.zone.CAEDARVA_MIRE)
++end

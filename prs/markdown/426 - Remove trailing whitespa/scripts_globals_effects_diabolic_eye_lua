@@ -1,0 +1,7 @@
+@@ -17,4 +17,4 @@ end
+ function onEffectLose(target,effect)
+     target:delMod(tpz.mod.ACC,15 + effect:getPower())
+     target:delMod(tpz.mod.HPP,-15)
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -80,4 +80,4 @@ end
+ 
+ function onMobDespawn(mob)
+     mob:setLocalVar("run", 0)
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,7 @@
+@@ -1506,4 +1506,4 @@ tpz.treasure.onTrigger = function(player, chestType)
+     local info = treasureInfo[chestType].zone[zoneId]
+ 
+     player:messageSpecial(msgBase + 7, info.key)
+-end
+\ No newline at end of file
++end

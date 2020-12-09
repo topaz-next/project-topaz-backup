@@ -1,0 +1,7 @@
+@@ -35,4 +35,4 @@ function onEventFinish(player,csid,option)
+     if csid == 523 then
+         player:setCharVar("gotitallCS",3)
+     end
+-end
+\ No newline at end of file
++end

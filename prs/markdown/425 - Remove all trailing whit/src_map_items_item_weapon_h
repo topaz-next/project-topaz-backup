@@ -1,0 +1,7 @@
+@@ -91,4 +91,4 @@ class CItemWeapon : public CItemEquipment
+     bool    m_ranged;
+     bool    m_twoHanded;
+ };
+-#endif
+\ No newline at end of file
++#endif

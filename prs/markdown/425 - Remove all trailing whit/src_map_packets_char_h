@@ -1,0 +1,7 @@
+@@ -41,4 +41,4 @@ class CCharPacket : public CBasicPacket
+ 	CCharPacket(CCharEntity* PChar, ENTITYUPDATE type, uint8 updatemask);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

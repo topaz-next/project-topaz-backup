@@ -1,0 +1,21 @@
+@@ -26,11 +26,11 @@
+ #include "../entities/charentity.h"
+ 
+ 
+-CCSPositionPacket::CCSPositionPacket(CCharEntity* PChar) 
++CCSPositionPacket::CCSPositionPacket(CCharEntity* PChar)
+ {
+ 	this->type = 0x65;
+ 	this->size = 0x10;
+-	
++
+ 	ref<float>(0x04) = PChar->loc.p.x;
+     ref<float>(0x08) = PChar->loc.p.y;
+     ref<float>(0x0C) = PChar->loc.p.z;
+@@ -47,4 +47,4 @@ CCSPositionPacket::CCSPositionPacket(CCharEntity* PChar)
+         ref<uint8>(0x16) = 0x01;
+         ref<uint8>(0x18) = 0x01;
+     }
+-}
+\ No newline at end of file
++}

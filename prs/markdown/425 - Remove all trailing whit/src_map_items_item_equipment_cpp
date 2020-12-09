@@ -1,0 +1,7 @@
+@@ -328,4 +328,4 @@ void CItemEquipment::SetAugmentMod(uint16 type, uint8 value)
+ uint16 CItemEquipment::getAugment(uint8 slot)
+ {
+     return ref<uint16>(m_extra, 2 + (slot * 2));
+-}
+\ No newline at end of file
++}

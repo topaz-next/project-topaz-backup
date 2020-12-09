@@ -1,0 +1,61 @@
+@@ -2,26 +2,37 @@
+ -- Area: Aht Urhgan Whitegate
+ --  NPC: Runic Portal
+ -- Aht Urhgan Teleporter to Other Areas
++-- !pos 125 -4.2 64.5 50
+ -----------------------------------
+ local ID = require("scripts/zones/Aht_Urhgan_Whitegate/IDs")
+------------------------------------
++require("scripts/globals/assault")
+ require("scripts/globals/besieged")
+ require("scripts/globals/keyitems")
++require("scripts/globals/settings")
+ require("scripts/globals/teleports")
+ -----------------------------------
+ 
+-function onTrade(player, npc, trade)
+-end
+-
+ function onTrigger(player, npc)
+-    local hasAssault, keyitem = tpz.besieged.hasAssaultOrders(player)
++    local runicPortals = player:getTeleport(tpz.teleport.type.RUNIC_PORTAL)
++    local points = player:getCurrency("imperial_standing")
++    local validTele = 0
+ 
+-    if hasAssault > 0 then
+-        player:messageSpecial(ID.text.RUNIC_PORTAL + 9, keyitem)
+-        player:startEvent(hasAssault)
++    if assaultUtil.hasOrders(player) then
++        for k, v in pairs(assaultUtil.Orders) do
++            if player:hasKeyItem(v.KI) then
++                validTele = bit.band(runicPortals, v.tele)
++                player:messageSpecial(ID.text.CONFIRMING, v.KI)
++                if validTele == v.valid then
++                    player:startEvent(v.event)
++                    player:setLocalVar("teleport", v.index)
++                else
++                    player:messageSpecial(ID.text.RUNIC_DENIED_ASSAULT_OFFSET + k)
++                end
++                break
++            end
++        end 
+     else
+         local hasPermit = player:hasKeyItem(tpz.ki.RUNIC_PORTAL_USE_PERMIT)
+-        local runicPortals = player:getTeleport(tpz.teleport.type.RUNIC_PORTAL)
+         local mercRank = tpz.besieged.getMercenaryRank(player)
+         local points = player:getCurrency("imperial_standing")
+         local hasAstral = tpz.besieged.getAstralCandescence()
+@@ -43,10 +54,10 @@ function onEventFinish(player, csid, option)
+             player:delCurrency("imperial_standing", 200)
+         end
+     elseif csid >= 120 and csid <= 125 and option == 1 then -- Has Assault Orders
+-        offset = csid - 120
++        offset = player:getLocalVar("teleport") - 120
+     end
+ 
+     if offset then
+         tpz.teleport.to(player, tpz.teleport.id.AZOUPH_SP + offset)
+     end
+-end
+\ No newline at end of file
++end

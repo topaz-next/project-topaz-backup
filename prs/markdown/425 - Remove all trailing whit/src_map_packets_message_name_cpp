@@ -1,0 +1,7 @@
+@@ -53,4 +53,4 @@ CMessageNamePacket::CMessageNamePacket(
+ 
+     CBaseEntity* PNameEntity = PNameActor ? PNameActor : PActor;
+     memcpy(data + 0x20, PNameEntity->GetName(), PNameEntity->name.size());
+-}
+\ No newline at end of file
++}

@@ -1,0 +1,7 @@
+@@ -55,4 +55,4 @@ function onEventFinish(player,csid,option)
+     elseif csid == 522 and npcUtil.giveItem(player, 15685) then
+         player:setCharVar("LeleroonsletterBlue", 5)
+     end
+-end
+\ No newline at end of file
++end

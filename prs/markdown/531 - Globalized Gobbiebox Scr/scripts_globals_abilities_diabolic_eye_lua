@@ -1,0 +1,7 @@
+@@ -15,4 +15,4 @@ end
+ 
+ function onUseAbility(player, target, ability)
+     player:addStatusEffect(tpz.effect.DIABOLIC_EYE,player:getMerit(tpz.merit.DIABOLIC_EYE),0,180)
+-end
+\ No newline at end of file
++end

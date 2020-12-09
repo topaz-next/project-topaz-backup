@@ -1,0 +1,7 @@
+@@ -37,4 +37,4 @@ namespace grade
+ 	float GetStatScale(uint8 rank, uint8 scale);
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif

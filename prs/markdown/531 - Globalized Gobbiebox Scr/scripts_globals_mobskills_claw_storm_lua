@@ -1,0 +1,7 @@
+@@ -30,4 +30,4 @@ function onMobWeaponSkill(target, mob, skill)
+     MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, mob:getMainLvl()/2.5, 3, 30)
+ 
+     return dmg
+-end
+\ No newline at end of file
++end

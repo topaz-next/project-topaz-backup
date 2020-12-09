@@ -1,0 +1,7 @@
+@@ -345,4 +345,4 @@ void CItem::setSent(bool sent)
+ bool CItem::isSent()
+ {
+     return m_sent;
+-}
+\ No newline at end of file
++}

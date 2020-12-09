@@ -1,0 +1,13 @@
+@@ -39,9 +39,9 @@ function onTrigger(player,currency,amount,target)
+         error(player, "Invalid amount.")
+         return
+     end
+-    
++
+     -- add currency
+     targ:addCurrency(currency,amount)
+     local newAmount = targ:getCurrency(currency)
+     player:PrintToPlayer(string.format("%s was given %i %s, for a total of %i.",targ:getName(),amount,currency,newAmount))
+-end
+\ No newline at end of file
++end
