@@ -4,12 +4,12 @@ from github import Github
 
 access_key = ""
 old_repo_name = ""
-new_repo_name = ""
+new_repo_name = "topaz-next/topaz"
 
 # =========================================================
 
 g = Github(access_key)
-old_repo = g.get_repo(old_repo_name)
+#old_repo = g.get_repo(old_repo_name)
 new_repo = g.get_repo(new_repo_name)
 
 # =========================================================
@@ -38,19 +38,17 @@ _{comment['created_at']}_
 def push_issue_to_new_repo(issue):
     # Clone issue
     new_issue = new_repo.create_issue(title=issue['title'],
-                                      body=get_new_issue_body(issue),
-                                      labels=issue['labels'])
+                                      body=get_new_issue_body(issue))
     
-    # Copy comments
-    for comment in issue['comments']:
-        new_issue.create_comment(get_new_comment_body(comment))
-
-    # Copy state
-    new_issue.state = issue['state']
-    
-    # Copy labels
     for label in issue['labels']:
         new_issue.add_to_labels(label)
+
+    # Copy comments
+    for comment in issue['comments']:
+        new_issue.create_comment(get_new_comment_body(issue['comments'][str(comment)]))
+
+    # Copy state
+    new_issue.edit(state=issue['state'], labels=issue['labels'])
 
 
 # =========================================================
@@ -165,8 +163,11 @@ def main():
     with open('json_dump.txt', 'r') as json_file:
         issues = rebuild_from_json_data(json.load(json_file))
 
-    for issue in issues:
-        save_issue_to_md(issues[str(issue)])
+    keys = sorted(issues, key=lambda x: int(x))
+    for key_number in keys:
+        issue_obj = issues[str(key_number)]
+        print("{} {}".format(issue_obj['number'], issue_obj['title']))
+        push_issue_to_new_repo(issue_obj)
 
 # =========================================================
 if __name__ == "__main__":
